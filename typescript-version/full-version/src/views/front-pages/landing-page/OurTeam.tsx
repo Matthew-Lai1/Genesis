@@ -97,7 +97,7 @@ const OurTeam = () => {
             <ElementOne className='absolute inline-end-0' />
             <div className='flex items-center justify-center mbe-6 gap-3'>
               <Lines />
-              <Typography color='text.primary' className='font-medium uppercase'>
+              <Typography variant='h6' className='uppercase'>
                 Our Great Team
               </Typography>
             </div>
@@ -108,9 +108,7 @@ const OurTeam = () => {
             </Typography>
             <Typography className='text-[18px]'> by Real People</Typography>
           </div>
-          <Typography color='text.secondary' className='font-medium text-center'>
-            Who is behind these great-looking interfaces?
-          </Typography>
+          <Typography className='font-medium text-center'>Who is behind these great-looking interfaces?</Typography>
         </div>
         <Grid container rowSpacing={16} columnSpacing={6} className='pbs-[100px]'>
           {team.map((member, index) => (
@@ -126,7 +124,7 @@ const OurTeam = () => {
                   <div className='flex flex-col gap-3 p-5 is-full'>
                     <div className='text-center'>
                       <Typography variant='h5'>{member.name}</Typography>
-                      <Typography color='text.secondary'>{member.position}</Typography>
+                      <Typography>{member.position}</Typography>
                     </div>
                     <div className='flex gap-3 item-center justify-center'>
                       <i className='ri-facebook-circle-line text-[22px]' />

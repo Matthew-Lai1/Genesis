@@ -23,9 +23,7 @@ const FreeTrial = () => {
                 <Typography variant='h5' color='primary' className='font-medium'>
                   Still not convinced? Start with a 14-day FREE trial!
                 </Typography>
-                <Typography color='text.secondary'>
-                  You will get full access to with all the features for 14 days.
-                </Typography>
+                <Typography>You will get full access to with all the features for 14 days.</Typography>
               </div>
               <Button component={Link} href='/front-pages/payment' variant='contained'>
                 Start 14-Days Free Trial

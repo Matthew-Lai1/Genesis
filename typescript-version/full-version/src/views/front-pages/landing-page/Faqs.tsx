@@ -93,7 +93,7 @@ const Faqs = () => {
           <ElementOne className='absolute inline-end-0' />
           <div className='flex items-center justify-center mbe-6 gap-3'>
             <Lines />
-            <Typography color='text.primary' className='font-medium uppercase'>
+            <Typography variant='h6' className='uppercase'>
               Faq
             </Typography>
           </div>
@@ -104,7 +104,7 @@ const Faqs = () => {
             questions
           </Typography>
         </div>
-        <Typography color='text.secondary' className='font-medium text-center'>
+        <Typography className='font-medium text-center'>
           Browse through these FAQs to find answers to commonly asked questions.
         </Typography>
       </div>

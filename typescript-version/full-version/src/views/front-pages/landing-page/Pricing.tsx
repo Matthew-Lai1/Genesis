@@ -88,7 +88,7 @@ const PricingPlan = () => {
           <ElementTwo className='absolute inline-start-0' />
           <div className='flex items-center justify-center mbe-6 gap-3 text-center'>
             <Lines />
-            <Typography color='text.primary' className='font-medium uppercase'>
+            <Typography variant='h6' className='uppercase'>
               Pricing Plans
             </Typography>
           </div>
@@ -99,7 +99,7 @@ const PricingPlan = () => {
           </Typography>
           <Typography className='text-[18px]'>designed for you</Typography>
         </div>
-        <Typography color='text.secondary' className='font-medium text-center'>
+        <Typography className='font-medium text-center'>
           All plans include 40+ advanced tools and features to boost your product. Choose the best plan to fit your
           needs.
         </Typography>
@@ -139,9 +139,7 @@ const PricingPlan = () => {
                     </div>
                     <div className='flex flex-col gap-0.5'>
                       <Typography className='font-medium'>Per month</Typography>
-                      <Typography variant='body2' color='text.secondary'>
-                        10% off for yearly subscription
-                      </Typography>
+                      <Typography variant='body2'>10% off for yearly subscription</Typography>
                     </div>
                   </div>
                   <Curve />
@@ -159,9 +157,7 @@ const PricingPlan = () => {
                   <div className='flex gap-1 items-center justify-between'>
                     <div className='flex flex-col gap-0.25'>
                       <Typography className='font-medium'>{plan.supportType} Support</Typography>
-                      <Typography variant='body2' color='text.secondary'>
-                        {plan.supportMedium}
-                      </Typography>
+                      <Typography variant='body2'>{plan.supportMedium}</Typography>
                     </div>
                     <Chip variant='tonal' size='small' color='primary' label={plan.respondTime} />
                   </div>

@@ -59,7 +59,7 @@ const ContactUs = () => {
           <ElementTwo className='absolute inline-start-0' />
           <div className='flex items-center justify-center mbe-6 gap-3'>
             <Lines />
-            <Typography color='text.primary' className='font-medium uppercase'>
+            <Typography variant='h6' className='uppercase'>
               Contact Us
             </Typography>
           </div>
@@ -70,9 +70,7 @@ const ContactUs = () => {
           </Typography>
           <Typography className='text-[18px]'>together</Typography>
         </div>
-        <Typography color='text.secondary' className='font-medium text-center'>
-          Any question or remark? just write us a message
-        </Typography>
+        <Typography className='font-medium text-center'>Any question or remark? just write us a message</Typography>
       </div>
       <div>
         <Grid container spacing={6}>

@@ -69,8 +69,7 @@ const data = [
     svg: <Eckerd color='#2882C3' />,
     rating: 5,
     name: 'Eugenia Moore',
-    position: 'Founder of Hubspot',
-    color: '#2882C3'
+    position: 'Founder of Hubspot'
   },
   {
     desc: 'Materio is awesome, and I particularly enjoy knowing that if I get stuck on something.',
@@ -191,7 +190,7 @@ const CustomerReviews = () => {
           </Typography>
           <Typography className='text-[18px]'>from clients</Typography>
         </div>
-        <Typography color='text.secondary' className='font-medium text-center'>
+        <Typography className='font-medium text-center'>
           See what our customers have to say about their experience.
         </Typography>
       </div>

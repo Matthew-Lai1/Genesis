@@ -344,7 +344,7 @@ const DropdownMenu = (props: Props) => {
               key={index}
               href={'/pages/auth' + page.href}
               target='_blank'
-              className='flex items-center gap-3 hover:text-primary'
+              className='flex items-center gap-3 focus:outline-none hover:text-primary'
               onClick={handleLinkClick}
             >
               <i className='ri-circle-line text-[10px]' />
@@ -364,7 +364,7 @@ const DropdownMenu = (props: Props) => {
               key={index}
               href={'/pages' + page.href}
               target='_blank'
-              className='flex items-center gap-3 hover:text-primary'
+              className='flex items-center gap-3 focus:outline-none hover:text-primary'
               onClick={handleLinkClick}
             >
               <i className='ri-circle-line text-[10px]' />

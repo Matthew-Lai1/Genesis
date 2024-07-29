@@ -33,9 +33,7 @@ const GetStarted = () => {
             <Typography variant='h5' color='primary' className='font-bold'>
               Ready to Get Started?
             </Typography>
-            <Typography className='font-medium' color='text.secondary'>
-              Start your project with a 14-day free trial
-            </Typography>
+            <Typography className='font-medium'>Start your project with a 14-day free trial</Typography>
           </div>
           <Button
             component={Link}

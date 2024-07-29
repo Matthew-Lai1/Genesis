@@ -126,26 +126,24 @@ const Payment = ({ data }: { data: PricingPlanType[] }) => {
             <CardContent className='flex flex-col max-sm:gap-y-5 gap-y-8 sm:p-8 border-be lg:border-be-0 lg:border-e bs-full'>
               <div>
                 <Typography variant='h4'>Checkout</Typography>
-                <Typography color='text.secondary'>
+                <Typography>
                   All plans include 40+ advanced tools and features to boost your product. Choose the best plan to fit
                   your needs.
                 </Typography>
               </div>
-              <div className='flex gap-5'>
-                <Grid container spacing={5}>
-                  {cardData.map((item, index) => (
-                    <CustomInputHorizontal
-                      key={index}
-                      type='radio'
-                      name='paymemt-method'
-                      data={item}
-                      selected={selectInput}
-                      handleChange={handlePaymentChange}
-                      gridProps={{ sm: 6, xs: 12 }}
-                    />
-                  ))}
-                </Grid>
-              </div>
+              <Grid container spacing={5}>
+                {cardData.map((item, index) => (
+                  <CustomInputHorizontal
+                    key={index}
+                    type='radio'
+                    name='paymemt-method'
+                    data={item}
+                    selected={selectInput}
+                    handleChange={handlePaymentChange}
+                    gridProps={{ sm: 6, xs: 12 }}
+                  />
+                ))}
+              </Grid>
               <div>
                 <Typography variant='h4' className='mbe-6'>
                   Billing Details
@@ -219,18 +217,16 @@ const Payment = ({ data }: { data: PricingPlanType[] }) => {
             <CardContent className='flex flex-col gap-8 sm:p-8'>
               <div className='flex flex-col gap-2'>
                 <Typography variant='h4'>Order Summary</Typography>
-                <Typography color='text.secondary'>
+                <Typography>
                   It can help you manage and service orders before, during, and after fulfillment.
                 </Typography>
               </div>
               <div className='flex flex-col gap-5'>
                 <div className='flex flex-col gap-4 p-6 bg-actionHover rounded'>
-                  <Typography color='text.secondary'>A simple start for everyone</Typography>
+                  <Typography>A simple start for everyone</Typography>
                   <div className='flex items-baseline'>
                     <Typography variant='h4'>$59.99</Typography>
-                    <Typography component='sub' color='text.secondary'>
-                      /month
-                    </Typography>
+                    <Typography component='sub'>/month</Typography>
                   </div>
                   <OpenDialogOnElementClick
                     element={Button}
@@ -241,16 +237,16 @@ const Payment = ({ data }: { data: PricingPlanType[] }) => {
                 </div>
                 <div>
                   <div className='flex gap-2 items-center justify-between mbe-2'>
-                    <Typography color='text.secondary'>Subscription</Typography>
+                    <Typography>Subscription</Typography>
                     <Typography className='font-medium'>$85.99</Typography>
                   </div>
                   <div className='flex gap-2 items-center justify-between'>
-                    <Typography color='text.secondary'>Tax</Typography>
+                    <Typography>Tax</Typography>
                     <Typography className='font-medium'>$4.99</Typography>
                   </div>
                   <Divider className='mlb-4' />
                   <div className='flex gap-2 items-center justify-between'>
-                    <Typography color='text.secondary'>Total</Typography>
+                    <Typography>Total</Typography>
                     <Typography className='font-medium'>$90.98</Typography>
                   </div>
                 </div>
@@ -262,7 +258,7 @@ const Payment = ({ data }: { data: PricingPlanType[] }) => {
                   Proceed With Payment
                 </Button>
               </div>
-              <Typography color='text.secondary'>
+              <Typography>
                 By continuing, you accept to our Terms of Services and Privacy Policy. Please note that payments are
                 non-refundable.
               </Typography>

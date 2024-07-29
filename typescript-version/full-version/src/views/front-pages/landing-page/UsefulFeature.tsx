@@ -98,7 +98,7 @@ const UsefulFeature = () => {
             </Typography>
             <Typography className='text-[18px]'>to start your next project</Typography>
           </div>
-          <Typography color='text.secondary' className='font-medium text-center'>
+          <Typography className='font-medium text-center'>
             Not just a set of tools, the package includes ready-to-deploy conceptual application.
           </Typography>
         </div>
