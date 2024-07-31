@@ -23,6 +23,7 @@
 | @iconify/tools                      | [https://github.com/iconify/tools](https://github.com/iconify/tools) | MIT |
 | @iconify/types                      | [https://github.com/iconify/iconify](https://github.com/iconify/iconify) | MIT |
 | @iconify/utils                      | [https://github.com/iconify/iconify](https://github.com/iconify/iconify) | MIT |
+| mapbox-gl                           | [https://github.com/mapbox/mapbox-gl-js](https://github.com/mapbox/mapbox-gl-js) | BSD-3-Clause |
 | @mui/lab                            | [https://github.com/mui/material-ui](https://github.com/mui/material-ui) | MIT |
 | @mui/material                       | [https://github.com/mui/material-ui](https://github.com/mui/material-ui) | MIT |
 | @mui/material-nextjs                | [https://github.com/mui/material-ui](https://github.com/mui/material-ui) | MIT |
@@ -38,6 +39,7 @@
 | @tiptap/pm                          | [https://github.com/ueberdosis/tiptap](https://github.com/ueberdosis/tiptap) | MIT |
 | @tiptap/react                       | [https://github.com/ueberdosis/tiptap](https://github.com/ueberdosis/tiptap) | MIT |
 | @tiptap/starter-kit                 | [https://github.com/ueberdosis/tiptap](https://github.com/ueberdosis/tiptap) | MIT |
+| @types/mapbox-gl                    | [https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) | MIT |
 | @types/negotiator                   | [https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) | MIT |
 | @types/node                         | [https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) | MIT |
 | @types/react                        | [https://github.com/DefinitelyTyped/DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) | MIT |
@@ -75,7 +77,9 @@
 | react-dropzone                      | [https://github.com/react-dropzone/react-dropzone](https://github.com/react-dropzone/react-dropzone) | MIT |
 | react-dom                           | [https://github.com/facebook/react](https://github.com/facebook/react) | MIT |
 | react-hook-form                     | [https://github.com/react-hook-form/react-hook-form](https://github.com/react-hook-form/react-hook-form) | MIT |
+| react-map-gl                        | [https://github.com/visgl/react-map-gl](https://github.com/visgl/react-map-gl) | MIT |
 | react-perfect-scrollbar             | [https://github.com/goldenyz/react-perfect-scrollbar](https://github.com/goldenyz/react-perfect-scrollbar) | MIT |
+| react-player                        | [https://github.com/cookpete/react-player](https://github.com/cookpete/react-player) | MIT |
 | react-redux                         | [https://github.com/reduxjs/react-redux](https://github.com/reduxjs/react-redux) | MIT |
 | react-toastify                      | [https://github.com/fkhadra/react-toastify](https://github.com/fkhadra/react-toastify) | MIT |
 | react-use                           | [https://github.com/streamich/react-use](https://github.com/streamich/react-use) | The Unlicense |
