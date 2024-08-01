@@ -46,7 +46,10 @@ const sidebars: SidebarsConfig = {
               label : 'How to remove i18n',
               items: ['guide/development/translation/how-to-remove-i18n/using-script', 'guide/development/translation/how-to-remove-i18n/manually']
             },
-            'guide/development/translation/add-i18n-to-Starter-kit'
+            'guide/development/translation/add-i18n-to-Starter-kit',
+            'guide/development/translation/add-language',
+            'guide/development/translation/change-default-language',
+            'guide/development/translation/remove-language'
           ]
         },
         'guide/development/rtl',
