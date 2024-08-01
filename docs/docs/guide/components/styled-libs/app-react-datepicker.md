@@ -25,14 +25,14 @@ Example: Defining `AppReactDatepicker`
 import type { ComponentProps } from 'react'
 
 // MUI Imports
-import Box from '@mui/material/Box';
-import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box'
+import { styled } from '@mui/material/styles'
 
 // Third-Party Imports
-import ReactDatePickerComponent from 'react-datepicker';
+import ReactDatePickerComponent from 'react-datepicker'
 
 // Styles
-import 'react-datepicker/dist/react-datepicker.css';
+import 'react-datepicker/dist/react-datepicker.css'
 
 type Props = ComponentProps<typeof ReactDatePickerComponent> & {
   boxProps?: BoxProps
@@ -41,20 +41,20 @@ type Props = ComponentProps<typeof ReactDatePickerComponent> & {
 // Styled Components
 const StyledReactDatePicker = styled(Box)<BoxProps>(({ theme }) => ({
   // Custom styles for React-Datepicker...
-}));
+}))
 
 // Component to render the date-picker
 const AppReactDatepicker = (props: Props) => {
-  const { boxProps, ...rest } = props;
+  const { boxProps, ...rest } = props
 
   return (
     <StyledReactDatePicker {...boxProps}>
       <ReactDatePickerComponent {...rest} />
     </StyledReactDatePicker>
-  );
-};
+  )
+}
 
-export default AppReactDatepicker;
+export default AppReactDatepicker
 ```
 
 This code sets up `AppReactDatepicker` to provide a Material-UI themed appearance to React-Datepicker.
@@ -66,24 +66,29 @@ Using `AppReactDatepicker`, integrating a styled date-picker into your applicati
 Example: Basic Date Picker Implementation
 
 ```tsx
-import { useState } from 'react';
-import AppReactDatepicker from '@/libs/styles/AppReactDatepicker';
-import CustomInput from './PickersCustomInput';
+// React Imports
+import { useState } from 'react'
+
+// MUI Imports
+import TextField from '@mui/material/TextField'
+
+// Third-Party Imports
+import AppReactDatepicker from '@/libs/styles/AppReactDatepicker'
 
 const PickersBasic = () => {
-  const [date, setDate] = useState<Date | null | undefined>(new Date());
+  const [date, setDate] = useState<Date | null>(new Date())
 
   return (
     <AppReactDatepicker
       selected={date}
-      onChange={(date: Date) => setDate(date)}
+      onChange={(date: Date | null) => setDate(date)}
       placeholderText='Click to select a date'
-      customInput={<CustomInput label='Basic' />}
+      customInput={<TextField label='Basic' />}
     />
-  );
-};
+  )
+}
 
-export default PickersBasic;
+export default PickersBasic
 ```
 
 In this example, `PickersBasic` is a functional component that uses `AppReactDatepicker` to render a date-picker. It showcases how to use custom inputs and handle date changes.
