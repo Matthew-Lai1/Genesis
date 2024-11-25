@@ -9,6 +9,7 @@ import { useParams, useRouter } from 'next/navigation'
 
 // Third-party Imports
 import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from 'cmdk'
+import { Title, Description } from '@radix-ui/react-dialog'
 
 // Type Imports
 import type { Locale } from '@configs/i18n'
@@ -206,6 +207,8 @@ const NavSearch = () => {
       )}
       <CommandDialog open={open} onOpenChange={setOpen}>
         <div className='flex items-center justify-between border-be pli-4 plb-3 gap-2'>
+          <Title hidden />
+          <Description hidden />
           <Search />
           <CommandInput value={searchValue} onValueChange={setSearchValue} />
           <span>[esc]</span>

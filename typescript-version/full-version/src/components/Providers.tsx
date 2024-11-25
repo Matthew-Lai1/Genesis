@@ -11,13 +11,13 @@ import { getMode, getSettingsFromCookie } from '@core/utils/serverHelpers'
 
 type Props = ChildrenType
 
-const Providers = (props: Props) => {
+const Providers = async (props: Props) => {
   // Props
   const { children } = props
 
   // Vars
-  const mode = getMode()
-  const settingsCookie = getSettingsFromCookie()
+  const mode = await getMode()
+  const settingsCookie = await getSettingsFromCookie()
 
   return (
     <NextAuthProvider basePath={process.env.NEXTAUTH_BASEPATH}>

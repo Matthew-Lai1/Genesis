@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
   basePath: process.env.BASEPATH,
   redirects: async () => {
     return [
@@ -22,6 +23,9 @@ const nextConfig = {
         locale: false
       }
     ]
+  },
+  compiler: {
+    emotion: true
   }
 }
 

@@ -29,9 +29,13 @@ export const metadata = {
   description: 'Master Next.js Framework Independent'
 }
 
-const RootLayout = ({ children, params }: ChildrenType & { params: { lang: Locale } }) => {
+const RootLayout = async (props: ChildrenType & { params: Promise<{ lang: Locale }> }) => {
+  const params = await props.params
+
+  const { children } = props
+
   // Vars
-  const headersList = headers()
+  const headersList = await headers()
   const direction = i18n.langDirection[params.lang]
 
   return (
