@@ -36,8 +36,8 @@ const Layout = async (props: ChildrenType & { params: Promise<{ lang: Locale }> 
   // Vars
   const direction = i18n.langDirection[params.lang]
   const dictionary = await getDictionary(params.lang)
-  const mode = getMode()
-  const systemMode = getSystemMode()
+  const mode = await getMode()
+  const systemMode = await getSystemMode()
 
   return (
     <Providers direction={direction}>

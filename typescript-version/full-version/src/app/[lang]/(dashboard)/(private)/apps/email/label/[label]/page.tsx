@@ -1,7 +1,9 @@
 // Component Imports
 import EmailWrapper from '@views/apps/email'
 
-const EmailLabelPage = ({ params }: { params: { label: string } }) => {
+const EmailLabelPage = async (props: { params: Promise<{ label: string }> }) => {
+  const params = await props.params
+
   return <EmailWrapper label={params.label} />
 }
 

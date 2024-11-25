@@ -11,9 +11,9 @@ import { getServerMode } from '@core/utils/serverHelpers'
 // Util Imports
 import { frontLayoutClasses } from '@layouts/utils/layoutClasses'
 
-const FrontLayout = ({ children }: ChildrenType) => {
+const FrontLayout = async ({ children }: ChildrenType) => {
   // Vars
-  const mode = getServerMode()
+  const mode = await getServerMode()
 
   return (
     <div className={frontLayoutClasses.root}>

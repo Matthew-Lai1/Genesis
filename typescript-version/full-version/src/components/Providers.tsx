@@ -25,7 +25,7 @@ const Providers = async (props: Props) => {
   // Vars
   const mode = await getMode()
   const settingsCookie = await getSettingsFromCookie()
-  const systemMode = getSystemMode()
+  const systemMode = await getSystemMode()
 
   return (
     <NextAuthProvider basePath={process.env.NEXTAUTH_BASEPATH}>

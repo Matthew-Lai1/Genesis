@@ -32,7 +32,9 @@ import { getInvoiceData } from '@/app/server/actions'
   return res.json()
 } */
 
-const EditPage = async ({ params }: { params: { id: string } }) => {
+const EditPage = async (props: { params: Promise<{ id: string }> }) => {
+  const params = await props.params
+
   // Vars
   const data = await getInvoiceData()
 

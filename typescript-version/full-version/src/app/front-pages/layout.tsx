@@ -31,9 +31,9 @@ export const metadata = {
   description: 'Master Next.js Framework Independent'
 }
 
-const Layout = ({ children }: ChildrenType) => {
+const Layout = async ({ children }: ChildrenType) => {
   // Vars
-  const systemMode = getSystemMode()
+  const systemMode = await getSystemMode()
 
   return (
     <html id='__next'>

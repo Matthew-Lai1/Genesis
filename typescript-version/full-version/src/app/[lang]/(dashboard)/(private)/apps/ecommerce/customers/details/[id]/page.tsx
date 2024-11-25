@@ -28,7 +28,9 @@ import { getEcommerceData } from '@/app/server/actions'
   return res.json()
 } */
 
-const CustomerDetailsPage = async ({ params }: { params: { id: string } }) => {
+const CustomerDetailsPage = async (props: { params: Promise<{ id: string }> }) => {
+  const params = await props.params
+
   // Vars
   const data = await getEcommerceData()
 
