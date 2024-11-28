@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
@@ -41,7 +41,7 @@ const renderTeams = (teams: ProfileTeamsType[]) => {
 const AboutOverview = ({ data }: { data?: ProfileTabType }) => {
   return (
     <Grid container>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Card>
           <CardContent>
             <div>
@@ -59,7 +59,7 @@ const AboutOverview = ({ data }: { data?: ProfileTabType }) => {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Card>
           <CardContent>
             <div>

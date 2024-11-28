@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react'
 import type { SyntheticEvent } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Tab from '@mui/material/Tab'
 import TabPanel from '@mui/lab/TabPanel'
 import Avatar from '@mui/material/Avatar'
@@ -61,7 +61,7 @@ const FAQ = ({ faqData, searchValue }: props) => {
   return filteredData && filteredData.length > 0 ? (
     <TabContext value={activeTab}>
       <Grid container>
-        <Grid item xs={12} sm={5} md={4} xl={3} className='flex flex-col items-center'>
+        <Grid size={{ xs: 12, sm: 5, md: 4, xl: 3 }} className='flex flex-col items-center'>
           <CustomTabList orientation='vertical' onChange={handleChange} className='is-full' pill='true'>
             {filteredData?.map((faq, index) => (
               <Tab
@@ -75,7 +75,7 @@ const FAQ = ({ faqData, searchValue }: props) => {
           </CustomTabList>
           <img src='/illustration-john.png' className='max-md:hidden' alt='john image' />
         </Grid>
-        <Grid item xs={12} sm={7} md={8} xl={9}>
+        <Grid size={{ xs: 12, sm: 7, md: 8, xl: 9 }}>
           {filteredData?.map((faq, index) => (
             <TabPanel key={index} value={faq.id} className='p-0'>
               <div className='flex items-center gap-4'>

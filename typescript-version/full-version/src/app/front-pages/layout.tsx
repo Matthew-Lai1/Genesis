@@ -1,5 +1,6 @@
 // MUI Imports
 import Button from '@mui/material/Button'
+import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
 
 // Third-party Imports
 import 'react-perfect-scrollbar/dist/css/styles.css'
@@ -36,8 +37,9 @@ const Layout = async ({ children }: ChildrenType) => {
   const systemMode = await getSystemMode()
 
   return (
-    <html id='__next'>
+    <html id='__next' suppressHydrationWarning>
       <body className='flex is-full min-bs-full flex-auto flex-col'>
+        <InitColorSchemeScript attribute='data' defaultMode={systemMode} />
         <Providers direction='ltr'>
           <BlankLayout systemMode={systemMode}>
             <IntersectionProvider>

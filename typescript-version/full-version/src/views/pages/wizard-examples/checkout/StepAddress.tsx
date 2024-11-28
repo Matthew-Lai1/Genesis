@@ -6,7 +6,7 @@ import type { ChangeEvent } from 'react'
 import Link from 'next/link'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
 import Divider from '@mui/material/Divider'
@@ -165,7 +165,7 @@ const StepAddress = ({ handleNext }: { handleNext: () => void }) => {
 
   return (
     <Grid container>
-      <Grid item xs={12} lg={8}>
+      <Grid size={{ xs: 12, lg: 8 }}>
         <div className='flex flex-col items-start gap-4'>
           <Typography>Select your preferable address</Typography>
           <Grid container>
@@ -174,7 +174,12 @@ const StepAddress = ({ handleNext }: { handleNext: () => void }) => {
                 type='radio'
                 key={index}
                 data={item}
-                gridProps={{ sm: 6, xs: 12 }}
+                gridProps={{
+                  size: {
+                    sm: 6,
+                    xs: 12
+                  }
+                }}
                 selected={selectedOption}
                 name='custom-radios-basic'
                 handleChange={handleOptionChange}
@@ -197,7 +202,12 @@ const StepAddress = ({ handleNext }: { handleNext: () => void }) => {
                 <CustomInputVertical
                   type='radio'
                   key={index}
-                  gridProps={{ sm: 4, xs: 12 }}
+                  gridProps={{
+                    size: {
+                      sm: 4,
+                      xs: 12
+                    }
+                  }}
                   selected={selectedSpeed}
                   name='custom-radios-basic'
                   handleChange={handleSpeedChange}
@@ -208,7 +218,7 @@ const StepAddress = ({ handleNext }: { handleNext: () => void }) => {
           </Grid>
         </div>
       </Grid>
-      <Grid item xs={12} lg={4}>
+      <Grid size={{ xs: 12, lg: 4 }}>
         <div className='border rounded'>
           <CardContent>
             <Typography className='font-medium'>Estimated Delivery Date</Typography>

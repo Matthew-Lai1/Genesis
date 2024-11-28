@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Dialog from '@mui/material/Dialog'
 import Button from '@mui/material/Button'
 import Switch from '@mui/material/Switch'
@@ -75,7 +75,7 @@ const BillingCard = ({ open, setOpen, data }: BillingCardProps) => {
             <i className='ri-close-line' />
           </IconButton>
           <Grid container spacing={5}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 name='number'
@@ -86,7 +86,7 @@ const BillingCard = ({ open, setOpen, data }: BillingCardProps) => {
                 onChange={e => setCardData({ ...cardData, cardNumber: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <TextField
                 fullWidth
                 name='name'
@@ -97,7 +97,7 @@ const BillingCard = ({ open, setOpen, data }: BillingCardProps) => {
                 onChange={e => setCardData({ ...cardData, name: e.target.value })}
               />
             </Grid>
-            <Grid item xs={6} sm={3}>
+            <Grid size={{ xs: 6, sm: 3 }}>
               <TextField
                 fullWidth
                 name='expiry'
@@ -108,7 +108,7 @@ const BillingCard = ({ open, setOpen, data }: BillingCardProps) => {
                 onChange={e => setCardData({ ...cardData, expiryDate: e.target.value })}
               />
             </Grid>
-            <Grid item xs={6} sm={3}>
+            <Grid size={{ xs: 6, sm: 3 }}>
               <TextField
                 fullWidth
                 name='cvv'
@@ -119,7 +119,7 @@ const BillingCard = ({ open, setOpen, data }: BillingCardProps) => {
                 onChange={e => setCardData({ ...cardData, cardCvv: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <FormControlLabel control={<Switch defaultChecked />} label='Save Card for future billing?' />
             </Grid>
           </Grid>

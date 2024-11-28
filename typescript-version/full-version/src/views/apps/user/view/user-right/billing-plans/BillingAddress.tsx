@@ -3,7 +3,7 @@ import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import type { ButtonProps } from '@mui/material/Button'
 
@@ -53,7 +53,7 @@ const BillingAddress = () => {
         />
         <CardContent>
           <Grid container>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <table>
                 <tbody className='align-top'>
                   <tr>
@@ -109,7 +109,7 @@ const BillingAddress = () => {
                 </tbody>
               </table>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <table>
                 <tbody className='align-top'>
                   <tr>

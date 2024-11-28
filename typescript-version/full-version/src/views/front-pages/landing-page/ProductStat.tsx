@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 // MUI Imports
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Third-party Imports
 import classnames from 'classnames'
@@ -66,7 +66,7 @@ const ProductStat = () => {
       <div className={frontCommonStyles.layoutSpacing}>
         <Grid container spacing={6}>
           {statData.map((stat, index) => (
-            <Grid item key={index} xs={6} md={3}>
+            <Grid size={{ xs: 6, md: 3 }} key={index}>
               <div className='flex flex-col items-center justify-center gap-6'>
                 <CustomAvatar
                   onMouseEnter={() => {

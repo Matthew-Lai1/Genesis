@@ -5,7 +5,7 @@ import { useState } from 'react'
 import type { SyntheticEvent } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
@@ -47,7 +47,7 @@ const EditCard = ({ invoiceData, id, data }: { invoiceData?: InvoiceType; id: st
       <Card>
         <CardContent>
           <Grid container>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <div className='bg-actionHover rounded'>
                 <div className='flex justify-between flex-col sm:flex-row'>
                   <div className='flex flex-col'>
@@ -67,9 +67,11 @@ const EditCard = ({ invoiceData, id, data }: { invoiceData?: InvoiceType; id: st
                         fullWidth
                         size='small'
                         value={id}
-                        InputProps={{
-                          disabled: true,
-                          startAdornment: <InputAdornment position='start'>#</InputAdornment>
+                        slotProps={{
+                          input: {
+                            disabled: true,
+                            startAdornment: <InputAdornment position='start'>#</InputAdornment>
+                          }
                         }}
                       />
                     </div>
@@ -95,7 +97,7 @@ const EditCard = ({ invoiceData, id, data }: { invoiceData?: InvoiceType; id: st
                 </div>
               </div>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <div className='flex justify-between flex-col sm:flex-row'>
                 <div className='flex flex-col'>
                   <Typography>Invoice To:</Typography>
@@ -148,14 +150,14 @@ const EditCard = ({ invoiceData, id, data }: { invoiceData?: InvoiceType; id: st
                 </div>
               </div>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Divider className='border-dashed' />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               {Array.from(Array(count).keys()).map((item, index) => (
                 <div key={index} className='repeater-item flex relative border rounded'>
                   <Grid container>
-                    <Grid item lg={6} md={5} xs={12}>
+                    <Grid size={{ xs: 12, md: 5, lg: 6 }}>
                       <Typography className='static md:absolute md:-top-6'>Item</Typography>
                       <Select fullWidth size='small' defaultValue='App Design'>
                         <MenuItem value='App Design'>App Design</MenuItem>
@@ -165,14 +167,18 @@ const EditCard = ({ invoiceData, id, data }: { invoiceData?: InvoiceType; id: st
                       </Select>
                       <TextField rows={2} fullWidth multiline size='small' defaultValue='Customization & Bug Fixes' />
                     </Grid>
-                    <Grid item lg={2} md={3} xs={12}>
+                    <Grid size={{ xs: 12, md: 3, lg: 2 }}>
                       <Typography className='static md:absolute md:-top-6'>Cost</Typography>
                       <TextField
                         size='small'
                         type='number'
                         placeholder='24'
                         defaultValue='24'
-                        InputProps={{ inputProps: { min: 0 } }}
+                        slotProps={{
+                          input: {
+                            inputProps: { min: 0 }
+                          }
+                        }}
                       />
                       <div>
                         <Typography component='span'>Discount:</Typography> <Typography component='span'>0%</Typography>
@@ -184,17 +190,21 @@ const EditCard = ({ invoiceData, id, data }: { invoiceData?: InvoiceType; id: st
                         </Tooltip>
                       </div>
                     </Grid>
-                    <Grid item md={2} xs={12}>
+                    <Grid size={{ xs: 12, md: 2 }}>
                       <Typography className='static md:absolute md:-top-6'>Hours</Typography>
                       <TextField
                         size='small'
                         type='number'
                         placeholder='1'
                         defaultValue='1'
-                        InputProps={{ inputProps: { min: 0 } }}
+                        slotProps={{
+                          input: {
+                            inputProps: { min: 0 }
+                          }
+                        }}
                       />
                     </Grid>
-                    <Grid item md={2} xs={12}>
+                    <Grid size={{ xs: 12, md: 2 }}>
                       <Typography className='static md:absolute md:-top-6'>Price</Typography>
                       <Typography>$24.00</Typography>
                     </Grid>
@@ -206,7 +216,7 @@ const EditCard = ({ invoiceData, id, data }: { invoiceData?: InvoiceType; id: st
                   </div>
                 </div>
               ))}
-              <Grid item xs={12}>
+              <Grid size={{ xs: 12 }}>
                 <Button
                   size='small'
                   variant='contained'
@@ -217,10 +227,10 @@ const EditCard = ({ invoiceData, id, data }: { invoiceData?: InvoiceType; id: st
                 </Button>
               </Grid>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Divider className='border-dashed' />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <div className='flex justify-between flex-col sm:flex-row'>
                 <div className='flex flex-col order-2 sm:order-[unset]'>
                   <div className='flex items-center'>
@@ -250,10 +260,10 @@ const EditCard = ({ invoiceData, id, data }: { invoiceData?: InvoiceType; id: st
                 </div>
               </div>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Divider className='border-dashed' />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <InputLabel htmlFor='invoice-note' className='inline-flex'>
                 Note:
               </InputLabel>

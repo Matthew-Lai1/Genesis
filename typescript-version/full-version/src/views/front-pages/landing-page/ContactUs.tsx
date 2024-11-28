@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 
 // MUI Imports
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import TextField from '@mui/material/TextField'
@@ -74,7 +74,7 @@ const ContactUs = () => {
       </div>
       <div>
         <Grid container spacing={6}>
-          <Grid item xs={12} md={6} lg={4}>
+          <Grid size={{ xs: 12, md: 6, lg: 4 }}>
             <Card className='bg-primary'>
               <CardContent className='flex flex-col gap-5 pli-8 pbs-8 pbe-7'>
                 <div className='flex flex-col gap-1.5'>
@@ -91,7 +91,7 @@ const ContactUs = () => {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={6} lg={8}>
+          <Grid size={{ xs: 12, md: 6, lg: 8 }}>
             <Card>
               <CardContent>
                 <Typography variant='h5' className='mbe-5'>

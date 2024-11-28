@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography'
 import Checkbox from '@mui/material/Checkbox'
 import Select from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 
 // Component Imports
@@ -97,13 +97,13 @@ const Notifications = () => {
         <CardContent>
           <Typography>When should we send you notifications?</Typography>
           <Grid container>
-            <Grid item xs={12} sm={6} md={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }}>
               <Select fullWidth defaultValue='online'>
                 <MenuItem value='online'>Only when I&#39;m online</MenuItem>
                 <MenuItem value='anytime'>Anytime</MenuItem>
               </Select>
             </Grid>
-            <Grid item xs={12} className='flex gap-4 flex-wrap'>
+            <Grid size={{ xs: 12 }} className='flex gap-4 flex-wrap'>
               <Button variant='contained' type='submit'>
                 Save Changes
               </Button>

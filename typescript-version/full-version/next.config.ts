@@ -23,9 +23,6 @@ const nextConfig: NextConfig = {
         locale: false
       }
     ]
-  },
-  compiler: {
-    emotion: true
   }
 }
 

@@ -4,7 +4,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Dialog from '@mui/material/Dialog'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
@@ -82,7 +82,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
             <i className='ri-close-line' />
           </IconButton>
           <Grid container spacing={5}>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <TextField
                 fullWidth
                 label='First Name'
@@ -91,7 +91,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
                 onChange={e => setUserData({ ...userData, firstName: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <TextField
                 fullWidth
                 label='Last Name'
@@ -100,7 +100,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
                 onChange={e => setUserData({ ...userData, lastName: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TextField
                 fullWidth
                 label='User Name'
@@ -109,7 +109,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
                 onChange={e => setUserData({ ...userData, userName: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <TextField
                 fullWidth
                 label='Billing Email'
@@ -118,7 +118,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
                 onChange={e => setUserData({ ...userData, billingEmail: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Status</InputLabel>
                 <Select
@@ -134,7 +134,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <TextField
                 fullWidth
                 label='Tax ID'
@@ -143,7 +143,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
                 onChange={e => setUserData({ ...userData, taxId: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <TextField
                 fullWidth
                 label='Contact'
@@ -152,7 +152,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
                 onChange={e => setUserData({ ...userData, contact: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Language</InputLabel>
                 <Select
@@ -176,7 +176,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <FormControl fullWidth>
                 <InputLabel>Country</InputLabel>
                 <Select
@@ -192,7 +192,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <FormControlLabel
                 control={<Switch defaultChecked={userData?.useAsBillingAddress} />}
                 label='Use as a billing address?'

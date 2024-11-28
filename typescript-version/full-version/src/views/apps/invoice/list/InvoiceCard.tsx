@@ -3,7 +3,7 @@
 // MUI Imports
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Divider from '@mui/material/Divider'
 import Avatar from '@mui/material/Avatar'
 import Typography from '@mui/material/Typography'
@@ -48,10 +48,7 @@ const InvoiceCard = () => {
         <Grid container spacing={6}>
           {data.map((item, index) => (
             <Grid
-              item
-              xs={12}
-              sm={6}
-              md={3}
+              size={{ xs: 12, sm: 6, md: 3 }}
               key={index}
               className={classnames({
                 '[&:nth-of-type(odd)>div]:pie-6 [&:nth-of-type(odd)>div]:border-ie':

@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
@@ -45,7 +45,7 @@ const ColoredCards = () => {
   return (
     <Grid container spacing={6}>
       {data.map((item, index) => (
-        <Grid item xs={12} md={6} key={index}>
+        <Grid size={{ xs: 12, md: 6 }} key={index}>
           <div
             className={classnames(
               'flex max-sm:flex-col items-center sm:items-start justify-between gap-6 rounded p-5',

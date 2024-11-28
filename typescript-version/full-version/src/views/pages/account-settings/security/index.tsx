@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import ChangePasswordCard from './ChangePasswordCard'
@@ -11,19 +11,19 @@ import RecentDevicesTable from './RecentDevicesTable'
 const Security = () => {
   return (
     <Grid container>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <ChangePasswordCard />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <TwoFactorAuthenticationCard />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <CreateApiKey />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <ApiKeyList />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <RecentDevicesTable />
       </Grid>
     </Grid>

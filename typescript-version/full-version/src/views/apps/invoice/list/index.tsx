@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Type Imports
 import type { InvoiceType } from '@/types/apps/invoiceTypes'
@@ -11,10 +11,10 @@ import InvoiceCard from './InvoiceCard'
 const InvoiceList = ({ invoiceData }: { invoiceData?: InvoiceType[] }) => {
   return (
     <Grid container>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <InvoiceCard />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <InvoiceListTable invoiceData={invoiceData} />
       </Grid>
     </Grid>

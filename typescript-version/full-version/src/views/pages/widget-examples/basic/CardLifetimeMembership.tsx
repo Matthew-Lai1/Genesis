@@ -1,6 +1,6 @@
 // MUI Imports
 import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
@@ -10,7 +10,7 @@ const CardLifetimeMembership = () => {
   return (
     <Card>
       <Grid container>
-        <Grid item xs={12} sm={7}>
+        <Grid size={{ xs: 12, sm: 7 }}>
           <CardContent>
             <Typography variant='h5' className='mbe-2'>
               Lifetime Membership
@@ -23,7 +23,7 @@ const CardLifetimeMembership = () => {
             </Typography>
             <Divider className='mbs-7 mbe-7' />
             <Grid container>
-              <Grid item xs={12} sm={6} className='flex flex-col pie-5 gap-[26px]'>
+              <Grid size={{ xs: 12, sm: 6 }} className='flex flex-col pie-5 gap-[26px]'>
                 <div className='flex items-center gap-2.5'>
                   <div className='flex'>
                     <i className='ri-lock-unlock-line text-xl text-textSecondary' />
@@ -37,7 +37,10 @@ const CardLifetimeMembership = () => {
                   <Typography color='text.secondary'>15 Members</Typography>
                 </div>
               </Grid>
-              <Grid item xs={12} sm={6} className='flex flex-col max-sm:mbs-[26px] sm:pis-5 sm:border-is gap-[26px]'>
+              <Grid
+                size={{ xs: 12, sm: 6 }}
+                className='flex flex-col max-sm:mbs-[26px] sm:pis-5 sm:border-is gap-[26px]'
+              >
                 <div className='flex items-center gap-2.5'>
                   <div className='flex'>
                     <i className='ri-lock-unlock-line text-xl text-textSecondary' />
@@ -54,7 +57,7 @@ const CardLifetimeMembership = () => {
             </Grid>
           </CardContent>
         </Grid>
-        <Grid item xs={12} sm={5}>
+        <Grid size={{ xs: 12, sm: 5 }}>
           <CardContent className='flex items-center justify-center bs-full bg-actionHover'>
             <div className='flex flex-col items-center justify-center gap-2'>
               <div className='flex items-baseline justify-center'>

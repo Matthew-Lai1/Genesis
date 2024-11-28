@@ -2,7 +2,7 @@
 import { redirect } from 'next/navigation'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Type Imports
 import type { InvoiceType } from '@/types/apps/invoiceTypes'
@@ -46,10 +46,10 @@ const EditPage = async (props: { params: Promise<{ id: string }> }) => {
 
   return filteredData ? (
     <Grid container>
-      <Grid item xs={12} md={9}>
+      <Grid size={{ xs: 12, md: 9 }}>
         <EditCard data={data} invoiceData={filteredData} id={params.id} />
       </Grid>
-      <Grid item xs={12} md={3}>
+      <Grid size={{ xs: 12, md: 3 }}>
         <EditActions id={params.id} />
       </Grid>
     </Grid>

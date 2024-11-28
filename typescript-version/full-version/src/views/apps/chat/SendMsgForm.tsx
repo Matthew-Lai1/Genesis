@@ -224,7 +224,7 @@ const SendMsgForm = ({ dispatch, activeUser, isBelowSmScreen, messageInputRef }:
           }}
           size='small'
           inputRef={messageInputRef}
-          InputProps={{ endAdornment: handleInputEndAdornment() }}
+          slotProps={{ input: { endAdornment: handleInputEndAdornment() } }}
         />
       </form>
     </div>

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import type { ChangeEvent } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 import IconButton from '@mui/material/IconButton'
@@ -79,7 +79,7 @@ const StepPersonalDetails = ({ activeStep, handleNext, handlePrev, steps }: Prop
           <CustomInputVertical
             type='radio'
             key={index}
-            gridProps={{ sm: 4, xs: 12 }}
+            gridProps={{ size: { xs: 12, sm: 4 } }}
             selected={selectedOption}
             name='custom-radios-basic'
             handleChange={handleOptionChange}
@@ -87,52 +87,56 @@ const StepPersonalDetails = ({ activeStep, handleNext, handlePrev, steps }: Prop
           />
         )
       })}
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <TextField fullWidth label='First Name' placeholder='John' />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <TextField fullWidth label='Last Name' placeholder='Doe' />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <TextField fullWidth label='Username' placeholder='john.doe' />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <TextField
           fullWidth
           label='Password'
           placeholder='············'
           id='personal-details-password'
           type={isPasswordShown ? 'text' : 'password'}
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position='end'>
-                <IconButton
-                  edge='end'
-                  onClick={handleClickShowPassword}
-                  onMouseDown={e => e.preventDefault()}
-                  aria-label='toggle password visibility'
-                >
-                  <i className={isPasswordShown ? 'ri-eye-off-line' : 'ri-eye-line'} />
-                </IconButton>
-              </InputAdornment>
-            )
+          slotProps={{
+            input: {
+              endAdornment: (
+                <InputAdornment position='end'>
+                  <IconButton
+                    edge='end'
+                    onClick={handleClickShowPassword}
+                    onMouseDown={e => e.preventDefault()}
+                    aria-label='toggle password visibility'
+                  >
+                    <i className={isPasswordShown ? 'ri-eye-off-line' : 'ri-eye-line'} />
+                  </IconButton>
+                </InputAdornment>
+              )
+            }
           }}
         />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <TextField fullWidth label='Email' placeholder='john.doe@gmail.com' />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <TextField
           fullWidth
           label='Contact'
           placeholder='202 555 0111'
-          InputProps={{
-            startAdornment: <InputAdornment position='start'>US (+1)</InputAdornment>
+          slotProps={{
+            input: {
+              startAdornment: <InputAdornment position='start'>US (+1)</InputAdornment>
+            }
           }}
         />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex items-center justify-between'>
           <Button
             variant='outlined'

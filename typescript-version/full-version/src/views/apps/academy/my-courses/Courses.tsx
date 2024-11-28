@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { useParams } from 'next/navigation'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Chip from '@mui/material/Chip'
@@ -124,7 +124,7 @@ const Courses = (props: Props) => {
         {data.length > 0 ? (
           <Grid container spacing={6}>
             {data.slice(activePage * 6, activePage * 6 + 6).map((item, index) => (
-              <Grid item xs={12} sm={6} md={4} key={index}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
                 <div className='border rounded bs-full'>
                   <div className='pli-2 pbs-2'>
                     <Link href={getLocalizedUrl('/apps/academy/course-details', locale as Locale)} className='flex'>

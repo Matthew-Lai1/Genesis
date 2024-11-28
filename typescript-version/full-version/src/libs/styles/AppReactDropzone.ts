@@ -77,6 +77,6 @@ const AppReactDropzone = styled(Box)<BoxProps>(({ theme }) => ({
       borderRadius: theme.shape.borderRadius
     }
   }
-}))
+})) as typeof Box
 
 export default AppReactDropzone

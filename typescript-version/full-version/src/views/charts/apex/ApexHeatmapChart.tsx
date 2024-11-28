@@ -79,7 +79,10 @@ const ApexHeatmapChart = () => {
     dataLabels: { enabled: false },
 
     // stroke: {
-    //   colors: [theme.palette.mode === 'light' ? theme.palette.background.paper : theme.palette.customColors.bodyBg]
+    //   colors: [theme.palette.background.paper],
+    //   ...theme.applyStyles('dark', {
+    //     colors: [theme.palette.customColors.bodyBg]
+    //   })
     // },
     legend: {
       position: 'bottom',

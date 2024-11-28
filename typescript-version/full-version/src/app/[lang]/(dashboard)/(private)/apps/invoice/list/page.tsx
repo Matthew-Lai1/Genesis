@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import InvoiceList from '@views/apps/invoice/list'
@@ -31,7 +31,7 @@ const InvoiceApp = async () => {
 
   return (
     <Grid container>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <InvoiceList invoiceData={data} />
       </Grid>
     </Grid>

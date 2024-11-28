@@ -5,7 +5,7 @@ import { useState } from 'react'
 import type { SyntheticEvent } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -260,7 +260,7 @@ const ProductInventory = () => {
                 <FormGroup className='flex flex-col gap-4'>
                   <Typography className='font-medium'>Advanced</Typography>
                   <Grid container spacing={4}>
-                    <Grid item xs={12} sm={6} md={7}>
+                    <Grid size={{ xs: 12, sm: 6, md: 7 }}>
                       <FormControl fullWidth>
                         <InputLabel size='small'>Product ID Type</InputLabel>
                         <Select size='small' label='Product ID Type' defaultValue='ISBN'>
@@ -271,7 +271,7 @@ const ProductInventory = () => {
                         </Select>
                       </FormControl>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={5}>
+                    <Grid size={{ xs: 12, sm: 6, md: 5 }}>
                       <TextField fullWidth label='Product ID' placeholder='100023' size='small' />
                     </Grid>
                   </Grid>

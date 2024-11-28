@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
@@ -30,62 +30,66 @@ const StepAccountDetails = ({ handleNext }: { handleNext: () => void }) => {
       <Typography>Account Information</Typography>
       <Typography>Enter Your Account Details</Typography>
       <Grid container>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField fullWidth label='Username' placeholder='johnDoe' />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField fullWidth type='email' label='Email' placeholder='johndoe@gmail.com' />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             fullWidth
             label='Password'
             placeholder='············'
             id='outlined-adornment-password'
             type={isPasswordShown ? 'text' : 'password'}
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position='end'>
-                  <IconButton
-                    edge='end'
-                    onClick={handleClickShowPassword}
-                    onMouseDown={e => e.preventDefault()}
-                    aria-label='toggle password visibility'
-                  >
-                    <i className={isPasswordShown ? 'ri-eye-off-line' : 'ri-eye-line'} />
-                  </IconButton>
-                </InputAdornment>
-              )
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <InputAdornment position='end'>
+                    <IconButton
+                      edge='end'
+                      onClick={handleClickShowPassword}
+                      onMouseDown={e => e.preventDefault()}
+                      aria-label='toggle password visibility'
+                    >
+                      <i className={isPasswordShown ? 'ri-eye-off-line' : 'ri-eye-line'} />
+                    </IconButton>
+                  </InputAdornment>
+                )
+              }
             }}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             fullWidth
             label='Confirm Password'
             placeholder='············'
             id='outlined-confirm-password'
             type={isConfirmPasswordShown ? 'text' : 'password'}
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position='end'>
-                  <IconButton
-                    edge='end'
-                    onClick={handleClickShowConfirmPassword}
-                    onMouseDown={e => e.preventDefault()}
-                    aria-label='toggle confirm password visibility'
-                  >
-                    <i className={isConfirmPasswordShown ? 'ri-eye-off-line' : 'ri-eye-line'} />
-                  </IconButton>
-                </InputAdornment>
-              )
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <InputAdornment position='end'>
+                    <IconButton
+                      edge='end'
+                      onClick={handleClickShowConfirmPassword}
+                      onMouseDown={e => e.preventDefault()}
+                      aria-label='toggle confirm password visibility'
+                    >
+                      <i className={isConfirmPasswordShown ? 'ri-eye-off-line' : 'ri-eye-line'} />
+                    </IconButton>
+                  </InputAdornment>
+                )
+              }
             }}
           />
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <TextField fullWidth label='Profile Link' placeholder='johndoe/profile' />
         </Grid>
-        <Grid item xs={12} className='flex justify-between'>
+        <Grid size={{ xs: 12 }} className='flex justify-between'>
           <Button
             disabled
             variant='contained'

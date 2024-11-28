@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import HorizontalStatisticsCard from '@views/pages/widget-examples/statistics/HorizontalStatisticsCard'
@@ -34,16 +34,16 @@ const Statistics = async () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <LogisticsStatisticsCard data={statsData?.statsHorizontalWithBorder} />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <HorizontalStatisticsCard data={statsData?.statsHorizontalWithAvatar} />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <UserListCards />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <CustomerStatisticsCard customerStatData={statsData?.customerStats} />
       </Grid>
     </Grid>

@@ -2,7 +2,7 @@
 import Link from 'next/link'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 // Component Imports
@@ -14,7 +14,7 @@ import StepperVerticalWithoutNumbers from '@views/forms/form-wizard/StepperVerti
 const FormWizard = () => {
   return (
     <Grid container>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Typography variant='h4'>Stepper</Typography>
         <Typography>
           Please refer to MUI&#39;s official docs for more details on component&#39;s{' '}
@@ -38,22 +38,22 @@ const FormWizard = () => {
           .
         </Typography>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Typography variant='h5'>Linear Stepper with Validation</Typography>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <StepperLinearWithValidation />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Typography variant='h5'>Alternative Label</Typography>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <StepperAlternativeLabel />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <StepperVerticalWithNumbers />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <StepperVerticalWithoutNumbers />
       </Grid>
     </Grid>

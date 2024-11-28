@@ -56,9 +56,15 @@ const ApexChartWrapper = styled(Box)<BoxProps>(({ theme }) => ({
     '& .apexcharts-xaxistooltip': {
       borderColor: 'var(--mui-palette-divider)',
 
-      // background: theme.palette.mode === 'light' ? theme.palette.grey[50] : theme.palette.customColors.bodyBg,
+      // background: 'var(--mui-palette-grey-50)',
+      // ...theme.applyStyles('dark', {
+      //   background: 'var(--mui-palette-customColors-bodyBg)'
+      // }),
       '&:after': {
-        // borderBottomColor: theme.palette.mode === 'light' ? theme.palette.grey[50] : theme.palette.customColors.bodyBg
+        // borderBottomColor: 'var(--mui-palette-grey-50)',
+        // ...theme.applyStyles('dark', {
+        //   borderBottomColor: 'var(--mui-palette-customColors-bodyBg)'
+        // })
       },
       '&:before': {
         borderBottomColor: 'var(--mui-palette-divider)'
@@ -67,9 +73,15 @@ const ApexChartWrapper = styled(Box)<BoxProps>(({ theme }) => ({
     '& .apexcharts-yaxistooltip': {
       borderColor: 'var(--mui-palette-divider)',
 
-      // background: theme.palette.mode === 'light' ? theme.palette.grey[50] : theme.palette.customColors.bodyBg,
+      // background: 'var(--mui-palette-grey-50)',
+      // ...theme.applyStyles('dark', {
+      //   background: 'var(--mui-palette-customColors-bodyBg)'
+      // }),
       '&:after': {
-        // borderLeftColor: theme.palette.mode === 'light' ? theme.palette.grey[50] : theme.palette.customColors.bodyBg
+        // borderBottomColor: 'var(--mui-palette-grey-50)',
+        // ...theme.applyStyles('dark', {
+        //   borderBottomColor: 'var(--mui-palette-customColors-bodyBg)'
+        // })
       },
       '&:before': {
         borderLeftColor: 'var(--mui-palette-divider)'
@@ -92,7 +104,7 @@ const ApexChartWrapper = styled(Box)<BoxProps>(({ theme }) => ({
       boxShadow: 'none'
     }
   }
-}))
+})) as typeof Box
 
 const AppReactApexCharts = (props: ApexChartWrapperProps) => {
   // Props

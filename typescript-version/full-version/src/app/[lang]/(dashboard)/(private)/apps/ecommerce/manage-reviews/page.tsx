@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import TotalReviews from '@views/apps/ecommerce/manage-reviews/TotalReviews'
@@ -33,13 +33,13 @@ const eCommerceManageReviews = async () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <TotalReviews />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <ReviewsStatistics />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <ManageReviewsTable reviewsData={data?.reviews} />
       </Grid>
     </Grid>

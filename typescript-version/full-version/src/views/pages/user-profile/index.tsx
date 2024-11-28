@@ -5,7 +5,7 @@ import { useState } from 'react'
 import type { ReactElement, SyntheticEvent } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Tab from '@mui/material/Tab'
 import TabContext from '@mui/lab/TabContext'
 import TabPanel from '@mui/lab/TabPanel'
@@ -27,11 +27,11 @@ const UserProfile = ({ tabContentList, data }: { tabContentList: { [key: string]
 
   return (
     <Grid container>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <UserProfileHeader data={data?.profileHeader} />
       </Grid>
       {activeTab === undefined ? null : (
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <TabContext value={activeTab}>
             <CustomTabList onChange={handleChange} variant='scrollable' pill='true'>
               <Tab

@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 import Typography from '@mui/material/Typography'
@@ -18,36 +18,38 @@ const StepPersonalInfo = ({ handleNext, handlePrev }: { handleNext: () => void; 
       <Typography>Personal Information</Typography>
       <Typography>Enter Your Personal Information</Typography>
       <Grid container>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField fullWidth label='First Name' placeholder='John' />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField fullWidth label='Last Name' placeholder='Doe' />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField
             fullWidth
             type='number'
             label='Mobile'
             placeholder='123-456-7890'
-            InputProps={{
-              startAdornment: <InputAdornment position='start'>US (+1)</InputAdornment>
+            slotProps={{
+              input: {
+                startAdornment: <InputAdornment position='start'>US (+1)</InputAdornment>
+              }
             }}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField fullWidth type='number' label='Pin Code' placeholder='689421' />
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <TextField fullWidth label='Address' placeholder='1456, Liberty Street' />
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <TextField fullWidth label='Landmark' placeholder='Nr. Wall Street' />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <TextField fullWidth label='City' placeholder='Miami' />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <FormControl fullWidth>
             <InputLabel>State</InputLabel>
             <Select label='State' defaultValue='new-york'>
@@ -59,7 +61,7 @@ const StepPersonalInfo = ({ handleNext, handlePrev }: { handleNext: () => void; 
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={12} className='flex justify-between'>
+        <Grid size={{ xs: 12 }} className='flex justify-between'>
           <Button
             variant='contained'
             color='secondary'

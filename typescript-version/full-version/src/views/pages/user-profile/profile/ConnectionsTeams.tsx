@@ -6,7 +6,7 @@ import CardActions from '@mui/material/CardActions'
 import Typography from '@mui/material/Typography'
 
 import Avatar from '@mui/material/Avatar'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Chip from '@mui/material/Chip'
 
 // Type Imports
@@ -28,7 +28,7 @@ const ConnectionsTeams = (props: Props) => {
 
   return (
     <>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <Card>
           <CardHeader
             title='Connections'
@@ -58,7 +58,7 @@ const ConnectionsTeams = (props: Props) => {
           </CardActions>
         </Card>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <Card>
           <CardHeader
             title='Teams'

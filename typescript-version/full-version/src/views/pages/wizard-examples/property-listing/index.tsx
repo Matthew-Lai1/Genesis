@@ -87,7 +87,11 @@ const PropertyListingWizard = () => {
             {steps.map((step, index) => {
               return (
                 <Step key={index} onClick={() => setActiveStep(index)}>
-                  <StepLabel StepIconComponent={StepperCustomDot}>
+                  <StepLabel
+                    slots={{
+                      stepIcon: StepperCustomDot
+                    }}
+                  >
                     <div className='step-label cursor-pointer'>
                       <Typography className='step-number'>{`0${index + 1}`}</Typography>
                       <div>

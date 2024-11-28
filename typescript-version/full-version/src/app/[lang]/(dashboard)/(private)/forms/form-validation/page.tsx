@@ -2,7 +2,7 @@
 import Link from 'next/link'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 // Component Imports
@@ -13,7 +13,7 @@ import FormValidationAsyncSubmit from '@views/forms/form-validation/FormValidati
 const FormValidation = () => {
   return (
     <Grid container>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Typography variant='h4'>React Hook Form</Typography>
         <Typography>
           <code>react-hook-form</code> is a third-party library. Please refer to its{' '}
@@ -28,13 +28,13 @@ const FormValidation = () => {
           for more details.
         </Typography>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <FormValidationBasic />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <FormValidationOnSchema />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <FormValidationAsyncSubmit />
       </Grid>
     </Grid>

@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 
 // MUI Imports
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Third-party Imports
 import classnames from 'classnames'
@@ -105,7 +105,7 @@ const UsefulFeature = () => {
         <div>
           <Grid container spacing={6}>
             {feature.map((item, index) => (
-              <Grid item xs={12} sm={6} lg={4} key={index}>
+              <Grid size={{ xs: 12, sm: 6, lg: 4 }} key={index}>
                 <div className='flex flex-col gap-2 justify-center items-center'>
                   <div className={classnames('mbe-2', styles.featureIcon)}>
                     <div className='flex items-center border-2 rounded-full p-5 is-[82px] bs-[82px]'>{item.icon}</div>

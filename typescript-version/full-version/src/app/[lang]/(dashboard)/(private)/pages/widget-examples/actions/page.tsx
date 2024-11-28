@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Components Imports
 import CardActionsTable from '@views/pages/widget-examples/actions/Table'
@@ -11,19 +11,19 @@ import CardActionAll from '@views/pages/widget-examples/actions/AllActions'
 const Actions = () => {
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <CardActionsTable />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CardActionCollapsible />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CardActionRefreshContent />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CardActionRemoveCard />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CardActionAll />
       </Grid>
     </Grid>

@@ -6,7 +6,7 @@ import { useState } from 'react'
 // MUI Imports
 import Card from '@mui/material/Card'
 import Chip from '@mui/material/Chip'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Radio from '@mui/material/Radio'
 import Switch from '@mui/material/Switch'
 import Button from '@mui/material/Button'
@@ -91,9 +91,9 @@ const PaymentMethod = () => {
       <CardHeader title='Payment Method' />
       <CardContent>
         <Grid container>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Grid container>
-              <Grid item xs={12}>
+              <Grid size={{ xs: 12 }}>
                 <RadioGroup
                   row
                   name='payment-method-radio'
@@ -106,7 +106,7 @@ const PaymentMethod = () => {
               </Grid>
               {paymentMethod === 'credit' ? (
                 <>
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <TextField
                       fullWidth
                       name='number'
@@ -117,7 +117,7 @@ const PaymentMethod = () => {
                       onChange={e => setCardData({ ...cardData, cardNumber: e.target.value })}
                     />
                   </Grid>
-                  <Grid item xs={12} sm={12} md={6}>
+                  <Grid size={{ xs: 12, sm: 12, md: 6 }}>
                     <TextField
                       fullWidth
                       name='name'
@@ -128,7 +128,7 @@ const PaymentMethod = () => {
                       onChange={e => setCardData({ ...cardData, name: e.target.value })}
                     />
                   </Grid>
-                  <Grid item xs={6} md={3}>
+                  <Grid size={{ xs: 6, lg: 3 }}>
                     <TextField
                       fullWidth
                       name='expiry'
@@ -139,7 +139,7 @@ const PaymentMethod = () => {
                       onChange={e => setCardData({ ...cardData, expiryDate: e.target.value })}
                     />
                   </Grid>
-                  <Grid item xs={6} md={3}>
+                  <Grid size={{ xs: 6, lg: 3 }}>
                     <TextField
                       fullWidth
                       name='cvv'
@@ -150,12 +150,12 @@ const PaymentMethod = () => {
                       onChange={e => setCardData({ ...cardData, cardCvv: e.target.value })}
                     />
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <FormControlLabel control={<Switch defaultChecked />} label='Save Card for future billing?' />
                   </Grid>
                 </>
               ) : (
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                   <Typography>
                     Cash on delivery is a mode of payment where you make the payment after the goods/services are
                     received.
@@ -165,7 +165,7 @@ const PaymentMethod = () => {
                   </Typography>
                 </Grid>
               )}
-              <Grid item xs={12} className='flex gap-4 flex-wrap'>
+              <Grid size={{ xs: 12 }} className='flex gap-4 flex-wrap'>
                 <Button type='submit' variant='contained'>
                   Save Changes
                 </Button>
@@ -176,7 +176,7 @@ const PaymentMethod = () => {
             </Grid>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Typography>My Cards</Typography>
             {data.map((item: DataType, index: number) => (
               <div

@@ -475,7 +475,7 @@ const StyledReactDatePicker = styled(Box)<BoxProps>(({ theme }) => {
       }
     }
   }
-})
+}) as typeof Box
 
 const AppReactDatepicker = (props: Props) => {
   // Props

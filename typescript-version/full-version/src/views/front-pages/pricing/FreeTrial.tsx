@@ -4,7 +4,7 @@ import Link from 'next/link'
 // MUI Imports
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Third-party Imports
 import classnames from 'classnames'
@@ -17,7 +17,7 @@ const FreeTrial = () => {
     <section className='bg-[var(--mui-palette-primary-mainOpacity)]'>
       <div className={classnames('flex justify-between flex-wrap md:relative', frontCommonStyles.layoutSpacing)}>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <div className='flex flex-col gap-11 items-center md:items-start justify-center plb-10'>
               <div className='flex flex-col gap-2 max-md:text-center'>
                 <Typography variant='h5' color='primary' className='font-medium'>
@@ -30,7 +30,7 @@ const FreeTrial = () => {
               </Button>
             </div>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <div className='md:absolute md:inline-end-[90px] xl:inline-end-[2%] flex justify-center block-end-0'>
               <img src='/images/front-pages/landing-page/chris.png' alt='girl with laptop' className='bs-[270px]' />
             </div>

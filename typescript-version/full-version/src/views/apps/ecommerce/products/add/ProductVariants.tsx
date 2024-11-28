@@ -5,7 +5,7 @@ import { useState } from 'react'
 import type { SyntheticEvent } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -36,9 +36,9 @@ const ProductVariants = () => {
       <CardContent>
         <Grid container spacing={6}>
           {Array.from(Array(count).keys()).map((item, index) => (
-            <Grid key={index} item xs={12} className='repeater-item'>
+            <Grid key={index} size={{ xs: 12 }} className='repeater-item'>
               <Grid container spacing={6}>
-                <Grid item xs={12} sm={4}>
+                <Grid size={{ xs: 12, sm: 4 }}>
                   <FormControl fullWidth>
                     <InputLabel>Select Variant</InputLabel>
                     <Select label='Select Variant' defaultValue='Size'>
@@ -49,7 +49,7 @@ const ProductVariants = () => {
                     </Select>
                   </FormControl>
                 </Grid>
-                <Grid item xs={12} sm={8}>
+                <Grid size={{ xs: 12, sm: 8 }}>
                   <div className='flex items-center gap-6'>
                     <TextField fullWidth label='Variant Value' placeholder='Enter Variant Value' />
                     <CustomIconButton onClick={deleteForm} className='min-is-fit'>
@@ -60,7 +60,7 @@ const ProductVariants = () => {
               </Grid>
             </Grid>
           ))}
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <Button variant='contained' onClick={() => setCount(count + 1)} startIcon={<i className='ri-add-line' />}>
               Add Another Option
             </Button>

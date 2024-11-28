@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -21,10 +21,10 @@ const BillingInformation = () => {
       <CardHeader title='Billing Information' />
       <CardContent>
         <Grid container spacing={5}>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <TextField fullWidth label='Legal business name' placeholder='Pixinvent' />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <FormControl fullWidth>
               <InputLabel>Country*</InputLabel>
               <Select
@@ -41,19 +41,19 @@ const BillingInformation = () => {
               </Select>
             </FormControl>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <TextField fullWidth label='Address' placeholder='126, New Street' />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <TextField fullWidth label='Apartment,suit, etc.' placeholder='Empire Heights' />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField fullWidth label='City' placeholder='New York' />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField fullWidth label='State' placeholder='New York' />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField fullWidth type='number' label='PIN Code' placeholder='111011' />
           </Grid>
         </Grid>

@@ -2,7 +2,7 @@
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Divider from '@mui/material/Divider'
 
 // Type Imports
@@ -52,7 +52,7 @@ const PreviewCard = ({ invoiceData, id }: { invoiceData?: InvoiceType; id: strin
     <Card className='previewCard'>
       <CardContent>
         <Grid container>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <div className='bg-actionHover rounded'>
               <div className='flex justify-between flex-col sm:flex-row'>
                 <div className='flex flex-col'>
@@ -75,9 +75,9 @@ const PreviewCard = ({ invoiceData, id }: { invoiceData?: InvoiceType; id: strin
               </div>
             </div>
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <Grid container>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <div className='flex flex-col'>
                   <Typography>Invoice To:</Typography>
                   <div>
@@ -89,7 +89,7 @@ const PreviewCard = ({ invoiceData, id }: { invoiceData?: InvoiceType; id: strin
                   </div>
                 </div>
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid size={{ xs: 12, sm: 6 }}>
                 <div className='flex flex-col'>
                   <Typography>Bill To:</Typography>
                   <div>
@@ -118,7 +118,7 @@ const PreviewCard = ({ invoiceData, id }: { invoiceData?: InvoiceType; id: strin
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <div className='overflow-x-auto border rounded'>
               <table className={tableStyles.table}>
                 <thead>
@@ -144,7 +144,7 @@ const PreviewCard = ({ invoiceData, id }: { invoiceData?: InvoiceType; id: strin
               </table>
             </div>
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <div className='flex justify-between flex-col sm:flex-row'>
               <div className='flex flex-col order-2 sm:order-[unset]'>
                 <div className='flex items-center'>
@@ -174,10 +174,10 @@ const PreviewCard = ({ invoiceData, id }: { invoiceData?: InvoiceType; id: strin
               </div>
             </div>
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <Divider className='border-dashed' />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <Typography>
               Note: It was a pleasure working with you and your team. We hope you will keep us in mind for future
               freelance projects. Thank You!

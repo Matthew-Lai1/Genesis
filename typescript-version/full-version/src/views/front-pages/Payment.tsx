@@ -11,7 +11,7 @@ import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 import Select from '@mui/material/Select'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import FormControl from '@mui/material/FormControl'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
@@ -45,10 +45,12 @@ const cardData: CustomInputHorizontalData[] = [
         <Avatar
           variant='rounded'
           className='is-[58px] bs-[34px]'
-          sx={{
-            backgroundColor: theme =>
-              theme.palette.mode === 'dark' ? theme.palette.common.white : theme.palette.action.hover
-          }}
+          sx={theme => ({
+            backgroundColor: 'var(--mui-palette-action-hover)',
+            ...theme.applyStyles('dark', {
+              backgroundColor: 'var(--mui-palette-common-white)'
+            })
+          })}
         >
           <img src='/images/logos/visa.png' alt='plan' className='bs-3' />
         </Avatar>
@@ -64,10 +66,12 @@ const cardData: CustomInputHorizontalData[] = [
         <Avatar
           variant='rounded'
           className='is-[58px] bs-[34px]'
-          sx={{
-            backgroundColor: theme =>
-              theme.palette.mode === 'dark' ? theme.palette.common.white : theme.palette.action.hover
-          }}
+          sx={theme => ({
+            backgroundColor: 'var(--mui-palette-action-hover)',
+            ...theme.applyStyles('dark', {
+              backgroundColor: 'var(--mui-palette-common-white)'
+            })
+          })}
         >
           <img src='/images/logos/paypal.png' alt='plan' className='bs-5' />
         </Avatar>
@@ -122,7 +126,7 @@ const Payment = ({ data }: { data: PricingPlanType[] }) => {
     <section className={classnames('md:plb-[100px] plb-6', frontCommonStyles.layoutSpacing)}>
       <Card>
         <Grid container>
-          <Grid item md={12} lg={7}>
+          <Grid size={{ md: 12, lg: 7 }}>
             <CardContent className='flex flex-col max-sm:gap-y-5 gap-y-8 sm:p-8 border-be lg:border-be-0 lg:border-e bs-full'>
               <div>
                 <Typography variant='h4'>Checkout</Typography>
@@ -140,7 +144,7 @@ const Payment = ({ data }: { data: PricingPlanType[] }) => {
                     data={item}
                     selected={selectInput}
                     handleChange={handlePaymentChange}
-                    gridProps={{ sm: 6, xs: 12 }}
+                    gridProps={{ size: { xs: 12, sm: 6 } }}
                   />
                 ))}
               </Grid>
@@ -149,13 +153,13 @@ const Payment = ({ data }: { data: PricingPlanType[] }) => {
                   Billing Details
                 </Typography>
                 <Grid container spacing={5}>
-                  <Grid item xs={12} sm={6}>
+                  <Grid size={{ xs: 12, sm: 6 }}>
                     <TextField fullWidth label='Email Address' defaultValue='admin@master.com' type='email' />
                   </Grid>
-                  <Grid item xs={12} sm={6}>
+                  <Grid size={{ xs: 12, sm: 6 }}>
                     <TextField fullWidth type='password' id='password-input' label='Password' defaultValue='admin' />
                   </Grid>
-                  <Grid item xs={12} sm={6}>
+                  <Grid size={{ xs: 12, sm: 6 }}>
                     <FormControl fullWidth>
                       <InputLabel id='country-select-label'>Billing Country</InputLabel>
                       <Select
@@ -173,7 +177,7 @@ const Payment = ({ data }: { data: PricingPlanType[] }) => {
                       </Select>
                     </FormControl>
                   </Grid>
-                  <Grid item xs={12} sm={6}>
+                  <Grid size={{ xs: 12, sm: 6 }}>
                     <TextField
                       label='Billing Zip / Postal Code'
                       id='postal-code-input'
@@ -190,7 +194,7 @@ const Payment = ({ data }: { data: PricingPlanType[] }) => {
                     Credit Card Info
                   </Typography>
                   <Grid container spacing={5}>
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                       <TextField
                         fullWidth
                         id='card-number-input'
@@ -199,13 +203,13 @@ const Payment = ({ data }: { data: PricingPlanType[] }) => {
                         type='number'
                       />
                     </Grid>
-                    <Grid item xs={12} sm={6}>
+                    <Grid size={{ xs: 12, sm: 6 }}>
                       <TextField fullWidth id='card-holder-name' placeholder='John Doe' label='Card Holder' />
                     </Grid>
-                    <Grid item xs={12} sm={3}>
+                    <Grid size={{ xs: 12, sm: 3 }}>
                       <TextField fullWidth id='expiry-date' placeholder='05/2026' label='EXP. date' type='number' />
                     </Grid>
-                    <Grid item xs={12} sm={3}>
+                    <Grid size={{ xs: 12, sm: 3 }}>
                       <TextField fullWidth id='cvv' placeholder='734' label='CVV' type='number' />
                     </Grid>
                   </Grid>
@@ -213,7 +217,7 @@ const Payment = ({ data }: { data: PricingPlanType[] }) => {
               )}
             </CardContent>
           </Grid>
-          <Grid item md={12} lg={5}>
+          <Grid size={{ md: 12, lg: 5 }}>
             <CardContent className='flex flex-col gap-8 sm:p-8'>
               <div className='flex flex-col gap-2'>
                 <Typography variant='h4'>Order Summary</Typography>

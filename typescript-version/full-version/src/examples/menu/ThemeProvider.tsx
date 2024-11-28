@@ -4,10 +4,8 @@
 import { useEffect } from 'react'
 
 // MUI Imports
-import {
-  Experimental_CssVarsProvider as CssVarsProvider,
-  experimental_extendTheme as extendTheme
-} from '@mui/material/styles'
+import { deepmerge } from '@mui/utils'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter'
 import CssBaseline from '@mui/material/CssBaseline'
 import type {} from '@mui/material/themeCssVarsAugmentation' //! Do not remove this import otherwise you will get type errors while making a production build
@@ -27,7 +25,7 @@ type Props = ChildrenType & {
   direction: Direction
 }
 
-const ThemeProvider = (props: Props) => {
+const CustomThemeProvider = (props: Props) => {
   // Props
   const { children, direction } = props
 
@@ -35,10 +33,16 @@ const ThemeProvider = (props: Props) => {
     skin: 'default'
   } as Settings
 
-  const theme = extendTheme(defaultCoreTheme(settings, 'light', direction))
+  const theme = createTheme(
+    deepmerge(defaultCoreTheme(settings, 'light', direction), {
+      cssVariables: {
+        colorSchemeSelector: 'data'
+      }
+    })
+  )
 
   useEffect(() => {
-    document.body.setAttribute('data-mui-color-scheme', 'light')
+    document.body.setAttribute('data-light', '')
   }, [])
 
   return (
@@ -51,14 +55,14 @@ const ThemeProvider = (props: Props) => {
         })
       }}
     >
-      <CssVarsProvider theme={theme} defaultMode='light'>
+      <ThemeProvider theme={theme} defaultMode='light'>
         <>
           <CssBaseline />
           {children}
         </>
-      </CssVarsProvider>
+      </ThemeProvider>
     </AppRouterCacheProvider>
   )
 }
 
-export default ThemeProvider
+export default CustomThemeProvider

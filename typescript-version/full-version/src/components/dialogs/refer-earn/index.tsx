@@ -9,7 +9,7 @@ import DialogTitle from '@mui/material/DialogTitle'
 import DialogContent from '@mui/material/DialogContent'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Avatar from '@mui/material/Avatar'
 import Divider from '@mui/material/Divider'
 import InputLabel from '@mui/material/InputLabel'
@@ -72,7 +72,7 @@ const ReferEarn = ({ open, setOpen }: ReferEarnProps) => {
         </IconButton>
         <Grid container spacing={6}>
           {options?.map((option, index) => (
-            <Grid item xs={12} md={4} key={index}>
+            <Grid size={{ xs: 12, md: 4 }} key={index}>
               <div className='flex items-center flex-col gap-4'>
                 <Avatar className='bs-[66px] is-[66px] sm:bs-[88px] sm:is-[88px]'>
                   {typeof option.icon === 'string' ? (

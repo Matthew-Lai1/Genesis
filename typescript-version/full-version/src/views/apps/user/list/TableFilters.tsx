@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 // MUI Imports
 import CardContent from '@mui/material/CardContent'
 import FormControl from '@mui/material/FormControl'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import Select from '@mui/material/Select'
@@ -33,7 +33,7 @@ const TableFilters = ({ setData, tableData }: { setData: (data: UsersType[]) => 
   return (
     <CardContent>
       <Grid container>
-        <Grid item xs={12} sm={4}>
+        <Grid size={{ xs: 12, sm: 4 }}>
           <FormControl fullWidth>
             <InputLabel id='role-select'>Select Role</InputLabel>
             <Select
@@ -54,7 +54,7 @@ const TableFilters = ({ setData, tableData }: { setData: (data: UsersType[]) => 
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid size={{ xs: 12, sm: 4 }}>
           <FormControl fullWidth>
             <InputLabel id='plan-select'>Select Plan</InputLabel>
             <Select
@@ -74,7 +74,7 @@ const TableFilters = ({ setData, tableData }: { setData: (data: UsersType[]) => 
             </Select>
           </FormControl>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid size={{ xs: 12, sm: 4 }}>
           <FormControl fullWidth>
             <InputLabel id='status-select'>Select Status</InputLabel>
             <Select

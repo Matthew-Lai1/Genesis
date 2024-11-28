@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import TextField from '@mui/material/TextField'
 import InputAdornment from '@mui/material/InputAdornment'
 import FormControl from '@mui/material/FormControl'
@@ -31,40 +31,46 @@ const StepPropertyDetails = ({ activeStep, handleNext, handlePrev, steps }: Prop
 
   return (
     <Grid container>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <TextField
           fullWidth
           type='number'
           label='Total Area'
           placeholder='1000'
-          InputProps={{
-            endAdornment: <InputAdornment position='end'>sq-ft</InputAdornment>
+          slotProps={{
+            input: {
+              endAdornment: <InputAdornment position='end'>sq-ft</InputAdornment>
+            }
           }}
         />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <TextField
           fullWidth
           type='number'
           label='Carpet Area'
           placeholder='800'
-          InputProps={{
-            endAdornment: <InputAdornment position='end'>sq-ft</InputAdornment>
+          slotProps={{
+            input: {
+              endAdornment: <InputAdornment position='end'>sq-ft</InputAdornment>
+            }
           }}
         />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <TextField
           fullWidth
           type='number'
           label='Plot Area'
           placeholder='800'
-          InputProps={{
-            endAdornment: <InputAdornment position='end'>sq-yd</InputAdornment>
+          slotProps={{
+            input: {
+              endAdornment: <InputAdornment position='end'>sq-yd</InputAdornment>
+            }
           }}
         />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <AppReactDatepicker
           selected={date}
           placeholderText='YYYY-MM-DD'
@@ -73,7 +79,7 @@ const StepPropertyDetails = ({ activeStep, handleNext, handlePrev, steps }: Prop
           customInput={<TextField fullWidth label='Available From' />}
         />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <FormControl>
           <FormLabel id='possession-status-radio'>Possession Status</FormLabel>
           <RadioGroup name='possession-status-group' defaultValue='under-construction'>
@@ -82,7 +88,7 @@ const StepPropertyDetails = ({ activeStep, handleNext, handlePrev, steps }: Prop
           </RadioGroup>
         </FormControl>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <FormControl>
           <FormLabel id='transaction-radio'>Transaction Type</FormLabel>
           <RadioGroup defaultValue='new-property' name='transaction-group' aria-labelledby='transaction-radio'>
@@ -91,7 +97,7 @@ const StepPropertyDetails = ({ activeStep, handleNext, handlePrev, steps }: Prop
           </RadioGroup>
         </FormControl>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <FormControl>
           <FormLabel id='main-road-radio'>Is Property Facing Main Road</FormLabel>
           <RadioGroup defaultValue='yes' name='main-road-group' aria-labelledby='main-road-radio'>
@@ -100,7 +106,7 @@ const StepPropertyDetails = ({ activeStep, handleNext, handlePrev, steps }: Prop
           </RadioGroup>
         </FormControl>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <FormControl>
           <FormLabel id='gated-colony-radio'>Gated Colony</FormLabel>
           <RadioGroup defaultValue='yes' name='gated-colony-group' aria-labelledby='gated-colony-radio'>
@@ -109,7 +115,7 @@ const StepPropertyDetails = ({ activeStep, handleNext, handlePrev, steps }: Prop
           </RadioGroup>
         </FormControl>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex items-center justify-between'>
           <Button
             variant='outlined'

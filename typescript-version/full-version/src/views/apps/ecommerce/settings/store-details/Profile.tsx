@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -12,19 +12,19 @@ const Profile = () => {
       <CardHeader title='Profile' />
       <CardContent>
         <Grid container spacing={5}>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <TextField fullWidth label='Store name' placeholder='ABCD' />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <TextField fullWidth label='Phone' placeholder='+(123) 456-7890' />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <TextField fullWidth label='Store contact email' placeholder='johndoe@email.com' />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <TextField fullWidth label='Sender email' placeholder='johndoe@email.com' />
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <Alert severity='warning' icon={<i className='ri-notification-3-line' />}>
               Confirm that you have access to johndoe@gmail.com in sender email settings.
             </Alert>

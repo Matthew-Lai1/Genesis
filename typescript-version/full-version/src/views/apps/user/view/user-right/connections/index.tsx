@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Switch from '@mui/material/Switch'
 
@@ -96,7 +96,7 @@ const socialAccountsArr: SocialAccountsType[] = [
 const ConnectionsTab = () => {
   return (
     <Grid container>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Card>
           <CardHeader
             title='Connected Accounts'
@@ -118,7 +118,7 @@ const ConnectionsTab = () => {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Card>
           <CardHeader title='Social Accounts' subheader='Display content from social accounts on your site' />
           <CardContent>

@@ -2,7 +2,7 @@
 
 // MUI Imports
 import Divider from '@mui/material/Divider'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -123,7 +123,7 @@ const ProductInformation = () => {
       }),
       Underline
     ],
-
+    immediatelyRender: false,
     content: `
       <p>
         Keep your account secure with authentication step.
@@ -136,13 +136,13 @@ const ProductInformation = () => {
       <CardHeader title='Product Information' />
       <CardContent>
         <Grid container spacing={5} className='mbe-5'>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <TextField fullWidth label='Product Name' placeholder='iPhone 14' />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <TextField fullWidth label='SKU' placeholder='FXSK123U' />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <TextField fullWidth label='Barcode' placeholder='0123-4567' />
           </Grid>
         </Grid>

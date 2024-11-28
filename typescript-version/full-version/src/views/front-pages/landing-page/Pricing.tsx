@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 // MUI Imports
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Slider from '@mui/material/Slider'
@@ -118,7 +118,7 @@ const PricingPlan = () => {
 
       <Grid container spacing={6}>
         {pricingPlans.map((plan, index) => (
-          <Grid item key={index} xs={12} lg={4}>
+          <Grid size={{ xs: 12, lg: 4 }} key={index}>
             <Card
               variant='outlined'
               {...(plan.current && { className: 'border-2 border-[var(--mui-palette-primary-main)]' })}

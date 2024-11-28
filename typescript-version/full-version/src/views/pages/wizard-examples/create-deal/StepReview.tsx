@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
 import Switch from '@mui/material/Switch'
@@ -22,7 +22,7 @@ type Props = {
 const StepReview = ({ activeStep, handleNext, handlePrev, steps }: Props) => {
   return (
     <Grid container>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <Typography className='mb-4'>Almost done! 🚀</Typography>
         <Typography className='mb-4'>Confirm your deal details information and submit to create it.</Typography>
         <table className={tableStyles.table}>
@@ -53,12 +53,12 @@ const StepReview = ({ activeStep, handleNext, handlePrev, steps }: Props) => {
         </table>
         <FormControlLabel control={<Switch />} label='I have confirmed the deal details.' />
       </Grid>
-      <Grid item lg={6} xs={12}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <div className='flex justify-center items-end is-full bs-full'>
-          <img alt='review-illustration' src='' />
+          <img alt='review-illustration' src='/' />
         </div>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex items-center justify-between'>
           <Button
             variant='outlined'

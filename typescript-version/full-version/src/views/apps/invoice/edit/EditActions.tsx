@@ -11,7 +11,7 @@ import { useParams } from 'next/navigation'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import FormControl from '@mui/material/FormControl'
 import InputLabel from '@mui/material/InputLabel'
 import Select from '@mui/material/Select'
@@ -38,7 +38,7 @@ const EditActions = ({ id }: { id: string }) => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Card>
           <CardContent>
             <Button
@@ -81,7 +81,7 @@ const EditActions = ({ id }: { id: string }) => {
         <SendInvoiceDrawer open={sendDrawerOpen} handleClose={() => setSendDrawerOpen(false)} />
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <FormControl fullWidth>
           <InputLabel id='payment-select'>Accept payments via</InputLabel>
           <Select fullWidth defaultValue='Internet Banking' label='Accept payments via' labelId='payment-select'>

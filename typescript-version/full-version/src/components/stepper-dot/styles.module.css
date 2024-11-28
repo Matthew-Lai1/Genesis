@@ -18,6 +18,6 @@
   }
 }
 
-[data-mui-color-scheme='dark'] .activeStepperCustomDot {
+[data-dark] .activeStepperCustomDot {
   background-color: var(--mui-palette-background-default);
 }

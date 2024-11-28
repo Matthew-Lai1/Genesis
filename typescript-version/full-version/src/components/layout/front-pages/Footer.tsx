@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
@@ -31,7 +31,7 @@ const Footer = () => {
         />
         <div className={classnames('plb-12 text-white', frontCommonStyles.layoutSpacing)}>
           <Grid container rowSpacing={10} columnSpacing={12}>
-            <Grid item xs={12} lg={5}>
+            <Grid size={{ xs: 12, lg: 5 }}>
               <div className='flex flex-col items-start gap-6'>
                 <Link href='/front-pages/landing-page'>
                   <Logo color='var(--mui-palette-common-white)' />
@@ -64,7 +64,7 @@ const Footer = () => {
                 </div>
               </div>
             </Grid>
-            <Grid item xs={12} sm={3} lg={2}>
+            <Grid size={{ xs: 12, sm: 3, lg: 2 }}>
               <Typography color='white' className='font-medium mbe-6 opacity-[0.92]'>
                 Pages
               </Typography>
@@ -91,7 +91,7 @@ const Footer = () => {
                 </Typography>
               </div>
             </Grid>
-            <Grid item xs={12} sm={3} lg={2}>
+            <Grid size={{ xs: 12, sm: 3, lg: 2 }}>
               <Typography color='white' className='font-medium mbe-6 opacity-[0.92]'>
                 Products
               </Typography>
@@ -110,7 +110,7 @@ const Footer = () => {
                 </Typography>
               </div>
             </Grid>
-            <Grid item xs={12} sm={6} lg={3}>
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
               <Typography color='white' className='font-medium mbe-6 opacity-[0.92]'>
                 Download our App
               </Typography>

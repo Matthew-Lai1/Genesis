@@ -12,7 +12,7 @@ import { useColorScheme } from '@mui/material/styles'
 
 // Type Imports
 import type { getDictionary } from '@/utils/getDictionary'
-import type { Mode, SystemMode } from '@core/types'
+import type { Mode } from '@core/types'
 import type { Locale } from '@configs/i18n'
 
 // Component Imports
@@ -33,12 +33,11 @@ import navigationCustomStyles from '@core/styles/vertical/navigationCustomStyles
 type Props = {
   dictionary: Awaited<ReturnType<typeof getDictionary>>
   mode: Mode
-  systemMode: SystemMode
 }
 
 const Navigation = (props: Props) => {
   // Props
-  const { dictionary, mode, systemMode } = props
+  const { dictionary, mode } = props
 
   // Hooks
   const { isHovered, isCollapsed, collapseVerticalNav } = useVerticalNav()
@@ -47,15 +46,11 @@ const Navigation = (props: Props) => {
   const { mode: muiMode, systemMode: muiSystemMode } = useColorScheme()
 
   // Vars
-  const isServer = typeof window === 'undefined'
   const isSemiDark = settings.semiDark
-  let isDark
 
-  if (isServer) {
-    isDark = mode === 'system' ? systemMode === 'dark' : mode === 'dark'
-  } else {
-    isDark = muiMode === 'system' ? muiSystemMode === 'dark' : muiMode === 'dark'
-  }
+  const currentMode = muiMode === 'system' ? muiSystemMode : muiMode || mode
+
+  const isDark = currentMode === 'dark'
 
   useEffect(() => {
     if (settings.layout === 'collapsed') {
@@ -73,11 +68,11 @@ const Navigation = (props: Props) => {
       customStyles={navigationCustomStyles()}
       backgroundColor='var(--mui-palette-background-paper)'
       // eslint-disable-next-line lines-around-comment
-      // The following condition adds the data-mui-color-scheme='dark' attribute to the VerticalNav component
+      // The following condition adds the data-dark attribute to the VerticalNav component
       // when semiDark is enabled and the mode or systemMode is light
       {...(isSemiDark &&
         !isDark && {
-          'data-mui-color-scheme': 'dark'
+          'data-dark': ''
         })}
     >
       {/* Nav Header including Logo & nav toggle icons  */}

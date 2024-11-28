@@ -7,7 +7,7 @@ import { useState } from 'react'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import TextField from '@mui/material/TextField'
 import InputAdornment from '@mui/material/InputAdornment'
 import IconButton from '@mui/material/IconButton'
@@ -30,69 +30,75 @@ const ChangePasswordCard = () => {
       <CardContent>
         <form>
           <Grid container>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <TextField
                 fullWidth
                 label='Current Password'
                 type={isCurrentPasswordShown ? 'text' : 'password'}
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position='end'>
-                      <IconButton
-                        edge='end'
-                        onClick={handleClickShowCurrentPassword}
-                        onMouseDown={e => e.preventDefault()}
-                      >
-                        <i className={isCurrentPasswordShown ? 'ri-eye-off-line' : 'ri-eye-line'} />
-                      </IconButton>
-                    </InputAdornment>
-                  )
+                slotProps={{
+                  input: {
+                    endAdornment: (
+                      <InputAdornment position='end'>
+                        <IconButton
+                          edge='end'
+                          onClick={handleClickShowCurrentPassword}
+                          onMouseDown={e => e.preventDefault()}
+                        >
+                          <i className={isCurrentPasswordShown ? 'ri-eye-off-line' : 'ri-eye-line'} />
+                        </IconButton>
+                      </InputAdornment>
+                    )
+                  }
                 }}
               />
             </Grid>
           </Grid>
           <Grid container className='mbs-0'>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <TextField
                 fullWidth
                 label='New Password'
                 type={isNewPasswordShown ? 'text' : 'password'}
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position='end'>
-                      <IconButton
-                        edge='end'
-                        onClick={() => setIsNewPasswordShown(!isNewPasswordShown)}
-                        onMouseDown={e => e.preventDefault()}
-                      >
-                        <i className={isNewPasswordShown ? 'ri-eye-off-line' : 'ri-eye-line'} />
-                      </IconButton>
-                    </InputAdornment>
-                  )
+                slotProps={{
+                  input: {
+                    endAdornment: (
+                      <InputAdornment position='end'>
+                        <IconButton
+                          edge='end'
+                          onClick={() => setIsNewPasswordShown(!isNewPasswordShown)}
+                          onMouseDown={e => e.preventDefault()}
+                        >
+                          <i className={isNewPasswordShown ? 'ri-eye-off-line' : 'ri-eye-line'} />
+                        </IconButton>
+                      </InputAdornment>
+                    )
+                  }
                 }}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <TextField
                 fullWidth
                 label='Confirm New Password'
                 type={isConfirmPasswordShown ? 'text' : 'password'}
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position='end'>
-                      <IconButton
-                        edge='end'
-                        onClick={() => setIsConfirmPasswordShown(!isConfirmPasswordShown)}
-                        onMouseDown={e => e.preventDefault()}
-                      >
-                        <i className={isConfirmPasswordShown ? 'ri-eye-off-line' : 'ri-eye-line'} />
-                      </IconButton>
-                    </InputAdornment>
-                  )
+                slotProps={{
+                  input: {
+                    endAdornment: (
+                      <InputAdornment position='end'>
+                        <IconButton
+                          edge='end'
+                          onClick={() => setIsConfirmPasswordShown(!isConfirmPasswordShown)}
+                          onMouseDown={e => e.preventDefault()}
+                        >
+                          <i className={isConfirmPasswordShown ? 'ri-eye-off-line' : 'ri-eye-line'} />
+                        </IconButton>
+                      </InputAdornment>
+                    )
+                  }
                 }}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography>Password Requirements:</Typography>
               <div>
                 <div className='flex items-center'>
@@ -109,7 +115,7 @@ const ChangePasswordCard = () => {
                 </div>
               </div>
             </Grid>
-            <Grid item xs={12} className='flex gap-4'>
+            <Grid size={{ xs: 12 }} className='flex gap-4'>
               <Button variant='contained'>Save Changes</Button>
               <Button variant='outlined' type='reset' color='secondary'>
                 Reset

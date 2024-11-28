@@ -5,7 +5,7 @@ import type { ReactElement } from 'react'
 import dynamic from 'next/dynamic'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Type Imports
 import type { PricingPlanType } from '@/types/pages/pricingTypes'
@@ -56,10 +56,10 @@ const UserViewTab = async () => {
 
   return (
     <Grid container>
-      <Grid item xs={12} lg={4} md={5}>
+      <Grid size={{ xs: 12, lg: 4, md: 5 }}>
         <UserLeftOverview />
       </Grid>
-      <Grid item xs={12} lg={8} md={7}>
+      <Grid size={{ xs: 12, lg: 8, md: 7 }}>
         <UserRight tabContentList={tabContentList(data)} />
       </Grid>
     </Grid>
