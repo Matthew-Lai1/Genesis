@@ -22,7 +22,9 @@ import StepperCustomDot from '@components/stepper-dot';
 <Stepper activeStep={activeStep} orientation='vertical'>
   {steps.map((step, index) => (
     <Step key={index}>
-      <StepLabel StepIconComponent={StepperCustomDot}>
+      <StepLabel slots={{
+        stepIcon: StepperCustomDot
+      }}>
         {/* Step content here */}
       </StepLabel>
     </Step>

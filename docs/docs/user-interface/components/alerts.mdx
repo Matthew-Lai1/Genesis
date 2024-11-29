@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Alerts
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -28,7 +28,7 @@ import SourceCodeAlertsDismissible from '!!raw-loader!@docPages/components/alert
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-alert/) and [API documentation](https://mui.com/material-ui/react-alert/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Basic"
       code={SourceCodeAlertBasic}
@@ -39,7 +39,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AlertBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Outlined"
       code={SourceCodeAlertsOutlined}
@@ -50,7 +50,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AlertsOutlined />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Filled"
       code={SourceCodeAlertsFilled}
@@ -61,7 +61,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AlertsFilled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Action"
       code={SourceCodeAlertsActions}
@@ -72,7 +72,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AlertsActions />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Description"
       code={SourceCodeAlertsDescription}
@@ -83,7 +83,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AlertsDescription />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Dismissible"
       code={SourceCodeAlertsDismissible}

@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Pagination
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -32,7 +32,7 @@ import SourceCodePaginationControlled from '!!raw-loader!@docPages/components/pa
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-pagination/) and [API documentation](https://mui.com/material-ui/react-pagination/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Basic Pagination'
       code={SourceCodePaginationBasic}
@@ -44,7 +44,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <PaginationBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Outlined Pagination'
       code={SourceCodePaginationOutlined}
@@ -55,7 +55,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <PaginationOutlined />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Disabled Pagination'
       code={SourceCodePaginationDisabled}
@@ -66,7 +66,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <PaginationDisabled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Rounded Pagination'
       code={SourceCodePaginationRounded}
@@ -77,7 +77,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <PaginationRounded />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Sizes'
       code={SourceCodePaginationSizes}
@@ -88,7 +88,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <PaginationSizes />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Buttons'
       code={SourceCodePaginationButtons}
@@ -100,7 +100,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <PaginationButtons />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title='Controlled Pagination'
       code={SourceCodePaginationControlled}
@@ -111,7 +111,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <PaginationControlled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title='Pagination Ranges'
       code={SourceCodePaginationRanges}

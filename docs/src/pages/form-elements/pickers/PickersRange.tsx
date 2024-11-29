@@ -2,7 +2,7 @@
 import { useState, forwardRef } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import TextField from '@mui/material/TextField'
 import type { TextFieldProps } from '@mui/material/TextField'
 
@@ -52,12 +52,12 @@ const PickersRange = () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{xs:12}}>
         <AppReactDatepicker
           selectsRange
-          endDate={endDate}
+          endDate={endDate as Date}
           selected={startDate}
-          startDate={startDate}
+          startDate={startDate as Date}
           id='date-range-picker'
           onChange={handleOnChange}
           shouldCloseOnSelect={false}
@@ -66,13 +66,13 @@ const PickersRange = () => {
           }
         />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{xs:12}}>
         <AppReactDatepicker
           selectsRange
           monthsShown={2}
-          endDate={endDateRange}
+          endDate={endDateRange as Date}
           selected={startDateRange}
-          startDate={startDateRange}
+          startDate={startDateRange as Date}
           shouldCloseOnSelect={false}
           id='date-range-picker-months'
           onChange={handleOnChangeRange}

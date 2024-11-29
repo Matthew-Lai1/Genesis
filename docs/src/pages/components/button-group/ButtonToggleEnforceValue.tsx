@@ -3,7 +3,7 @@ import { useState } from 'react'
 import type { MouseEvent } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import ToggleButton from '@mui/material/ToggleButton'
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
@@ -27,7 +27,7 @@ const ButtonToggleEnforceValue = () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{xs:12, sm:6}}>
         <Typography className='font-medium mbe-2'>Exclusive Selection</Typography>
         <ToggleButtonGroup exclusive value={alignment} onChange={handleAlignment} aria-label='text alignment'>
           <ToggleButton value='left' aria-label='left aligned'>
@@ -44,7 +44,7 @@ const ButtonToggleEnforceValue = () => {
           </ToggleButton>
         </ToggleButtonGroup>
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{xs:12, sm:6}}>
         <Typography className='font-medium mbe-2'>Multiple Selection</Typography>
         <ToggleButtonGroup value={formats} onChange={handleFormat} aria-label='device'>
           <ToggleButton value='laptop' aria-label='laptop'>

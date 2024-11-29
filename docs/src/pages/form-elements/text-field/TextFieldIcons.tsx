@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Input from '@mui/material/Input'
 import TextField from '@mui/material/TextField'
 import InputLabel from '@mui/material/InputLabel'
@@ -9,7 +9,7 @@ import InputAdornment from '@mui/material/InputAdornment'
 const TextFieldIcons = () => {
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{xs:12}}>
       <FormControl fullWidth variant='standard'>
         <InputLabel htmlFor='input-with-icon-adornment'>With a start adornment</InputLabel>
         <Input
@@ -22,27 +22,29 @@ const TextFieldIcons = () => {
         />
       </FormControl>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{xs:12}}>
       <TextField
         fullWidth
         label='TextField'
         variant='standard'
         id='input-with-icon-textfield'
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position='start'>
-              <i className='ri-account-circle-line' />
-            </InputAdornment>
-          )
+        slotProps={{
+          input: {
+            startAdornment: (
+              <InputAdornment position='start'>
+                <i className='ri-account-circle-line' />
+              </InputAdornment>
+            )
+          }
         }}
       />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{xs:12}}>
         <Grid container spacing={2} className='items-end'>
-          <Grid item xs={1} className='flex justify-center'>
+        <Grid size={{xs:1}} className='flex justify-center'>
             <i className='ri-account-circle-line text-actionActive' />
           </Grid>
-          <Grid item xs={11}>
+         <Grid size={{xs:11}}>
             <TextField fullWidth variant='standard' id='input-with-icon-grid' label='With a grid' />
           </Grid>
         </Grid>

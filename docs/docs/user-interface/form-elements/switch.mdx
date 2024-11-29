@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Switch
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -30,7 +30,7 @@ import SourceCodeSwitchControlledUncontrolled from '!!raw-loader!@docPages/form-
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-switch/) and [API documentation](https://mui.com/material-ui/react-switch/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title='Basic Switches'
       code={SourceCodeSwitchBasic}
@@ -38,7 +38,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SwitchBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Controlled and Uncontrolled'
       code={SourceCodeSwitchControlledUncontrolled}
@@ -49,7 +49,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SwitchControlledUncontrolled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Label Placement'
       code={SourceCodeSwitchLabelPlacement}
@@ -60,7 +60,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SwitchLabelPlacement />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Colors'
       code={SourceCodeSwitchColors}
@@ -71,7 +71,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SwitchColors />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Customized Switch'
       code={SourceCodeSwitchCustomized}
@@ -82,7 +82,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SwitchCustomized />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Sizes'
       code={SourceCodeSwitchSizes}
@@ -93,7 +93,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SwitchSizes />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Standalone Switch'
       code={SourceCodeSwitchStandalone}

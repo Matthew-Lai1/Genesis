@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Date & Time Pickers
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -38,32 +38,32 @@ import SourceCodePickersMonthYearDropdowns from '!!raw-loader!@docPages/form-ele
 <code>react-datepicker</code> is a third-party library. Please refer to its [official documentation](https://reactdatepicker.com/) for more details.
 
   <Grid container spacing={6}>
-    <Grid item xs={12}>
+    <Grid size={{xs:12}}>
       <CardSnippet title='Date Picker' code={SourceCodePickersBasic}>
         <PickersBasic />
       </CardSnippet>
     </Grid>
-    <Grid item xs={12} md={6}>
+    <Grid size={{xs:12, md:6}}>
       <CardSnippet title='Time Pickers' code={SourceCodePickersTime}>
         <PickersTime />
       </CardSnippet>
     </Grid>
-    <Grid item xs={12} md={6}>
+    <Grid size={{xs:12, md:6}}>
       <CardSnippet title='Min & Max Pickers' code={SourceCodePickersMinMax}>
         <PickersMinMax />
       </CardSnippet>
     </Grid>
-    <Grid item xs={12} md={6}>
+    <Grid size={{xs:12, md:6}}>
       <CardSnippet title='Date Range Pickers' code={SourceCodePickersRange}>
         <PickersRange />
       </CardSnippet>
     </Grid>
-    <Grid item xs={12} md={6}>
+    <Grid size={{xs:12, md:6}}>
       <CardSnippet title='Specific Range' code={SourceCodePickersSpecificRange}>
         <PickersSpecificRange />
       </CardSnippet>
     </Grid>
-    <Grid item xs={12}>
+    <Grid size={{xs:12}}>
       <CardSnippet
         title='Include & Exclude'
         code={SourceCodePickersIncludeExclude}
@@ -71,7 +71,7 @@ import SourceCodePickersMonthYearDropdowns from '!!raw-loader!@docPages/form-ele
         <PickersIncludeExclude />
       </CardSnippet>
     </Grid>
-    <Grid item xs={12} md={6}>
+    <Grid size={{xs:12, md:6}}>
       <CardSnippet
         title='Month & Year Dropdowns'
         code={SourceCodePickersMonthYearDropdowns}
@@ -79,7 +79,7 @@ import SourceCodePickersMonthYearDropdowns from '!!raw-loader!@docPages/form-ele
         <PickersMonthYearDropdowns />
       </CardSnippet>
     </Grid>
-    <Grid item xs={12} md={6}>
+    <Grid size={{xs:12, md:6}}>
       <CardSnippet
         title='Month, Year & Quarter'
         code={SourceCodePickersMonthYearQuarter}
@@ -87,17 +87,17 @@ import SourceCodePickersMonthYearDropdowns from '!!raw-loader!@docPages/form-ele
         <PickersMonthYearQuarter />
       </CardSnippet>
     </Grid>
-    <Grid item xs={12}>
+    <Grid size={{xs:12}}>
       <CardSnippet title='Options' code={SourceCodePickersOptions}>
         <PickersOptions />
       </CardSnippet>
     </Grid>
-    <Grid item xs={12} md={6}>
+    <Grid size={{xs:12, md:6}}>
       <CardSnippet title='Callbacks' code={SourceCodePickersCallbacks}>
         <PickersCallbacks />
       </CardSnippet>
     </Grid>
-    <Grid item xs={12} md={6}>
+    <Grid size={{xs:12, md:6}}>
       <CardSnippet title='Customization' code={SourceCodePickersCustomization}>
         <PickersCustomization />
       </CardSnippet>

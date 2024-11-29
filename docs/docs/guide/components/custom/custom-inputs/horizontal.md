@@ -37,7 +37,7 @@ export type CustomInputHorizontalData = {
 export type CustomInputHorizontalProps = {
   name: string
   color?: ThemeColor
-  gridProps?: GridProps
+  gridProps?: Grid2Props
   data: CustomInputHorizontalData
 } & (
   | {
@@ -81,7 +81,7 @@ const Component = () => {
       type="radio"
       key={index}
       data={item}
-      gridProps={{ xs: 12 }}
+      gridProps={{ size: { xs: 12 } }}
       selected={selectedOption}
       name="custom-radios-basic"
       handleChange={handleOptionChange}

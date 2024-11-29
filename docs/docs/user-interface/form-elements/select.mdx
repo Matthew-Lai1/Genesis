@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Select
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -32,7 +32,7 @@ import SourceCodeSelectControlledUncontrolled from '!!raw-loader!@docPages/form-
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-select/) and [API documentation](https://mui.com/material-ui/react-select/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Variants'
       code={SourceCodeSelectVariants}
@@ -43,7 +43,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SelectVariants />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Native Select'
       code={SourceCodeSelectNative}
@@ -54,7 +54,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SelectNative />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Select Props'
       code={SourceCodeSelectProps}
@@ -65,7 +65,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SelectProps />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Multiple Select'
       code={SourceCodeSelectMultiple}
@@ -76,7 +76,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SelectMultiple />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Controlled and Uncontrolled'
       code={SourceCodeSelectControlledUncontrolled}
@@ -87,7 +87,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SelectControlledUncontrolled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Customized Select'
       code={SourceCodeSelectCustomized}
@@ -98,7 +98,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SelectCustomized />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Grouping'
       code={SourceCodeSelectGrouping}
@@ -109,7 +109,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SelectGrouping />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Select with Dialog'
       code={SourceCodeSelectWithDialog}

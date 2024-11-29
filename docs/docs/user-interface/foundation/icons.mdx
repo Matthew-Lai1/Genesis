@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Icons
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Link from '@mui/material/Link'
 import Tooltip from '@mui/material/Tooltip'
@@ -70,7 +70,7 @@ export const icons = [
 export const RenderIcons = () => {
   return icons.map((icon, index) => {
     return (
-      <Grid item key={index}>
+      <Grid key={index}>
         <Tooltip arrow title={icon} placement='top'>
           <Card>
             <CardContent className='flex'>
@@ -88,12 +88,12 @@ export const RenderIcons = () => {
 <code>@iconify/iconify</code> is a third-party library. Please refer to its [official documentation](https://iconify.design/) for more details.
 
 <Grid container spacing={6}>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <Grid container spacing={6}>
       <RenderIcons />
     </Grid>
   </Grid>
-  <Grid item xs={12} className='text-center'>
+  <Grid size={{xs:12}} className='text-center'>
     <Button
       variant='contained'
       component={Link}

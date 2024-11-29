@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Checkbox
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -32,7 +32,7 @@ import SourceCodeCheckboxControlledUncontrolled from '!!raw-loader!@docPages/for
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-checkbox/) and [API documentation](https://mui.com/material-ui/react-checkbox/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title='Basic Checkboxes'
       code={SourceCodeCheckboxBasic}
@@ -40,7 +40,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <CheckboxBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Controlled and Uncontrolled'
       code={SourceCodeCheckboxControlledUncontrolled}
@@ -51,7 +51,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <CheckboxControlledUncontrolled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Colors'
       code={SourceCodeCheckboxColors}
@@ -62,7 +62,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <CheckboxColors />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Custom Icons'
       code={SourceCodeCheckboxCustomIcons}
@@ -73,7 +73,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <CheckboxCustomIcons />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Customized'
       code={SourceCodeCheckboxCustomized}
@@ -84,7 +84,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <CheckboxCustomized />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Label Placement'
       code={SourceCodeCheckboxLabelPlacement}
@@ -95,7 +95,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <CheckboxLabelPlacement />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Show Error'
       code={SourceCodeCheckboxShowError}
@@ -106,7 +106,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <CheckboxShowError />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title='Sizes'
       code={SourceCodeCheckboxSizes}

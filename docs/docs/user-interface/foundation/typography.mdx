@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Typography
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 import Headings from '@site/src/pages/foundation/typography/Headings'
 import Body from '@site/src/pages/foundation/typography/Body'
@@ -19,19 +19,19 @@ import Color from '@site/src/pages/foundation/typography/Color'
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-typography/) and [API documentation](https://mui.com/material-ui/api/typography/).
 
 <Grid container spacing={6}>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <Headings />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <Body />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <Subtitle />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <Extra />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <Color />
   </Grid>
 </Grid>

@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Editor
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 import CardSnippet from '@docComponents/card-snippet/index'
 import EditorBasic from '@docPages/form-elements/editor/EditorBasic'
@@ -21,7 +21,7 @@ import '@/libs/styles/tiptapEditor.css'
 <code>Tiptap Editor</code> is a third-party library. Please refer to its [official documentation](https://tiptap.dev/docs/editor/installation/nextjs) for more details.
 
 <Grid container spacing={6}>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title='Basic Editor'
       code={SourceCodeEditorBasic}
@@ -30,7 +30,7 @@ import '@/libs/styles/tiptapEditor.css'
       <EditorBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title='Custom Editor'
       code={SourceCodeEditorCustom}

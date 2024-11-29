@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Autocomplete
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -46,7 +46,7 @@ import SourceCodeAutocompleteControlledUncontrolled from '!!raw-loader!@docPages
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-autocomplete/) and [API documentation](https://mui.com/material-ui/api/autocomplete/).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Variants'
       code={SourceCodeAutocompleteVariants}
@@ -57,9 +57,9 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AutocompleteVariants />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{xs:12}}>
         <CardSnippet
         title='Controlled and Uncontrolled'
         code={SourceCodeAutocompleteControlledUncontrolled}
@@ -70,7 +70,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
           <AutocompleteControlledUncontrolled />
         </CardSnippet>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{xs:12}}>
         <CardSnippet
         title='Free Solo'
         code={SourceCodeAutocompleteFreeSolo}
@@ -83,7 +83,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       </Grid>
     </Grid>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Autocomplete Props'
       code={SourceCodeAutocompleteProps}
@@ -94,9 +94,9 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AutocompleteProps />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{xs:12}}>
         <CardSnippet
           title='Country Select'
           code={SourceCodeAutocompleteCountry}
@@ -107,7 +107,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
           <AutocompleteCountry />
         </CardSnippet>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{xs:12}}>
         <CardSnippet
           title='Creatable'
           code={SourceCodeAutocompleteCreatable}
@@ -118,7 +118,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
           <AutocompleteCreatable />
         </CardSnippet>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{xs:12}}>
         <CardSnippet
           title='Multiple Values'
           code={SourceCodeAutocompleteMultipleValues}
@@ -131,7 +131,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       </Grid>
     </Grid>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Disabled Options'
       code={SourceCodeAutocompleteDisabledOptions}
@@ -142,7 +142,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AutocompleteDisabledOptions />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Grouped'
       code={SourceCodeAutocompleteGrouped}
@@ -153,7 +153,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AutocompleteGrouped />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Checkboxes'
       code={SourceCodeAutocompleteCheckboxes}
@@ -164,7 +164,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AutocompleteCheckboxes />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Fixed Options'
       code={SourceCodeAutocompleteFixedOptions}
@@ -175,7 +175,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AutocompleteFixedOptions />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Small Size'
       code={SourceCodeAutocompleteSmallSize}
@@ -186,7 +186,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AutocompleteSmallSize />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Limit Tags'
       code={SourceCodeAutocompleteLimitTags}
@@ -197,7 +197,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AutocompleteLimitTags />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Custom Filter'
       code={SourceCodeAutocompleteCustomFilter}
@@ -208,7 +208,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AutocompleteCustomFilter />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Custom Input'
       code={SourceCodeAutocompleteCustomInput}

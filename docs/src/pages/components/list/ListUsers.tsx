@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography'
 import List from '@mui/material/List'
 import ListItemText from '@mui/material/ListItemText'
 import ListItemAvatar from '@mui/material/ListItemAvatar'
-import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction'
 import type { ListProps } from '@mui/material/List'
 
 import useBaseUrl from '@docusaurus/useBaseUrl'
@@ -82,7 +81,13 @@ const ListUsers = () => {
   return (
     <StyledList disablePadding>
       {userList.map((user, index) => (
-        <ListItem key={index}>
+        <ListItem key={index}
+         secondaryAction={
+          <Button variant='contained' size='small'>
+            Add
+          </Button>
+         }
+        >
           <ListItemAvatar>
             <Avatar src={`${useBaseUrl(user.avatarSrc)}`} alt={user.name} />
           </ListItemAvatar>
@@ -98,11 +103,6 @@ const ListUsers = () => {
               </Typography>
             </div>
           </div>
-          <ListItemSecondaryAction>
-            <Button variant='contained' size='small'>
-              Add
-            </Button>
-          </ListItemSecondaryAction>
         </ListItem>
       ))}
     </StyledList>

@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Timeline
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 import CardSnippet from '@docComponents/card-snippet/index'
 import TimelineFilled from '@docPages/components/timeline/TimelineFilled'
@@ -21,7 +21,7 @@ import SourceCodeTimeLineCenter from '!!raw-loader!@docPages/components/timeline
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-timeline/) and [API documentation](https://mui.com/material-ui/react-timeline/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
      title='Timeline Filled' 
      code={SourceCodeTimelineFilled}
@@ -29,7 +29,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <TimelineFilled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
      title='Timeline Outlined'
      code={SourceCodeTimelineOutlined}
@@ -37,7 +37,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <TimelineOutlined />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       className='bg-transparent'
       sx={{

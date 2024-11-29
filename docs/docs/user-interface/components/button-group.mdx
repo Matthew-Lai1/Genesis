@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Button Groups
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -40,7 +40,7 @@ import SourceCodeButtonToggleEnforceValue from '!!raw-loader!@docPages/component
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-button-group/) and [API documentation](https://mui.com/material-ui/api/button-group/).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Basic Button Group"
       code={SourceCodeButtonGroupBasic}
@@ -51,7 +51,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ButtonGroupBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Button Group Sizes"
       code={SourceCodeButtonGroupSizes}
@@ -62,7 +62,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ButtonGroupSizes />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Vertical Button Group"
       code={SourceCodeButtonGroupVertical}
@@ -73,7 +73,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ButtonGroupVertical />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Split Button"
       code={SourceCodeButtonGroupSplit}
@@ -84,7 +84,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ButtonGroupSplit />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Button Group Colors"
       code={SourceCodeButtonGroupColors}
@@ -95,11 +95,11 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ButtonGroupColors />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <Typography variant='h5'>Toggle Button</Typography>
     <Typography variant='body2'>Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-toggle-button/) and [API documentation](https://mui.com/material-ui/react-toggle-button/#api).</Typography>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Basic Toggle Button"
       code={SourceCodeButtonToggleBasic}
@@ -110,7 +110,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ButtonToggleBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Multiple Toggle Button"
       code={SourceCodeButtonToggleMultiple}
@@ -121,7 +121,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ButtonToggleMultiple />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Toggle Button Sizes"
       code={SourceCodeButtonToggleSizes}
@@ -132,7 +132,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ButtonToggleSizes />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Vertical Toggle Button"
       code={SourceCodeButtonToggleVertical}
@@ -143,7 +143,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ButtonToggleVertical />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title="Enforce Value Set"
       code={SourceCodeButtonToggleEnforceValue}
@@ -154,7 +154,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ButtonToggleEnforceValue />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title="Customized Toggle Button"
       code={SourceCodeButtonToggleCustomized}
@@ -165,7 +165,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ButtonToggleCustomized />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Toggle Button Colors"
       code={SourceCodeButtonToggleColors}

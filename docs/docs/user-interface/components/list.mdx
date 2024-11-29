@@ -4,7 +4,7 @@ title: ''
 sidebar_label: List
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -36,7 +36,7 @@ import SourceCodeListStickySubheader from '!!raw-loader!@docPages/components/lis
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-list/) and [API documentation](https://mui.com/material-ui/react-list/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Basic List'
       code={SourceCodeListBasic}
@@ -47,7 +47,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ListBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Nested List'
       code={SourceCodeListNested}
@@ -55,7 +55,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ListNested />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Dense List'
       code={SourceCodeListDense}
@@ -66,7 +66,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ListDense />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='List with Secondary Text'
       code={SourceCodeListSecondary}
@@ -77,7 +77,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ListSecondary />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Selected List Item'
       code={SourceCodeListItemSelected}
@@ -88,7 +88,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ListItemSelected />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='List with Checkbox'
       code={SourceCodeListWithCheckbox}
@@ -96,7 +96,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ListWithCheckbox />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='List with Switch'
       code={SourceCodeListWithSwitch}
@@ -104,7 +104,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ListWithSwitch />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Sticky Subheader'
       code={SourceCodeListStickySubheader}
@@ -115,7 +115,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ListStickySubheader />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Users List'
       code={SourceCodeListUsers}
@@ -123,7 +123,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ListUsers />
     </CardSnippet>
   </Grid>
-   <Grid item xs={12} md={6}>
+   <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Progress List'
       code={SourceCodeListProgress}

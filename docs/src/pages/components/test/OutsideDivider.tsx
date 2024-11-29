@@ -8,7 +8,7 @@ const OutsideDivider = () => {
       <Typography>Basic Divider</Typography>
       <Divider />
       <Typography>Light Divider (below)</Typography>
-      <Divider light />
+      <Divider className='opacity-60' />
       <div className='flex'>
         <Typography>Vertical</Typography>
         <Divider flexItem orientation='vertical' className='mlb-1 mis-4 mie-0' />

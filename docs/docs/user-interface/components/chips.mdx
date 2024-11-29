@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Chips
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -34,7 +34,7 @@ import SourceCodeChipsClickable from '!!raw-loader!@docPages/components/chips/Ch
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-chip/) and [API documentation](https://mui.com/material-ui/api/chip/).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Chip Variants"
       code={SourceCodeChipsVariants}
@@ -45,7 +45,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ChipsVariants />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Disabled Chips"
       code={SourceCodeChipsDisabled}
@@ -56,7 +56,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ChipsDisabled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Colors"
       code={SourceCodeChipsColors}
@@ -67,7 +67,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ChipsColors />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="onDelete"
       code={SourceCodeChipsOnDelete}
@@ -78,7 +78,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ChipsOnDelete />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Chip Sizes"
       code={SourceCodeChipsSizes}
@@ -89,7 +89,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ChipsSizes />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Clickable Chip"
       code={SourceCodeChipsClickable}
@@ -100,7 +100,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ChipsClickable />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Chip with Avatar"
       code={SourceCodeChipsAvatar}
@@ -111,7 +111,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ChipsAvatar />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title="Icon Chip"
       code={SourceCodeChipsIcon}
@@ -122,7 +122,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ChipsIcon />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title="Chips Array"
       code={SourceCodeChipsArray}

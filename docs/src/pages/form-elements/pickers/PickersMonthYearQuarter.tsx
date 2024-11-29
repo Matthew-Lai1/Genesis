@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import CustomInput from './PickersCustomInput'
@@ -16,33 +16,33 @@ const PickersMonthYear = () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{xs:12, lg:6}}>
         <AppReactDatepicker
           selected={month}
           id='month-picker'
           showMonthYearPicker
           dateFormat='MM/yyyy'
-          onChange={(date: Date) => setMonth(date)}
+          onChange={(date: Date | null) => setMonth(date)}
           customInput={<CustomInput label='Month Picker' />}
         />
       </Grid>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{xs:12, lg:6}}>
         <AppReactDatepicker
           showYearPicker
           selected={year}
           id='year-picker'
           dateFormat='MM/yyyy'
-          onChange={(date: Date) => setYear(date)}
+          onChange={(date: Date | null) => setYear(date)}
           customInput={<CustomInput label='Year Picker' />}
         />
       </Grid>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{xs:12, lg:6}}>
         <AppReactDatepicker
           selected={quarter}
           id='quarter-picker'
           showQuarterYearPicker
           dateFormat='yyyy, QQQ'
-          onChange={(date: Date) => setQuarter(date)}
+          onChange={(date: Date | null) => setQuarter(date)}
           customInput={<CustomInput label='Quarter Picker' />}
         />
       </Grid>

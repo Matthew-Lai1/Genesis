@@ -24,7 +24,7 @@ export type CustomInputVerticalData = {
 export type CustomInputVerticalProps = {
   name: string
   color?: ThemeColor
-  gridProps?: GridProps
+  gridProps?: Grid2Props
   data: CustomInputVerticalData
 } & (
   | {
@@ -66,7 +66,7 @@ const Component = () => {
     <CustomInputVertical
       type='radio'
       key={index}
-      gridProps={{ sm: 4, xs: 12 }}
+      gridProps={{ size: { xs: 12, sm: 4 } }}
       selected={selectedOption}
       name='custom-radios-basic'
       handleChange={handleOptionChange}

@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Progress
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
 
@@ -39,11 +39,11 @@ import SourceCodeProgressCircularControlledUncontrolled from '!!raw-loader!@docP
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-progress/) and [API documentation](https://mui.com/material-ui/react-progress/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <Typography variant='h5'>Circular</Typography>
     <Divider />
   </Grid>
-  <Grid item xs={12} lg={6}>
+  <Grid size={{xs:12, lg:6}}>
     <CardSnippet
       title='Indeterminate'
       code={SourceCodeProgressCircularIndeterminate}
@@ -54,7 +54,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ProgressCircularIndeterminate />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
+  <Grid size={{xs:12, lg:6}}>
     <CardSnippet
       title='Colors'
       code={SourceCodeProgressCircularColors}
@@ -65,7 +65,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ProgressCircularColors />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
+  <Grid size={{xs:12, lg:6}}>
     <CardSnippet
       title='With label'
       code={SourceCodeProgressCircularWithLabel}
@@ -76,7 +76,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ProgressCircularWithLabel />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
+  <Grid size={{xs:12, lg:6}}>
     <CardSnippet
       title='Customization'
       code={SourceCodeProgressCustomization}
@@ -87,7 +87,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ProgressCustomization />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title='Controlled and Uncontrolled'
       code={SourceCodeProgressCircularControlledUncontrolled}
@@ -98,11 +98,11 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ProgressCircularControlledUncontrolled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <Typography variant='h5'>Linear</Typography>
     <Divider />
   </Grid>
-  <Grid item xs={12} lg={6}>
+  <Grid size={{xs:12, lg:6}}>
     <CardSnippet
       title='Indeterminate'
       code={SourceCodeProgressLinearIndeterminate}
@@ -113,7 +113,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ProgressLinearIndeterminate />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
+  <Grid size={{xs:12, lg:6}}>
     <CardSnippet
       title='Buffer'
       code={SourceCodeProgressLinearBuffer}
@@ -124,7 +124,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ProgressLinearBuffer />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
+  <Grid size={{xs:12, lg:6}}>
     <CardSnippet
       title='Colors'
       code={SourceCodeProgressLinearColors}
@@ -135,7 +135,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ProgressLinearColors />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
+  <Grid size={{xs:12, lg:6}}>
     <CardSnippet
       title='Controlled and Uncontrolled'
       code={SourceCodeProgressLinearControlledUncontrolled}
@@ -146,7 +146,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ProgressLinearControlledUncontrolled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
+  <Grid size={{xs:12, lg:6}}>
     <CardSnippet
       title='With Label'
       code={SourceCodeProgressLinearWithLabel}
@@ -157,7 +157,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ProgressLinearWithLabel />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
+  <Grid size={{xs:12, lg:6}}>
     <CardSnippet
       title='Customization'
       code={SourceCodeProgressLinearCustomization}

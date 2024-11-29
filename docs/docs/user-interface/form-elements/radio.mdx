@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Radio
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -32,7 +32,7 @@ import SourceCodeRadioControlledUncontrolled from '!!raw-loader!@docPages/form-e
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-radio-button/) and [API documentation](https://mui.com/material-ui/react-radio-button/#api-2).
 
 <Grid container spacing={6}>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title='RadioGroup'
       code={SourceCodeRadioGroup}
@@ -43,7 +43,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <RadioGroup />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title='Controlled and Uncontrolled'
       code={SourceCodeRadioControlledUncontrolled}
@@ -54,7 +54,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <RadioControlledUncontrolled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Standalone Radio Buttons'
       code={SourceCodeRadioStandalone}
@@ -65,7 +65,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <RadioStandalone />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Colors'
       code={SourceCodeRadioColor}
@@ -76,7 +76,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <RadioColor />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Sizes'
       code={SourceCodeRadioSizes}
@@ -87,7 +87,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <RadioSizes />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Customized Radio'
       code={SourceCodeRadioCustomized}
@@ -98,7 +98,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <RadioCustomized />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Label Placement'
       code={SourceCodeRadioLabelPlacement}
@@ -109,7 +109,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <RadioLabelPlacement />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Show Error'
       code={SourceCodeRadioShowError}

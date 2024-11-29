@@ -3,7 +3,7 @@ import { useState } from 'react'
 import type { ReactNode } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import List from '@mui/material/List'
 import Button from '@mui/material/Button'
@@ -13,6 +13,7 @@ import Checkbox from '@mui/material/Checkbox'
 import CardHeader from '@mui/material/CardHeader'
 import ListItemText from '@mui/material/ListItemText'
 import ListItemIcon from '@mui/material/ListItemIcon'
+import ListItemButton from '@mui/material/ListItemButton'
 
 const not = (a: readonly number[], b: readonly number[]) => {
   return a.filter(value => b.indexOf(value) === -1)
@@ -92,7 +93,7 @@ const TransferListEnhanced = () => {
           const labelId = `transfer-list-all-item-${value}-label`
 
           return (
-            <ListItem key={value} role='listitem' button onClick={handleToggle(value)}>
+            <ListItemButton key={value} role='listitem' onClick={handleToggle(value)}>
               <ListItemIcon>
                 <Checkbox
                   tabIndex={-1}
@@ -102,7 +103,7 @@ const TransferListEnhanced = () => {
                 />
               </ListItemIcon>
               <ListItemText id={labelId} primary={`List item ${value + 1}`} />
-            </ListItem>
+            </ListItemButton>
           )
         })}
         <ListItem />
@@ -112,8 +113,8 @@ const TransferListEnhanced = () => {
 
   return (
     <Grid container spacing={4} className='items-center justify-center'>
-      <Grid item>{customList('Choices', left)}</Grid>
-      <Grid item>
+      <Grid>{customList('Choices', left)}</Grid>
+      <Grid>
         <Grid container direction='column' className='items-center'>
           <Button
             size='small'
@@ -137,7 +138,7 @@ const TransferListEnhanced = () => {
           </Button>
         </Grid>
       </Grid>
-      <Grid item>{customList('Chosen', right)}</Grid>
+      <Grid>{customList('Chosen', right)}</Grid>
     </Grid>
   )
 }

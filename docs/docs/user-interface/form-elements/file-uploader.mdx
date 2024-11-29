@@ -4,7 +4,7 @@ title: ''
 sidebar_label: File Uploader
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 import CardSnippet from '@docComponents/card-snippet/index'
 import AppReactDropzone from '@docComponents/styled-components/AppReactDropzone'
@@ -27,7 +27,7 @@ It is essential to ensure that when incorporating the <code>react-dropzone</code
 
 <AppReactDropzone>
   <Grid container spacing={6}>
-    <Grid item xs={12}>
+    <Grid size={{xs:12}}>
       <CardSnippet
         title='Upload Multiple Files'
         code={SourceCodeFileUploaderMultiple}
@@ -35,7 +35,7 @@ It is essential to ensure that when incorporating the <code>react-dropzone</code
         <FileUploaderMultiple />
       </CardSnippet>
     </Grid>
-    <Grid item xs={12}>
+    <Grid size={{xs:12}}>
       <CardSnippet
         title='Upload Single Files'
         code={SourceCodeFileUploaderSingle}
@@ -43,7 +43,7 @@ It is essential to ensure that when incorporating the <code>react-dropzone</code
         <FileUploaderSingle />
       </CardSnippet>
     </Grid>
-    <Grid item xs={12}>
+    <Grid size={{xs:12}}>
       <CardSnippet
         title='Upload Files with Restrictions'
         code={SourceCodeFileUploaderRestrictions}

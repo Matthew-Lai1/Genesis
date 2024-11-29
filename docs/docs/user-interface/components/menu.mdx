@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Menu
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -30,7 +30,7 @@ import SourceCodeMenuComposition from '!!raw-loader!@docPages/components/menu/Me
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-menu/) and [API documentation](https://mui.com/material-ui/react-menu/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Basic Menu'
       code={SourceCodeMenuBasic}
@@ -42,7 +42,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <MenuBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Selected Menu'
       code={SourceCodeMenuSelected}
@@ -53,7 +53,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <MenuSelected />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='MenuList Composition'
       code={SourceCodeMenuComposition}
@@ -64,7 +64,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <MenuComposition />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Customized Menu'
       code={SourceCodeMenuCustomized}
@@ -75,7 +75,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <MenuCustomized />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Max Height Menu'
       code={SourceCodeMenuMaxHeight}
@@ -86,7 +86,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <MenuMaxHeight />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{xs:12, md:6}}>
     <CardSnippet
       title='Change Transition'
       code={SourceCodeMenuTransition}
@@ -97,7 +97,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <MenuTransition />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{xs:12}}>
     <CardSnippet
       title='Context Menu'
       code={SourceCodeMenuContext}

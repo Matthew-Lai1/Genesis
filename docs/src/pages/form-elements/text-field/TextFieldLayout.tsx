@@ -1,11 +1,11 @@
 // MUI Imports
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import TextField from "@mui/material/TextField";
 
 const TextFieldLayout = () => {
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{xs:12}}>
         <TextField
           fullWidth
           label="Full width"
@@ -13,7 +13,7 @@ const TextFieldLayout = () => {
           className='mbe-4'
         />
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid size={{xs:12, md:4}}>
         <TextField
           fullWidth
           label="None"
@@ -23,7 +23,7 @@ const TextFieldLayout = () => {
           helperText="Some important text"
         />
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid size={{xs:12, md:4}}>
       <TextField
         fullWidth
         label="Dense"
@@ -34,7 +34,7 @@ const TextFieldLayout = () => {
         helperText="Some important text"
       />
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid size={{xs:12, md:4}}>
       <TextField
         fullWidth
         label="Normal"
