@@ -59,7 +59,7 @@ import type { BoxProps } from '@mui/material/Box'
 
 const StepperWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   // Responsive and state-based style definitions...
-}))
+})) as typeof Box
 
 export default StepperWrapper
 ```

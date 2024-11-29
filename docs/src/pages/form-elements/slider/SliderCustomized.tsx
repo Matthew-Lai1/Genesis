@@ -64,7 +64,10 @@ const Slider = styled(MuiSlider)<SliderProps>(({ theme }) => ({
     },
     '& *': {
       background: 'transparent',
-      color: theme.palette.mode === 'dark' ? theme.palette.common.white : theme.palette.common.black
+      color: 'var(--mui-palette-common-black)',
+      ...theme.applyStyles('dark', {
+        color: 'var(--mui-palette-common-white)'
+      })
     }
   }
 }))

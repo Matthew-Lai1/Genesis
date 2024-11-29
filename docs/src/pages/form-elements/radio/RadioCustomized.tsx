@@ -11,9 +11,12 @@ const BpIcon = styled('span')(({ theme }) => ({
   width: 16,
   height: 16,
   borderRadius: '50%',
-  backgroundColor: theme.palette.mode === 'dark' ? '#394b59' : '#f5f8fa',
+  backgroundColor: '#f5f8fa',
   'input:hover ~ &': {
-    backgroundColor: theme.palette.mode === 'dark' ? '#30404d' : '#ebf1f5'
+    backgroundColor: '#ebf1f5',
+    ...theme.applyStyles('dark', {
+      backgroundColor: '#30404d'
+    })
   },
   '.Mui-focusVisible &': {
     outlineOffset: 2,
@@ -21,23 +24,25 @@ const BpIcon = styled('span')(({ theme }) => ({
   },
   'input:disabled ~ &': {
     boxShadow: 'none',
-    background: theme.palette.mode === 'dark' ? 'rgba(57,75,89,.5)' : 'rgba(206,217,224,.5)'
+    background: 'rgba(206,217,224,.5)',
+    ...theme.applyStyles('dark', {
+      background: 'rgba(57,75,89,.5)'
+    })
   },
-  boxShadow:
-    theme.palette.mode === 'dark'
-      ? '0 0 0 1px rgb(16 22 26 / 40%)'
-      : 'inset 0 0 0 1px rgba(16,22,26,.2), inset 0 -1px 0 rgba(16,22,26,.1)',
-  backgroundImage:
-    theme.palette.mode === 'dark'
-      ? 'linear-gradient(180deg,hsla(0,0%,100%,.05),hsla(0,0%,100%,0))'
-      : 'linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0))'
+  boxShadow: 'inset 0 0 0 1px rgba(16,22,26,.2), inset 0 -1px 0 rgba(16,22,26,.1)',
+  backgroundImage: 'linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0))',
+  ...theme.applyStyles('dark', {
+    backgroundColor: '#394b59',
+    boxShadow: '0 0 0 1px rgb(16 22 26 / 40%)',
+    backgroundImage: 'linear-gradient(180deg,hsla(0,0%,100%,.05),hsla(0,0%,100%,0))'
+  })
 }))
 
 const BpCheckedIcon = styled(BpIcon)({
-  backgroundColor: '#137cbd',
+  backgroundColor: '#137cbd !important',
   backgroundImage: 'linear-gradient(180deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,0))',
   'input:hover ~ &': {
-    backgroundColor: '#106ba3'
+    backgroundColor: '#106ba3 !important'
   },
   '&:before': {
     width: 16,

@@ -3,8 +3,8 @@ import type { ReactNode } from "react";
 
 // MUI Imports
 import {
-  Experimental_CssVarsProvider as CssVarsProvider,
-  experimental_extendTheme as extendTheme,
+  ThemeProvider,
+  createTheme,
   StyledEngineProvider
 } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -23,8 +23,8 @@ import colorSchemes from '@core/theme/colorSchemes'
 import spacing from "@core/theme/spacing";
 import typography from "@core/theme/typography";
 
-const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const theme = extendTheme({
+const CustomThemeProvider = ({ children }: { children: ReactNode }) => {
+  const theme = createTheme({
     components: overrides(),
     colorSchemes: colorSchemes(),
     ...spacing,
@@ -34,24 +34,27 @@ const ThemeProvider = ({ children }: { children: ReactNode }) => {
         sm: 4,
         md: 6,
         lg: 8,
-        xl: 10
-      }
+        xl: 10,
+      },
     },
-    typography: typography('')
+    typography: typography(''),
+    cssVariables: {
+      colorSchemeSelector: 'data'
+    }
   });
 
   return (
     <StyledEngineProvider injectFirst>
-      <CssVarsProvider
+      <ThemeProvider
         theme={theme}
         modeStorageKey={`${themeConfig.templateName.toLowerCase().split(' ').join('-')}-mui-docs-mode`}
       >
         <CssBaseline />
         <ChangeMuiMode />
         {children}
-      </CssVarsProvider>
+      </ThemeProvider>
     </StyledEngineProvider>
   );
 };
 
-export default ThemeProvider;
+export default CustomThemeProvider;

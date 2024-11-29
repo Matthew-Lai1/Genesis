@@ -15,8 +15,10 @@ import type { AccordionDetailsProps } from '@mui/material/AccordionDetails'
 // Styled component for Accordion component
 const Accordion = styled(MuiAccordion)<AccordionProps>(({ theme }) => ({
   boxShadow: 'none !important',
-  border:
-    theme.palette.mode === 'light' ? `1px solid ${theme.palette.grey[300]}` : `1px solid ${theme.palette.divider}`,
+  border: '1px solid var(--mui-palette-grey-300)',
+  ...theme.applyStyles('dark', {
+    borderColor: 'var(--mui-palette-divider)',
+  }),
   '&:not(:last-of-type)': {
     borderBottom: 0
   },
@@ -46,9 +48,12 @@ const AccordionSummary = styled(MuiAccordionSummary)<AccordionSummaryProps>(({ t
   padding: theme.spacing(0, 4),
   minHeight: theme.spacing(12),
   transition: 'min-height 0.15s ease-in-out',
-  backgroundColor: theme.palette.mode === 'light' ? theme.palette.grey[50] : theme.palette.background.default,
-  borderBottom:
-    theme.palette.mode === 'light' ? `1px solid ${theme.palette.grey[300]}` : `1px solid ${theme.palette.divider}`,
+  backgroundColor: 'var(--mui-palette-grey-50)',
+  borderBottom: '1px solid var(--mui-palette-grey-300)',
+  ...theme.applyStyles('dark', {
+    backgroundColor: 'var(--mui-palette-background-default)',
+    borderColor: 'var(--mui-palette-divider)',
+  }),
   '&.Mui-expanded': {
     minHeight: theme.spacing(12)
   },

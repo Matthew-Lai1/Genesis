@@ -41,7 +41,7 @@ type Props = ComponentProps<typeof ReactDatePickerComponent> & {
 // Styled Components
 const StyledReactDatePicker = styled(Box)<BoxProps>(({ theme }) => ({
   // Custom styles for React-Datepicker...
-}))
+})) as typeof Box
 
 // Component to render the date-picker
 const AppReactDatepicker = (props: Props) => {
