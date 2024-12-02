@@ -144,15 +144,17 @@ const AddCategoryDrawer = (props: Props) => {
               placeholder='No file chosen'
               value={fileName}
               className='flex-auto'
-              InputProps={{
-                readOnly: true,
-                endAdornment: fileName ? (
-                  <InputAdornment position='end'>
-                    <IconButton size='small' edge='end' onClick={() => setFileName('')}>
-                      <i className='tabler-x' />
-                    </IconButton>
-                  </InputAdornment>
-                ) : null
+              slotProps={{
+                input: {
+                  readOnly: true,
+                  endAdornment: fileName ? (
+                    <InputAdornment position='end'>
+                      <IconButton size='small' edge='end' onClick={() => setFileName('')}>
+                        <i className='tabler-x' />
+                      </IconButton>
+                    </InputAdornment>
+                  ) : null
+                }
               }}
             />
             <Button component='label' variant='tonal' htmlFor='contained-button-file' className='min-is-fit'>

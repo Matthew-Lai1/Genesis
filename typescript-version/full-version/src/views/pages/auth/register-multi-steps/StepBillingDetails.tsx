@@ -3,7 +3,7 @@ import { useState } from 'react'
 import type { ChangeEvent } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import type { TypographyProps } from '@mui/material/Typography'
@@ -117,7 +117,7 @@ const StepBillingDetails = ({ handlePrev }: { handlePrev: () => void }) => {
             type='radio'
             key={index}
             data={item}
-            gridProps={{ xs: 12, sm: 4 }}
+            gridProps={{ size: { xs: 12, sm: 4 } }}
             selected={selectedOption}
             name='custom-radios-basic'
             handleChange={handleOptionChange}
@@ -129,19 +129,19 @@ const StepBillingDetails = ({ handlePrev }: { handlePrev: () => void }) => {
         <Typography>Enter your card information</Typography>
       </div>
       <Grid container spacing={6}>
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <CustomTextField fullWidth label='Card Number' placeholder='1356 3215 6548 7898' />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <CustomTextField fullWidth label='Name On Card' placeholder='John Doe' />
         </Grid>
-        <Grid item xs={12} sm={3}>
+        <Grid size={{ xs: 12, sm: 3 }}>
           <CustomTextField fullWidth label='Expiry Date' placeholder='MM/YY' />
         </Grid>
-        <Grid item xs={12} sm={3}>
+        <Grid size={{ xs: 12, sm: 3 }}>
           <CustomTextField fullWidth label='CVV Code' placeholder='654' />
         </Grid>
-        <Grid item xs={12} className='flex justify-between'>
+        <Grid size={{ xs: 12 }} className='flex justify-between'>
           <Button
             variant='tonal'
             color='secondary'

@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 
 // MUI Imports
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
@@ -73,7 +73,7 @@ const ContactUs = () => {
         </div>
         <div className='lg:pis-[38px]'>
           <Grid container spacing={6}>
-            <Grid item xs={12} md={6} lg={5}>
+            <Grid size={{ xs: 12, md: 6, lg: 5 }}>
               <div className={classnames('border p-[10px] relative', styles.contactRadius)}>
                 <img
                   src='/images/front-pages/landing-page/contact-border.png'
@@ -112,7 +112,7 @@ const ContactUs = () => {
                 </div>
               </div>
             </Grid>
-            <Grid item xs={12} md={6} lg={7}>
+            <Grid size={{ xs: 12, md: 6, lg: 7 }}>
               <Card>
                 <CardContent>
                   <div className='flex flex-col gap-y-[6px] mbe-6'>

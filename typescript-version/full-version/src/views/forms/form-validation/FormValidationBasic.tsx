@@ -7,7 +7,7 @@ import { useState } from 'react'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Radio from '@mui/material/Radio'
 import RadioGroup from '@mui/material/RadioGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
@@ -76,7 +76,7 @@ const FormValidationBasic = () => {
       <CardContent>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid container spacing={6}>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <Controller
                 name='firstName'
                 control={control}
@@ -92,7 +92,7 @@ const FormValidationBasic = () => {
                 )}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <Controller
                 name='lastName'
                 control={control}
@@ -108,7 +108,7 @@ const FormValidationBasic = () => {
                 )}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <Controller
                 name='email'
                 control={control}
@@ -125,7 +125,7 @@ const FormValidationBasic = () => {
                 )}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <Controller
                 name='password'
                 control={control}
@@ -138,26 +138,28 @@ const FormValidationBasic = () => {
                     placeholder='············'
                     id='form-validation-basic-password'
                     type={isPasswordShown ? 'text' : 'password'}
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position='end'>
-                          <IconButton
-                            edge='end'
-                            onClick={handleClickShowPassword}
-                            onMouseDown={e => e.preventDefault()}
-                            aria-label='toggle password visibility'
-                          >
-                            <i className={isPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
-                          </IconButton>
-                        </InputAdornment>
-                      )
+                    slotProps={{
+                      input: {
+                        endAdornment: (
+                          <InputAdornment position='end'>
+                            <IconButton
+                              edge='end'
+                              onClick={handleClickShowPassword}
+                              onMouseDown={e => e.preventDefault()}
+                              aria-label='toggle password visibility'
+                            >
+                              <i className={isPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
+                            </IconButton>
+                          </InputAdornment>
+                        )
+                      }
                     }}
                     {...(errors.password && { error: true, helperText: 'This field is required.' })}
                   />
                 )}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <Controller
                 name='dob'
                 control={control}
@@ -182,7 +184,7 @@ const FormValidationBasic = () => {
                 )}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <Controller
                 name='select'
                 control={control}
@@ -199,7 +201,7 @@ const FormValidationBasic = () => {
               />
               {errors.select && <FormHelperText error>This field is required.</FormHelperText>}
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Controller
                 name='textarea'
                 control={control}
@@ -216,7 +218,7 @@ const FormValidationBasic = () => {
                 )}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <FormControl error={Boolean(errors.radio)}>
                 <FormLabel>Gender</FormLabel>
                 <Controller
@@ -234,7 +236,7 @@ const FormValidationBasic = () => {
                 {errors.radio && <FormHelperText error>This field is required.</FormHelperText>}
               </FormControl>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <FormControl error={Boolean(errors.checkbox)}>
                 <Controller
                   name='checkbox'
@@ -247,7 +249,7 @@ const FormValidationBasic = () => {
                 {errors.checkbox && <FormHelperText error>This field is required.</FormHelperText>}
               </FormControl>
             </Grid>
-            <Grid item xs={12} className='flex gap-4'>
+            <Grid size={{ xs: 12 }} className='flex gap-4'>
               <Button variant='contained' type='submit'>
                 Submit
               </Button>

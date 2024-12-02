@@ -9,10 +9,10 @@ const ChangeMuiMode = () => {
   const { colorMode } = useColorMode()
   const { mode, setMode } = useColorScheme()
 
-  if (colorMode === "light" && mode === "dark") {
+  if (colorMode === "light" && mode !== "light") {
     setMode("light")
   }
-  if (colorMode === "dark" && mode === "light") {
+  if (colorMode === "dark" && mode !== "dark") {
     setMode("dark")
   }
 

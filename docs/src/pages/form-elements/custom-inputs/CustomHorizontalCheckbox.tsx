@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Type Imports
 import type { CustomInputHorizontalData } from '@core/components/custom-inputs/types'
@@ -53,7 +53,7 @@ const CustomHorizontalCheckbox = () => {
           selected={selected}
           handleChange={handleChange}
           name='custom-checkbox-basic'
-          gridProps={{ sm: 6, xs: 12 }}
+          gridProps={{ size: { xs: 12, sm: 6 } }}
         />
       ))}
     </Grid>

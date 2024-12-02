@@ -6,7 +6,7 @@ import type { MouseEvent } from 'react'
 
 // MUI Imports
 import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 import CardActions from '@mui/material/CardActions'
@@ -32,12 +32,12 @@ const CardMobile = () => {
   return (
     <Card>
       <Grid container>
-        <Grid item xs={12} md={5} className='flex items-center justify-center'>
+        <Grid size={{ xs: 12, md: 5 }} className='flex items-center justify-center'>
           <CardContent className='flex items-center justify-center'>
             <img alt='iPhone 11 Pro' src='/images/cards/4.png' height={175} />
           </CardContent>
         </Grid>
-        <Grid item xs={12} md={7} className='md:border-is border-bs md:border-bs-0'>
+        <Grid size={{ xs: 12, md: 7 }} className='md:border-is border-bs md:border-bs-0'>
           <CardContent>
             <Typography variant='h5' className='mbe-2'>
               Apple iPhone 11 Pro

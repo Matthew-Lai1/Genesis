@@ -11,7 +11,7 @@ import { useParams } from 'next/navigation'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import Switch from '@mui/material/Switch'
@@ -37,7 +37,7 @@ const EditActions = ({ id }: { id: string }) => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Card>
           <CardContent className='flex flex-col gap-4'>
             <Button
@@ -80,7 +80,7 @@ const EditActions = ({ id }: { id: string }) => {
         <SendInvoiceDrawer open={sendDrawerOpen} handleClose={() => setSendDrawerOpen(false)} />
       </Grid>
 
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <CustomTextField select fullWidth defaultValue='Internet Banking' label='Accept payments via'>
           <MenuItem value='Internet Banking'>Internet Banking</MenuItem>
           <MenuItem value='Debit Card'>Debit Card</MenuItem>

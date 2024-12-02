@@ -4,7 +4,7 @@ title: ''
 sidebar_label: List
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -36,98 +36,66 @@ import SourceCodeListStickySubheader from '!!raw-loader!@docPages/components/lis
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-list/) and [API documentation](https://mui.com/material-ui/react-list/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='Basic List'
-      code={SourceCodeListBasic}
-    >
-      <Typography className='mbe-4'>
-          Lists are a continuous group of text or images.
-        </Typography>
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Basic List' code={SourceCodeListBasic}>
+      <Typography className='mbe-4'>Lists are a continuous group of text or images.</Typography>
       <ListBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='Nested List'
-      code={SourceCodeListNested}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Nested List' code={SourceCodeListNested}>
       <ListNested />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='Dense List'
-      code={SourceCodeListDense}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Dense List' code={SourceCodeListDense}>
       <Typography className='mbe-4'>
         Use <code>dense</code> prop with <code>&lt;List&gt;</code> component for dense list.
       </Typography>
       <ListDense />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='List with Secondary Text'
-      code={SourceCodeListSecondary}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='List with Secondary Text' code={SourceCodeListSecondary}>
       <Typography className='mbe-4'>
         Use <code>secondary</code> prop with <code>&lt;ListItemText&gt;</code> component for secondary text.
       </Typography>
       <ListSecondary />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='Selected List Item'
-      code={SourceCodeListItemSelected}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Selected List Item' code={SourceCodeListItemSelected}>
       <Typography className='mbe-4'>
         Manage <code>selected</code> prop with the help of a state.
       </Typography>
       <ListItemSelected />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='List with Checkbox'
-      code={SourceCodeListWithCheckbox}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='List with Checkbox' code={SourceCodeListWithCheckbox}>
       <ListWithCheckbox />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='List with Switch'
-      code={SourceCodeListWithSwitch}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='List with Switch' code={SourceCodeListWithSwitch}>
       <ListWithSwitch />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='Sticky Subheader'
-      code={SourceCodeListStickySubheader}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Sticky Subheader' code={SourceCodeListStickySubheader}>
       <Typography className='mbe-4'>
         <code>&lt;ListSubheader&gt;</code> is by default sticky.
       </Typography>
       <ListStickySubheader />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='Users List'
-      code={SourceCodeListUsers}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Users List' code={SourceCodeListUsers}>
       <ListUsers />
     </CardSnippet>
   </Grid>
-   <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='Progress List'
-      code={SourceCodeListProgress}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Progress List' code={SourceCodeListProgress}>
       <ListProgress />
     </CardSnippet>
   </Grid>

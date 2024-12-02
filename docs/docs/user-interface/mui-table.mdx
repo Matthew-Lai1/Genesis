@@ -4,7 +4,7 @@ title: ''
 sidebar_label: MUI Table
 ---
 
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 
@@ -23,43 +23,43 @@ import TableStickyHeader from '@docPages/tables/mui/TableStickyHeader';
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-table/) and [API documentation](https://mui.com/material-ui/react-table/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Card>
       <CardHeader title='Basic Table' />
       <TableBasic />
     </Card>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Card>
       <CardHeader title='Dense Table' />
       <TableDense />
     </Card>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Card>
       <CardHeader title='Sticky Header' />
       <TableStickyHeader />
     </Card>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Card>
       <CardHeader title='Collapsible Table' />
       <TableCollapsible />
     </Card>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Card>
       <CardHeader title='Spanning Table' />
       <TableSpanning />
     </Card>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Card>
       <CardHeader title='Customized Table' />
       <TableCustomized />
     </Card>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Card>
       <TableSortSelect />
     </Card>

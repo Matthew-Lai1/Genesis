@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import AppReactDatepicker from '@/libs/styles/AppReactDatepicker'
@@ -24,51 +24,51 @@ const PickersOptions = () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} lg={4}>
+      <Grid size={{ xs: 12, lg: 4 }}>
         <AppReactDatepicker
           isClearable
           id='picker-clear'
           selected={dateClear}
           customInput={<CustomTextField label='Clear' fullWidth />}
-          onChange={(date: Date) => setDateClear(date)}
+          onChange={(date: Date | null) => setDateClear(date)}
         />
       </Grid>
-      <Grid item xs={12} lg={4}>
+      <Grid size={{ xs: 12, lg: 4 }}>
         <AppReactDatepicker
           weekLabel='Wk'
           showWeekNumbers
           id='picker-week-num'
           selected={dateWeekNum}
-          onChange={(date: Date) => setDateWeekNum(date)}
+          onChange={(date: Date | null) => setDateWeekNum(date)}
           customInput={<CustomTextField label='Week Numbers' fullWidth />}
         />
       </Grid>
-      <Grid item xs={12} lg={4}>
+      <Grid size={{ xs: 12, lg: 4 }}>
         <AppReactDatepicker
           id='picker-filter'
           selected={dateFilter}
           filterDate={isWeekday}
-          onChange={(date: Date) => setDateFilter(date)}
+          onChange={(date: Date | null) => setDateFilter(date)}
           customInput={<CustomTextField label='Filter Dates' fullWidth />}
         />
       </Grid>
-      <Grid item xs={12} lg={4}>
+      <Grid size={{ xs: 12, lg: 4 }}>
         <AppReactDatepicker
           showYearDropdown
           showMonthDropdown
           selected={dateOpen}
           id='picker-open-date'
           openToDate={new Date('1993/09/28')}
-          onChange={(date: Date) => setDateOpen(date)}
+          onChange={(date: Date | null) => setDateOpen(date)}
           customInput={<CustomTextField label='Open To Date' fullWidth />}
         />
       </Grid>
-      <Grid item xs={12} lg={4}>
+      <Grid size={{ xs: 12, lg: 4 }}>
         <AppReactDatepicker
           todayButton='Today'
           selected={dateTodayBtn}
           id='picker-date-today-btn'
-          onChange={(date: Date) => setDateTodayBtn(date)}
+          onChange={(date: Date | null) => setDateTodayBtn(date)}
           customInput={<CustomTextField label='Date Today Button' fullWidth />}
         />
       </Grid>

@@ -74,7 +74,11 @@ const AddPaymentDrawer = ({ open, handleClose }: Props) => {
             fullWidth
             id='invoice-balance'
             label='Invoice Balance'
-            InputProps={{ disabled: true }}
+            slotProps={{
+              input: {
+                disabled: true
+              }
+            }}
             defaultValue='5000.00'
           />
           <CustomTextField
@@ -82,8 +86,10 @@ const AddPaymentDrawer = ({ open, handleClose }: Props) => {
             id='payment-amount'
             label='Payment Amount'
             type='number'
-            InputProps={{
-              startAdornment: <InputAdornment position='start'>$</InputAdornment>
+            slotProps={{
+              input: {
+                startAdornment: <InputAdornment position='start'>$</InputAdornment>
+              }
             }}
             value={formData.paymentAmount}
             onChange={e => setFormData({ ...formData, paymentAmount: +e.target.value })}

@@ -2,7 +2,7 @@
 import Link from 'next/link'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
 import Divider from '@mui/material/Divider'
@@ -33,7 +33,7 @@ const products = [
 const StepConfirmation = () => {
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex items-center flex-col text-center gap-4'>
           <Typography variant='h4'>Thank You! 😇</Typography>
           <Typography>
@@ -55,7 +55,7 @@ const StepConfirmation = () => {
           </div>
         </div>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex flex-col md:flex-row border rounded'>
           <div className='flex flex-col is-full items-center p-6 sm:items-start max-md:[&:not(:last-child)]:border-be md:[&:not(:last-child)]:border-ie'>
             <div className='flex items-center gap-2 mbe-4'>
@@ -96,7 +96,7 @@ const StepConfirmation = () => {
           </div>
         </div>
       </Grid>
-      <Grid item xs={12} md={8} xl={9}>
+      <Grid size={{ xs: 12, md: 8, xl: 9 }}>
         <div className='border rounded'>
           {products.map((product, index) => (
             <div
@@ -128,7 +128,7 @@ const StepConfirmation = () => {
           ))}
         </div>
       </Grid>
-      <Grid item xs={12} md={4} xl={3}>
+      <Grid size={{ xs: 12, md: 4, xl: 3 }}>
         <div className='border rounded'>
           <CardContent className='flex gap-4 flex-col'>
             <Typography color='text.primary' className='font-medium'>

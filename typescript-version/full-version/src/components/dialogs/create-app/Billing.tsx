@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Switch from '@mui/material/Switch'
 import Button from '@mui/material/Button'
@@ -32,7 +32,7 @@ const Billing = ({ activeStep, isLastStep, handleNext, handlePrev }: Props) => {
     <div className='flex flex-col gap-6'>
       <Typography variant='h5'>Payment Details</Typography>
       <Grid container spacing={6}>
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <CustomTextField
             fullWidth
             name='number'
@@ -43,7 +43,7 @@ const Billing = ({ activeStep, isLastStep, handleNext, handlePrev }: Props) => {
             onChange={e => setCardData({ ...cardData, number: e.target.value })}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <CustomTextField
             fullWidth
             name='name'
@@ -54,7 +54,7 @@ const Billing = ({ activeStep, isLastStep, handleNext, handlePrev }: Props) => {
             onChange={e => setCardData({ ...cardData, name: e.target.value })}
           />
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid size={{ xs: 6, sm: 3 }}>
           <CustomTextField
             fullWidth
             name='expiry'
@@ -65,7 +65,7 @@ const Billing = ({ activeStep, isLastStep, handleNext, handlePrev }: Props) => {
             onChange={e => setCardData({ ...cardData, expiry: e.target.value })}
           />
         </Grid>
-        <Grid item xs={6} sm={3}>
+        <Grid size={{ xs: 6, sm: 3 }}>
           <CustomTextField
             fullWidth
             name='cvv'
@@ -76,10 +76,10 @@ const Billing = ({ activeStep, isLastStep, handleNext, handlePrev }: Props) => {
             onChange={e => setCardData({ ...cardData, cvv: e.target.value })}
           />
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <FormControlLabel control={<Switch defaultChecked />} label='Save Card for future billing?' />
         </Grid>
-        <Grid item xs={12} className='flex items-center justify-between'>
+        <Grid size={{ xs: 12 }} className='flex items-center justify-between'>
           <Button
             variant='tonal'
             color='secondary'

@@ -28,7 +28,9 @@ import { getInvoiceData } from '@/app/server/actions'
   return res.json()
 } */
 
-const PreviewPage = async ({ params }: { params: { id: string } }) => {
+const PreviewPage = async (props: { params: Promise<{ id: string }> }) => {
+  const params = await props.params
+
   // Vars
   const data = await getInvoiceData()
 

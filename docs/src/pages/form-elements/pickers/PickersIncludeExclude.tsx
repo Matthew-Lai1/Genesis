@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Third-party Imports
 import { addDays, subDays, setHours, setMinutes } from 'date-fns'
@@ -20,31 +20,31 @@ const PickersIncludeExclude = () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <AppReactDatepicker
           selected={date}
           id='include-dates'
-          onChange={(date: Date) => setDate(date)}
+          onChange={(date: Date | null) => setDate(date)}
           customInput={<CustomTextField label='Include Dates' fullWidth />}
           includeDates={[new Date(), addDays(new Date(), 1)]}
         />
       </Grid>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <AppReactDatepicker
           id='exclude-dates'
           selected={dateExclude}
-          onChange={(date: Date) => setDateExclude(date)}
+          onChange={(date: Date | null) => setDateExclude(date)}
           customInput={<CustomTextField label='Exclude Dates' fullWidth />}
           excludeDates={[subDays(new Date(), 1), subDays(new Date(), 2)]}
         />
       </Grid>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <AppReactDatepicker
           showTimeSelect
           selected={time}
           id='include-time'
           dateFormat='MM/dd/yyyy h:mm aa'
-          onChange={(date: Date) => setTime(date)}
+          onChange={(date: Date | null) => setTime(date)}
           customInput={<CustomTextField label='Include Time' fullWidth />}
           includeTimes={[
             setHours(setMinutes(new Date(), 0), 17),
@@ -54,13 +54,13 @@ const PickersIncludeExclude = () => {
           ]}
         />
       </Grid>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <AppReactDatepicker
           showTimeSelect
           id='exclude-time'
           selected={timeExclude}
           dateFormat='MM/dd/yyyy h:mm aa'
-          onChange={(date: Date) => setTimeExclude(date)}
+          onChange={(date: Date | null) => setTimeExclude(date)}
           customInput={<CustomTextField label='Exclude Time' fullWidth />}
           excludeTimes={[
             setHours(setMinutes(new Date(), 0), 17),

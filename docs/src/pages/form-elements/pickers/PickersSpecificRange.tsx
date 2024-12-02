@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Third-party Imports
 import { addDays, setHours, setMinutes } from 'date-fns'
@@ -18,23 +18,23 @@ const PickersSpecificRange = () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <AppReactDatepicker
           selected={date}
           id='specific-date'
           minDate={new Date()}
           maxDate={addDays(new Date(), 5)}
-          onChange={(date: Date) => setDate(date)}
+          onChange={(date: Date | null) => setDate(date)}
           customInput={<CustomTextField label='Specific Date Range' fullWidth />}
         />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <AppReactDatepicker
           showTimeSelect
           selected={time}
           id='specific-time'
           dateFormat='MM/dd/yyyy h:mm aa'
-          onChange={(date: Date) => setTime(date)}
+          onChange={(date: Date | null) => setTime(date)}
           minTime={setHours(setMinutes(new Date(), 0), 17)}
           maxTime={setHours(setMinutes(new Date(), 30), 20)}
           customInput={<CustomTextField label='Specific Time' fullWidth />}

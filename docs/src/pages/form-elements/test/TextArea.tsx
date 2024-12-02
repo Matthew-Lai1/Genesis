@@ -3,7 +3,7 @@ import { useState } from 'react'
 import type { ChangeEvent } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import TextField from '@mui/material/TextField'
 import CardHeader from '@mui/material/CardHeader'
@@ -22,7 +22,7 @@ const Textarea = () => {
       <CardHeader title='Textarea' />
       <CardContent>
         <Grid container spacing={6}>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <TextField 
             fullWidth
             multiline
@@ -33,11 +33,11 @@ const Textarea = () => {
             id='textarea-outlined-controlled'
           />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <TextField 
             fullWidth multiline id='textarea-outlined' placeholder='Placeholder' label='Multiline Placeholder' />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <TextField 
             fullWidth
             rows={4}
@@ -47,7 +47,7 @@ const Textarea = () => {
             id='textarea-outlined-static'
           />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <TextField 
             fullWidth
             multiline
@@ -59,7 +59,7 @@ const Textarea = () => {
             id='textarea-filled-controlled'
           />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <TextField 
             fullWidth
             multiline
@@ -69,7 +69,7 @@ const Textarea = () => {
             label='Multiline Placeholder'
           />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <TextField 
             fullWidth
             rows={4}
@@ -80,7 +80,7 @@ const Textarea = () => {
             defaultValue='Default Value'
           />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField 
               fullWidth
               multiline
@@ -92,7 +92,7 @@ const Textarea = () => {
               id='textarea-standard-controlled'
             />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField 
               fullWidth
               multiline
@@ -102,7 +102,7 @@ const Textarea = () => {
               label='Multiline Placeholder'
             />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField 
               fullWidth
               rows={4}

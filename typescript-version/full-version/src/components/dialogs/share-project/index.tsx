@@ -158,20 +158,24 @@ const ShareProject = ({ open, setOpen }: ShareProjectProps) => {
           <CustomAutocomplete
             fullWidth
             options={autocompleteOptions || []}
-            ListboxComponent={List}
+            slotProps={{ listbox: { component: List } }}
             id='add-member'
             getOptionLabel={option => option.name}
             renderInput={params => (
               <CustomTextField {...params} size='small' placeholder='Add project members...' label='Add Members' />
             )}
-            renderOption={(props, option) => (
-              <ListItem {...props} key={option.name} sx={{ width: 'calc(100% - 1rem)' }}>
-                <ListItemAvatar>
-                  <CustomAvatar src={`/images/avatars/${option.avatar}`} alt={option.name} size={30} />
-                </ListItemAvatar>
-                <ListItemText primary={option.name} />
-              </ListItem>
-            )}
+            renderOption={(props, option) => {
+              const { key, ...rest } = props
+
+              return (
+                <ListItem key={key} {...rest} sx={{ width: 'calc(100% - 1rem)' }}>
+                  <ListItemAvatar>
+                    <CustomAvatar src={`/images/avatars/${option.avatar}`} alt={option.name} size={30} />
+                  </ListItemAvatar>
+                  <ListItemText primary={option.name} />
+                </ListItem>
+              )
+            }}
           />
         </div>
         <div className='flex flex-col gap-4'>

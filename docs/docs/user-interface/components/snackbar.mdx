@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Snackbar
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -28,7 +28,7 @@ import SourceCodeSnackbarControlSlideDirection from '!!raw-loader!@docPages/comp
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-snackbar/) and [API documentation](https://mui.com/material-ui/react-snackbar/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Basic Snackbar'
       code={SourceCodeSnackbarBasic}
@@ -39,7 +39,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SnackbarBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Alert Snackbar'
       code={SourceCodeSnackbarAlert}
@@ -50,7 +50,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SnackbarAlert />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Positioned Snackbar'
       code={SourceCodeSnackbarPositioned}
@@ -61,7 +61,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SnackbarPositioned />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Consecutive Snackbars'
       code={SourceCodeSnackbarConsecutive}
@@ -72,7 +72,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SnackbarConsecutive />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Change Transition'
       code={SourceCodeSnackbarTransition}
@@ -83,7 +83,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SnackbarTransition />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Control Slide Direction'
       code={SourceCodeSnackbarControlSlideDirection}

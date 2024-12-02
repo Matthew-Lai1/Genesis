@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Badges
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -30,7 +30,7 @@ import SourceCodeBadgesTonal from '!!raw-loader!@docPages/components/badges/Badg
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-badge/) and [API documentation](https://mui.com/material-ui/api/badge/).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Basic Badges"
       code={SourceCodeBadgesBasic}
@@ -41,7 +41,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <BadgesBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Dot Badges"
       code={SourceCodeBadgesDot}
@@ -52,7 +52,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <BadgesDot />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Badge Alignment"
       code={SourceCodeBadgesAlignment}
@@ -63,7 +63,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <BadgesAlignment />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Maximum Value"
       code={SourceCodeBadgesMaxValue}
@@ -74,7 +74,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <BadgesMaxValue />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Badge Overlap"
       code={SourceCodeBadgesOverlap}
@@ -85,7 +85,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <BadgesOverlap />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Badge visibility"
       code={SourceCodeBadgesVisibility}

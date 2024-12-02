@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Accordion
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -24,7 +24,7 @@ import SourceCodeAccordionCustomized from '!!raw-loader!@docPages/components/acc
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-alert/) and [API documentation](https://mui.com/material-ui/react-alert/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Basic Accordion"
       code={SourceCodeAccordionBasic}
@@ -36,7 +36,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AccordionBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Controlled Accordion"
       code={SourceCodeAccordionControlled}
@@ -48,7 +48,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AccordionControlled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Customized Accordion"
       code={SourceCodeAccordionCustomized}
@@ -60,7 +60,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AccordionCustomized />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Additional Actions"
       code={SourceCodeAccordionActions}

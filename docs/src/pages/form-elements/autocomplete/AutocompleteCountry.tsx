@@ -36,9 +36,11 @@ const AutocompleteCountry = () => {
         <CustomTextField
           {...params}
           label='Choose a country'
-          inputProps={{
-            ...params.inputProps,
-            autoComplete: 'new-password'
+          slotProps={{
+            htmlInput: {
+              ...params.inputProps,
+              autoComplete: 'new-password'
+            }
           }}
         />
       )}

@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Buttons
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -40,44 +40,32 @@ import SourceCodeButtonsWithIconAndLabel from '!!raw-loader!@docPages/components
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-button/) and [API documentation](https://mui.com/material-ui/react-button/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12}>
-    <CardSnippet
-      title="Contained"
-      code={SourceCodeButtonsContained}
-    >
+  <Grid size={{ xs: 12 }}>
+    <CardSnippet title='Contained' code={SourceCodeButtonsContained}>
       <Typography className='mbe-4'>
         Use <code>variant='contained'</code> prop with <code>&lt;Button&gt;</code> component for contained buttons.
       </Typography>
       <ButtonsContained />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
-    <CardSnippet
-      title="Text"
-      code={SourceCodeButtonsText}
-    >
+  <Grid size={{ xs: 12 }}>
+    <CardSnippet title='Text' code={SourceCodeButtonsText}>
       <Typography className='mbe-4'>
         Use <code>variant='text'</code> prop with <code>&lt;Button&gt;</code> component for buttons with text only.
       </Typography>
       <ButtonsText />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
-    <CardSnippet
-      title="Outlined"
-      code={SourceCodeButtonsOutlined}
-    >
+  <Grid size={{ xs: 12 }}>
+    <CardSnippet title='Outlined' code={SourceCodeButtonsOutlined}>
       <Typography className='mbe-4'>
         Use <code>variant='outlined'</code> prop with <code>&lt;Button&gt;</code> component for outlined buttons.
       </Typography>
       <ButtonsOutlined />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
-    <CardSnippet
-      title="Tonal"
-      code={SourceCodeButtonsTonal}
-    >
+  <Grid size={{ xs: 12 }}>
+    <CardSnippet title='Tonal' code={SourceCodeButtonsTonal}>
       {
         <Typography className='mbe-4'>
           Use <code>variant='tonal'</code> prop with <code>&lt;Button&gt;</code> component for tonal buttons.
@@ -86,94 +74,75 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <ButtonsTonal />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title="Buttons With Icon and Label"
-      code={SourceCodeButtonsWithIconAndLabel}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Buttons With Icon and Label' code={SourceCodeButtonsWithIconAndLabel}>
       <Typography className='mbe-4'>
-        Use <code>startIcon | endIcon</code> prop with <code>&lt;Button&gt;</code> component to add an icon inside a button.
+        Use <code>startIcon | endIcon</code> prop with <code>&lt;Button&gt;</code> component to add an icon inside a
+        button.
       </Typography>
       <ButtonsWithIconAndLabel />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title="Icon Buttons"
-      code={SourceCodeButtonsIcons}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Icon Buttons' code={SourceCodeButtonsIcons}>
       <Typography className='mbe-4'>
-        Use an icon component inside <code>&lt;IconButton&gt;</code> component. For different colors, use <code>color</code> prop with <code>&lt;IconButton&gt;</code> component.
+        Use an icon component inside <code>&lt;IconButton&gt;</code> component. For different colors, use{' '}
+        <code>color</code> prop with <code>&lt;IconButton&gt;</code> component.
       </Typography>
       <ButtonsIcons />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
-    <CardSnippet
-      title="Button Sizes"
-      code={SourceCodeButtonsSizes}
-    >
+  <Grid size={{ xs: 12 }}>
+    <CardSnippet title='Button Sizes' code={SourceCodeButtonsSizes}>
       <Typography className='mbe-4'>
-        Use <code>size={`{'small' | 'medium' | 'large'}`}</code> prop with <code>&lt;Button&gt;</code> component for different sized buttons. To use icon buttons, you need to use <code>size={`{small | large}`}</code> prop with <code>&lt;IconButton&gt;</code> component or you can also use <code>fontSize</code> prop with the icons.
+        Use <code>size={`{'small' | 'medium' | 'large'}`}</code> prop with <code>&lt;Button&gt;</code> component for
+        different sized buttons. To use icon buttons, you need to use <code>size={`{small | large}`}</code> prop with{' '}
+        <code>&lt;IconButton&gt;</code> component or you can also use <code>fontSize</code> prop with the icons.
       </Typography>
       <ButtonsSizes />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Grid container spacing={6}>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <Grid container spacing={6}>
-          <Grid item xs={12}>
-            <CardSnippet
-              title="Button Colors"
-              code={SourceCodeButtonsColors}
-            >
+          <Grid size={{ xs: 12 }}>
+            <CardSnippet title='Button Colors' code={SourceCodeButtonsColors}>
               <Typography className='mbe-4'>
                 Use <code>color</code> prop with <code>&lt;Button&gt;</code> component for different colored buttons.
               </Typography>
               <ButtonsColors />
             </CardSnippet>
           </Grid>
-          <Grid item xs={12}>
-            <CardSnippet
-              title="Customized Buttons"
-              code={SourceCodeButtonsCustomized}
-            >
-            <ButtonsCustomized />
+          <Grid size={{ xs: 12 }}>
+            <CardSnippet title='Customized Buttons' code={SourceCodeButtonsCustomized}>
+              <ButtonsCustomized />
             </CardSnippet>
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={12} lg={6}>
-        <CardSnippet
-          title="Custom Icon Buttons"
-          code={SourceCodeCustomIconButtons}
-        >
+      <Grid size={{ xs: 12, lg: 6 }}>
+        <CardSnippet title='Custom Icon Buttons' code={SourceCodeCustomIconButtons}>
           <Typography className='mbe-4'>
-            Use <code>&lt;CustomIconButton&gt;</code> component to use our custom icon button. You can use all the props of the <code>&lt;Button&gt;</code> component and additionally, we have added <code>default</code> color.
+            Use <code>&lt;CustomIconButton&gt;</code> component to use our custom icon button. You can use all the props
+            of the <code>&lt;Button&gt;</code> component and additionally, we have added <code>default</code> color.
           </Typography>
           <CustomIconButtons />
         </CardSnippet>
       </Grid>
     </Grid>
   </Grid>
-  <Grid item xs={12}>
-    <CardSnippet
-      title="Floating Action Button"
-      code={SourceCodeButtonsFab}
-    >
+  <Grid size={{ xs: 12 }}>
+    <CardSnippet title='Floating Action Button' code={SourceCodeButtonsFab}>
       <Typography className='mbe-4'>
-        Use <code>color</code> prop with <code>&lt;Fab&gt;</code> component for different colored Floating Action
-        Button and <code>variant='extended'</code> prop for extended (not round) Floating Action Button.
+        Use <code>color</code> prop with <code>&lt;Fab&gt;</code> component for different colored Floating Action Button
+        and <code>variant='extended'</code> prop for extended (not round) Floating Action Button.
       </Typography>
       <ButtonsFab />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
-    <CardSnippet
-      title="Floating Action Button Sizes"
-      code={SourceCodeButtonsFab}
-    >
+  <Grid size={{ xs: 12 }}>
+    <CardSnippet title='Floating Action Button Sizes' code={SourceCodeButtonsFab}>
       <Typography className='mbe-4'>
         Use <code>size={`{'small' | 'medium' | 'large'}`}</code> prop for different sizes of Floating Action Buttons.
       </Typography>

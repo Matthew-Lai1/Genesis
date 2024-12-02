@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 // MUI Imports
 import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -64,7 +64,7 @@ const FormValidationAsyncSubmit = () => {
       <CardContent>
         <form onSubmit={handleSubmit(onSubmit)}>
           <Grid container spacing={6}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Controller
                 name='firstName'
                 control={control}
@@ -80,7 +80,7 @@ const FormValidationAsyncSubmit = () => {
                 )}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Controller
                 name='lastName'
                 control={control}
@@ -96,7 +96,7 @@ const FormValidationAsyncSubmit = () => {
                 )}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Controller
                 name='email'
                 control={control}
@@ -113,7 +113,7 @@ const FormValidationAsyncSubmit = () => {
                 )}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Controller
                 name='password'
                 control={control}
@@ -126,26 +126,28 @@ const FormValidationAsyncSubmit = () => {
                     id='outlined-password'
                     placeholder='············'
                     type={isPasswordShown ? 'text' : 'password'}
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position='end'>
-                          <IconButton
-                            edge='end'
-                            onClick={handleClickShowPassword}
-                            onMouseDown={e => e.preventDefault()}
-                            aria-label='toggle password visibility'
-                          >
-                            <i className={isPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
-                          </IconButton>
-                        </InputAdornment>
-                      )
+                    slotProps={{
+                      input: {
+                        endAdornment: (
+                          <InputAdornment position='end'>
+                            <IconButton
+                              edge='end'
+                              onClick={handleClickShowPassword}
+                              onMouseDown={e => e.preventDefault()}
+                              aria-label='toggle password visibility'
+                            >
+                              <i className={isPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
+                            </IconButton>
+                          </InputAdornment>
+                        )
+                      }
                     }}
                     {...(errors.password && { error: true, helperText: 'This field is required' })}
                   />
                 )}
               />
             </Grid>
-            <Grid item xs={12} className='flex gap-4'>
+            <Grid size={{ xs: 12 }} className='flex gap-4'>
               <Button variant='contained' type='submit' className='gap-2'>
                 {loading && <CircularProgress size={20} color='inherit' />}
                 Submit

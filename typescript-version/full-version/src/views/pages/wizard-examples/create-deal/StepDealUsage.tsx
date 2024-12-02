@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import MenuItem from '@mui/material/MenuItem'
 import Switch from '@mui/material/Switch'
 import Button from '@mui/material/Button'
@@ -19,7 +19,7 @@ type Props = {
 const StepDealUsage = ({ activeStep, handleNext, handlePrev, steps }: Props) => {
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField select fullWidth label='User Type' defaultValue=''>
           <MenuItem value=''>Select User Type</MenuItem>
           <MenuItem value='all'>All</MenuItem>
@@ -28,16 +28,16 @@ const StepDealUsage = ({ activeStep, handleNext, handlePrev, steps }: Props) => 
           <MenuItem value='prime-members'>Prime Members</MenuItem>
         </CustomTextField>
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField fullWidth type='number' label='Max Users' placeholder='500' />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField fullWidth type='number' label='Minimum Cart Amount' placeholder='$99' />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField fullWidth type='number' label='Promotional Fee' placeholder='$9' />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField select fullWidth label='Payment Method' defaultValue=''>
           <MenuItem value=''>Select Payment Method</MenuItem>
           <MenuItem value='any'>Any</MenuItem>
@@ -46,7 +46,7 @@ const StepDealUsage = ({ activeStep, handleNext, handlePrev, steps }: Props) => 
           <MenuItem value='wallet'>Wallet</MenuItem>
         </CustomTextField>
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField select fullWidth label='Deal Status' defaultValue=''>
           <MenuItem value=''>Select Deal Status</MenuItem>
           <MenuItem value='active'>Active</MenuItem>
@@ -55,10 +55,10 @@ const StepDealUsage = ({ activeStep, handleNext, handlePrev, steps }: Props) => 
           <MenuItem value='abandoned'>Abandoned</MenuItem>
         </CustomTextField>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <FormControlLabel control={<Switch />} label='Limit this discount to a single-use per customer?' />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex items-center justify-between'>
           <Button
             variant='tonal'

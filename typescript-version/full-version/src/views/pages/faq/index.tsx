@@ -4,7 +4,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Type Imports
 import type { FaqType } from '@/types/pages/faqTypes'
@@ -20,13 +20,13 @@ const FAQ = ({ data }: { data?: FaqType[] }) => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <FaqHeader searchValue={searchValue} setSearchValue={setSearchValue} />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Faqs faqData={data} searchValue={searchValue} />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <FaqFooter />
       </Grid>
     </Grid>

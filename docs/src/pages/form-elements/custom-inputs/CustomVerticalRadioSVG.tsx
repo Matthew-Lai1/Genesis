@@ -3,7 +3,7 @@ import type { ChangeEvent } from 'react'
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Type Import
 import type { CustomInputVerticalData } from '@core/components/custom-inputs/types'
@@ -123,7 +123,7 @@ const CustomVerticalRadioSVG = () => {
             selected={selected}
             name='custom-radios-icons'
             handleChange={handleChange}
-            gridProps={{ sm: 4, xs: 12 }}
+            gridProps={{ size: { xs: 12, sm: 4 } }}
           />
         )
       })}

@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Test
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
 
@@ -23,47 +23,47 @@ import SelectCustomizedAndGrouping from '@docPages/form-elements/test/SelectCust
 <div className='template-bg-color' />
 
 <Grid container spacing={6}>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Typography variant='h3'>TextField</Typography>
     <Divider />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <TextFieldVariant />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <TextFieldIcons />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <TextFieldInputAdornment />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <TextFieldComponents />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Typography variant='h3'>Textarea</Typography>
     <Divider />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Textarea />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Typography variant='h3'>Select</Typography>
     <Divider />
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <SelectVariants />
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <SelectCustomizedAndGrouping />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <SelectMultiple />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Typography variant='h3'>Autocomplete</Typography>
     <Divider />
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <AutocompleteVariants />
   </Grid>
 </Grid>

@@ -1,21 +1,16 @@
 // MUI Imports
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
-import CustomTextField from '@core/components/mui/TextField';
+import CustomTextField from '@core/components/mui/TextField'
 
 const TextFieldFormProps = () => {
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} md={2}>
-        <CustomTextField
-          required
-          id='form-props-required'
-          label='Required'
-          defaultValue='Hello World'
-        />
+      <Grid size={{ xs: 12, md: 2 }}>
+        <CustomTextField required id='form-props-required' label='Required' defaultValue='Hello World' />
       </Grid>
-      <Grid item xs={12} md={2}>
+      <Grid size={{ xs: 12, md: 2 }}>
         <CustomTextField
           disabled
           id='form-props-disabled'
@@ -24,7 +19,7 @@ const TextFieldFormProps = () => {
           helperText='helper text'
         />
       </Grid>
-      <Grid item xs={12} md={2}>
+      <Grid size={{ xs: 12, md: 2 }}>
         <CustomTextField
           type='password'
           label='Password'
@@ -32,7 +27,7 @@ const TextFieldFormProps = () => {
           autoComplete='current-password'
         />
       </Grid>
-      <Grid item xs={12} md={2}>
+      <Grid size={{ xs: 12, md: 2 }}>
         <CustomTextField
           label='Read Only'
           defaultValue='Hello World'
@@ -40,24 +35,16 @@ const TextFieldFormProps = () => {
           inputProps={{ readOnly: true }}
         />
       </Grid>
-      <Grid item xs={12} md={2}>
+      <Grid size={{ xs: 12, md: 2 }}>
         <CustomTextField type='number' label='Number' id='form-props-number' />
       </Grid>
-      <Grid item xs={12} md={2}>
-        <CustomTextField
-          label='Label'
-          placeholder='Placeholder'
-          id='form-props-full-width'
-        />
+      <Grid size={{ xs: 12, md: 2 }}>
+        <CustomTextField label='Label' placeholder='Placeholder' id='form-props-full-width' />
       </Grid>
-      <Grid item xs={12} md={2}>
-        <CustomTextField
-          id='form-props-search'
-          label='Search field'
-          type='search'
-        />
+      <Grid size={{ xs: 12, md: 2 }}>
+        <CustomTextField id='form-props-search' label='Search field' type='search' />
       </Grid>
-      <Grid item xs={12} md={2}>
+      <Grid size={{ xs: 12, md: 2 }}>
         <CustomTextField
           label='Helper text'
           id='form-props-helperText'
@@ -69,4 +56,4 @@ const TextFieldFormProps = () => {
   )
 }
 
-export default TextFieldFormProps;
+export default TextFieldFormProps

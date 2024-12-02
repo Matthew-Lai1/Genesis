@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import CardContent from '@mui/material/CardContent'
 import MenuItem from '@mui/material/MenuItem'
 
@@ -51,7 +51,7 @@ const TableFilters = ({
   return (
     <CardContent>
       <Grid container spacing={6}>
-        <Grid item xs={12} sm={4}>
+        <Grid size={{ xs: 12, sm: 4 }}>
           <CustomTextField
             select
             fullWidth
@@ -66,7 +66,7 @@ const TableFilters = ({
             <MenuItem value='Inactive'>Inactive</MenuItem>
           </CustomTextField>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid size={{ xs: 12, sm: 4 }}>
           <CustomTextField
             select
             fullWidth
@@ -84,7 +84,7 @@ const TableFilters = ({
             <MenuItem value='Games'>Games</MenuItem>
           </CustomTextField>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid size={{ xs: 12, sm: 4 }}>
           <CustomTextField
             select
             fullWidth

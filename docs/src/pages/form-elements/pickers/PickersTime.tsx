@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import AppReactDatepicker from '@/libs/styles/AppReactDatepicker'
@@ -15,7 +15,7 @@ const PickersTime = () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <AppReactDatepicker
           showTimeSelect
           selected={time}
@@ -23,11 +23,11 @@ const PickersTime = () => {
           showTimeSelectOnly
           dateFormat='h:mm aa'
           id='time-only-picker'
-          onChange={(date: Date) => setTime(date)}
+          onChange={(date: Date | null) => setTime(date)}
           customInput={<CustomTextField label='Time Only' fullWidth />}
         />
       </Grid>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <AppReactDatepicker
           showTimeSelect
           timeFormat='HH:mm'
@@ -35,7 +35,7 @@ const PickersTime = () => {
           selected={dateTime}
           id='date-time-picker'
           dateFormat='MM/dd/yyyy h:mm aa'
-          onChange={(date: Date) => setDateTime(date)}
+          onChange={(date: Date | null) => setDateTime(date)}
           customInput={<CustomTextField label='Date & Time' fullWidth />}
         />
       </Grid>

@@ -30,7 +30,7 @@ const CardTooltip = () => {
         <Tooltip arrow title='Arrow' className='mie-4'>
           <Button variant='outlined'>Arrow</Button>
         </Tooltip>
-        <Tooltip TransitionComponent={Zoom} title='Zoom'>
+        <Tooltip slots={{ transition: Zoom }}  title='Zoom'>
           <Button variant='outlined'>Zoom</Button>
         </Tooltip>
       </CardContent>

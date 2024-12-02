@@ -12,7 +12,6 @@ You may add / update / remove any other dependencies according to your requireme
 "@emotion/react"
 "@emotion/styled"
 "@floating-ui/react"
-"@iconify/iconify"
 "@iconify/json"
 "@iconify/tools"
 "@iconify/types"
@@ -143,6 +142,20 @@ You may add / update / remove any other dependencies according to your requireme
 
 ```json
 "@formkit/drag-and-drop"
+```
+
+## Mapbox
+
+```json
+"mapbox-gl"
+"react-map-gl"
+"@types/mapbox-gl"
+```
+
+## Media Player
+
+```json
+"react-player"
 ```
 
 ## Redux

@@ -8,7 +8,7 @@ import type { SyntheticEvent, ReactElement } from 'react'
 import Tab from '@mui/material/Tab'
 import TabContext from '@mui/lab/TabContext'
 import TabPanel from '@mui/lab/TabPanel'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import CustomTabList from '@core/components/mui/TabList'
@@ -25,7 +25,7 @@ const UserRight = ({ tabContentList }: { tabContentList: { [key: string]: ReactE
     <>
       <TabContext value={activeTab}>
         <Grid container spacing={6}>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <CustomTabList onChange={handleChange} variant='scrollable' pill='true'>
               <Tab icon={<i className='tabler-users' />} value='overview' label='Overview' iconPosition='start' />
               <Tab icon={<i className='tabler-lock' />} value='security' label='Security' iconPosition='start' />
@@ -44,7 +44,7 @@ const UserRight = ({ tabContentList }: { tabContentList: { [key: string]: ReactE
               <Tab icon={<i className='tabler-link' />} value='connections' label='Connections' iconPosition='start' />
             </CustomTabList>
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <TabPanel value={activeTab} className='p-0'>
               {tabContentList[activeTab]}
             </TabPanel>

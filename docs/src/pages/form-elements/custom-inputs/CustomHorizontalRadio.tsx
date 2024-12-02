@@ -2,7 +2,7 @@
 import { ChangeEvent, useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Type Import
 import { CustomInputHorizontalData } from '@core/components/custom-inputs/types'
@@ -51,7 +51,7 @@ const CustomHorizontalRadio = () => {
           selected={selected}
           name='custom-radios-basic'
           handleChange={handleChange}
-          gridProps={{ sm: 6, xs: 12 }}
+          gridProps={{ size: { xs: 12, sm: 6 } }}
         />
       ))}
     </Grid>

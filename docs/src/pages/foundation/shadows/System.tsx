@@ -1,7 +1,7 @@
 // MUI Imports
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
@@ -13,7 +13,7 @@ const System = () => {
       <CardContent className='flex gap-6 flex-wrap items-center justify-center !p-[50px] !pbs-0'>
         <Grid container spacing={12}>
           {Array.from({ length: 24 }).map((_, i) => (
-            <Grid item key={i} xs={12} sm={4} md={3} lg={2}>
+            <Grid key={i} size={{ xs: 12, sm: 4, md: 3, lg: 2 }}>
               <Box
                 key={i}
                 sx={{ boxShadow: `var(--mui-shadows-${i + 1})` }}

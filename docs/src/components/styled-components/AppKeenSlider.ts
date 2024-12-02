@@ -115,6 +115,6 @@ const AppKeenSlider = styled(Box)<BoxProps>(({ theme }: { theme: Theme }) => ({
       }
     }
   }
-}))
+})) as typeof Box
 
 export default AppKeenSlider

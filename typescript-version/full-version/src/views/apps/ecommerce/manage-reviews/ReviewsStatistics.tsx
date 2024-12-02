@@ -4,7 +4,7 @@
 import dynamic from 'next/dynamic'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Chip from '@mui/material/Chip'
@@ -98,7 +98,7 @@ const ReviewsStatistics = () => {
     <Card>
       <CardContent>
         <Grid container spacing={6}>
-          <Grid item xs={12} sm={6}>
+          <Grid size={{ xs: 12, sm: 6 }}>
             <div className='bs-full flex flex-col items-start justify-between gap-6'>
               <div className='flex flex-col items-start gap-2'>
                 <Typography variant='h5'>Reviews statistics</Typography>
@@ -115,7 +115,7 @@ const ReviewsStatistics = () => {
               </div>
             </div>
           </Grid>
-          <Grid item xs={12} sm={6} className='flex justify-center'>
+          <Grid size={{ xs: 12, sm: 6 }} className='flex justify-center'>
             <AppReactApexCharts type='bar' width='100%' height={156} series={series} options={options} />
           </Grid>
         </Grid>

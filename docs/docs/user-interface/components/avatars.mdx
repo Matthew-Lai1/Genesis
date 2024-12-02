@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Avatars
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -34,7 +34,7 @@ import SourceCodeAvatarsGroupedPullUpWithTooltip from '!!raw-loader!@docPages/co
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-avatar/) and [API documentation](https://mui.com/material-ui/react-avatar/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Image Avatars"
       code={SourceCodeAvatarsImage}
@@ -45,7 +45,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AvatarsImage />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Letter Avatars"
       code={SourceCodeAvatarsLetter}
@@ -56,7 +56,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AvatarsLetter />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Sizes"
       code={SourceCodeAvatarsSizes}
@@ -67,7 +67,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AvatarsSizes />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Icon Avatars"
       code={SourceCodeAvatarsIcon}
@@ -78,7 +78,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AvatarsIcon />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Variants"
       code={SourceCodeAvatarsVariants}
@@ -102,7 +102,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AvatarsWithBadge />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Grouped Avatars With PullUp"
       code={SourceCodeAvatarsGroupedPullUp}
@@ -113,7 +113,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AvatarsGroupedPullUp />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title="Grouped Avatars With PullUp & Tooltip"
       code={SourceCodeAvatarsGroupedPullUpWithTooltip}
@@ -124,7 +124,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <AvatarsGroupedPullUpWithTooltip />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <CardSnippet
       title="Grouped Avatars Alignment"
       code={SourceCodeAvatarsGrouped}

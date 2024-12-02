@@ -72,7 +72,11 @@ const StepperVerticalWithoutNumbers = () => {
           <Stepper activeStep={activeStep} orientation='vertical'>
             {steps.map((step, index) => (
               <Step key={index} className={classNames({ active: activeStep === index })}>
-                <StepLabel StepIconComponent={StepperCustomDot}>
+                <StepLabel
+                  slots={{
+                    stepIcon: StepperCustomDot
+                  }}
+                >
                   <div className='step-label'>
                     <div>
                       <Typography className='step-title'>{step.title}</Typography>
@@ -86,13 +90,7 @@ const StepperVerticalWithoutNumbers = () => {
                     <Button variant='contained' onClick={handleNext} size='small'>
                       {index === steps.length - 1 ? 'Finish' : 'Next'}
                     </Button>
-                    <Button
-                      size='small'
-                      color='secondary'
-                      variant='tonal'
-                      onClick={handleBack}
-                      disabled={index === 0}
-                    >
+                    <Button size='small' color='secondary' variant='tonal' onClick={handleBack} disabled={index === 0}>
                       Back
                     </Button>
                   </div>

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Typography from '@mui/material/Typography'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Third-party Imports
 import classnames from 'classnames'
@@ -109,7 +109,7 @@ const KnowledgeBase = () => {
       <Grid container spacing={6}>
         {allArticles.map((article, index) => {
           return (
-            <Grid item xs={12} lg={4} key={index}>
+            <Grid size={{ xs: 12, lg: 4 }} key={index}>
               <Card>
                 <CardContent className='flex flex-col items-start gap-6 text-center'>
                   <div className='flex gap-3 items-center'>

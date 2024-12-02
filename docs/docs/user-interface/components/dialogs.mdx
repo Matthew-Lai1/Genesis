@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Dialogs
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -36,7 +36,7 @@ import SourceCodeDialogsRespoFullScreen from '!!raw-loader!@docPages/components/
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-dialog/) and [API documentation](https://mui.com/material-ui/react-dialog/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Basic'
       code={SourceCodeDialogsBasic}
@@ -47,7 +47,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <DialogsBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Alerts'
       code={SourceCodeDialogsAlert}
@@ -58,7 +58,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <DialogsAlert />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Transitions'
       code={SourceCodeDialogsTransition}
@@ -69,7 +69,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <DialogsTransition />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Form Dialog'
       code={SourceCodeDialogsForm}
@@ -80,7 +80,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <DialogsForm />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Customized Dialog'
       code={SourceCodeDialogsCustomized}
@@ -91,7 +91,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <DialogsCustomized />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Full Screen Dialog'
       code={SourceCodeDialogsFullScreen}
@@ -102,7 +102,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <DialogsFullScreen />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Optional Sizes'
       code={SourceCodeDialogsSizes}
@@ -113,7 +113,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <DialogsSizes />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Responsive full-screen'
       code={SourceCodeDialogsRespoFullScreen}
@@ -124,7 +124,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <DialogsRespoFullScreen />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Confirmation Dialog'
       code={SourceCodeDialogsConfirmation}
@@ -135,7 +135,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <DialogsConfirmation />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Scrolling Long Content'
       code={SourceCodeDialogsScroll}

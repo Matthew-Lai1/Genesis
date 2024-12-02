@@ -1,6 +1,6 @@
 // MUI Imports
 import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Input from '@mui/material/Input'
 import TextField from '@mui/material/TextField'
 import InputLabel from '@mui/material/InputLabel'
@@ -17,7 +17,7 @@ const TextFieldIcons = () => {
       <CardHeader title='Icons' />
       <CardContent>
         <Grid container spacing={6}>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <FormControl fullWidth>
               <InputLabel>With a start adornment</InputLabel>
               <OutlinedInput
@@ -30,30 +30,32 @@ const TextFieldIcons = () => {
               />
             </FormControl>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField
               fullWidth
               label='TextField'
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position='start'>
-                    <i className='tabler-user-circle' />
-                  </InputAdornment>
-                )
+              slotProps={{
+                input: {
+                  startAdornment: (
+                    <InputAdornment position='start'>
+                      <i className='tabler-user-circle' />
+                    </InputAdornment>
+                  )
+                }
               }}
             />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <Grid container className='items-center'>
-              <Grid item xs={1}>
+              <Grid size={{ xs: 1 }}>
                 <i className='tabler-user-circle text-actionActive' />
               </Grid>
-              <Grid item xs={11}>
+             <Grid size={{ xs: 11 }}>
                 <TextField fullWidth label='With a grid' />
               </Grid>
             </Grid>
           </Grid>
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <FormControl fullWidth variant='filled'>
             <InputLabel>With a start adornment</InputLabel>
             <FilledInput
@@ -65,31 +67,33 @@ const TextFieldIcons = () => {
             />
           </FormControl>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <TextField
             fullWidth
             label='TextField'
             variant='filled'
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position='start'>
-                  <i className='tabler-user-circle' />
-                </InputAdornment>
-              )
+            slotProps={{
+              input: {
+                startAdornment: (
+                  <InputAdornment position='start'>
+                    <i className='tabler-user-circle' />
+                  </InputAdornment>
+                )
+              }
             }}
           />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <Grid container className='items-center'>
-              <Grid item xs={1}>
+              <Grid size={{ xs: 1 }}>
                 <i className='tabler-user-circle text-actionActive' />
               </Grid>
-              <Grid item xs={11}>
+             <Grid size={{ xs: 11 }}>
                 <TextField fullWidth variant='filled' label='With a grid' />
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <FormControl fullWidth variant='standard'>
             <InputLabel>With a start adornment</InputLabel>
             <Input
@@ -101,26 +105,28 @@ const TextFieldIcons = () => {
             />
           </FormControl>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <TextField
             fullWidth
             label='TextField'
             variant='standard'
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position='start'>
-                  <i className='tabler-user-circle' />
-                </InputAdornment>
-              )
+            slotProps={{
+              input: {
+                startAdornment: (
+                  <InputAdornment position='start'>
+                    <i className='tabler-user-circle' />
+                  </InputAdornment>
+                )
+              }
             }}
           />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <Grid container className='items-center'>
-              <Grid item xs={1}>
+              <Grid size={{ xs: 1 }}>
                 <i className='tabler-user-circle mbs-3 text-actionActive' />
               </Grid>
-              <Grid item xs={11}>
+             <Grid size={{ xs: 11 }}>
                 <TextField fullWidth variant='standard' label='With a grid' />
               </Grid>
             </Grid>

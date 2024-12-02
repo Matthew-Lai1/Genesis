@@ -11,3 +11,5 @@ For comprehensive and easy-to-follow steps on clearing your browser cache, pleas
 [How to Clear Browser Cache - Detailed Guide](https://www.leadshook.com/help/how-to-clear-local-storage-in-google-chrome-browser/)
 
 This guide ensures you have the latest information for various browsers including Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge.
+
+Alternatively, you can use [this](https://chromewebstore.google.com/detail/clear-site-data/aihgofjefdlhpnmeakpnjjeajofpcbhj) chrome extension for a more convenient and efficient way to clear cache data.

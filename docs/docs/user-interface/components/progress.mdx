@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Progress
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
 
@@ -39,129 +39,99 @@ import SourceCodeProgressCircularControlledUncontrolled from '!!raw-loader!@docP
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-progress/) and [API documentation](https://mui.com/material-ui/react-progress/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Typography variant='h5'>Circular</Typography>
     <Divider />
   </Grid>
-  <Grid item xs={12} lg={6}>
-    <CardSnippet
-      title='Indeterminate'
-      code={SourceCodeProgressCircularIndeterminate}
-    >
+  <Grid size={{ xs: 12, lg: 6 }}>
+    <CardSnippet title='Indeterminate' code={SourceCodeProgressCircularIndeterminate}>
       <Typography className='mbe-4'>
         Use <code>CircularProgress</code> component for simple circular progress.
       </Typography>
       <ProgressCircularIndeterminate />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
-    <CardSnippet
-      title='Colors'
-      code={SourceCodeProgressCircularColors}
-    >
+  <Grid size={{ xs: 12, lg: 6 }}>
+    <CardSnippet title='Colors' code={SourceCodeProgressCircularColors}>
       <Typography className='mbe-4'>
         Use <code>color</code> prop for different colored circular progress.
       </Typography>
       <ProgressCircularColors />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
-    <CardSnippet
-      title='With label'
-      code={SourceCodeProgressCircularWithLabel}
-    >
+  <Grid size={{ xs: 12, lg: 6 }}>
+    <CardSnippet title='With label' code={SourceCodeProgressCircularWithLabel}>
       <Typography className='mbe-4'>
-        Use <code>variant='determinate'</code> and <code>value</code> props with the help of a state for circular progress with label.
+        Use <code>variant='determinate'</code> and <code>value</code> props with the help of a state for circular
+        progress with label.
       </Typography>
       <ProgressCircularWithLabel />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
-    <CardSnippet
-      title='Customization'
-      code={SourceCodeProgressCustomization}
-    >
+  <Grid size={{ xs: 12, lg: 6 }}>
+    <CardSnippet title='Customization' code={SourceCodeProgressCustomization}>
       <Typography className='mbe-4'>
         Use <code>styled</code> hook to customize your circular progress.
       </Typography>
       <ProgressCustomization />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
-    <CardSnippet
-      title='Controlled and Uncontrolled'
-      code={SourceCodeProgressCircularControlledUncontrolled}
-    >
+  <Grid size={{ xs: 12 }}>
+    <CardSnippet title='Controlled and Uncontrolled' code={SourceCodeProgressCircularControlledUncontrolled}>
       <Typography className='mbe-4'>
         Manage <code>value</code> prop with the help of a state for controlled circular progress.
       </Typography>
       <ProgressCircularControlledUncontrolled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <Typography variant='h5'>Linear</Typography>
     <Divider />
   </Grid>
-  <Grid item xs={12} lg={6}>
-    <CardSnippet
-      title='Indeterminate'
-      code={SourceCodeProgressLinearIndeterminate}
-    >
+  <Grid size={{ xs: 12, lg: 6 }}>
+    <CardSnippet title='Indeterminate' code={SourceCodeProgressLinearIndeterminate}>
       <Typography className='mbe-4'>
         Use <code>LinearProgress</code> component for simple linear progress.
       </Typography>
       <ProgressLinearIndeterminate />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
-    <CardSnippet
-      title='Buffer'
-      code={SourceCodeProgressLinearBuffer}
-    >
+  <Grid size={{ xs: 12, lg: 6 }}>
+    <CardSnippet title='Buffer' code={SourceCodeProgressLinearBuffer}>
       <Typography className='mbe-4'>
-        Use <code>variant='buffer'</code> and <code>valueBuffer</code> props with the help of a state for linear progress with buffer.
+        Use <code>variant='buffer'</code> and <code>valueBuffer</code> props with the help of a state for linear
+        progress with buffer.
       </Typography>
       <ProgressLinearBuffer />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
-    <CardSnippet
-      title='Colors'
-      code={SourceCodeProgressLinearColors}
-    >
+  <Grid size={{ xs: 12, lg: 6 }}>
+    <CardSnippet title='Colors' code={SourceCodeProgressLinearColors}>
       <Typography className='mbe-4'>
         Use <code>color</code> prop for different colored linear progress.
       </Typography>
       <ProgressLinearColors />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
-    <CardSnippet
-      title='Controlled and Uncontrolled'
-      code={SourceCodeProgressLinearControlledUncontrolled}
-    >
+  <Grid size={{ xs: 12, lg: 6 }}>
+    <CardSnippet title='Controlled and Uncontrolled' code={SourceCodeProgressLinearControlledUncontrolled}>
       <Typography className='mbe-4'>
         Manage <code>value</code> prop with the help of a state for controlled linear progress.
       </Typography>
       <ProgressLinearControlledUncontrolled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
-    <CardSnippet
-      title='With Label'
-      code={SourceCodeProgressLinearWithLabel}
-    >
+  <Grid size={{ xs: 12, lg: 6 }}>
+    <CardSnippet title='With Label' code={SourceCodeProgressLinearWithLabel}>
       <Typography className='mbe-4'>
-        Use <code>variant='determinate'</code> and <code>value</code> props with the help of a state for linear progress with label.
+        Use <code>variant='determinate'</code> and <code>value</code> props with the help of a state for linear progress
+        with label.
       </Typography>
       <ProgressLinearWithLabel />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} lg={6}>
-    <CardSnippet
-      title='Customization'
-      code={SourceCodeProgressLinearCustomization}
-    >
+  <Grid size={{ xs: 12, lg: 6 }}>
+    <CardSnippet title='Customization' code={SourceCodeProgressLinearCustomization}>
       <Typography className='mbe-4'>
         Use <code>styled</code> hook to customize your Linear progress.
       </Typography>

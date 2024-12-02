@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Ratings
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -26,7 +26,7 @@ import SourceCodeRatingsHoverFeedback from '!!raw-loader!@docPages/components/ra
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-rating/) and [API documentation](https://mui.com/material-ui/api/rating/).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Basic Ratings'
       code={SourceCodeRatingsBasic}
@@ -37,7 +37,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <RatingsBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Customized Ratings'
       code={SourceCodeRatingsCustomized}
@@ -49,7 +49,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <RatingsCustomized />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Half Ratings'
       code={SourceCodeRatingsHalf}
@@ -60,7 +60,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <RatingsHalf />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Sizes'
       code={SourceCodeRatingsSizes}
@@ -71,7 +71,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <RatingsSizes />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <CardSnippet
       title='Hover Feedback'
       code={SourceCodeRatingsHoverFeedback}

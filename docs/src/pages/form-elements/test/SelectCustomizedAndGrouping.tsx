@@ -38,7 +38,10 @@ const CustomFormControl = styled(FormControl)<FormControlProps>(({ theme }) => (
     padding: '10px 26px 10px 12px',
     backgroundColor: theme.palette.background.paper,
     transition: theme.transitions.create(['border-color', 'box-shadow']),
-    border: theme.palette.mode === 'light' ? '1px solid #ced4da' : `1px solid ${theme.palette.divider}`,
+    border: '1px solid #ced4da',
+    ...theme.applyStyles('dark', {
+      borderColor: 'var(--mui-palette-divider)'
+    }),
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
@@ -100,7 +103,9 @@ const SelectCustomizedAndGrouping = () => {
       </CardContent>
 
       <CardContent>
-        <Typography variant='h6' className='mbe-4'>Grouping</Typography>
+        <Typography variant='h6' className='mbe-4'>
+          Grouping
+        </Typography>
         <div className='flex gap-4 flex-col'>
           <FormControl fullWidth>
             <InputLabel htmlFor='grouped-select'>Grouping</InputLabel>

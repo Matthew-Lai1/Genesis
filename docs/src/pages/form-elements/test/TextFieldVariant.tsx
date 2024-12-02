@@ -1,6 +1,6 @@
 // MUI Imports
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
+import Grid from "@mui/material/Grid2";
 import Card from "@mui/material/Card";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
@@ -22,7 +22,10 @@ const InputBase = styled(MuiInputBase)<InputBaseProps>(({ theme }) => ({
     position: 'relative',
     backgroundColor: 'var(--mui-palette-background-paper)',
     transition: theme.transitions.create(['border-color', 'box-shadow']),
-    border: theme.palette.mode === 'light' ? '1px solid #ced4da' : '1px solid var(--mui-palette-divider)',
+    border: '1px solid #ced4da',
+    ...theme.applyStyles('dark', {
+      borderColor: 'var(--mui-palette-divider)'
+    }),
     fontFamily: [
       '-apple-system',
       'BlinkMacSystemFont',
@@ -48,31 +51,31 @@ const TextFieldVariant = () => {
       <CardHeader title="Variants" />
       <CardContent>
         <Grid container spacing={6}>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField fullWidth label="Outlined" />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField fullWidth label="Filled" variant="filled" />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField fullWidth label="Standard" variant="standard" />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField fullWidth disabled label="Disabled Outlined" />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField fullWidth disabled label="Disabled Filled" variant="filled" />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField fullWidth disabled label="Disabled Standard" variant="standard" />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField fullWidth size="small" label="Small Outlined" />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField fullWidth size="small" label="Small Filled" variant="filled" />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField fullWidth size="small" label="Small Standard" variant="standard" />
           </Grid>
         </Grid>

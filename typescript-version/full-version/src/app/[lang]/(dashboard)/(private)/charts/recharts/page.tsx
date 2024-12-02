@@ -2,7 +2,7 @@
 import Link from 'next/link'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 // Component Imports
@@ -16,7 +16,7 @@ import RechartsScatterChart from '@views/charts/recharts/RechartsScatterChart'
 const Recharts = () => {
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Typography variant='h4'>Recharts</Typography>
         <Typography>
           <code>recharts</code> is a third-party library. Please refer to its{' '}
@@ -31,22 +31,22 @@ const Recharts = () => {
           for more details.
         </Typography>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <RechartsLineChart />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <RechartsAreaChart />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <RechartsScatterChart />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <RechartsBarChart />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <RechartsRadarChart />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <RechartsPieChart />
       </Grid>
     </Grid>

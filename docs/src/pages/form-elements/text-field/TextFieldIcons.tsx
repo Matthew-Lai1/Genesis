@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import InputAdornment from '@mui/material/InputAdornment'
 
 // Component Imports
@@ -9,7 +9,7 @@ const TextFieldIcons = () => {
   return (
     <form className='flex items-center'>
       <Grid container spacing={6}>
-        <Grid item>
+        <Grid>
           <CustomTextField
             id='input-with-icon-adornment'
             label='With adornment'
@@ -22,12 +22,12 @@ const TextFieldIcons = () => {
             }}
           />
         </Grid>
-        <Grid item>
+        <Grid>
           <Grid container spacing={2}>
-            <Grid item className='flex items-center'>
+            <Grid className='flex items-center'>
               <i className='tabler-user-circle text-base mbs-3' />
             </Grid>
-            <Grid item>
+            <Grid>
               <CustomTextField
                 fullWidth
                 id='input-with-icon-grid'

@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography'
 import Accordion from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
 import AccordionDetails from '@mui/material/AccordionDetails'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Chip from '@mui/material/Chip'
 
 // Third-party Imports
@@ -106,14 +106,14 @@ const Faqs = () => {
         </div>
         <div>
           <Grid container spacing={6}>
-            <Grid item xs={12} lg={5} className='text-center'>
+            <Grid size={{ xs: 12, lg: 5 }} className='text-center'>
               <img
                 src='/images/front-pages/landing-page/boy-sitting-with-laptop.png'
                 alt='boy with laptop'
                 className='is-[80%] max-is-[320px]'
               />
             </Grid>
-            <Grid item xs={12} lg={7}>
+            <Grid size={{ xs: 12, lg: 7 }}>
               <div>
                 {FaqsData.map((data, index) => {
                   return (

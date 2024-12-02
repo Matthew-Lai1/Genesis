@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Avatar from '@mui/material/Avatar'
 import Chip from '@mui/material/Chip'
 import Card from '@mui/material/Card'
@@ -21,7 +21,7 @@ const Connections = ({ data }: { data?: ConnectionsTabType[] }) => {
       {data &&
         data.map((item, index) => {
           return (
-            <Grid item key={index} xs={12} sm={6} md={4}>
+            <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
               <Card className='relative'>
                 <OptionMenu
                   iconClassName='text-textDisabled'

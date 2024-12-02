@@ -4,7 +4,7 @@ import type { ChangeEvent } from 'react'
 
 // MUI Imports
 import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Chip from '@mui/material/Chip'
 import MenuItem from '@mui/material/MenuItem'
 import Checkbox from '@mui/material/Checkbox'
@@ -76,7 +76,7 @@ const SelectMultiple = () => {
       <CardHeader title='Multiple Select' />
       <CardContent>
         <Grid container spacing={6}>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Wrapper>
               <FormControl>
                 <InputLabel>Name</InputLabel>
@@ -177,7 +177,7 @@ const SelectMultiple = () => {
             </Wrapper>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Wrapper>
               <FormControl variant='filled'>
                 <InputLabel>Name</InputLabel>
@@ -278,7 +278,7 @@ const SelectMultiple = () => {
             </Wrapper>
           </Grid>
 
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Wrapper>
               <FormControl variant='standard'>
                 <InputLabel>Name</InputLabel>

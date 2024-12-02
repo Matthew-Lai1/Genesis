@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Type Imports
 import type { CustomInputVerticalData } from '@core/components/custom-inputs/types'
@@ -123,7 +123,7 @@ const CustomVerticalCheckboxSVG = () => {
             data={{ ...item, asset: SVGs[index].asset }}
             handleChange={handleChange}
             name='custom-checkbox-icons'
-            gridProps={{ sm: 4, xs: 12 }}
+            gridProps={{ size: { xs: 12, sm: 4 } }}
           />
         )
       })}

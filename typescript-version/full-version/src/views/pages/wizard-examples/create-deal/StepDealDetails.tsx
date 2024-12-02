@@ -3,7 +3,7 @@ import type { SyntheticEvent } from 'react'
 import { useState, forwardRef } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import FormControl from '@mui/material/FormControl'
 import MenuItem from '@mui/material/MenuItem'
 import Chip from '@mui/material/Chip'
@@ -71,13 +71,13 @@ const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }: Props) =
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField fullWidth label='Deal Title' placeholder='Black Friday sale, 25% off' />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField fullWidth label='Deal Code' placeholder='25PEROFF' />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField
           fullWidth
           multiline
@@ -86,9 +86,9 @@ const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }: Props) =
           placeholder='To sell or distribute something as a business deal'
         />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <Grid container spacing={6}>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <CustomTextField
               select
               fullWidth
@@ -113,7 +113,7 @@ const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }: Props) =
               ))}
             </CustomTextField>
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <CustomTextField select fullWidth label='Cart Condition' defaultValue=''>
               <MenuItem value=''>
                 <Typography color='text.primary' noWrap>
@@ -134,7 +134,7 @@ const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }: Props) =
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <AppReactDatepicker
           selectsRange
           endDate={endDate as Date}
@@ -148,7 +148,7 @@ const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }: Props) =
           }
         />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <FormControl>
           <FormLabel>Notify Users</FormLabel>
           <FormGroup aria-label='position' row>
@@ -158,7 +158,7 @@ const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }: Props) =
           </FormGroup>
         </FormControl>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex items-center justify-between'>
           <Button
             variant='tonal'

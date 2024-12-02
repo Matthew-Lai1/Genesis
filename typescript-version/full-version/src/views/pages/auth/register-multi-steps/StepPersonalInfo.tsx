@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import MenuItem from '@mui/material/MenuItem'
@@ -17,36 +17,38 @@ const StepPersonalInfo = ({ handleNext, handlePrev }: { handleNext: () => void; 
         <Typography>Enter Your Personal Information</Typography>
       </div>
       <Grid container spacing={6}>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <CustomTextField fullWidth label='First Name' placeholder='John' />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <CustomTextField fullWidth label='Last Name' placeholder='Doe' />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <CustomTextField
             fullWidth
             type='number'
             label='Mobile'
             placeholder='202 555 0111'
-            InputProps={{
-              startAdornment: <InputAdornment position='start'>US (+1)</InputAdornment>
+            slotProps={{
+              input: {
+                startAdornment: <InputAdornment position='start'>US (+1)</InputAdornment>
+              }
             }}
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <CustomTextField fullWidth type='number' label='Pin Code' placeholder='689421' />
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <CustomTextField fullWidth label='Address' placeholder='1456, Liberty Street' />
         </Grid>
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <CustomTextField fullWidth label='Landmark' placeholder='Nr. Wall Street' />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <CustomTextField fullWidth label='City' placeholder='Miami' />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <CustomTextField select fullWidth label='State' defaultValue='new-york'>
             <MenuItem value='new-york'>New York</MenuItem>
             <MenuItem value='california'>California</MenuItem>
@@ -55,7 +57,7 @@ const StepPersonalInfo = ({ handleNext, handlePrev }: { handleNext: () => void; 
             <MenuItem value='washington'>Washington</MenuItem>
           </CustomTextField>
         </Grid>
-        <Grid item xs={12} className='flex justify-between'>
+        <Grid size={{ xs: 12 }} className='flex justify-between'>
           <Button
             variant='tonal'
             color='secondary'

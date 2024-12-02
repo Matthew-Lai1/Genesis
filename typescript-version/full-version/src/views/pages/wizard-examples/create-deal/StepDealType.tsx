@@ -3,7 +3,7 @@ import { useState } from 'react'
 import type { ChangeEvent } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import FormHelperText from '@mui/material/FormHelperText'
 import MenuItem from '@mui/material/MenuItem'
 import Button from '@mui/material/Button'
@@ -94,7 +94,7 @@ const StepDealType = ({ activeStep, handleNext, handlePrev, steps }: Props) => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <ImgWrapper>
           <img width={650} alt='illustration' src={`/images/pages/create-deal-type-${theme.palette.mode}.png`} />
         </ImgWrapper>
@@ -110,7 +110,7 @@ const StepDealType = ({ activeStep, handleNext, handlePrev, steps }: Props) => {
           <CustomInputVertical
             type='radio'
             key={index}
-            gridProps={{ sm: 4, xs: 12 }}
+            gridProps={{ size: { xs: 12, sm: 4 } }}
             selected={selectedOption}
             name='custom-radios-basic'
             handleChange={handleOptionChange}
@@ -118,7 +118,7 @@ const StepDealType = ({ activeStep, handleNext, handlePrev, steps }: Props) => {
           />
         )
       })}
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField
           fullWidth
           type='number'
@@ -127,7 +127,7 @@ const StepDealType = ({ activeStep, handleNext, handlePrev, steps }: Props) => {
           helperText='Enter the discount percentage. 10 = 10%'
         />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField
           select
           fullWidth
@@ -145,7 +145,7 @@ const StepDealType = ({ activeStep, handleNext, handlePrev, steps }: Props) => {
         </CustomTextField>
         <FormHelperText>Select applicable regions for the deal.</FormHelperText>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex items-center justify-between'>
           <Button
             variant='tonal'

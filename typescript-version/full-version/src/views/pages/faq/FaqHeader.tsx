@@ -42,12 +42,14 @@ const FaqHeader = ({ searchValue, setSearchValue }: Props) => {
           placeholder='search articles...'
           value={searchValue}
           onChange={e => setSearchValue(e.target.value)}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position='start'>
-                <i className='tabler-search' />
-              </InputAdornment>
-            )
+          slotProps={{
+            input: {
+              startAdornment: (
+                <InputAdornment position='start'>
+                  <i className='tabler-search' />
+                </InputAdornment>
+              )
+            }
           }}
         />
       </CardContent>

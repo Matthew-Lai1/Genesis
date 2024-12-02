@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import AppReactDatepicker from '@/libs/styles/AppReactDatepicker'
@@ -16,34 +16,34 @@ const PickersMonthYearDropdowns = () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <AppReactDatepicker
           selected={month}
           showMonthDropdown
           id='month-dropdown'
           placeholderText='MM-DD-YYYY'
-          onChange={(date: Date) => setMonth(date)}
+          onChange={(date: Date | null) => setMonth(date)}
           customInput={<CustomTextField label='Month Dropdown' fullWidth />}
         />
       </Grid>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <AppReactDatepicker
           selected={year}
           showYearDropdown
           id='year-dropdown'
           placeholderText='MM-DD-YYYY'
-          onChange={(date: Date) => setYear(date)}
+          onChange={(date: Date | null) => setYear(date)}
           customInput={<CustomTextField label='Year Dropdown' fullWidth />}
         />
       </Grid>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <AppReactDatepicker
           showYearDropdown
           showMonthDropdown
           selected={monthYear}
           id='month-year-dropdown'
           placeholderText='MM-DD-YYYY'
-          onChange={(date: Date) => setMonthYear(date)}
+          onChange={(date: Date | null) => setMonthYear(date)}
           customInput={<CustomTextField label='Month & Year Dropdown' fullWidth />}
         />
       </Grid>

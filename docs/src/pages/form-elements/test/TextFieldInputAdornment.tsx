@@ -3,7 +3,7 @@ import { useState } from 'react'
 import type { ChangeEvent } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import Input from '@mui/material/Input'
 import TextField from '@mui/material/TextField'
@@ -47,16 +47,18 @@ const TextFieldInputAdornment = () => {
       <CardHeader title='Input Adornment' />
       <CardContent>
         <Grid container spacing={6}>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <TextField
             fullWidth
             label='With normal TextField'
-            InputProps={{
-              startAdornment: <InputAdornment position='start'>Kg</InputAdornment>
+            slotProps={{
+              input: {
+                startAdornment: <InputAdornment position='start'>Kg</InputAdornment>
+              }
             }}
             />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <FormControl fullWidth>
             <OutlinedInput
               value={values.weight}
@@ -69,7 +71,7 @@ const TextFieldInputAdornment = () => {
             <FormHelperText>Weight</FormHelperText>
           </FormControl>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <FormControl fullWidth>
             <InputLabel>Password</InputLabel>
             <OutlinedInput
@@ -92,17 +94,19 @@ const TextFieldInputAdornment = () => {
             />
           </FormControl>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <TextField
             fullWidth
             variant='filled'
             label='With normal TextField'
-            InputProps={{
-              startAdornment: <InputAdornment position='start'>Kg</InputAdornment>
+            slotProps={{
+              input: {
+                startAdornment: <InputAdornment position='start'>Kg</InputAdornment>
+              }
             }}
           />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <FormControl variant='filled' fullWidth>
             <FilledInput
               value={values.weight}
@@ -115,7 +119,7 @@ const TextFieldInputAdornment = () => {
             <FormHelperText>Weight</FormHelperText>
           </FormControl>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <FormControl variant='filled' fullWidth>
             <InputLabel>Password</InputLabel>
             <FilledInput
@@ -137,17 +141,19 @@ const TextFieldInputAdornment = () => {
             />
           </FormControl>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <TextField
             fullWidth
             variant='standard'
             label='With normal TextField'
-            InputProps={{
-              startAdornment: <InputAdornment position='start'>Kg</InputAdornment>
+            slotProps={{
+              input: {
+                startAdornment: <InputAdornment position='start'>Kg</InputAdornment>
+              }
             }}
           />
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <FormControl variant='standard' className='mbs-3' fullWidth>
             <Input
               value={values.weight}
@@ -160,7 +166,7 @@ const TextFieldInputAdornment = () => {
             <FormHelperText>Weight</FormHelperText>
           </FormControl>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
           <FormControl variant='standard' fullWidth>
             <InputLabel>Password</InputLabel>
             <Input

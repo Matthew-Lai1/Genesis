@@ -1,6 +1,6 @@
 // MUI Imports
 import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -17,50 +17,56 @@ const FormLayoutsWithIcon = () => {
       <CardContent>
         <Form>
           <Grid container spacing={6}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <CustomTextField
                 fullWidth
                 label='Name'
                 placeholder='John Doe'
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position='start'>
-                      <i className='tabler-user' />
-                    </InputAdornment>
-                  )
+                slotProps={{
+                  input: {
+                    startAdornment: (
+                      <InputAdornment position='start'>
+                        <i className='tabler-user' />
+                      </InputAdornment>
+                    )
+                  }
                 }}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <CustomTextField
                 fullWidth
                 type='email'
                 label='Email'
                 placeholder='johndoe@gmail.com'
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position='start'>
-                      <i className='tabler-mail' />
-                    </InputAdornment>
-                  )
+                slotProps={{
+                  input: {
+                    startAdornment: (
+                      <InputAdornment position='start'>
+                        <i className='tabler-mail' />
+                      </InputAdornment>
+                    )
+                  }
                 }}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <CustomTextField
                 fullWidth
                 label='Phone No.'
                 placeholder='123-456-7890'
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position='start'>
-                      <i className='tabler-phone' />
-                    </InputAdornment>
-                  )
+                slotProps={{
+                  input: {
+                    startAdornment: (
+                      <InputAdornment position='start'>
+                        <i className='tabler-phone' />
+                      </InputAdornment>
+                    )
+                  }
                 }}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <CustomTextField
                 fullWidth
                 rows={4}
@@ -68,16 +74,18 @@ const FormLayoutsWithIcon = () => {
                 label='Message'
                 placeholder='Bio...'
                 sx={{ '& .MuiInputBase-root.MuiFilledInput-root': { alignItems: 'baseline' } }}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position='start'>
-                      <i className='tabler-message' />
-                    </InputAdornment>
-                  )
+                slotProps={{
+                  input: {
+                    startAdornment: (
+                      <InputAdornment position='start'>
+                        <i className='tabler-message' />
+                      </InputAdornment>
+                    )
+                  }
                 }}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Button variant='contained' type='submit'>
                 Submit
               </Button>

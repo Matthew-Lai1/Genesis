@@ -7,7 +7,7 @@ import Chip from '@mui/material/Chip'
 import Switch from '@mui/material/Switch'
 import Typography from '@mui/material/Typography'
 import InputLabel from '@mui/material/InputLabel'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import { useTheme } from '@mui/material/styles'
 
 // Third-party Imports
@@ -71,7 +71,7 @@ const Pricing = ({ data }: { data?: PricingPlanType[] }) => {
       </div>
       <Grid container spacing={6}>
         {data?.map((plan, index) => (
-          <Grid item xs={12} md={4} key={index}>
+          <Grid size={{ xs: 12, md: 4 }} key={index}>
             <PlanDetails data={plan} pricingPlan={pricingPlan} />
           </Grid>
         ))}

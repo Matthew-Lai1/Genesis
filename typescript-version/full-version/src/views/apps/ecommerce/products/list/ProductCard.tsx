@@ -1,7 +1,7 @@
 'use client'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Chip from '@mui/material/Chip'
@@ -66,10 +66,7 @@ const ProductCard = () => {
         <Grid container spacing={6}>
           {data.map((item, index) => (
             <Grid
-              item
-              xs={12}
-              sm={6}
-              md={3}
+              size={{ xs: 12, sm: 6, md: 3 }}
               key={index}
               className={classnames({
                 '[&:nth-of-type(odd)>div]:pie-6 [&:nth-of-type(odd)>div]:border-ie': isBelowMdScreen && !isSmallScreen,

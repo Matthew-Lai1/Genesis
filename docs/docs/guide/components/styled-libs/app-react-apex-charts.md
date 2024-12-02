@@ -38,7 +38,7 @@ type ApexChartWrapperProps = Props & {
 // Define custom styles and properties
 const ApexChartWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   // Custom styles for the ApexCharts...
-}));
+})) as typeof Box;
 
 // Component to render the chart
 const AppReactApexCharts = (props: ApexChartWrapperProps) => {

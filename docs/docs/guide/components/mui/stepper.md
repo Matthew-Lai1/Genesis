@@ -22,7 +22,11 @@ import StepperCustomDot from '@components/stepper-dot';
 <Stepper activeStep={activeStep} orientation='vertical'>
   {steps.map((step, index) => (
     <Step key={index}>
-      <StepLabel StepIconComponent={StepperCustomDot}>
+      <StepLabel
+        slots={{
+          stepIcon: StepperCustomDot
+        }}
+      >
         {/* Step content here */}
       </StepLabel>
     </Step>
@@ -59,7 +63,7 @@ import type { BoxProps } from '@mui/material/Box'
 
 const StepperWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   // Responsive and state-based style definitions...
-}))
+})) as typeof Box
 
 export default StepperWrapper
 ```

@@ -49,5 +49,5 @@ In order to change the colors of the template,you need to follow the steps below
 2. Now follow the [common customization steps](/docs/guide/development/theming/overview#common-customization-steps) mentioned in Overview.
 
 Above example is for changing the secondary color, you can change any color by following the same steps. Please refer
-[MUI extendTheme customization](https://mui.com/material-ui/experimental-api/css-theme-variables/customization/#color-schemes) for more information.
+[MUI createTheme customization](https://mui.com/material-ui/customization/theming/#createtheme-options-args-theme) for more information.
 Also refer our core theme from file `src/@core/theme/colorSchemes.ts` in order to check more colors & custom colors, dark/light colors etc.. to get better idea.

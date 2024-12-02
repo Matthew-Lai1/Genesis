@@ -38,7 +38,7 @@ Please be aware that introducing a new theme may lead to runtime errors, given t
    + import userTheme from './userTheme'
    ```
 
-3. Now use `userTheme` instead of `defaultCoreTheme` in the `ThemeProvider` component as shown below:
+3. Now use `userTheme` instead of `defaultCoreTheme` in the `CustomThemeProvider` component as shown below:
 
     ```diff title="src/components/theme/index.tsx"
     - const coreTheme = deepmerge(defaultCoreTheme(), ...)

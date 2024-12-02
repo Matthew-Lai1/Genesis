@@ -40,8 +40,10 @@ const TextFieldInputAdornment = () => {
       <CustomTextField
         id='icons-start-adornment'
         label='With normal TextField'
-        InputProps={{
-          startAdornment: <InputAdornment position='start'>Kg</InputAdornment>
+        slotProps={{
+          input: {
+            startAdornment: <InputAdornment position='start'>Kg</InputAdornment>
+          }
         }}
       />
       <CustomTextField

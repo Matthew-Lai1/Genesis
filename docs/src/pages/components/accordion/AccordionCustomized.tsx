@@ -39,21 +39,19 @@ const Accordion = styled(MuiAccordion)<AccordionProps>({
 })
 
 // Styled component for AccordionSummary component
-const AccordionSummary = styled(MuiAccordionSummary)<AccordionSummaryProps>(
-  ({ theme }) => ({
-    borderBlockEnd: '0 !important',
+const AccordionSummary = styled(MuiAccordionSummary)<AccordionSummaryProps>(({ theme }) => ({
+  borderBlockEnd: '0 !important',
+  minHeight: theme.spacing(11.5),
+  transition: 'min-height 0.15s ease-in-out',
+  backgroundColor: 'var(--mui-palette-customColors-greyLightBg)',
+  '&.Mui-expanded': {
     minHeight: theme.spacing(11.5),
-    transition: 'min-height 0.15s ease-in-out',
-    backgroundColor: 'var(--mui-palette-customColors-greyLightBg)',
-    '&.Mui-expanded': {
-      minHeight: theme.spacing(11.5),
-      borderBlockEnd: '1px solid var(--mui-palette-divider) !important',
-      '& .MuiAccordionSummary-expandIconWrapper': {
-        transform: 'rotate(180deg)'
-      }
+    borderBlockEnd: '1px solid var(--mui-palette-divider) !important',
+    '& .MuiAccordionSummary-expandIconWrapper': {
+      transform: 'rotate(180deg)'
     }
-  })
-);
+  }
+}))
 
 // Styled component for AccordionDetails component
 const AccordionDetails = styled(MuiAccordionDetails)<AccordionDetailsProps>(({ theme }) => ({

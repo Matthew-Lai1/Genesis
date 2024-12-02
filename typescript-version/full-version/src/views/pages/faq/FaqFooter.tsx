@@ -1,6 +1,6 @@
 // MUI Imports
 import Chip from '@mui/material/Chip'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 // Component Imports
@@ -17,7 +17,7 @@ const FaqFooter = () => {
         </Typography>
       </div>
       <Grid container spacing={6} className='mbs-6'>
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <div className='flex justify-center items-center flex-col gap-4 p-6 rounded bg-actionHover'>
             <CustomAvatar variant='rounded' color='primary' skin='light' size={46}>
               <i className='tabler-phone text-[26px]' />
@@ -29,7 +29,7 @@ const FaqFooter = () => {
             </div>
           </div>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid size={{ xs: 12, md: 6 }}>
           <div className='flex justify-center items-center flex-col gap-4 p-6 rounded bg-actionHover'>
             <CustomAvatar variant='rounded' color='primary' skin='light' size={46}>
               <i className='tabler-mail text-[26px]' />

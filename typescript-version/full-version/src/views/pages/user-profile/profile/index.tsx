@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Type Imports
 import type { ProfileTabType } from '@/types/pages/profileTypes'
@@ -13,16 +13,16 @@ import ProjectsTable from './ProjectsTables'
 const ProfileTab = ({ data }: { data?: ProfileTabType }) => {
   return (
     <Grid container spacing={6}>
-      <Grid item lg={4} md={5} xs={12}>
+      <Grid size={{ xs: 12, md: 5, lg: 4 }}>
         <AboutOverview data={data} />
       </Grid>
-      <Grid item lg={8} md={7} xs={12}>
+      <Grid size={{ xs: 12, md: 7, lg: 8 }}>
         <Grid container spacing={6}>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <ActivityTimeline />
           </Grid>
           <ConnectionsTeams connections={data?.connections} teamsTech={data?.teamsTech} />
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <ProjectsTable projectTable={data?.projectTable} />
           </Grid>
         </Grid>

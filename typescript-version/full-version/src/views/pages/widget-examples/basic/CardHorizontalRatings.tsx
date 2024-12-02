@@ -2,7 +2,7 @@
 
 // MUI Imports
 import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
 import Rating from '@mui/material/Rating'
@@ -13,7 +13,7 @@ const CardHorizontalRatings = () => {
   return (
     <Card>
       <Grid container>
-        <Grid item xs={12} md={6} lg={7}>
+        <Grid size={{ xs: 12, md: 6, lg: 7 }}>
           <CardContent>
             <Typography variant='h5' className='mbe-2'>
               Stumptown Roasters
@@ -32,7 +32,7 @@ const CardHorizontalRatings = () => {
             <Button>Reviews</Button>
           </CardActions>
         </Grid>
-        <Grid item xs={12} md={6} lg={5} className='flex items-center justify-center md:order-[unset] -order-1'>
+        <Grid size={{ xs: 12, md: 6, lg: 5 }} className='flex items-center justify-center md:order-[unset] -order-1'>
           <CardContent className='flex items-center justify-center'>
             <img src='/images/cards/5.png' height='175' className='rounded' />
           </CardContent>

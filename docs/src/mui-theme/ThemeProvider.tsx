@@ -5,11 +5,7 @@ import type { ReactNode } from 'react'
 import { useColorMode } from '@docusaurus/theme-common/internal'
 
 // MUI Imports
-import {
-  Experimental_CssVarsProvider as CssVarsProvider,
-  experimental_extendTheme as extendTheme,
-  StyledEngineProvider
-} from '@mui/material/styles'
+import { ThemeProvider, createTheme, StyledEngineProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import type {} from '@mui/material/themeCssVarsAugmentation'
 import type {} from '@mui/lab/themeAugmentation'
@@ -28,11 +24,11 @@ import shadows from '@core/theme/shadows'
 import customShadows from '@core/theme/customShadows'
 import typography from '@core/theme/typography'
 
-const ThemeProvider = ({ children }: { children: ReactNode }) => {
+const CustomThemeProvider = ({ children }: { children: ReactNode }) => {
   // Hooks
   const { colorMode } = useColorMode()
 
-  const theme = extendTheme({
+  const theme = createTheme({
     components: overrides('default'),
     colorSchemes: colorSchemes('default'),
     ...spacing,
@@ -54,21 +50,24 @@ const ThemeProvider = ({ children }: { children: ReactNode }) => {
       dark: '225 222 245',
       lightShadow: '47 43 61',
       darkShadow: '19 17 32'
+    },
+    cssVariables: {
+      colorSchemeSelector: 'data'
     }
   })
 
   return (
     <StyledEngineProvider injectFirst>
-      <CssVarsProvider
+      <ThemeProvider
         theme={theme}
         modeStorageKey={`${themeConfig.templateName.toLowerCase().split(' ').join('-')}-mui-docs-mode`}
       >
         <CssBaseline />
         <ChangeMuiMode />
         {children}
-      </CssVarsProvider>
+      </ThemeProvider>
     </StyledEngineProvider>
   )
 }
 
-export default ThemeProvider
+export default CustomThemeProvider

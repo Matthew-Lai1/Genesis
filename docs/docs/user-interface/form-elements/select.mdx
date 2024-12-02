@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Select
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -34,11 +34,11 @@ import SourceCodeSelectSize from '!!raw-loader!@docPages/form-elements/select/Se
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-select/) and [API documentation](https://mui.com/material-ui/react-select/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <CardSnippet
       title='Custom'
       code={SourceCodeSelectCustom}
-    > 
+    >
         <Typography className='mbe-4'>
           To use the custom <code>select</code>, use select prop with the <code>CustomTextField</code> component and pass multiple <code>MenuItem</code> components as children of the <code>CustomTextField</code> component for the multiple options.
 
@@ -50,7 +50,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
     </CardSnippet>
 
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Variants'
       code={SourceCodeSelectVariants}
@@ -61,7 +61,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SelectVariants />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Native Select'
       code={SourceCodeSelectNative}
@@ -72,7 +72,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SelectNative />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
+  <Grid size={{ xs: 12 }}>
     <CardSnippet
       title='Select Props'
       code={SourceCodeSelectProps}
@@ -83,18 +83,18 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SelectProps />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Controlled and Uncontrolled'
       code={SourceCodeSelectControlledUncontrolled}
-    > 
+    >
         <Typography className='mbe-4'>
           Manage value with the help of a state and pass it in the <code>SelectProps</code> prop with the <code>CustomTextField</code> component for controlled select and use <code>defaultValue</code> prop with the <code>CustomTextField</code> component for uncontrolled Select.
-        </Typography> 
+        </Typography>
       <SelectControlledUncontrolled />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Sizes'
       code={SourceCodeSelectSize}
@@ -105,7 +105,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SelectSize />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <CardSnippet
       title='Multiple Select'
       code={SourceCodeSelectMultiple}
@@ -116,9 +116,9 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <SelectMultiple />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
+  <Grid size={{ xs: 12, md: 6 }}>
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <CardSnippet
           title='Select with Dialog'
           code={SourceCodeSelectWithDialog}
@@ -126,7 +126,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
           <SelectWithDialog />
         </CardSnippet>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <CardSnippet
           title='Grouping'
           code={SourceCodeSelectGrouping}

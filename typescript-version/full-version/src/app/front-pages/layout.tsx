@@ -1,5 +1,6 @@
 // MUI Imports
 import Button from '@mui/material/Button'
+import InitColorSchemeScript from '@mui/material/InitColorSchemeScript'
 
 // Third-party Imports
 import 'react-perfect-scrollbar/dist/css/styles.css'
@@ -32,13 +33,14 @@ export const metadata = {
     'Vuexy - MUI Next.js Admin Dashboard Template - is the most developer friendly & highly customizable Admin Dashboard Template based on MUI v5.'
 }
 
-const Layout = ({ children }: ChildrenType) => {
+const Layout = async ({ children }: ChildrenType) => {
   // Vars
-  const systemMode = getSystemMode()
+  const systemMode = await getSystemMode()
 
   return (
-    <html id='__next'>
+    <html id='__next' suppressHydrationWarning>
       <body className='flex is-full min-bs-full flex-auto flex-col'>
+        <InitColorSchemeScript attribute='data' defaultMode={systemMode} />
         <Providers direction='ltr'>
           <BlankLayout systemMode={systemMode}>
             <IntersectionProvider>

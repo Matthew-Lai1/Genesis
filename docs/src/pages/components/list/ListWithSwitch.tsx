@@ -8,7 +8,6 @@ import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListSubheader from '@mui/material/ListSubheader'
-import ListItemSecondaryAction from '@mui/material/ListItemSecondaryAction'
 
 const ListWithSwitch = () => {
   // States
@@ -29,63 +28,67 @@ const ListWithSwitch = () => {
 
   return (
     <List subheader={<ListSubheader>Settings</ListSubheader>}>
-      <ListItem>
+      <ListItem
+        secondaryAction={<Switch edge='end' checked={checked.indexOf('wifi') !== -1} onChange={handleToggle('wifi')} />}
+      >
         <ListItemIcon>
           <i className='tabler-wifi text-xl' />
         </ListItemIcon>
         <ListItemText primary='Wi-Fi' />
-        <ListItemSecondaryAction>
-          <Switch edge='end' checked={checked.indexOf('wifi') !== -1} onChange={handleToggle('wifi')} />
-        </ListItemSecondaryAction>
       </ListItem>
-      <ListItem>
+      <ListItem
+        secondaryAction={
+          <Switch edge='end' checked={checked.indexOf('bluetooth') !== -1} onChange={handleToggle('bluetooth')} />
+        }
+      >
         <ListItemIcon>
           <i className='tabler-bluetooth text-xl' />
         </ListItemIcon>
         <ListItemText primary='Bluetooth' />
-        <ListItemSecondaryAction>
-          <Switch edge='end' checked={checked.indexOf('bluetooth') !== -1} onChange={handleToggle('bluetooth')} />
-        </ListItemSecondaryAction>
       </ListItem>
-      <ListItem>
+      <ListItem
+        secondaryAction={
+          <Switch edge='end' checked={checked.indexOf('location') !== -1} onChange={handleToggle('location')} />
+        }
+      >
         <ListItemIcon>
           <i className='tabler-map-pin text-xl' />
         </ListItemIcon>
         <ListItemText primary='Location' />
-        <ListItemSecondaryAction>
-          <Switch edge='end' checked={checked.indexOf('location') !== -1} onChange={handleToggle('location')} />
-        </ListItemSecondaryAction>
       </ListItem>
-      <ListItem>
+      <ListItem
+        secondaryAction={
+          <Switch edge='end' checked={checked.indexOf('airplane') !== -1} onChange={handleToggle('airplane')} />
+        }
+      >
         <ListItemIcon>
           <i className='tabler-plane-tilt text-xl' />
         </ListItemIcon>
         <ListItemText primary='Airplane Mode' />
-        <ListItemSecondaryAction>
-          <Switch edge='end' checked={checked.indexOf('airplane') !== -1} onChange={handleToggle('airplane')} />
-        </ListItemSecondaryAction>
       </ListItem>
-      <ListItem>
+      <ListItem
+        secondaryAction={
+          <Switch edge='end' checked={checked.indexOf('hotspot') !== -1} onChange={handleToggle('hotspot')} />
+        }
+      >
         <ListItemIcon>
           <i className='tabler-access-point text-xl' />
         </ListItemIcon>
         <ListItemText primary='Hotspot' />
-        <ListItemSecondaryAction>
-          <Switch edge='end' checked={checked.indexOf('hotspot') !== -1} onChange={handleToggle('hotspot')} />
-        </ListItemSecondaryAction>
       </ListItem>
-      <ListItem>
-        <ListItemIcon>
-          <i className='tabler-circle-minus text-xl' />
-        </ListItemIcon>
-        <ListItemText primary='Do not disturb' />
-        <ListItemSecondaryAction>
+      <ListItem
+        secondaryAction={
           <Switch
             edge='end'
             checked={checked.indexOf('do-not-disturb') !== -1}
             onChange={handleToggle('do-not-disturb')}
           />
-        </ListItemSecondaryAction>
+        }
+      >
+        <ListItemIcon>
+          <i className='tabler-circle-minus text-xl' />
+        </ListItemIcon>
+        <ListItemText primary='Do not disturb' />
       </ListItem>
     </List>
   )

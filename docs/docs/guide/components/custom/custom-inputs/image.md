@@ -23,7 +23,7 @@ export type CustomInputImgData = {
 export type CustomInputImgProps = {
   name: string
   color?: ThemeColor
-  gridProps: GridProps
+  gridProps: Grid2Props
   data: CustomInputImgData
 } & (
   | {
@@ -59,7 +59,7 @@ const Component = () => {
       selected={selected}
       name='custom-radios-img'
       handleChange={handleChange}
-      gridProps={{ sm: 4, xs: 12 }}
+      gridProps={{ size: { xs: 12, sm: 4 } }}
     />
   );
 };

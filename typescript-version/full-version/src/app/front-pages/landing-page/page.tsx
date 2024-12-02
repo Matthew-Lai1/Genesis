@@ -4,9 +4,9 @@ import LandingPageWrapper from '@views/front-pages/landing-page'
 // Server Action Imports
 import { getServerMode } from '@core/utils/serverHelpers'
 
-const LandingPage = () => {
+const LandingPage = async () => {
   // Vars
-  const mode = getServerMode()
+  const mode = await getServerMode()
 
   return <LandingPageWrapper mode={mode} />
 }

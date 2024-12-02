@@ -4,7 +4,7 @@
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
@@ -34,7 +34,7 @@ const CurrentPlan = ({ data }: { data?: PricingPlanType[] }) => {
       <CardHeader title='Current Plan' />
       <CardContent>
         <Grid container spacing={6}>
-          <Grid item xs={12} md={6} className='flex flex-col gap-4'>
+          <Grid size={{ xs: 12, md: 6 }} className='flex flex-col gap-4'>
             <div>
               <Typography className='font-medium text-textPrimary'>Your Current Plan is Basic</Typography>
               <Typography>A simple start for everyone</Typography>
@@ -55,7 +55,7 @@ const CurrentPlan = ({ data }: { data?: PricingPlanType[] }) => {
               <Typography>Standard plan for small to medium businesses</Typography>
             </div>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Alert icon={false} severity='warning' className='mbe-4'>
               <AlertTitle>We need your attention!</AlertTitle>
               Your plan requires update

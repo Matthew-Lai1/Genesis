@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 
 // MUI Imports
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Chip from '@mui/material/Chip'
 
 // Third-party Imports
@@ -110,7 +110,7 @@ const UsefulFeature = () => {
         <div>
           <Grid container spacing={6}>
             {feature.map((item, index) => (
-              <Grid item xs={12} sm={6} lg={4} key={index}>
+              <Grid size={{ xs: 12, sm: 6, lg: 4 }} key={index}>
                 <div className='flex flex-col gap-2 justify-center items-center'>
                   {item.icon}
                   <Typography className='mbs-2' variant='h5'>

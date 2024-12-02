@@ -92,7 +92,7 @@ const ToastifyWrapper = styled(Box)<BoxProps>(({ theme }) => {
       color: 'var(--mui-palette-text-primary)'
     }
   }
-})
+}) as typeof Box
 
 const AppReactToastify = (props: Props) => {
   const { boxProps, direction = 'ltr', ...rest } = props

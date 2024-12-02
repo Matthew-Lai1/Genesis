@@ -221,15 +221,17 @@ const KanbanDrawer = (props: KanbanDrawerProps) => {
                 placeholder='Choose File'
                 variant='outlined'
                 value={fileName}
-                InputProps={{
-                  readOnly: true,
-                  endAdornment: fileName ? (
-                    <InputAdornment position='end'>
-                      <IconButton size='small' edge='end' onClick={() => setFileName('')}>
-                        <i className='tabler-x' />
-                      </IconButton>
-                    </InputAdornment>
-                  ) : null
+                slotProps={{
+                  input: {
+                    readOnly: true,
+                    endAdornment: fileName ? (
+                      <InputAdornment position='end'>
+                        <IconButton size='small' edge='end' onClick={() => setFileName('')}>
+                          <i className='tabler-x' />
+                        </IconButton>
+                      </InputAdornment>
+                    ) : null
+                  }
                 }}
               />
               <Button component='label' variant='tonal' htmlFor='contained-button-file'>

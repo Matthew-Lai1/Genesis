@@ -5,7 +5,7 @@ import { useState } from 'react'
 import type { ChangeEvent } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
@@ -117,7 +117,7 @@ const AccountDetails = () => {
       <CardContent>
         <form onSubmit={e => e.preventDefault()}>
           <Grid container spacing={6}>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='First Name'
@@ -126,7 +126,7 @@ const AccountDetails = () => {
                 onChange={e => handleFormChange('firstName', e.target.value)}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='Last Name'
@@ -135,7 +135,7 @@ const AccountDetails = () => {
                 onChange={e => handleFormChange('lastName', e.target.value)}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='Email'
@@ -144,7 +144,7 @@ const AccountDetails = () => {
                 onChange={e => handleFormChange('email', e.target.value)}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='Organization'
@@ -153,7 +153,7 @@ const AccountDetails = () => {
                 onChange={e => handleFormChange('organization', e.target.value)}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='Phone Number'
@@ -162,7 +162,7 @@ const AccountDetails = () => {
                 onChange={e => handleFormChange('phoneNumber', e.target.value)}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='Address'
@@ -171,7 +171,7 @@ const AccountDetails = () => {
                 onChange={e => handleFormChange('address', e.target.value)}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='State'
@@ -180,7 +180,7 @@ const AccountDetails = () => {
                 onChange={e => handleFormChange('state', e.target.value)}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 type='number'
@@ -190,7 +190,7 @@ const AccountDetails = () => {
                 onChange={e => handleFormChange('zipCode', e.target.value)}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 select
                 fullWidth
@@ -204,7 +204,7 @@ const AccountDetails = () => {
                 <MenuItem value='germany'>Germany</MenuItem>
               </CustomTextField>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 select
                 fullWidth
@@ -236,7 +236,7 @@ const AccountDetails = () => {
                 ))}
               </CustomTextField>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 select
                 fullWidth
@@ -264,7 +264,7 @@ const AccountDetails = () => {
                 <MenuItem value='gmt-04-clp'>(GMT-04:00) Caracas, La Paz</MenuItem>
               </CustomTextField>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 select
                 fullWidth
@@ -278,7 +278,7 @@ const AccountDetails = () => {
                 <MenuItem value='bitcoin'>Bitcoin</MenuItem>
               </CustomTextField>
             </Grid>
-            <Grid item xs={12} className='flex gap-4 flex-wrap'>
+            <Grid size={{ xs: 12 }} className='flex gap-4 flex-wrap'>
               <Button variant='contained' type='submit'>
                 Save Changes
               </Button>

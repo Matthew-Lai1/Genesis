@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react'
 
 // MUI Imports
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Chip from '@mui/material/Chip'
 import { styled } from '@mui/material/styles'
 
@@ -106,7 +106,7 @@ const OurTeam = () => {
         </div>
         <Grid container rowSpacing={16} columnSpacing={6} className='pbs-[100px]'>
           {team.map((member, index) => (
-            <Grid item xs={12} md={6} lg={3} key={index}>
+            <Grid size={{ xs: 12, md: 6, lg: 3 }} key={index}>
               <Card className='border overflow-visible' color={member.color as ThemeColor}>
                 <div className='flex flex-col items-center justify-center p-0'>
                   <div

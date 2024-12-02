@@ -4,7 +4,7 @@ title: ''
 sidebar_label: Menu
 ---
 
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 import CardSnippet from '@docComponents/card-snippet/index'
@@ -30,11 +30,8 @@ import SourceCodeMenuComposition from '!!raw-loader!@docPages/components/menu/Me
 Please refer to MUI's official docs for more details on component's [usage guide](https://mui.com/material-ui/react-menu/) and [API documentation](https://mui.com/material-ui/react-menu/#api).
 
 <Grid container spacing={6}>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='Basic Menu'
-      code={SourceCodeMenuBasic}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Basic Menu' code={SourceCodeMenuBasic}>
       <Typography className='mbe-4'>
         Manage <code>anchorEl</code> and <code>open</code> props with the help of a state and <code>onClose</code> prop
         with the help of a function in <code>Menu</code> component.
@@ -42,66 +39,49 @@ Please refer to MUI's official docs for more details on component's [usage guide
       <MenuBasic />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='Selected Menu'
-      code={SourceCodeMenuSelected}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Selected Menu' code={SourceCodeMenuSelected}>
       <Typography className='mbe-4'>
         Manage <code>selected</code> prop with the help of a state in <code>MenuItem</code> component to select an item.
       </Typography>
       <MenuSelected />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='MenuList Composition'
-      code={SourceCodeMenuComposition}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='MenuList Composition' code={SourceCodeMenuComposition}>
       <Typography className='mbe-4'>
-        Use a different positioning strategy and not blocking the page scroll by using <code>MenuList</code> and <code>Popper</code> components.
+        Use a different positioning strategy and not blocking the page scroll by using <code>MenuList</code> and{' '}
+        <code>Popper</code> components.
       </Typography>
       <MenuComposition />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='Customized Menu'
-      code={SourceCodeMenuCustomized}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Customized Menu' code={SourceCodeMenuCustomized}>
       <Typography className='mbe-4'>
         Use <code>styled</code> hook to customize your menu.
       </Typography>
       <MenuCustomized />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='Max Height Menu'
-      code={SourceCodeMenuMaxHeight}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Max Height Menu' code={SourceCodeMenuMaxHeight}>
       <Typography className='mbe-4'>
         Use <code>PaperProps</code> prop and use <code>style</code> property to set the height of the menu.
       </Typography>
       <MenuMaxHeight />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12} md={6}>
-    <CardSnippet
-      title='Change Transition'
-      code={SourceCodeMenuTransition}
-    >
+  <Grid size={{ xs: 12, md: 6 }}>
+    <CardSnippet title='Change Transition' code={SourceCodeMenuTransition}>
       <Typography className='mbe-4'>
         Use <code>TransitionComponent</code> prop to change the transition of the menu.
       </Typography>
       <MenuTransition />
     </CardSnippet>
   </Grid>
-  <Grid item xs={12}>
-    <CardSnippet
-      title='Context Menu'
-      code={SourceCodeMenuContext}
-    >
+  <Grid size={{ xs: 12 }}>
+    <CardSnippet title='Context Menu' code={SourceCodeMenuContext}>
       <Typography className='mbe-4'>
         Use <code>onContextMenu</code> prop in the parent element to manage the context menu.
       </Typography>

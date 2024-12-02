@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -130,9 +130,9 @@ const CustomerAddress = (props: dataType) => {
       </div>
       <Collapse in={expanded} timeout={300}>
         <Grid container spacing={6} className='pbe-3 pis-12'>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Grid container spacing={2}>
-              <Grid item xs={4}>
+              <Grid size={{ xs: 4 }}>
                 <div className='flex flex-col gap-1'>
                   <Typography variant='body2'>Name</Typography>
                   <Typography variant='body2'>Number</Typography>
@@ -142,7 +142,7 @@ const CustomerAddress = (props: dataType) => {
                   <Typography variant='body2'>ID</Typography>
                 </div>
               </Grid>
-              <Grid item xs={8}>
+              <Grid size={{ xs: 8 }}>
                 <div className='flex flex-col gap-1'>
                   <Typography variant='body2' color='text.primary' className='font-medium'>
                     Violet Mendoza
@@ -166,9 +166,9 @@ const CustomerAddress = (props: dataType) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <Grid container>
-              <Grid item xs={4}>
+              <Grid size={{ xs: 4 }}>
                 <div className='flex flex-col gap-1'>
                   <Typography variant='body2'>Billing</Typography>
                   <Typography variant='body2'>Number</Typography>
@@ -177,7 +177,7 @@ const CustomerAddress = (props: dataType) => {
                   <Typography variant='body2'>CVC</Typography>
                 </div>
               </Grid>
-              <Grid item xs={8}>
+              <Grid size={{ xs: 8 }}>
                 <div className='flex flex-col gap-1'>
                   <Typography variant='body2' color='text.primary' className='font-medium'>
                     USA

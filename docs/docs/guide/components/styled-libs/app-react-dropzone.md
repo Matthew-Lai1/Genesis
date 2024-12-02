@@ -28,7 +28,7 @@ import { styled } from '@mui/material/styles';
 // Styled Components
 const AppReactDropzone = styled(Box)<BoxProps>(({ theme }) => ({
   // Custom styles for the React Dropzone...
-}));
+})) as typeof Box;
 
 export default AppReactDropzone;
 ```
