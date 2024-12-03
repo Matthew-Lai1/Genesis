@@ -12,7 +12,7 @@ import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import Typography from '@mui/material/Typography'
@@ -239,13 +239,13 @@ const RevenueReport = () => {
   return (
     <Card>
       <Grid container>
-        <Grid item xs={12} sm={8} className='border-r'>
+        <Grid size={{ xs: 12, sm: 8 }} className='border-r'>
           <CardHeader title='Revenue Report' />
           <CardContent>
             <AppReactApexCharts type='bar' height={320} width='100%' series={barSeries} options={barOptions} />
           </CardContent>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid size={{ xs: 12, sm: 4 }}>
           <CardContent className='flex flex-col items-center justify-center min-bs-full gap-8'>
             <Button
               size='small'

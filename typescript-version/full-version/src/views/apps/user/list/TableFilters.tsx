@@ -40,7 +40,9 @@ const TableFilters = ({ setData, tableData }: { setData: (data: UsersType[]) => 
             id='select-role'
             value={role}
             onChange={e => setRole(e.target.value)}
-            SelectProps={{ displayEmpty: true }}
+            slotProps={{
+              select: { displayEmpty: true }
+            }}
           >
             <MenuItem value=''>Select Role</MenuItem>
             <MenuItem value='admin'>Admin</MenuItem>
@@ -57,7 +59,9 @@ const TableFilters = ({ setData, tableData }: { setData: (data: UsersType[]) => 
             id='select-plan'
             value={plan}
             onChange={e => setPlan(e.target.value)}
-            SelectProps={{ displayEmpty: true }}
+            slotProps={{
+              select: { displayEmpty: true }
+            }}
           >
             <MenuItem value=''>Select Plan</MenuItem>
             <MenuItem value='basic'>Basic</MenuItem>
@@ -73,7 +77,9 @@ const TableFilters = ({ setData, tableData }: { setData: (data: UsersType[]) => 
             id='select-status'
             value={status}
             onChange={e => setStatus(e.target.value)}
-            SelectProps={{ displayEmpty: true }}
+            slotProps={{
+              select: { displayEmpty: true }
+            }}
           >
             <MenuItem value=''>Select Status</MenuItem>
             <MenuItem value='pending'>Pending</MenuItem>

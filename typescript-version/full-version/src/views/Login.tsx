@@ -224,14 +224,20 @@ const Login = ({ mode }: { mode: SystemMode }) => {
                     field.onChange(e.target.value)
                     errorState !== null && setErrorState(null)
                   }}
-                  InputProps={{
-                    endAdornment: (
-                      <InputAdornment position='end'>
-                        <IconButton edge='end' onClick={handleClickShowPassword} onMouseDown={e => e.preventDefault()}>
-                          <i className={isPasswordShown ? 'tabler-eye' : 'tabler-eye-off'} />
-                        </IconButton>
-                      </InputAdornment>
-                    )
+                  slotProps={{
+                    input: {
+                      endAdornment: (
+                        <InputAdornment position='end'>
+                          <IconButton
+                            edge='end'
+                            onClick={handleClickShowPassword}
+                            onMouseDown={e => e.preventDefault()}
+                          >
+                            <i className={isPasswordShown ? 'tabler-eye' : 'tabler-eye-off'} />
+                          </IconButton>
+                        </InputAdornment>
+                      )
+                    }
                   }}
                   {...(errors.password && { error: true, helperText: errors.password.message })}
                 />

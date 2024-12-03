@@ -71,7 +71,7 @@ const CurrentPlan = ({ data }: { data?: PricingPlanType[] }) => {
             <LinearProgress variant='determinate' value={80} className='mlb-1 bs-2.5' />
             <Typography variant='body2'>Your plan requires update</Typography>
           </Grid>
-          <Grid item xs={12} className='flex gap-4 flex-wrap'>
+          <Grid size={{ xs: 12 }} className='flex gap-4 flex-wrap'>
             <OpenDialogOnElementClick
               element={Button}
               elementProps={buttonProps('Upgrade plan', 'contained', 'primary')}

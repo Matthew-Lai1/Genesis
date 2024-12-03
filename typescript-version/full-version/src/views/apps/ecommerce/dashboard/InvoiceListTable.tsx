@@ -337,7 +337,9 @@ const InvoiceListTable = ({ invoiceData }: { invoiceData: InvoiceType[] }) => {
             value={status}
             onChange={e => setStatus(e.target.value)}
             className='max-sm:is-full sm:is-[160px]'
-            SelectProps={{ displayEmpty: true }}
+            slotProps={{
+              select: { displayEmpty: true }
+            }}
           >
             <MenuItem value=''>Invoice Status</MenuItem>
             <MenuItem value='downloaded'>Downloaded</MenuItem>

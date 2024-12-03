@@ -208,9 +208,11 @@ const FormLayoutsSeparator = () => {
                 fullWidth
                 label='Language'
                 value={formData.language}
-                SelectProps={{
-                  multiple: true,
-                  onChange: e => setFormData({ ...formData, language: e.target.value as string[] })
+                slotProps={{
+                  select: {
+                    multiple: true,
+                    onChange: e => setFormData({ ...formData, language: e.target.value as string[] })
+                  }
                 }}
               >
                 <MenuItem value='English'>English</MenuItem>

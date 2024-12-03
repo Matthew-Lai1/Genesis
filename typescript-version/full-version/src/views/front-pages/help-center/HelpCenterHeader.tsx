@@ -45,12 +45,14 @@ const HelpCenterHeader = ({ searchValue, setSearchValue }: Props) => {
           placeholder='Ask a question...'
           value={searchValue}
           onChange={e => setSearchValue(e.target.value)}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position='start'>
-                <i className='tabler-search' />
-              </InputAdornment>
-            )
+          slotProps={{
+            input: {
+              startAdornment: (
+                <InputAdornment position='start'>
+                  <i className='tabler-search' />
+                </InputAdornment>
+              )
+            }
           }}
         />
         <Typography>Common troubleshooting topics: eCommerce, Blogging to payment</Typography>

@@ -127,14 +127,16 @@ const ReferEarn = ({ open, setOpen }: ReferEarnProps) => {
               id='refer-social'
               placeholder='http://pixinvent.link'
               label='You can also copy and send it or share it on your social media. 🚀'
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position='end'>
-                    <Button size='small' className='capitalize !text-primary'>
-                      Copy Link
-                    </Button>
-                  </InputAdornment>
-                )
+              slotProps={{
+                input: {
+                  endAdornment: (
+                    <InputAdornment position='end'>
+                      <Button size='small' className='capitalize !text-primary'>
+                        Copy Link
+                      </Button>
+                    </InputAdornment>
+                  )
+                }
               }}
             />
             <div className='flex items-center gap-1'>

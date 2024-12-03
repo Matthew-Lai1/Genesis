@@ -4,9 +4,9 @@ import LoginV2 from '@views/pages/auth/LoginV2'
 // Server Action Imports
 import { getServerMode } from '@core/utils/serverHelpers'
 
-const LoginV2Page = () => {
+const LoginV2Page = async () => {
   // Vars
-  const mode = getServerMode()
+  const mode = await getServerMode()
 
   return <LoginV2 mode={mode} />
 }

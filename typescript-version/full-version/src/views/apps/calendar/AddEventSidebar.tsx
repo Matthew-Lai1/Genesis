@@ -325,8 +325,10 @@ const AddEventSidebar = (props: AddEventSidebarType) => {
                   guests: typeof e.target.value === 'string' ? e.target.value.split(',') : e.target.value
                 })
               }}
-              SelectProps={{
-                multiple: true
+              slotProps={{
+                select: {
+                  multiple: true
+                }
               }}
             >
               <MenuItem value='bruce'>Bruce</MenuItem>

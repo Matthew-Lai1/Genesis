@@ -172,25 +172,27 @@ const KanbanDrawer = (props: KanbanDrawerProps) => {
             <CustomTextField
               select
               label='Label'
-              SelectProps={{
-                multiple: true,
-                value: badgeText || [],
-                onChange: e => setBadgeText(e.target.value as string[]),
-                renderValue: selected => (
-                  <div className='flex flex-wrap gap-1'>
-                    {(selected as string[]).map(value => (
-                      <Chip
-                        variant='tonal'
-                        key={value}
-                        size='small'
-                        onMouseDown={e => e.stopPropagation()}
-                        label={value}
-                        color={chipColor[value]?.color}
-                        onDelete={() => setBadgeText(current => current.filter(item => item !== value))}
-                      />
-                    ))}
-                  </div>
-                )
+              slotProps={{
+                select: {
+                  multiple: true,
+                  value: badgeText || [],
+                  onChange: e => setBadgeText(e.target.value as string[]),
+                  renderValue: selected => (
+                    <div className='flex flex-wrap gap-1'>
+                      {(selected as string[]).map(value => (
+                        <Chip
+                          variant='tonal'
+                          key={value}
+                          size='small'
+                          onMouseDown={e => e.stopPropagation()}
+                          label={value}
+                          color={chipColor[value]?.color}
+                          onDelete={() => setBadgeText(current => current.filter(item => item !== value))}
+                        />
+                      ))}
+                    </div>
+                  )
+                }
               }}
             >
               {Object.keys(chipColor).map(chip => (

@@ -6,7 +6,7 @@ import { useState } from 'react'
 // MUI Imports
 import Badge from '@mui/material/Badge'
 import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
 
@@ -73,13 +73,13 @@ const Slides = () => {
               Total 28.5% Conversion Rate
             </Typography>
             <Grid container spacing={4} className='relative'>
-              <Grid item xs={12} sm={8} className='order-2 sm:order-1'>
+              <Grid size={{ xs: 12, sm: 8 }} className='order-2 sm:order-1'>
                 <div className='flex flex-col gap-4 pbs-5 sm:plb-6'>
                   <Typography className='font-medium text-[var(--mui-palette-common-white)]'>{slide.title}</Typography>
                   <Grid container spacing={4}>
                     {Object.keys(slide.details).map((key: string, index: number) => {
                       return (
-                        <Grid item key={index} xs={6}>
+                        <Grid key={index} size={{ xs: 6 }}>
                           <div className='flex items-center gap-0.5'>
                             <CustomAvatar
                               color='primary'
@@ -98,7 +98,7 @@ const Slides = () => {
                   </Grid>
                 </div>
               </Grid>
-              <Grid item xs={12} sm={4} className='flex justify-center order-1 sm:order-2'>
+              <Grid size={{ xs: 12, sm: 4 }} className='flex justify-center order-1 sm:order-2'>
                 <img
                   src={slide.img}
                   height={150}

@@ -92,16 +92,18 @@ const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }: Props) =
             <CustomTextField
               select
               fullWidth
-              SelectProps={{
-                multiple: true, // @ts-ignore
-                onChange: handleChange,
-                renderValue: selected => (
-                  <div className='flex flex-wrap gap-2'>
-                    {(selected as string[]).map((value, index) => (
-                      <Chip size='small' key={index} label={value} />
-                    ))}
-                  </div>
-                )
+              slotProps={{
+                select: {
+                  multiple: true, // @ts-ignore
+                  onChange: handleChange,
+                  renderValue: selected => (
+                    <div className='flex flex-wrap gap-2'>
+                      {(selected as string[]).map((value, index) => (
+                        <Chip size='small' key={index} label={value} />
+                      ))}
+                    </div>
+                  )
+                }
               }}
               label='Offered Items'
               value={offeredItems}

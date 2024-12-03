@@ -58,16 +58,16 @@ const FormWizard = () => {
       <Grid size={{ xs: 12 }}>
         <StepperVerticalWithoutNumbers />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Typography variant='h5'>Custom Horizontal Stepper</Typography>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <StepperCustomHorizontal />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Typography variant='h5'>Custom Vertical Stepper</Typography>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <StepperCustomVertical />
       </Grid>
     </Grid>

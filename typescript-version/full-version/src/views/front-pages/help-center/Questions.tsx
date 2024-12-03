@@ -69,12 +69,14 @@ const Questions = () => {
           <Grid size={{ xs: 12, lg: 4 }} className='flex flex-col gap-6'>
             <CustomTextField
               placeholder='Search...'
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position='start'>
-                    <i className='tabler-search' />
-                  </InputAdornment>
-                )
+              slotProps={{
+                input: {
+                  startAdornment: (
+                    <InputAdornment position='start'>
+                      <i className='tabler-search' />
+                    </InputAdornment>
+                  )
+                }
               }}
             />
             <div className='flex flex-col gap-4'>

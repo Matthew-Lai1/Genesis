@@ -347,7 +347,9 @@ const RolesTable = ({ tableData }: { tableData?: UsersType[] }) => {
             onChange={e => setRole(e.target.value)}
             id='roles-app-role-select'
             className='max-sm:is-full sm:is-[160px]'
-            SelectProps={{ displayEmpty: true }}
+            slotProps={{
+              select: { displayEmpty: true }
+            }}
           >
             <MenuItem value=''>Select Role</MenuItem>
             <MenuItem value='admin'>Admin</MenuItem>

@@ -132,8 +132,10 @@ const StepDealType = ({ activeStep, handleNext, handlePrev, steps }: Props) => {
           select
           fullWidth
           value={region}
-          SelectProps={{
-            onChange: e => setRegion(e.target.value as string)
+          slotProps={{
+            select: {
+              onChange: e => setRegion(e.target.value as string)
+            }
           }}
           label='Region'
         >

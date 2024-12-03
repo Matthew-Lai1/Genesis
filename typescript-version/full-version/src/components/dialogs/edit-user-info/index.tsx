@@ -163,16 +163,18 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
                 fullWidth
                 label='Language'
                 value={userData?.language?.map(lang => lang.toLowerCase().replace(/\s+/g, '-')) || []}
-                SelectProps={{
-                  multiple: true,
-                  onChange: e => setUserData({ ...userData, language: e.target.value as string[] }),
-                  renderValue: selected => (
-                    <div className='flex items-center gap-2'>
-                      {(selected as string[]).map(value => (
-                        <Chip key={value} label={value} className='capitalize' size='small' />
-                      ))}
-                    </div>
-                  )
+                slotProps={{
+                  select: {
+                    multiple: true,
+                    onChange: e => setUserData({ ...userData, language: e.target.value as string[] }),
+                    renderValue: selected => (
+                      <div className='flex items-center gap-2'>
+                        {(selected as string[]).map(value => (
+                          <Chip key={value} label={value} className='capitalize' size='small' />
+                        ))}
+                      </div>
+                    )
+                  }
                 }}
               >
                 {languages.map((language, index) => (

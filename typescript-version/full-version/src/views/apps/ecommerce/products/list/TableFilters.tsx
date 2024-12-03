@@ -58,7 +58,9 @@ const TableFilters = ({
             id='select-status'
             value={status}
             onChange={e => setStatus(e.target.value)}
-            SelectProps={{ displayEmpty: true }}
+            slotProps={{
+              select: { displayEmpty: true }
+            }}
           >
             <MenuItem value=''>Select Status</MenuItem>
             <MenuItem value='Scheduled'>Scheduled</MenuItem>
@@ -73,7 +75,9 @@ const TableFilters = ({
             id='select-category'
             value={category}
             onChange={e => setCategory(e.target.value)}
-            SelectProps={{ displayEmpty: true }}
+            slotProps={{
+              select: { displayEmpty: true }
+            }}
           >
             <MenuItem value=''>Select Category</MenuItem>
             <MenuItem value='Accessories'>Accessories</MenuItem>
@@ -91,7 +95,9 @@ const TableFilters = ({
             id='select-stock'
             value={stock}
             onChange={e => setStock(e.target.value as string)}
-            SelectProps={{ displayEmpty: true }}
+            slotProps={{
+              select: { displayEmpty: true }
+            }}
           >
             <MenuItem value=''>Select Stock</MenuItem>
             <MenuItem value='In Stock'>In Stock</MenuItem>

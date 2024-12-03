@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Types Imports
 import type { CardStatsHorizontalProps } from '@/types/pages/widgetTypes'
@@ -12,7 +12,7 @@ const Horizontal = ({ data }: { data: CardStatsHorizontalProps[] }) => {
     return (
       <Grid container spacing={6}>
         {data.map((item, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}>
+          <Grid size={{ xs: 12, sm: 6, md: 3 }} key={index}>
             <CardStatHorizontal {...item} />
           </Grid>
         ))}

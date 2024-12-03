@@ -210,23 +210,25 @@ const AccountDetails = () => {
                 fullWidth
                 label='Language'
                 value={language}
-                SelectProps={{
-                  multiple: true, // @ts-ignore
-                  onChange: handleChange,
-                  renderValue: selected => (
-                    <div className='flex flex-wrap gap-2'>
-                      {(selected as string[]).map(value => (
-                        <Chip
-                          key={value}
-                          clickable
-                          onMouseDown={event => event.stopPropagation()}
-                          size='small'
-                          label={value}
-                          onDelete={() => handleDelete(value)}
-                        />
-                      ))}
-                    </div>
-                  )
+                slotProps={{
+                  select: {
+                    multiple: true, // @ts-ignore
+                    onChange: handleChange,
+                    renderValue: selected => (
+                      <div className='flex flex-wrap gap-2'>
+                        {(selected as string[]).map(value => (
+                          <Chip
+                            key={value}
+                            clickable
+                            onMouseDown={event => event.stopPropagation()}
+                            size='small'
+                            label={value}
+                            onDelete={() => handleDelete(value)}
+                          />
+                        ))}
+                      </div>
+                    )
+                  }
                 }}
               >
                 {languageData.map(name => (
@@ -243,7 +245,9 @@ const AccountDetails = () => {
                 label='TimeZone'
                 value={formData.timezone}
                 onChange={e => handleFormChange('timezone', e.target.value)}
-                SelectProps={{ MenuProps: { PaperProps: { style: { maxHeight: 250 } } } }}
+                slotProps={{
+                  select: { MenuProps: { PaperProps: { style: { maxHeight: 250 } } } }
+                }}
               >
                 <MenuItem value='gmt-12'>(GMT-12:00) International Date Line West</MenuItem>
                 <MenuItem value='gmt-11'>(GMT-11:00) Midway Island, Samoa</MenuItem>

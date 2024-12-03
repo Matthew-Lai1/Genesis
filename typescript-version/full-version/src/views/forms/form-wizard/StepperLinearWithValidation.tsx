@@ -392,7 +392,9 @@ const StepperLinearWithValidation = () => {
                     <CustomTextField
                       select
                       fullWidth
-                      SelectProps={{ multiple: true }}
+                      slotProps={{
+                        select: { multiple: true }
+                      }}
                       label='Language'
                       value={Array.isArray(value) ? value : []}
                       onChange={onChange}
