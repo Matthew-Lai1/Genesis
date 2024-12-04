@@ -82,7 +82,7 @@ async function replacePatternInFile(filePath: string) {
 }
 
 async function updateNextConfig() {
-  const filePath = 'next.config.mjs'
+  const filePath = 'next.config.ts'
 
   const content = await readFile(filePath, 'utf8')
 
@@ -99,7 +99,7 @@ async function updateNextConfig() {
 
   if (content !== updatedContent) {
     await writeFile(filePath, updatedContent, 'utf8')
-    consola.success('Removed redirects from next.config.mjs\n')
+    consola.success('Removed redirects from next.config.ts\n')
   }
 }
 
