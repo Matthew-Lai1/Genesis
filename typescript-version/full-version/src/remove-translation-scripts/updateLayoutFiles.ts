@@ -11,11 +11,11 @@ export const updateLayoutFile = async () => {
 
   // Modify the file content as needed
   layoutFileContent = layoutFileContent
-    .replace(/\{ children, params \}/, '{ children }')
     .replace(/lang={params.lang}/g, "lang='en'")
-    .replace(/ & { params: { lang: Locale } }/, '')
     .replace(/const headersList.*/, '')
     .replace(/<TranslationWrapper[^>]*>([\s\S]*?)<\/TranslationWrapper>/, '$1')
+    .replace(/&\s*\{[^}]*params:\s*Promise<[^}]*lang:\s*Locale[^}]*\}>\s}/, '')
+    .replace(/const params = await props.params/g, '')
 
   // Write the modified content back to the file
   await fs.promises.writeFile('src/app/layout.tsx', layoutFileContent)
@@ -35,6 +35,8 @@ export const updateDashboardLayoutFile = async () => {
     .replace(/<Customizer((?!disableDirection)[^>]*?)\/?>/g, `<Customizer$1 disableDirection />`)
     .replace(/const dictionary = await getDictionary\(params.lang\)\n?/, '')
     .replace(/(AuthGuard\s*[^>]*?)locale={params.lang}(.*?>)/, '$1$2')
+    .replace(/&\s*\{[^}]*params:\s*Promise<[^}]*lang:\s*Locale[^}]*\}>\s}/, '')
+    .replace(/const params = await props.params/g, '')
 
   await fs.promises.writeFile(filePath, content)
   consola.success('Added disabledDirection prop in customizer component\n')
@@ -48,7 +50,10 @@ export const updateGuestLayoutFile = async () => {
 
   let content = await fs.promises.readFile(filePath, 'utf8')
 
-  content = content.replace(/lang={params.lang}/, '')
+  content = content
+    .replace(/lang={params.lang}/, '')
+    .replace(/&\s*\{[^}]*params:\s*Promise<[^}]*lang:\s*Locale[^}]*\}>\s}/, '')
+    .replace(/const params = await props.params/g, '')
 
   await fs.promises.writeFile(filePath, content)
 }
