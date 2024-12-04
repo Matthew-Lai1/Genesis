@@ -16,7 +16,7 @@ While we have applied custom styling to the `TextField` component, it retains co
 The custom modifications come with certain restrictions:
 
 - The `variant` prop is fixed to ensure consistency in the component's enhanced design. As a result, you cannot change the `TextField` variant when using `CustomTextField`.
-- The `shrink` property of the `InputLabelProps` prop cannot be modified. This decision was made to maintain a uniform appearance across different implementations of the component.
+- The `shrink` property of the `inputLabel` prop of `slotProps` cannot be modified. This decision was made to maintain a uniform appearance across different implementations of the component.
 :::
 
 ### Importing the Customized textField

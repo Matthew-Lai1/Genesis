@@ -32,7 +32,9 @@ const TextFieldFormProps = () => {
           label='Read Only'
           defaultValue='Hello World'
           id='form-props-read-only-input'
-          inputProps={{ readOnly: true }}
+          slotProps={{
+            htmlInput: { readOnly: true }
+          }}
         />
       </Grid>
       <Grid size={{ xs: 12, md: 2 }}>

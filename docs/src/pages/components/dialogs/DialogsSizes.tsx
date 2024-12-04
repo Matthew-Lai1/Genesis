@@ -67,10 +67,9 @@ const DialogsSizes = () => {
               select
               label='maxWidth'
               value={maxWidth}
-              SelectProps={{ onChange: handleMaxWidthChange }}
-              inputProps={{
-                name: 'max-width',
-                id: 'max-width'
+              slotProps={{
+                select: { onChange: handleMaxWidthChange },
+                htmlInput: { name: 'max-width', id: 'max-width' }
               }}
             >
               <MenuItem value={false as any}>false</MenuItem>

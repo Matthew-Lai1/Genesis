@@ -47,7 +47,11 @@ const SelectWithDialog = () => {
               fullWidth
               label='Age'
               defaultValue=''
-              SelectProps={{ native: true }}
+              slotProps={{
+                select: {
+                  native: true
+                }
+              }}
             >
               <option aria-label='None' value='' />
               <option value={10}>Ten</option>

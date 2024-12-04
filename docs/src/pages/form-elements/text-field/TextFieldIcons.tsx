@@ -13,12 +13,14 @@ const TextFieldIcons = () => {
           <CustomTextField
             id='input-with-icon-adornment'
             label='With adornment'
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position='start'>
-                  <i className='tabler-user-circle' />
-                </InputAdornment>
-              ),
+            slotProps={{
+              input: {
+                startAdornment: (
+                  <InputAdornment position='start'>
+                    <i className='tabler-user-circle' />
+                  </InputAdornment>
+                )
+              }
             }}
           />
         </Grid>

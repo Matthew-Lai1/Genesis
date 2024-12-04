@@ -29,7 +29,11 @@ const SelectProps = () => {
         defaultValue=''
         id='select-autoWidth'
         helperText='Auto width'
-        SelectProps={{ autoWidth: true }}
+        slotProps={{
+          select: {
+            autoWidth: true
+          }
+        }}
       >
         <MenuItem value=''>
           <em>None</em>
@@ -77,7 +81,11 @@ const SelectProps = () => {
         defaultValue=''
         helperText='Read only'
         id='select-props-readOnly'
-        SelectProps={{ readOnly: true }}
+        slotProps={{
+          select: {
+            readOnly: true
+          }
+        }}
       >
         <MenuItem value=''>
           <em>None</em>
@@ -108,8 +116,10 @@ const SelectProps = () => {
         defaultValue=''
         id='select-without-label'
         helperText='Without label'
-        SelectProps={{ displayEmpty: true }}
-        inputProps={{ 'aria-label': 'Without label' }}
+        slotProps={{
+          select: { displayEmpty: true },
+          htmlInput: { 'aria-label': 'Without label' }
+        }}
       >
         <MenuItem value=''>
           <em>None</em>

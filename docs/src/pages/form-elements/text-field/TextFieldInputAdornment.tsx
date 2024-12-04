@@ -52,16 +52,18 @@ const TextFieldInputAdornment = () => {
         id='icons-adornment-password'
         onChange={handleChange('password')}
         type={values.showPassword ? 'text' : 'password'}
-        InputProps={{
-          endAdornment: (
-            <InputAdornment position='end'>
-              <IconButton edge='end' onClick={handleClickShowPassword}
-                onMouseDown={e => e.preventDefault()}
-                aria-label='toggle password visibility' >
-                <i className={classnames(values.showPassword ? 'tabler-eye' : 'tabler-eye-off')} />
-              </IconButton>
-            </InputAdornment>
-          )
+        slotProps={{
+          input: {
+            endAdornment: (
+              <InputAdornment position='end'>
+                <IconButton edge='end' onClick={handleClickShowPassword}
+                  onMouseDown={e => e.preventDefault()}
+                  aria-label='toggle password visibility' >
+                  <i className={classnames(values.showPassword ? 'tabler-eye' : 'tabler-eye-off')} />
+                </IconButton>
+              </InputAdornment>
+            )
+          }
         }}
       />
     </Box>

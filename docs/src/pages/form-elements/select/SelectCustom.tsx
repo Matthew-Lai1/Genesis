@@ -27,7 +27,11 @@ const SelectCustom = () => {
         defaultValue=''
         label='Native'
         id='custom-select-native'
-        SelectProps={{ native: true }}
+        slotProps={{
+          select: {
+            native: true
+          }
+        }}
       >
         <option aria-label='None' value='' />
         <option value={10}>Ten</option>

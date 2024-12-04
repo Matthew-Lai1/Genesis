@@ -1,6 +1,6 @@
 // MUI Imports
 import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -19,7 +19,7 @@ const Color = () => {
       <CardContent className='flex gap-6 flex-wrap items-center justify-center !p-[50px] !pbs-0'>
         <Grid container spacing={12}>
           {colorShadows.map(({ color, shadow }, index) => (
-            <Grid item key={index} sm={12} lg={4}>
+            <Grid key={index} size={{ sm: 12, lg: 4 }}>
               <Box
                 sx={{ boxShadow: `var(--mui-customShadows-${color}-${shadow})` }}
                 className='flex rounded-lg p-6 items-center justify-center min-is-[100px]'

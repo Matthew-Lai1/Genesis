@@ -40,7 +40,13 @@ const PickersBasic = () => {
           id='read-only-input'
           onChange={(date: Date | null) => setDate(date)}
           placeholderText='Click to select a date'
-          customInput={<CustomTextField InputProps={{ readOnly: true }} label='Readonly' fullWidth />}
+          customInput={
+            <CustomTextField
+              slotProps={{ input: { readOnly: true } }}
+              label='Readonly'
+              fullWidth
+            />
+          }
         />
       </Grid>
     </Grid>

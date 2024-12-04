@@ -66,7 +66,13 @@ const SelectMultiple = () => {
           label='Default'
           value={personName}
           id='select-multiple-default'
-          SelectProps={{ MenuProps, multiple: true, onChange: handleChange}}
+          slotProps={{
+            select: {
+              MenuProps,
+              multiple: true,
+              onChange: handleChange
+            }
+          }}
 
         >
           {names.map(name => (
@@ -83,10 +89,13 @@ const SelectMultiple = () => {
           label='Checkbox'
           value={personName}
           id='demo-multiple-checkbox'
-          SelectProps={{ MenuProps,
-            multiple: true,
-            onChange: handleChange,
-            renderValue: selected => (selected as unknown as string[]).join(', ')
+          slotProps={{
+            select: {
+              multiple: true,
+              onChange: handleChange,
+              renderValue: (selected) =>
+                (selected as unknown as string[]).join(', ')
+            }
           }}
         >
           {names.map(name => (
@@ -104,17 +113,19 @@ const SelectMultiple = () => {
           label='Chip'
           value={personName}
           id='demo-multiple-chip'
-          SelectProps={{ 
-            multiple: true,
-            MenuProps,
-            onChange: handleChange,
-            renderValue: selected => (
-              <div className='flex flex-wrap gap-1'>
-                {(selected as unknown as string[]).map(value => (
-                  <Chip key={value} label={value} size='small' />
-                ))}
-              </div>
-            )
+          slotProps={{
+            select: {
+              multiple: true,
+              MenuProps,
+              onChange: handleChange,
+              renderValue: selected => (
+                <div className='flex flex-wrap gap-1'>
+                  {(selected as unknown as string[]).map(value => (
+                    <Chip key={value} label={value} size='small' />
+                  ))}
+                </div>
+              )
+            }
           }}
         >
           {names.map(name => (
@@ -130,18 +141,20 @@ const SelectMultiple = () => {
           fullWidth
           label='Placeholder'
           value={personName}
-          inputProps={{ 'aria-label': 'Without label' }}
-          SelectProps={{ 
-            MenuProps,
-            multiple: true,
-            displayEmpty: true,
-            onChange: handleChange,
-            renderValue:selected => {
-              if ((selected as unknown as string[]).length === 0) {
-                return <em>Placeholder</em>
+          slotProps={{
+            htmlInput: { 'aria-label': 'Without label' },
+            select: {
+              MenuProps,
+              multiple: true,
+              displayEmpty: true,
+              onChange: handleChange,
+              renderValue: (selected) => {
+                if ((selected as unknown as string[]).length === 0) {
+                  return <em>Placeholder</em>
+                }
+
+                return (selected as unknown as string[]).join(', ')
               }
-  
-              return (selected as unknown as string[]).join(', ')
             }
           }}
         >
@@ -160,13 +173,15 @@ const SelectMultiple = () => {
           select
           fullWidth
           label='Native'
-          value= {personNameNative}
-          SelectProps={{ 
-            MenuProps,
-            native: true,
-            multiple: true, // @ts-ignore
-            onChange: e =>  handleChangeMultipleNative(e),
-            inputProps: { id: 'select-multiple-native' }
+          value={personNameNative}
+          slotProps={{
+            select: { 
+              MenuProps,
+              native: true,
+              multiple: true, // @ts-ignore
+              onChange: e => handleChangeMultipleNative(e),
+              inputProps: { id: 'select-multiple-native' }
+            }
           }}
         >
           {names.map(name => (

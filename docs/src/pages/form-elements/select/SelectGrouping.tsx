@@ -30,7 +30,11 @@ const SelectGrouping = () => {
         label='Grouping'
         defaultValue=''
         id='grouped-native-select'
-        SelectProps={{ native: true }}
+        slotProps={{
+          select: {
+            native: true
+          }
+        }}
       >
         <option aria-label='None' value='' />
         <optgroup label='Category 1'>

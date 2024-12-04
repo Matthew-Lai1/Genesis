@@ -23,7 +23,9 @@ const CustomAutocomplete = forwardRef(
           <Autocomplete
             {...props}
             ref={ref}
-            PaperComponent={props => <Paper {...props} />}
+            slots={{
+              paper: props => <Paper {...props} />,
+            }}
           />
         )
       }

@@ -10,7 +10,7 @@ The customized `CustomTextField` component leverages MUI's built-in `select` pro
 
 To use the `CustomTextField` as a select dropdown, you simply need to pass the `select` prop to the component. The `select` prop makes the text field use the `Select` component internally.
 
-Additionally, `SelectProps` allows for the further customization of the select text field, accepting an object with some properties that can be used to customize the select component.
+Additionally, `select` of `slotProps` prop allows for the further customization of the select text field, accepting an object with some properties that can be used to customize the select component.
 
 ### How to use
 
@@ -26,9 +26,11 @@ const selectCustom = () => {
       defaultValue=""
       label="Default"
       id="custom-select"
-      SelectProps={{
-        displayEmpty: true,
-        multiple: true
+      slotProps={{
+        select: {
+          displayEmpty: true,
+          multiple: true
+        }
       }}
     >
       <MenuItem value="">

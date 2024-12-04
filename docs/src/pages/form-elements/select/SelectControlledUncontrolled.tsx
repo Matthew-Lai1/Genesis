@@ -25,8 +25,10 @@ const SelectControlledUncontrolled = () => {
         value={value}
         label='Controlled'
         id='controlled-select'
-        SelectProps={{
-          onChange: handleChange
+        slotProps={{
+          select: {
+            onChange: handleChange
+          }
         }}
       >
         <MenuItem value=''>
