@@ -5,7 +5,13 @@ import { consola } from 'consola'
 
 import { updatePackages } from './updatePackages'
 import { findAndReplaceInFiles } from './findAndReplaceInFiles'
-import { updateLayoutFile, updateDashboardLayoutFile, updateGuestLayoutFile } from './updateLayoutFiles'
+import {
+  updateLayoutFile,
+  updateDashboardLayoutFile,
+  updateGuestLayoutFile,
+  updateBlankLayoutFile,
+  updateFrontLayoutFile
+} from './updateLayoutFiles'
 import { removeFilesAndFolders } from './removeFilesAndFolders'
 import removeUnwantedCode from './removeUnwantedCode'
 import { reverseEslintConfig, updateEslintConfig } from './removeUnusedImports'
@@ -41,6 +47,10 @@ async function main() {
   await updateDashboardLayoutFile()
 
   await updateGuestLayoutFile()
+
+  await updateBlankLayoutFile()
+
+  await updateFrontLayoutFile()
 
   await modifyGenerateMenuFile()
 
