@@ -12,7 +12,7 @@ While customs styles have been applied to the `Autocomplete` component to improv
 :::caution Warning
 Certain restrictions have been applied to the `CustomAutocomplete` component:
 
-- The `ref` prop and `PaperComponent` cannot be altered in the `CustomAutocomplete`. These customizations are part of the design enhancement and are fixed to maintain the component's intended appearance.
+- The `ref` prop and `paper` prop of `slots` cannot be altered in the `CustomAutocomplete`. These customizations are part of the design enhancement and are fixed to maintain the component's intended appearance.
   :::
 
 ### Importing the Customized Autocomplete

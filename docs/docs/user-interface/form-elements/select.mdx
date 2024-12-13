@@ -44,7 +44,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
 
           <br/>
 
-          To use the custom <code>select</code>, use the <code>SelectProps=&#123;&#123; native: true &#125;&#125;</code> prop with the <code>CustomTextField</code> component and pass multiple <code>&lt;option&gt;</code> elements as children of the <code>CustomTextField</code> component for the multiple options.
+          To use the custom <code>select</code>, use the <code>slotProps=&#123;&#123; select: &#123; native: true &#125; &#125;&#125;</code> prop with the <code>CustomTextField</code> component and pass multiple <code>&lt;option&gt;</code> elements as children of the <code>CustomTextField</code> component for the multiple options.
         </Typography>
       <SelectCustom />
     </CardSnippet>
@@ -78,7 +78,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       code={SourceCodeSelectProps}
     >
       <Typography className='mbe-4'>
-        Use <code>label</code>, <code>helperText</code>, <code>disabled</code>, <code>error</code>, <code>required</code>, <code>inputProps</code> and <code>SelectProps</code> props with the <code>CustomTextField</code> component for different states of <code>select</code>.
+        Use <code>label</code>, <code>helperText</code>, <code>disabled</code>, <code>error</code>, <code>required</code> and <code>slotProps</code> props with the <code>CustomTextField</code> component for different states of <code>select</code>.
       </Typography>
       <SelectProps />
     </CardSnippet>
@@ -89,7 +89,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       code={SourceCodeSelectControlledUncontrolled}
     >
         <Typography className='mbe-4'>
-          Manage value with the help of a state and pass it in the <code>SelectProps</code> prop with the <code>CustomTextField</code> component for controlled select and use <code>defaultValue</code> prop with the <code>CustomTextField</code> component for uncontrolled Select.
+          Manage value with the help of a state and pass it in the <code>select</code> prop in <code>slotProps</code> with the <code>CustomTextField</code> component for controlled select and use <code>defaultValue</code> prop with the <code>CustomTextField</code> component for uncontrolled Select.
         </Typography>
       <SelectControlledUncontrolled />
     </CardSnippet>
@@ -111,7 +111,7 @@ Please refer to MUI's official docs for more details on component's [usage guide
       code={SourceCodeSelectMultiple}
     >
       <Typography className='mbe-4'>
-        Use <code>SelectProps=&#123;&#123; multiple: true &#125;&#125;</code> prop with the <code>CustomTextField</code> component for multiple selections.
+        Use <code>slotProps=&#123;&#123; select: &#123; multiple: true &#125; &#125;&#125;</code> prop with the <code>CustomTextField</code> component for multiple selections.
       </Typography>
       <SelectMultiple />
     </CardSnippet>
