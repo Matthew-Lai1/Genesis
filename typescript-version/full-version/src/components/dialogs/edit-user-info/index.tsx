@@ -74,6 +74,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
       onClose={handleClose}
       maxWidth='md'
       scroll='body'
+      closeAfterTransition={false}
       sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
     >
       <DialogCloseButton onClick={() => setOpen(false)} disableRipple>

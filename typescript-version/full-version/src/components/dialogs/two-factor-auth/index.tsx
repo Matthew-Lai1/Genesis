@@ -174,6 +174,7 @@ const TwoFactorAuth = ({ open, setOpen }: TwoFactorAuthProps) => {
         scroll='body'
         open={open}
         onClose={() => setOpen(false)}
+        closeAfterTransition={false}
         sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
       >
         <DialogCloseButton onClick={handleClose} disableRipple>
@@ -223,6 +224,7 @@ const TwoFactorAuth = ({ open, setOpen }: TwoFactorAuthProps) => {
         scroll='body'
         open={showAuthDialog}
         onClose={handleAuthDialogClose}
+        closeAfterTransition={false}
         sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
       >
         <DialogCloseButton onClick={handleAuthDialogClose} disableRipple>

@@ -77,6 +77,7 @@ const PaymentMethod = ({ open, setOpen }: PaymentMethodProps) => {
       onClose={() => setOpen(false)}
       maxWidth='sm'
       scroll='body'
+      closeAfterTransition={false}
       sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
     >
       <DialogCloseButton onClick={() => setOpen(false)} disableRipple>

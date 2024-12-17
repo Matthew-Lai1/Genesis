@@ -30,7 +30,7 @@ const SelectWithDialog = () => {
       <Button variant='outlined' onClick={handleClickOpen}>
         Open select dialog
       </Button>
-      <Dialog maxWidth='xs' fullWidth open={open} onClose={handleClose}>
+      <Dialog maxWidth='xs' fullWidth open={open} onClose={handleClose} closeAfterTransition={false}>
         <DialogTitle>Fill the form</DialogTitle>
         <DialogContent className='!pbs-2'>
           <Box component='form' className='flex gap-4'>

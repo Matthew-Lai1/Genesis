@@ -27,9 +27,7 @@ const replaceDirectionPattern = /const direction\s*=\s*i18n.langDirection\[param
 const removeDictionaryDestructuringPattern = /dictionary(,| )/g
 
 // Pattern to match Props type definitions including `params`
-const removeParamsFromPropsPattern = /&\s*{\s*params:\s*{\s*lang:\s*Locale\s*}\s*}/g
-
-const removeParamsFromPropsPattern2 = /\{ params \}: \{ params: \{ lang: Locale \} \}/
+const removeParamsFromPropsPattern = /&\s*{\s*params:\s*Promise<{\slang:\s*Locale\s*}>\s*}/g
 
 const removeParamsFromFunctionPattern = /(?<={ .*)params,?(?=.* }: [A-Z][A-Za-z]+)/g
 
@@ -50,7 +48,6 @@ async function replacePatternInFile(filePath: string) {
     replaceDirectionPattern.test(data) ||
     removeDictionaryDestructuringPattern.test(data) ||
     removeParamsFromPropsPattern.test(data) ||
-    removeParamsFromPropsPattern2.test(data) ||
     removeParamsFromFunctionPattern.test(data) ||
     excludeLangPattern.test(data)
   ) {
@@ -66,13 +63,13 @@ async function replacePatternInFile(filePath: string) {
       .replace(replaceDirectionPattern, "const direction = 'ltr'")
       .replace(removeDictionaryDestructuringPattern, '')
       .replace(removeParamsFromPropsPattern, '')
-      .replace(removeParamsFromPropsPattern2, '')
       .replace(removeParamsFromFunctionPattern, '')
       .replace(/const\s*{\s*lang:\s*locale\s*}\s*=\s*useParams\(\)/g, '')
       .replace(/(\w+: )?locale,/g, '')
       .replace(/,\s*(\w+: )?locale/g, '')
       .replace(/\{ lang \}: \{ lang: Locale \}/g, '')
       .replace(/\${lang}\//g, '')
+      .replace(/props: \{ params: Promise<\{ lang: Locale \}> \}/gm, '')
       .replace(/excludeLang\??:\s.*,?/g, '')
       .replace(/item\.excludeLang.*?:/, '')
 
@@ -86,7 +83,7 @@ async function replacePatternInFile(filePath: string) {
 }
 
 async function updateNextConfig() {
-  const filePath = 'next.config.mjs'
+  const filePath = 'next.config.ts'
 
   const content = await readFile(filePath, 'utf8')
 
@@ -103,7 +100,7 @@ async function updateNextConfig() {
 
   if (content !== updatedContent) {
     await writeFile(filePath, updatedContent, 'utf8')
-    consola.success('Removed redirects from next.config.mjs\n')
+    consola.success('Removed redirects from next.config.ts\n')
   }
 }
 

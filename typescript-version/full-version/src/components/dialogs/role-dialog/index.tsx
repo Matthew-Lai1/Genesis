@@ -110,6 +110,7 @@ const RoleDialog = ({ open, setOpen, title }: RoleDialogProps) => {
       scroll='body'
       open={open}
       onClose={handleClose}
+      closeAfterTransition={false}
       sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
     >
       <DialogCloseButton onClick={() => setOpen(false)} disableRipple>

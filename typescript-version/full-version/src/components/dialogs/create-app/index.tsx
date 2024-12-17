@@ -126,6 +126,7 @@ const CreateApp = ({ open, setOpen }: CreateAppProps) => {
       open={open}
       onClose={handleClose}
       scroll='body'
+      closeAfterTransition={false}
       sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
     >
       <DialogCloseButton onClick={() => setOpen(false)} disableRipple>

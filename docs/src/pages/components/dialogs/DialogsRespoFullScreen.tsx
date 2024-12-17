@@ -28,7 +28,7 @@ const DialogsRespoFullScreen = () => {
       <Button variant='outlined' onClick={handleClickOpen}>
         Open responsive dialog
       </Button>
-      <Dialog fullScreen={fullScreen} open={open} onClose={handleClose} aria-labelledby='responsive-dialog-title'>
+      <Dialog fullScreen={fullScreen} open={open} onClose={handleClose} aria-labelledby='responsive-dialog-title' closeAfterTransition={false}>
         <DialogTitle id='responsive-dialog-title'>Use Google's location service?</DialogTitle>
         <DialogContent>
           <DialogContentText>

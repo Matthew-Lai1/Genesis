@@ -56,6 +56,7 @@ const DialogsSizes = () => {
         fullWidth={fullWidth}
         onClose={handleClose}
         aria-labelledby='max-width-dialog-title'
+        closeAfterTransition={false}
       >
         <DialogTitle id='max-width-dialog-title'>Optional sizes</DialogTitle>
         <DialogContent>

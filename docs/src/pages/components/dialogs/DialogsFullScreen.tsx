@@ -22,7 +22,7 @@ const DialogsFullScreen = () => {
       <Button variant='outlined' onClick={handleClickOpen}>
         Open dialog
       </Button>
-      <Dialog fullScreen onClose={handleClose} aria-labelledby='full-screen-dialog-title' open={open}>
+      <Dialog fullScreen onClose={handleClose} aria-labelledby='full-screen-dialog-title' open={open} closeAfterTransition={false}>
       <DialogTitle id='alert-dialog-title'>Use Google's location service?</DialogTitle>
         <DialogContent>
           <DialogContentText id='alert-dialog-description'>

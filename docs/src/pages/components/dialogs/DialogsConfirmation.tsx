@@ -32,6 +32,7 @@ const DialogsConfirmation = () => {
             handleClose()
           }
         }}
+        closeAfterTransition={false}
       >
         <DialogTitle id='alert-dialog-title'>Use Google's location service?</DialogTitle>
         <DialogContent>

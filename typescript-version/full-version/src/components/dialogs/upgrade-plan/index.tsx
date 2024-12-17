@@ -34,7 +34,13 @@ const UpgradePlan = ({ open, setOpen }: UpgradePlanProps) => {
 
   return (
     <>
-      <Dialog fullWidth open={open} onClose={handleClose} sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}>
+      <Dialog
+        fullWidth
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition={false}
+        sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
+      >
         <DialogCloseButton onClick={() => setOpen(false)} disableRipple>
           <i className='tabler-x' />
         </DialogCloseButton>

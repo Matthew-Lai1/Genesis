@@ -52,6 +52,7 @@ const DialogsScroll = () => {
         onClose={handleClose}
         aria-labelledby='scroll-dialog-title'
         aria-describedby='scroll-dialog-description'
+        closeAfterTransition={false}
       >
         <DialogTitle id='scroll-dialog-title'>Subscribe</DialogTitle>
         <DialogContent dividers={scroll === 'paper'}>

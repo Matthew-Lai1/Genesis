@@ -142,6 +142,7 @@ const ShareProject = ({ open, setOpen }: ShareProjectProps) => {
       scroll='body'
       open={open}
       onClose={() => setOpen(false)}
+      closeAfterTransition={false}
       sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
     >
       <DialogCloseButton onClick={() => setOpen(false)} disableRipple>

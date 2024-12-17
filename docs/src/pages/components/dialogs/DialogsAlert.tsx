@@ -27,6 +27,7 @@ const DialogsAlert = () => {
         onClose={handleClose}
         aria-labelledby='alert-dialog-title'
         aria-describedby='alert-dialog-description'
+        closeAfterTransition={false}
       >
         <DialogTitle id='alert-dialog-title'>Use Google's location service?</DialogTitle>
         <DialogContent>

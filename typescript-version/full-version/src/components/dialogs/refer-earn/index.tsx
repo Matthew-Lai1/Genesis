@@ -65,6 +65,7 @@ const ReferEarn = ({ open, setOpen }: ReferEarnProps) => {
       onClose={() => setOpen(false)}
       maxWidth='md'
       scroll='body'
+      closeAfterTransition={false}
       sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
     >
       <DialogCloseButton onClick={() => setOpen(false)} disableRipple>

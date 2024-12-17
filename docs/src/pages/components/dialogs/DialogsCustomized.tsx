@@ -28,6 +28,7 @@ const DialogsCustomized = () => {
         onClose={handleClose}
         aria-labelledby='customized-dialog-title'
         open={open}
+        closeAfterTransition={false}
         PaperProps={{ sx: { overflow: 'visible' } }}
       >
         <DialogTitle id='customized-dialog-title'>
