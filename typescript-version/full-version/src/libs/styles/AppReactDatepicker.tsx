@@ -106,6 +106,16 @@ const StyledReactDatePicker = styled(Box)<BoxProps>(({ theme }) => {
         color: 'var(--mui-palette-text-secondary)'
       },
       '& .react-datepicker__day': {
+        '&--keyboard-selected': {
+          backgroundColor: 'rgb(var(--mui-palette-primary-mainChannel) / 0.16)',
+          color: 'var(--mui-palette-primary-main)',
+          '&:hover': {
+            backgroundColor: 'rgb(var(--mui-palette-primary-mainChannel) / 0.16) !important'
+          }
+        },
+        '&:hover': {
+          borderRadius: '50%'
+        },
         margin: 0,
         width: '2.25rem',
         borderRadius: '50%',
@@ -195,6 +205,10 @@ const StyledReactDatePicker = styled(Box)<BoxProps>(({ theme }) => {
         }
       },
       '& .react-datepicker__day--keyboard-selected': {
+        borderRadius: '50% !important',
+        '&:hover': {
+          backgroundColor: 'rgb(var(--mui-palette-primary-mainChannel) / 0.06)'
+        },
         '&:not(.react-datepicker__day--in-range)': {
           //   backgroundColor: `rgba(${theme.palette.customColors.main}, 0.06)`,
           '&:hover': {

@@ -38,7 +38,7 @@ const DialogsBasic = () => {
       <Button variant='outlined' onClick={handleClickOpen}>
         Open simple dialog
       </Button>
-      <Dialog onClose={handleDialogClose} aria-labelledby='simple-dialog-title' open={open}>
+      <Dialog onClose={handleDialogClose} aria-labelledby='simple-dialog-title' open={open} closeAfterTransition={false}>
         <DialogTitle id='simple-dialog-title'>Set backup account</DialogTitle>
         <List className='pt-0 px-0'>
           {emails.map(email => (

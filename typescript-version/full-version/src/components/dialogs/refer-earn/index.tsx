@@ -58,7 +58,14 @@ const options: Options[] = [
 
 const ReferEarn = ({ open, setOpen }: ReferEarnProps) => {
   return (
-    <Dialog fullWidth open={open} onClose={() => setOpen(false)} maxWidth='md' scroll='body'>
+    <Dialog
+      fullWidth
+      open={open}
+      onClose={() => setOpen(false)}
+      maxWidth='md'
+      scroll='body'
+      closeAfterTransition={false}
+    >
       <DialogTitle variant='h4' className='flex gap-2 flex-col text-center sm:pbs-16 sm:pbe-12 sm:pli-16'>
         Refer & Earn
         <Typography component='span' className='flex flex-col text-center'>

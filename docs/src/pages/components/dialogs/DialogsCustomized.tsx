@@ -23,7 +23,7 @@ const DialogsCustomized = () => {
       <Button variant='outlined' onClick={handleClickOpen}>
         Open dialog
       </Button>
-      <Dialog onClose={handleClose} aria-labelledby='customized-dialog-title' open={open}>
+      <Dialog onClose={handleClose} aria-labelledby='customized-dialog-title' open={open} closeAfterTransition={false}>
         <DialogTitle id='customized-dialog-title' className='p-4'>
           <Typography variant='h6' component='span'>
             Modal title

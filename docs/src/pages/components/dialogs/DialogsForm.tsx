@@ -23,7 +23,7 @@ const DialogsForm = () => {
       <Button variant='outlined' onClick={handleClickOpen}>
         Open form dialog
       </Button>
-      <Dialog open={open} onClose={handleClose} aria-labelledby='form-dialog-title'>
+      <Dialog open={open} onClose={handleClose} aria-labelledby='form-dialog-title' closeAfterTransition={false}>
         <DialogTitle id='form-dialog-title'>Subscribe</DialogTitle>
         <DialogContent>
           <DialogContentText className='mbe-3'>

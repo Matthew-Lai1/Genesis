@@ -102,7 +102,7 @@ const RoleDialog = ({ open, setOpen, title }: RoleDialogProps) => {
   }, [selectedCheckbox])
 
   return (
-    <Dialog fullWidth maxWidth='md' scroll='body' open={open} onClose={handleClose}>
+    <Dialog fullWidth maxWidth='md' scroll='body' open={open} onClose={handleClose} closeAfterTransition={false}>
       <DialogTitle variant='h4' className='flex flex-col gap-2 text-center sm:pbs-16 sm:pbe-6 sm:pli-16'>
         {title ? 'Edit Role' : 'Add Role'}
         <Typography component='span' className='flex flex-col text-center'>

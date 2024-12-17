@@ -112,7 +112,7 @@ const CreateApp = ({ open, setOpen }: CreateAppProps) => {
   }
 
   return (
-    <Dialog fullWidth maxWidth='md' open={open} onClose={handleClose} scroll='body'>
+    <Dialog fullWidth maxWidth='md' open={open} onClose={handleClose} scroll='body' closeAfterTransition={false}>
       <DialogTitle variant='h4' className='flex gap-2 flex-col text-center sm:pbs-16 sm:pbe-6 sm:pli-16 '>
         Create App
         <Typography component='span' className='flex flex-col text-center'>

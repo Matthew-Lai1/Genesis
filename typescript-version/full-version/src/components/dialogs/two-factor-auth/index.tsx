@@ -172,7 +172,14 @@ const TwoFactorAuth = ({ open, setOpen }: TwoFactorAuthProps) => {
 
   return (
     <>
-      <Dialog fullWidth maxWidth='md' scroll='body' open={open} onClose={() => setOpen(false)}>
+      <Dialog
+        fullWidth
+        maxWidth='md'
+        scroll='body'
+        open={open}
+        onClose={() => setOpen(false)}
+        closeAfterTransition={false}
+      >
         <DialogTitle variant='h4' className='flex gap-2 flex-col text-center sm:pbs-16 sm:pbe-6 sm:pli-16'>
           Select Authentication Method
           <Typography component='span' className='flex flex-col text-center'>
@@ -212,7 +219,14 @@ const TwoFactorAuth = ({ open, setOpen }: TwoFactorAuthProps) => {
         </DialogActions>
       </Dialog>
 
-      <Dialog fullWidth maxWidth='md' scroll='body' open={showAuthDialog} onClose={handleAuthDialogClose}>
+      <Dialog
+        fullWidth
+        maxWidth='md'
+        scroll='body'
+        open={showAuthDialog}
+        onClose={handleAuthDialogClose}
+        closeAfterTransition={false}
+      >
         <form onSubmit={e => e.preventDefault()}>
           {authType === 'sms' ? SMSDialog(handleAuthDialogClose) : AppDialog(handleAuthDialogClose)}
         </form>

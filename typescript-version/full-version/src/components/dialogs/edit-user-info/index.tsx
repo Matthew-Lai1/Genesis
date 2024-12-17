@@ -69,7 +69,7 @@ const EditUserInfo = ({ open, setOpen, data }: EditUserInfoProps) => {
   }
 
   return (
-    <Dialog fullWidth open={open} onClose={handleClose} maxWidth='md' scroll='body'>
+    <Dialog fullWidth open={open} onClose={handleClose} maxWidth='md' scroll='body' closeAfterTransition={false}>
       <DialogTitle variant='h4' className='flex gap-2 flex-col text-center sm:pbs-16 sm:pbe-6 sm:pli-16'>
         Edit User Information
         <Typography component='span' className='flex flex-col text-center'>

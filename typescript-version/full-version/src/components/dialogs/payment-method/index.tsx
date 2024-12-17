@@ -69,7 +69,14 @@ const PaymentMethod = ({ open, setOpen }: PaymentMethodProps) => {
   const { mode } = useColorScheme()
 
   return (
-    <Dialog fullWidth open={open} onClose={() => setOpen(false)} maxWidth='sm' scroll='body'>
+    <Dialog
+      fullWidth
+      open={open}
+      onClose={() => setOpen(false)}
+      maxWidth='sm'
+      scroll='body'
+      closeAfterTransition={false}
+    >
       <DialogTitle variant='h4' className='flex gap-2 flex-col text-center sm:pbs-16 sm:pbe-10 sm:pli-16'>
         Select Payment Methods
         <Typography component='span' className='flex flex-col items-center'>

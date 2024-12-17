@@ -62,7 +62,7 @@ const BillingCard = ({ open, setOpen, data }: BillingCardProps) => {
   }, [open])
 
   return (
-    <Dialog open={open} onClose={handleClose}>
+    <Dialog open={open} onClose={handleClose} closeAfterTransition={false}>
       <DialogTitle variant='h4' className='flex flex-col gap-2 text-center sm:pbs-16 sm:pbe-6 sm:pli-16'>
         {data ? 'Edit Card' : 'Add New Card'}
         <Typography component='span' className='flex flex-col text-center'>

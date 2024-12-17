@@ -133,7 +133,14 @@ const ShareProject = ({ open, setOpen }: ShareProjectProps) => {
   }
 
   return (
-    <Dialog fullWidth maxWidth='md' scroll='body' open={open} onClose={() => setOpen(false)}>
+    <Dialog
+      fullWidth
+      maxWidth='md'
+      scroll='body'
+      open={open}
+      onClose={() => setOpen(false)}
+      closeAfterTransition={false}
+    >
       <DialogTitle variant='h4' className='flex gap-2 flex-col text-center sm:pbs-16 sm:pbe-6 sm:pli-16'>
         Share Project
         <Typography component='span' className='flex flex-col text-center'>
