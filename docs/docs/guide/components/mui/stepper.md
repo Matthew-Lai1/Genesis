@@ -14,7 +14,7 @@ This guide focuses exclusively on the new properties we've added. Feel free to u
 
 The `StepperCustomDot` component, situated at `src/components/stepper-dot/index.tsx`, is designed to customize the visual representation of each step within the `Stepper`. It adjusts icons based on the step's state.
 
-To use the `StepperCustomDot` within a stepper, you can incorporate it in the `StepIconComponent` prop in the `StepLabel`  component. Here's a basic example of using `StepperCustomDot` within a `Stepper` component:
+To use the `StepperCustomDot` within a stepper, you can incorporate it in the `stepIcon` prop of `slots` in the `StepLabel` component. Here's a basic example of using `StepperCustomDot` within a `Stepper` component:
 
 ```tsx
 import StepperCustomDot from '@components/stepper-dot';

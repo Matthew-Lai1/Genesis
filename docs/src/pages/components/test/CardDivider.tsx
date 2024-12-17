@@ -11,7 +11,7 @@ const CardDivider = () => {
         <Typography>Basic Divider</Typography>
         <Divider />
         <Typography>Light Divider (below)</Typography>
-        <Divider light />
+        <Divider className='opacity-60' />
         <div className='flex'>
           <Typography>Vertical</Typography>
           <Divider flexItem orientation='vertical' className='mis-4'/>

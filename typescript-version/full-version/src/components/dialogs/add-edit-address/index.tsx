@@ -123,6 +123,7 @@ const AddEditAddress = ({ open, setOpen, data }: AddEditAddressProps) => {
         setOpen(false)
         setSelected(initialSelected)
       }}
+      closeAfterTransition={false}
     >
       <DialogTitle variant='h4' className='flex gap-2 flex-col text-center sm:pbs-16 sm:pbe-6 sm:pli-16'>
         {data ? 'Edit Address' : 'Add New Address'}

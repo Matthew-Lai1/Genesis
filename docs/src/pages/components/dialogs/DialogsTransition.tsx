@@ -39,6 +39,7 @@ const DialogsTransition = () => {
         TransitionComponent={Transition}
         aria-labelledby='alert-dialog-slide-title'
         aria-describedby='alert-dialog-slide-description'
+        closeAfterTransition={false}
       >
         <DialogTitle id='alert-dialog-slide-title'>Use Google's location service?</DialogTitle>
         <DialogContent>
