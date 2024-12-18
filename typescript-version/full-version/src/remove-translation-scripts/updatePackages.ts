@@ -1,7 +1,7 @@
-import fs from 'fs'
 import { promisify } from 'util'
 import { exec as execCallback } from 'child_process'
 
+import fs from 'fs-extra'
 import { consola } from 'consola'
 
 const exec = promisify(execCallback)

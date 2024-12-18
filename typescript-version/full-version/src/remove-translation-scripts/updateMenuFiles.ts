@@ -1,6 +1,5 @@
+import fs from 'fs-extra'
 import { consola } from 'consola'
-
-const fs = require('fs').promises
 
 const staticMenuFiles = [
   'src/components/layout/vertical/VerticalMenu.tsx',

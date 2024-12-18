@@ -1,5 +1,4 @@
-import * as fs from 'fs'
-
+import fs from 'fs-extra'
 import { consola } from 'consola'
 
 // Update the main layout file

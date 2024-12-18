@@ -25,6 +25,7 @@
     "@tanstack/react-table": "^8.20.6",
     "classnames": "^2.5.1",
     "cmdk": "^1.0.4",
+    "fs-extra": "^11.2.0",
     "negotiator": "^1.0.0",
     "next": "15.1.0",
     "next-auth": "^4.24.11",
@@ -35,6 +36,7 @@
     "server-only": "^0.0.1"
   },
   "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
     "@types/negotiator": "^0.6.3",
     "@types/node": "^22.10.2",
     "@types/react": "^18.3.12",

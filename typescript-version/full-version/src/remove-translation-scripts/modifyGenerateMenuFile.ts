@@ -1,6 +1,5 @@
 import { consola } from 'consola'
-
-const fs = require('fs').promises
+import fs from 'fs-extra'
 
 export const modifyGenerateMenuFile = async () => {
   const filePath = 'src/components/GenerateMenu.tsx'
