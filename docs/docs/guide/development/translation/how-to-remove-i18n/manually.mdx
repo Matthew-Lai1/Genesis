@@ -88,7 +88,7 @@ Move all content from the language-specific directories `[lang]` folder to the m
         
     3. Remove the unused variable and it's releted import from the `VerticalMenu.tsx` file.
 
-    4. You need to remove `dictionary` parameter from `menuData` function in `<GenerateVerticalMenu menuData={menuData(dictionary, params)} />` from `src/components/layout/vertical/VerticalMenu.tsx` file.
+    4. You need to remove `dictionary` parameter from `menuData` function in `<GenerateVerticalMenu menuData={menuData(dictionary)} />` from `src/components/layout/vertical/VerticalMenu.tsx` file.
 
 - Go to the `src/components/layout/horizontal/HorizontalMenu.tsx` file and make the same changes above in the `VerticalMenu.tsx` file. 
 - Also you need to remove the `dictionary: Awaited<ReturnType<typeof getDictionary>>` from the parameter and replace the `label` as above mentioned and remove `excludeLang` from the `src/data/navigation/verticalMenuData.tsx` and `src/data/navigation/horizontalMenuData.tsx` files.
@@ -157,7 +157,7 @@ Move all content from the language-specific directories `[lang]` folder to the m
 
 #### Other Components Changes:
 
-- Remove the `excludeLang` related code from the `src/components/layout/shared/search/index.tsx` and `src/components/layout/shared/search/index.tsx` files.
+- Remove the `excludeLang` related code from the `src/components/layout/shared/search/index.tsx`, `src/data/searchData.ts`, `src/components/GenerateMenu.tsx` and `src/components/GenerateMenu.tsx` files.
 
 - Go to the `src/components/AuthRedirect.tsx` file and make the following changes.
 
