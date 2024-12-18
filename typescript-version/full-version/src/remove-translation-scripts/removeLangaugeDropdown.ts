@@ -1,8 +1,9 @@
 import { promisify } from 'util'
 import { exec as execCallback } from 'child_process'
 
+import fs from 'fs-extra'
+
 const exec = promisify(execCallback)
-const fs = require('fs').promises
 
 export const removeLangaugeDropdown = async () => {
   // Path to the LanguageDropdown.tsx file

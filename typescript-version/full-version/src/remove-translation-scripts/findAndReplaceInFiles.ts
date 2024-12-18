@@ -1,12 +1,7 @@
 import { consola } from 'consola'
+import fs from 'fs-extra'
 
-const fs = require('fs')
-const util = require('util')
-
-const { globby } = require('globby')
-
-const readFile = util.promisify(fs.readFile)
-const writeFile = util.promisify(fs.writeFile)
+import { globby } from 'globby'
 
 // Pattern to find `getLocalizedUrl('/any-url', locale as Locale)` and capture the URL
 const getUrlPattern = /getLocalizedUrl\((['"`]\/)(.*)(['"`]), locale as Locale\)/g
@@ -34,7 +29,7 @@ const removeParamsFromFunctionPattern = /(?<={ .*)params,?(?=.* }: [A-Z][A-Za-z]
 const excludeLangPattern = /excludeLang\??:\s.*,?/g
 
 async function replacePatternInFile(filePath: string) {
-  const data = await readFile(filePath, 'utf8')
+  const data = await fs.readFile(filePath, 'utf8')
 
   // Initial check to see if any pattern exists in the data, to avoid unnecessary operations
   if (
@@ -75,7 +70,7 @@ async function replacePatternInFile(filePath: string) {
 
     // Only write back if changes were made
     if (data !== newData) {
-      await writeFile(filePath, newData, 'utf8')
+      await fs.writeFile(filePath, newData, 'utf8')
     } else {
       consola.error(`No changes made to: ${filePath}`)
     }
@@ -85,7 +80,7 @@ async function replacePatternInFile(filePath: string) {
 async function updateNextConfig() {
   const filePath = 'next.config.ts'
 
-  const content = await readFile(filePath, 'utf8')
+  const content = await fs.readFile(filePath, 'utf8')
 
   // Define a pattern that matches the redirects configuration and remove it
   const redirectsPattern = /(return \[[\s\S]*?\]\s*)/
@@ -99,7 +94,7 @@ async function updateNextConfig() {
   const updatedContent = content.replace(redirectsPattern, redirect)
 
   if (content !== updatedContent) {
-    await writeFile(filePath, updatedContent, 'utf8')
+    await fs.writeFile(filePath, updatedContent, 'utf8')
     consola.success('Removed redirects from next.config.ts\n')
   }
 }

@@ -170,6 +170,8 @@ You may add / update / remove any other dependencies according to your requireme
 ```json
 "globby"
 "consola"
+"fs-extra"
+"@types/fs-extra" // Typescript version only
 ```
 
 ## Right to Left (RTL)
