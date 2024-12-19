@@ -111,7 +111,7 @@ const StepCart = ({ handleNext }: { handleNext: () => void }) => {
                   <div className='flex items-center gap-4'>
                     <div className='flex items-center gap-0.5'>
                       <Typography color='text.disabled'>Sold By:</Typography>
-                      <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+                      <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
                         {product.soldBy}
                       </Typography>
                     </div>
@@ -136,7 +136,7 @@ const StepCart = ({ handleNext }: { handleNext: () => void }) => {
                 </div>
                 <div className='flex flex-col justify-between items-center gap-4 sm:items-end'>
                   <div className='flex'>
-                    <Typography color='primary'>{`$${product.price}/`}</Typography>
+                    <Typography color='primary.main'>{`$${product.price}/`}</Typography>
                     <Typography className='line-through'>{`$${product.originalPrice}`}</Typography>
                   </div>
                   <Button variant='tonal' size='small'>
@@ -152,7 +152,7 @@ const StepCart = ({ handleNext }: { handleNext: () => void }) => {
           component={Link}
           onClick={e => e.preventDefault()}
           className='flex items-center justify-between gap-4 plb-2 pli-5 border border-primary rounded'
-          color='primary'
+          color='primary.main'
         >
           Add more products from wishlist
           <DirectionalIcon ltrIconClass='tabler-arrow-right' rtlIconClass='tabler-arrow-left' className='text-base' />
@@ -179,7 +179,7 @@ const StepCart = ({ handleNext }: { handleNext: () => void }) => {
                 href='/'
                 component={Link}
                 onClick={e => e.preventDefault()}
-                color='primary'
+                color='primary.main'
                 className='font-medium'
               >
                 Add a gift wrap
@@ -198,7 +198,7 @@ const StepCart = ({ handleNext }: { handleNext: () => void }) => {
               </div>
               <div className='flex items-center flex-wrap justify-between'>
                 <Typography color='text.primary'>Coup Discount</Typography>
-                <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+                <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
                   Apply Coupon
                 </Typography>
               </div>

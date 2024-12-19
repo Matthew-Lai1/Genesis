@@ -138,7 +138,7 @@ const ConnectionsTab = () => {
                       {item.title}
                     </Typography>
                     {item.isConnected ? (
-                      <Typography color='primary' component={Link} href={item.href || '/'} target='_blank'>
+                      <Typography color='primary.main' component={Link} href={item.href || '/'} target='_blank'>
                         {item.username}
                       </Typography>
                     ) : (

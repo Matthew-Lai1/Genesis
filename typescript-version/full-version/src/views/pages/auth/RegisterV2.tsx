@@ -159,7 +159,7 @@ const RegisterV2 = ({ mode }: { mode: SystemMode }) => {
               <Typography
                 component={Link}
                 href={getLocalizedUrl('/pages/auth/login-v2', locale as Locale)}
-                color='primary'
+                color='primary.main'
               >
                 Sign in instead
               </Typography>

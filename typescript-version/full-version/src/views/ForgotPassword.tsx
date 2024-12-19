@@ -99,7 +99,7 @@ const ForgotPassword = ({ mode }: { mode: SystemMode }) => {
             <Button fullWidth variant='contained' type='submit'>
               Send Reset Link
             </Button>
-            <Typography className='flex justify-center items-center' color='primary'>
+            <Typography className='flex justify-center items-center' color='primary.main'>
               <Link href={getLocalizedUrl('/login', locale as Locale)} className='flex items-center gap-1.5'>
                 <DirectionalIcon
                   ltrIconClass='tabler-chevron-left'

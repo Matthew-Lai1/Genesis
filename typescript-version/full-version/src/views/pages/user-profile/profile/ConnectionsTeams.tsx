@@ -53,7 +53,7 @@ const ConnectionsTeams = (props: Props) => {
               ))}
           </CardContent>
           <CardActions className='flex justify-center'>
-            <Typography component={Link} color='primary'>
+            <Typography component={Link} color='primary.main'>
               View all connections
             </Typography>
           </CardActions>
@@ -83,7 +83,7 @@ const ConnectionsTeams = (props: Props) => {
               ))}
           </CardContent>
           <CardActions className='flex justify-center'>
-            <Typography component={Link} color='primary'>
+            <Typography component={Link} color='primary.main'>
               View all teams
             </Typography>
           </CardActions>

@@ -129,7 +129,7 @@ const Connections = () => {
                     {item.isConnected ? (
                       <Typography
                         variant='body2'
-                        color='primary'
+                        color='primary.main'
                         component={Link}
                         href={item.href || '/'}
                         target='_blank'

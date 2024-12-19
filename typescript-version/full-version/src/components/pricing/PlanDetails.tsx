@@ -48,7 +48,7 @@ const PlanDetails = ({ data, pricingPlan }: Props) => {
           <Typography component='sup' className='self-start font-medium'>
             $
           </Typography>
-          <Typography variant='h1' component='span' color='primary'>
+          <Typography variant='h1' component='span' color='primary.main'>
             {pricingPlan === 'monthly' ? data?.monthlyPrice : data?.yearlyPlan.monthly}
           </Typography>
           <Typography component='sub' className='self-end font-medium'>

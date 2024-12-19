@@ -80,13 +80,13 @@ const data: DataType[] = [
 
 const Transactions = () => {
   return (
-    <Card className='bs-full flex flex-col'>
+    <Card className='flex flex-col'>
       <CardHeader
         title='Transactions'
         subheader='Total 58 transaction done in month'
         action={<OptionMenu options={['Refresh', 'Show all entries', 'Make payment']} />}
       />
-      <CardContent className='flex grow flex-col justify-between max-sm:gap-5'>
+      <CardContent className='flex grow gap-y-[18px] lg:gap-y-5 flex-col justify-between max-sm:gap-5'>
         {data.map((item, index) => (
           <div key={index} className='flex items-center gap-4'>
             <CustomAvatar skin='light' variant='rounded' color={item.avatarColor} size={34}>

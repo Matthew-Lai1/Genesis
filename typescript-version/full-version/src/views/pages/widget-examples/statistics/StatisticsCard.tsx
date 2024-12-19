@@ -57,7 +57,7 @@ const StatisticsCard = () => {
         }
       />
       <CardContent className='flex justify-between flex-wrap gap-4'>
-        <Grid container spacing={4}>
+        <Grid container spacing={4} flex={1}>
           {data.map((item, index) => (
             <Grid size={{ xs: 6, md: 3 }} key={index} className='flex gap-4 items-center'>
               <CustomAvatar color={item.color} variant='rounded' size={40} skin='light'>

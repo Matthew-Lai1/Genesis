@@ -57,10 +57,10 @@ const data: CustomInputHorizontalData[] = [
         </Typography>
         <Divider />
         <div className='flex items-center gap-4 mbs-0.5 pbe-[6px]'>
-          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
             Edit
           </Typography>
-          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
             Remove
           </Typography>
         </div>
@@ -80,10 +80,10 @@ const data: CustomInputHorizontalData[] = [
         </Typography>
         <Divider />
         <div className='flex items-center gap-4 mbs-0.5 pbe-[6px]'>
-          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
             Edit
           </Typography>
-          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
             Remove
           </Typography>
         </div>
@@ -143,7 +143,8 @@ const StepAddress = ({ handleNext }: { handleNext: () => void }) => {
 
   const buttonProps: ButtonProps = {
     variant: 'tonal',
-    children: 'Add New Address'
+    children: 'Add New Address',
+    className: 'self-start'
   }
 
   // States
@@ -169,8 +170,8 @@ const StepAddress = ({ handleNext }: { handleNext: () => void }) => {
   return (
     <Grid container spacing={6}>
       <Grid size={{ xs: 12, lg: 8 }} className='flex flex-col gap-6'>
-        <div className='flex flex-col items-start gap-4'>
-          <Typography color='text.primary' className='font-medium'>
+        <div className='flex flex-col gap-4'>
+          <Typography color='text.primary' className='font-medium self-start'>
             Select your preferable address
           </Typography>
           <Grid container spacing={6}>
@@ -193,8 +194,8 @@ const StepAddress = ({ handleNext }: { handleNext: () => void }) => {
           </Grid>
           <OpenDialogOnElementClick element={Button} elementProps={buttonProps} dialog={AddEditAddress} />
         </div>
-        <div className='flex flex-col items-start gap-4'>
-          <Typography color='text.primary' className='font-medium'>
+        <div className='flex flex-col gap-4'>
+          <Typography color='text.primary' className='font-medium self-start'>
             Choose Delivery Speed
           </Typography>
           <Grid container spacing={6}>

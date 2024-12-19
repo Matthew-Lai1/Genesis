@@ -112,7 +112,7 @@ const StepConfirmation = () => {
                   <div className='flex flex-col items-baseline gap-2'>
                     <div className='flex gap-0.5'>
                       <Typography>Sold By:</Typography>
-                      <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+                      <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
                         {product.soldBy}
                       </Typography>
                     </div>
@@ -120,7 +120,7 @@ const StepConfirmation = () => {
                   </div>
                 </div>
                 <div className='flex items-center'>
-                  <Typography color='primary'>{`$${product.price}/`}</Typography>
+                  <Typography color='primary.main'>{`$${product.price}/`}</Typography>
                   <Typography color='text.disabled' className='line-through'>{`$${product.originalPrice}`}</Typography>
                 </div>
               </div>

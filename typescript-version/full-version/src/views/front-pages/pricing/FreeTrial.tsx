@@ -20,7 +20,7 @@ const FreeTrial = () => {
           <Grid size={{ xs: 12, md: 6 }}>
             <div className='flex flex-col gap-11 items-center md:items-start justify-center plb-12'>
               <div className='flex flex-col gap-2 max-md:text-center'>
-                <Typography variant='h4' color='primary' className='font-medium'>
+                <Typography variant='h4' color='primary.main' className='font-medium'>
                   Still not convinced? Start with a 14-day FREE trial!
                 </Typography>
                 <Typography>You will get full access to with all the features for 14 days.</Typography>

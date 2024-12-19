@@ -147,7 +147,7 @@ const LoginV2 = ({ mode }: { mode: SystemMode }) => {
               <FormControlLabel control={<Checkbox />} label='Remember me' />
               <Typography
                 className='text-end'
-                color='primary'
+                color='primary.main'
                 component={Link}
                 href={getLocalizedUrl('/pages/auth/forgot-password-v2', locale as Locale)}
               >
@@ -162,7 +162,7 @@ const LoginV2 = ({ mode }: { mode: SystemMode }) => {
               <Typography
                 component={Link}
                 href={getLocalizedUrl('/pages/auth/register-v2', locale as Locale)}
-                color='primary'
+                color='primary.main'
               >
                 Create an account
               </Typography>

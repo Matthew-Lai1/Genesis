@@ -33,10 +33,10 @@ const customInputData: CustomInputVerticalData[] = [
       <Content component='div' className='flex flex-col justify-center items-center bs-full gap-2'>
         <Typography>A simple start for start ups & Students</Typography>
         <div className='flex items-baseline'>
-          <Typography component='sup' className='self-start' color='primary'>
+          <Typography component='sup' className='self-start' color='primary.main'>
             $
           </Typography>
-          <Typography component='span' variant='h3' color='primary'>
+          <Typography component='span' variant='h3' color='primary.main'>
             0
           </Typography>
           <Typography component='sub' className='self-baseline text-textDisabled'>
@@ -53,10 +53,10 @@ const customInputData: CustomInputVerticalData[] = [
       <Content component='div' className='flex flex-col justify-center items-center bs-full gap-2'>
         <Typography>For small to medium businesses</Typography>
         <div className='flex items-baseline'>
-          <Typography component='sup' className='self-start' color='primary'>
+          <Typography component='sup' className='self-start' color='primary.main'>
             $
           </Typography>
-          <Typography component='span' variant='h3' color='primary'>
+          <Typography component='span' variant='h3' color='primary.main'>
             99
           </Typography>
           <Typography component='sub' className='self-baseline text-textDisabled'>
@@ -74,10 +74,10 @@ const customInputData: CustomInputVerticalData[] = [
       <Content component='div' className='flex flex-col justify-center items-center bs-full gap-2'>
         <Typography>Solution for enterprise & organizations</Typography>
         <div className='flex items-baseline'>
-          <Typography component='sup' className='self-start' color='primary'>
+          <Typography component='sup' className='self-start' color='primary.main'>
             $
           </Typography>
-          <Typography component='span' variant='h3' color='primary'>
+          <Typography component='span' variant='h3' color='primary.main'>
             499
           </Typography>
           <Typography component='sub' className='self-baseline text-textDisabled'>

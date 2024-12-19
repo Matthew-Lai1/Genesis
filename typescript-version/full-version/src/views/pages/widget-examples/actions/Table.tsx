@@ -16,7 +16,7 @@ const CardActionsTable = () => {
   return (
     <Card>
       <CardHeader title='Card Actions' />
-      <CardContent>
+      <CardContent className='p-0'>
         <TableContainer>
           <Table className={tableStyles.table}>
             <TableHead>
@@ -42,11 +42,11 @@ const CardActionsTable = () => {
                 <TableCell>Refresh your card content using refresh action</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell>Remove Card</TableCell>
-                <TableCell>
+                <TableCell className='border-be-0'>Remove Card</TableCell>
+                <TableCell className='border-be-0'>
                   <i className='tabler-x text-xl' />
                 </TableCell>
-                <TableCell>Remove card from page using remove card action</TableCell>
+                <TableCell className='border-be-0'>Remove card from page using remove card action</TableCell>
               </TableRow>
             </TableBody>
           </Table>

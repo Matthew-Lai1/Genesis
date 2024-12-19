@@ -216,7 +216,7 @@ const AddAction = ({ invoiceData }: { invoiceData?: InvoiceType[] }) => {
                     'gap-5': isBelowMdScreen
                   })}
                 >
-                  <Grid container spacing={5} className='m-0 pbe-5'>
+                  <Grid container spacing={5} className='m-0 p-5'>
                     <Grid size={{ xs: 12, md: 5, lg: 6 }}>
                       <Typography className='font-medium md:absolute md:-top-8' color='text.primary'>
                         Item

@@ -35,7 +35,7 @@ const TotalReviews = () => {
         <div className='flex max-sm:flex-col items-center gap-6'>
           <div className='flex flex-col items-start gap-2 is-full sm:is-6/12'>
             <div className='flex items-center gap-2'>
-              <Typography variant='h3' color='primary'>
+              <Typography variant='h3' color='primary.main'>
                 4.89
               </Typography>
               <i className='tabler-star-filled text-[32px] text-primary' />

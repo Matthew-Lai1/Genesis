@@ -90,7 +90,7 @@ const RegisterV1 = () => {
               <Typography
                 component={Link}
                 href={getLocalizedUrl('/pages/auth/login-v1', locale as Locale)}
-                color='primary'
+                color='primary.main'
               >
                 Sign in instead
               </Typography>

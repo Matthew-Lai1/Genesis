@@ -170,7 +170,7 @@ const ManageReviewsTable = ({ reviewsData }: { reviewsData?: ReviewType[] }) => 
               <Typography
                 component={Link}
                 href={getLocalizedUrl('/apps/ecommerce/customers/details/879861', locale as Locale)}
-                color='primary'
+                color='primary.main'
                 className='font-medium'
               >
                 {row.original.reviewer}

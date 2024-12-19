@@ -139,7 +139,7 @@ const PricingPlan = () => {
                       {plan.title}
                     </Typography>
                     <div className='flex items-baseline gap-x-1'>
-                      <Typography variant='h2' color='primary' className='font-extrabold'>
+                      <Typography variant='h2' color='primary.main' className='font-extrabold'>
                         ${pricingPlan === 'monthly' ? plan.monthlyPay : plan.annualPay}
                       </Typography>
                       <Typography color='text.disabled' className='font-medium'>
