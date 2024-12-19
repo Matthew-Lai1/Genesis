@@ -53,7 +53,7 @@ const ColoredCards = () => {
             )}
           >
             <div className='flex flex-col items-center sm:items-start max-sm:text-center'>
-              <Typography variant='h5' color={item.color} className='mbe-2'>
+              <Typography variant='h5' color={`${item.color}.main`} className='mbe-2'>
                 {item.title}
               </Typography>
               <Typography className='mbe-4'>{item.description}</Typography>

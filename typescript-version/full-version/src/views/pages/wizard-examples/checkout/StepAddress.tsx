@@ -54,10 +54,10 @@ const data: CustomInputHorizontalData[] = [
         </Typography>
         <Divider />
         <div className='flex items-center'>
-          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
             Edit
           </Typography>
-          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
             Remove
           </Typography>
         </div>
@@ -77,10 +77,10 @@ const data: CustomInputHorizontalData[] = [
         </Typography>
         <Divider />
         <div className='flex items-center'>
-          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
             Edit
           </Typography>
-          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
             Remove
           </Typography>
         </div>

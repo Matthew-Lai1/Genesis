@@ -69,10 +69,10 @@ const UpgradePlan = ({ open, setOpen }: UpgradePlanProps) => {
             <Typography variant='body2'>User current plan is standard plan</Typography>
             <div className='flex items-center justify-between flex-wrap gap-2'>
               <div className='flex justify-center items-baseline gap-1'>
-                <Typography component='sup' className='self-start' color='primary'>
+                <Typography component='sup' className='self-start' color='primary.main'>
                   $
                 </Typography>
-                <Typography component='span' color='primary' variant='h1'>
+                <Typography component='span' color='primary.main' variant='h1'>
                   99
                 </Typography>
                 <Typography component='sub' className='self-baseline' variant='body2'>

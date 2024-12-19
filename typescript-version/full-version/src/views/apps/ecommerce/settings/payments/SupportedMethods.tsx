@@ -36,7 +36,7 @@ const SupportedMethods = () => {
             <div className='flex items-center justify-center rounded bg-white shadow-sm min-is-[58px] min-bs-[37px]'>
               <img src='/images/apps/ecommerce/paypal.png' height={25} />
             </div>
-            <Typography component={Link} color='primary' className='font-medium'>
+            <Typography component={Link} color='primary.main' className='font-medium'>
               Activate PayPal
             </Typography>
           </div>

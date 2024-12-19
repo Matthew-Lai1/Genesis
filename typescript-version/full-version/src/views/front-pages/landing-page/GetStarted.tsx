@@ -28,12 +28,14 @@ const GetStarted = () => {
           frontCommonStyles.layoutSpacing
         )}
       >
-        <div className='flex flex-col items-start gap-y-8 pbs-9 lg:plb-9 z-[1]'>
-          <div className='flex flex-col gap-1'>
-            <Typography variant='h5' color='primary' className='font-bold'>
+        <div className='flex flex-col items-center lg:items-start gap-y-8 pbs-9 lg:plb-9 z-[1]'>
+          <div className='flex flex-col gap-1 max-lg:items-center'>
+            <Typography variant='h5' color='primary.main' className='font-bold max-sm:text-center'>
               Ready to Get Started?
             </Typography>
-            <Typography className='font-medium'>Start your project with a 14-day free trial</Typography>
+            <Typography className='font-medium max-sm:text-center'>
+              Start your project with a 14-day free trial
+            </Typography>
           </div>
           <Button
             component={Link}

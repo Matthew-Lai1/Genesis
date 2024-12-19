@@ -30,7 +30,7 @@ const HelpCenterHeader = ({ searchValue, setSearchValue }: Props) => {
           'flex flex-col gap-4 items-center text-center pbs-[150px] lg:pbs-[180px] pbe-[40px] sm:pbe-[100px] pli-5'
         )}
       >
-        <Typography variant='h4' color='primary'>
+        <Typography variant='h4' color='primary.main'>
           Hello, how can we help?
         </Typography>
         <TextField

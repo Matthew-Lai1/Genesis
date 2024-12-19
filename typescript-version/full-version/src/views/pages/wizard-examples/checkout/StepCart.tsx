@@ -100,7 +100,7 @@ const StepCart = ({ handleNext }: { handleNext: () => void }) => {
                   <Typography>{product.productName}</Typography>
                   <div className='flex items-center'>
                     <Typography>Sold By:</Typography>
-                    <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+                    <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
                       {product.soldBy}
                     </Typography>
                     {product.inStock ? (
@@ -114,7 +114,7 @@ const StepCart = ({ handleNext }: { handleNext: () => void }) => {
                 </div>
                 <div className='flex flex-col justify-between items-center sm:items-end'>
                   <div className='flex'>
-                    <Typography color='primary'>{`$${product.price}`}</Typography>
+                    <Typography color='primary.main'>{`$${product.price}`}</Typography>
                     <Typography className='line-through'>{`/$${product.originalPrice}`}</Typography>
                   </div>
                   <Button variant='outlined' size='small'>
@@ -130,7 +130,7 @@ const StepCart = ({ handleNext }: { handleNext: () => void }) => {
           component={Link}
           onClick={e => e.preventDefault()}
           className='flex items-center justify-between gap-4 border rounded'
-          color='primary'
+          color='primary.main'
         >
           Add more products from wishlist
           <DirectionalIcon ltrIconClass='ri-arrow-right-s-line' rtlIconClass='ri-arrow-left-s-line' />
@@ -153,7 +153,7 @@ const StepCart = ({ handleNext }: { handleNext: () => void }) => {
                 href='/'
                 component={Link}
                 onClick={e => e.preventDefault()}
-                color='primary'
+                color='primary.main'
                 className='font-medium'
               >
                 Add a gift wrap
@@ -175,7 +175,7 @@ const StepCart = ({ handleNext }: { handleNext: () => void }) => {
                   component={Link}
                   onClick={e => e.preventDefault()}
                   className='font-medium'
-                  color='primary'
+                  color='primary.main'
                 >
                   Apply Coupon
                 </Typography>

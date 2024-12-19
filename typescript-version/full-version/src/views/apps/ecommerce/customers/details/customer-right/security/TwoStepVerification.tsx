@@ -32,7 +32,7 @@ const TwoStepVerification = () => {
         <Typography>
           Two-factor authentication adds an additional layer of security to your account by requiring more than just a
           password to log in.{' '}
-          <Typography component={Link} color='primary'>
+          <Typography component={Link} color='primary.main'>
             Learn more.
           </Typography>
         </Typography>

@@ -119,7 +119,7 @@ const InvoiceListTable = ({ invoiceData }: { invoiceData?: InvoiceType[] }) => {
           <Typography
             component={Link}
             href={getLocalizedUrl(`/apps/invoice/preview/${row.original.id}`, locale as Locale)}
-            color='primary'
+            color='primary.main'
           >{`#${row.original.id}`}</Typography>
         )
       }),

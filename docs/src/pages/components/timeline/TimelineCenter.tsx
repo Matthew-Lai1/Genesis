@@ -255,7 +255,7 @@ const TimelineCenter = () => {
               <div className='flex items-center gap-1'>
                 <Typography variant='h4'>$24,895</Typography>
                 <i className='ri-arrow-up-s-fill text-3xl text-success'/>
-                <Typography variant='body2' className='font-medium' color='success'>
+                <Typography variant='body2' className='font-medium' color='success.main'>
                   10%
                 </Typography>
               </div>

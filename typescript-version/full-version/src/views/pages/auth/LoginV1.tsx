@@ -66,7 +66,7 @@ const LoginV1 = () => {
             <FormControlLabel control={<Checkbox />} label='Remember me' />
             <Typography
               className='text-end'
-              color='primary'
+              color='primary.main'
               component={Link}
               href={getLocalizedUrl('/pages/auth/forgot-password-v1', locale as Locale)}
             >
@@ -81,7 +81,7 @@ const LoginV1 = () => {
             <Typography
               component={Link}
               href={getLocalizedUrl('/pages/auth/register-v1', locale as Locale)}
-              color='primary'
+              color='primary.main'
             >
               Create an account
             </Typography>

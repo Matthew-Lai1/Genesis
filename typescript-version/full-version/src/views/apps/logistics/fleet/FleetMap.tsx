@@ -26,11 +26,12 @@ type Props = {
       }
     }[]
   }
+  mapboxAccessToken: string
 }
 
 const FleetMap = (props: Props) => {
   // Vars
-  const { carIndex, viewState, geojson } = props
+  const { carIndex, viewState, geojson, mapboxAccessToken } = props
 
   // Hooks
   const mapRef = useRef<MapRef>()
@@ -42,7 +43,7 @@ const FleetMap = (props: Props) => {
   return (
     <div className='is-full bs-full'>
       <Map
-        mapboxAccessToken='pk.eyJ1Ijoic29jaWFsZXhwbG9yZXIiLCJhIjoiREFQbXBISSJ9.dwFTwfSaWsHvktHrRtpydQ'
+        mapboxAccessToken={mapboxAccessToken}
         // eslint-disable-next-line lines-around-comment
         // @ts-ignore
         ref={mapRef}
