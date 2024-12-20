@@ -10,10 +10,12 @@ import { getSystemMode } from '@core/utils/serverHelpers'
 
 type Props = ChildrenType
 
-const Layout = ({ children }: Props) => {
+const Layout = async (props: Props) => {
+  const { children } = props
+
   // Vars
   const direction = 'ltr'
-  const systemMode = getSystemMode()
+  const systemMode = await getSystemMode()
 
   return (
     <Providers direction={direction}>

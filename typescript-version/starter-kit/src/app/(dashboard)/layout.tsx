@@ -21,22 +21,20 @@ import ScrollToTop from '@core/components/scroll-to-top'
 // Util Imports
 import { getMode, getSystemMode } from '@core/utils/serverHelpers'
 
-const Layout = async ({ children }: ChildrenType) => {
+const Layout = async (props: ChildrenType) => {
+  const { children } = props
+
   // Vars
   const direction = 'ltr'
-  const mode = getMode()
-  const systemMode = getSystemMode()
+  const mode = await getMode()
+  const systemMode = await getSystemMode()
 
   return (
     <Providers direction={direction}>
       <LayoutWrapper
         systemMode={systemMode}
         verticalLayout={
-          <VerticalLayout
-            navigation={<Navigation mode={mode} systemMode={systemMode} />}
-            navbar={<Navbar />}
-            footer={<VerticalFooter />}
-          >
+          <VerticalLayout navigation={<Navigation mode={mode} />} navbar={<Navbar />} footer={<VerticalFooter />}>
             {children}
           </VerticalLayout>
         }
