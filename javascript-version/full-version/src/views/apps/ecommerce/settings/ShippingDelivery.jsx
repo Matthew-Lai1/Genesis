@@ -93,7 +93,7 @@ const ShippingDelivery = () => {
         title='Shipping zones'
         subheader='Choose where you ship and how much you charge for shipping at checkout.'
         action={
-          <Typography component={Link} color='primary' className='font-medium'>
+          <Typography component={Link} color='primary.main' className='font-medium'>
             Create zone
           </Typography>
         }

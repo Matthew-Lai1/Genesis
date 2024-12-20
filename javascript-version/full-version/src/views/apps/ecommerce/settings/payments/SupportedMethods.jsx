@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -35,13 +35,13 @@ const SupportedMethods = () => {
             <div className='flex items-center justify-center rounded bg-white shadow-sm min-is-[58px] min-bs-[37px]'>
               <img src='/images/apps/ecommerce/paypal.png' height={25} />
             </div>
-            <Typography component={Link} color='primary' className='font-medium'>
+            <Typography component={Link} color='primary.main' className='font-medium'>
               Activate PayPal
             </Typography>
           </div>
           <Divider className='mlb-6' />
           <Grid container spacing={6}>
-            <Grid item xs={12} sm={4}>
+            <Grid size={{ xs: 12, sm: 4 }}>
               <div>
                 <Typography variant='body2' className='mbe-2'>
                   Provider
@@ -51,7 +51,7 @@ const SupportedMethods = () => {
                 </Typography>
               </div>
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid size={{ xs: 12, sm: 4 }}>
               <div>
                 <Typography variant='body2' className='mbe-2'>
                   Status
@@ -59,7 +59,7 @@ const SupportedMethods = () => {
                 <Chip variant='tonal' size='small' label='Inactive' color='warning' />
               </div>
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid size={{ xs: 12, sm: 4 }}>
               <div>
                 <Typography variant='body2' className='mbe-2'>
                   Transaction Fee

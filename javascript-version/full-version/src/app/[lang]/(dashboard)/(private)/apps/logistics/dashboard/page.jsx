@@ -1,5 +1,5 @@
 //MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 //Component Imports
 import LogisticsStatisticsCard from '@views/apps/logistics/dashboard/LogisticsStatisticsCard'
@@ -52,25 +52,25 @@ const LogisticsDashboard = async () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <LogisticsStatisticsCard data={data?.statsHorizontalWithBorder} />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <LogisticsVehicleOverview />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <LogisticsShipmentStatistics />
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid size={{ xs: 12, md: 4 }}>
         <LogisticsDeliveryPerformance />
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid size={{ xs: 12, md: 4 }}>
         <LogisticsDeliveryExceptions />
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid size={{ xs: 12, md: 4 }}>
         <LogisticsOrdersByCountries />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <LogisticsOverviewTable vehicleData={vehicleData?.vehicles} />
       </Grid>
     </Grid>

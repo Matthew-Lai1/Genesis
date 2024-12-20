@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
@@ -36,7 +36,7 @@ const ColoredCards = () => {
   return (
     <Grid container spacing={6}>
       {data.map((item, index) => (
-        <Grid item xs={12} md={6} key={index}>
+        <Grid size={{ xs: 12, md: 6 }} key={index}>
           <div
             className={classnames(
               'flex max-sm:flex-col items-center sm:items-start justify-between gap-6 rounded p-6',
@@ -44,7 +44,7 @@ const ColoredCards = () => {
             )}
           >
             <div className='flex flex-col items-center sm:items-start max-sm:text-center'>
-              <Typography variant='h5' color={item.color} className='mbe-2'>
+              <Typography variant='h5' color={`${item.color}.main`} className='mbe-2'>
                 {item.title}
               </Typography>
               <Typography className='mbe-4'>{item.description}</Typography>

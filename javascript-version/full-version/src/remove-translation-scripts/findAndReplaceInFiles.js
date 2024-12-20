@@ -1,12 +1,6 @@
 import { consola } from 'consola'
-
-const fs = require('fs')
-const util = require('util')
-
-const { globby } = require('globby')
-
-const readFile = util.promisify(fs.readFile)
-const writeFile = util.promisify(fs.writeFile)
+import fs from 'fs-extra'
+import { globby } from 'globby'
 
 // Pattern to find `getLocalizedUrl('/any-url', locale)` and capture the URL
 const getUrlPattern = /getLocalizedUrl\((['"`]\/)(.*)(['"`]), locale\)/g
@@ -21,12 +15,11 @@ const removeDictionaryDestructuringPattern = /dictionary(,| )/g
 
 // Pattern to match Props type definitions including `params`
 
-const removeParamsFromPropsPattern2 = /\{ params \}: \{ params: \{ lang: Locale \} \}/
 const removeParamsFromFunctionPattern = /(?<={ .*)params,?(?=.* }: [A-Z][A-Za-z]+)/g
 const excludeLangPattern = /excludeLang\??:\s.*,?/g
 
 async function replacePatternInFile(filePath) {
-  const data = await readFile(filePath, 'utf8')
+  const data = await fs.readFile(filePath, 'utf8')
 
   // Initial check to see if any pattern exists in the data, to avoid unnecessary operations
   if (
@@ -38,7 +31,6 @@ async function replacePatternInFile(filePath) {
     getDictionaryProp.test(data) ||
     replaceDirectionPattern.test(data) ||
     removeDictionaryDestructuringPattern.test(data) ||
-    removeParamsFromPropsPattern2.test(data) ||
     removeParamsFromFunctionPattern.test(data) ||
     excludeLangPattern.test(data)
   ) {
@@ -54,19 +46,19 @@ async function replacePatternInFile(filePath) {
       .replace(replaceDirectionPattern, "const direction = 'ltr'")
       .replace(removeDictionaryDestructuringPattern, '')
 
-      .replace(removeParamsFromPropsPattern2, '')
       .replace(removeParamsFromFunctionPattern, '')
       .replace(/const\s*{\s*lang:\s*locale\s*}\s*=\s*useParams\(\)/g, '')
       .replace(/(\w+: )?locale,/g, '')
       .replace(/,\s*(\w+: )?locale/g, '')
       .replace(/\{ lang \}: \{ lang: Locale \}/g, '')
       .replace(/\${lang}\//g, '')
+      .replace(/props: \{ params: Promise<\{ lang: Locale \}> \}/gm, '')
       .replace(/excludeLang\??:\s.*,?/g, '')
       .replace(/item\.excludeLang.*?:/, '')
 
     // Only write back if changes were made
     if (data !== newData) {
-      await writeFile(filePath, newData, 'utf8')
+      await fs.writeFile(filePath, newData, 'utf8')
     } else {
       consola.error(`No changes made to: ${filePath}`)
     }
@@ -75,7 +67,7 @@ async function replacePatternInFile(filePath) {
 
 async function updateNextConfig() {
   const filePath = 'next.config.mjs'
-  const content = await readFile(filePath, 'utf8')
+  const content = await fs.readFile(filePath, 'utf8')
 
   // Define a pattern that matches the redirects configuration and remove it
   const redirectsPattern = /(return \[[\s\S]*?\]\s*)/
@@ -89,7 +81,7 @@ async function updateNextConfig() {
   const updatedContent = content.replace(redirectsPattern, redirect)
 
   if (content !== updatedContent) {
-    await writeFile(filePath, updatedContent, 'utf8')
+    await fs.writeFile(filePath, updatedContent, 'utf8')
     consola.success('Removed redirects from next.config.mjs\n')
   }
 }

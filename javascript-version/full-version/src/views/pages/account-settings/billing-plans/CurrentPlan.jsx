@@ -2,7 +2,7 @@
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
@@ -27,7 +27,7 @@ const CurrentPlan = ({ data }) => {
       <CardHeader title='Current Plan' />
       <CardContent>
         <Grid container spacing={6}>
-          <Grid item xs={12} md={6} className='flex flex-col gap-6'>
+          <Grid size={{ xs: 12, md: 6 }} className='flex flex-col gap-6'>
             <div className='flex flex-col gap-1'>
               <Typography color='text.primary' className='font-medium'>
                 Your Current Plan is Basic
@@ -50,7 +50,7 @@ const CurrentPlan = ({ data }) => {
               <Typography>Standard plan for small to medium businesses</Typography>
             </div>
           </Grid>
-          <Grid item xs={12} md={6} className='flex flex-col gap-6'>
+          <Grid size={{ xs: 12, md: 6 }} className='flex flex-col gap-6'>
             <Alert severity='warning'>
               <AlertTitle>We need your attention!</AlertTitle>
               Your plan requires update
@@ -68,7 +68,7 @@ const CurrentPlan = ({ data }) => {
               <Typography variant='body2'>18 days remaining until your plan requires update</Typography>
             </div>
           </Grid>
-          <Grid item xs={12} className='flex gap-4 flex-wrap'>
+          <Grid size={{ xs: 12 }} className='flex gap-4 flex-wrap'>
             <OpenDialogOnElementClick
               element={Button}
               elementProps={buttonProps('Upgrade Plan', 'primary', 'contained')}

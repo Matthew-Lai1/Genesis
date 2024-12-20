@@ -1,7 +1,7 @@
 // MUI Imports
 import Typography from '@mui/material/Typography'
 import Breadcrumbs from '@mui/material/Breadcrumbs'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Divider from '@mui/material/Divider'
 import InputAdornment from '@mui/material/InputAdornment'
 
@@ -31,7 +31,7 @@ const Questions = () => {
     <section className='flex flex-col justify-center items-center gap-4 md:plb-[100px] plb-[50px] pbs-[70px] -mbs-[70px] bg-backgroundPaper'>
       <div className={classnames('pbs-10 md:pbs-16', frontCommonStyles.layoutSpacing)}>
         <Grid container spacing={6}>
-          <Grid item xs={12} lg={8}>
+          <Grid size={{ xs: 12, lg: 8 }}>
             <div className='flex flex-col gap-2'>
               <Breadcrumbs aria-label='breadcrumb'>
                 <Link className='hover:text-primary' href='/front-pages/help-center'>
@@ -66,15 +66,17 @@ const Questions = () => {
               />
             </div>
           </Grid>
-          <Grid item xs={12} lg={4} className='flex flex-col gap-6'>
+          <Grid size={{ xs: 12, lg: 4 }} className='flex flex-col gap-6'>
             <CustomTextField
               placeholder='Search...'
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position='start'>
-                    <i className='tabler-search' />
-                  </InputAdornment>
-                )
+              slotProps={{
+                input: {
+                  startAdornment: (
+                    <InputAdornment position='start'>
+                      <i className='tabler-search' />
+                    </InputAdornment>
+                  )
+                }
               }}
             />
             <div className='flex flex-col gap-4'>

@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Components Imports
 import WebsiteAnalyticsSlider from '@views/dashboards/analytics/WebsiteAnalyticsSlider'
@@ -38,34 +38,34 @@ const DashboardAnalytics = async () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <WebsiteAnalyticsSlider />
       </Grid>
-      <Grid item xs={12} sm={6} lg={3}>
+      <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
         <LineAreaDailySalesChart />
       </Grid>
-      <Grid item xs={12} sm={6} lg={3}>
+      <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
         <SalesOverview />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <EarningReports />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <SupportTracker />
       </Grid>
-      <Grid item xs={12} md={6} lg={4}>
+      <Grid size={{ xs: 12, md: 6, lg: 4 }}>
         <SalesByCountries />
       </Grid>
-      <Grid item xs={12} md={6} lg={4}>
+      <Grid size={{ xs: 12, md: 6, lg: 4 }}>
         <TotalEarning />
       </Grid>
-      <Grid item xs={12} md={6} lg={4}>
+      <Grid size={{ xs: 12, md: 6, lg: 4 }}>
         <MonthlyCampaignState />
       </Grid>
-      <Grid item xs={12} md={6} lg={4}>
+      <Grid size={{ xs: 12, md: 6, lg: 4 }}>
         <SourceVisits />
       </Grid>
-      <Grid item xs={12} lg={8}>
+      <Grid size={{ xs: 12, lg: 8 }}>
         <ProjectsTable projectTable={data?.users.profile.projectTable} />
       </Grid>
     </Grid>

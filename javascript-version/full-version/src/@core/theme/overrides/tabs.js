@@ -68,7 +68,7 @@ const tabs = {
         padding: theme.spacing(2, 5),
         minBlockSize: 38,
         color: 'var(--mui-palette-text-primary)',
-        '& > .MuiTab-iconWrapper': {
+        '& > .MuiTab-icon': {
           fontSize: '1.125rem',
           ...(ownerState.iconPosition === 'top' && {
             marginBlockEnd: theme.spacing(1.5)

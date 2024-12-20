@@ -35,12 +35,12 @@ const GetStarted = ({ mode }) => {
           frontCommonStyles.layoutSpacing
         )}
       >
-        <div className='flex flex-col items-start gap-y-8 pbs-9 lg:plb-9 z-[1]'>
-          <div className='flex flex-col'>
-            <Typography variant='h3' color='primary' className='font-bold text-[2.125rem]'>
+        <div className='flex flex-col items-center lg:items-start gap-y-8 pbs-9 lg:plb-9 z-[1]'>
+          <div className='flex flex-col gap-1 max-lg:items-center'>
+            <Typography variant='h3' color='primary.main' className='font-bold text-[2.125rem] max-sm:text-center'>
               Ready to Get Started?
             </Typography>
-            <Typography variant='h5' color='text.secondary'>
+            <Typography variant='h5' color='text.secondary' className='max-sm:text-center'>
               Start your project with a 14-day free trial
             </Typography>
           </div>

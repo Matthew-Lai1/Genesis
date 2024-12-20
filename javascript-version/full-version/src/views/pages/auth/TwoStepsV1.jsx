@@ -91,7 +91,7 @@ const TwoStepsV1 = () => {
             </Button>
             <div className='flex justify-center items-center flex-wrap gap-2'>
               <Typography>Didn&#39;t get the code?</Typography>
-              <Typography color='primary' component={Link} href='/' onClick={e => e.preventDefault()}>
+              <Typography color='primary.main' component={Link} href='/' onClick={e => e.preventDefault()}>
                 Resend
               </Typography>
             </div>

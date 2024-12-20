@@ -23,7 +23,9 @@ import { getInvoiceData } from '@/app/server/actions'
 
   return res.json()
 } */
-const PreviewPage = async ({ params }) => {
+const PreviewPage = async props => {
+  const params = await props.params
+
   // Vars
   const data = await getInvoiceData()
   const filteredData = data?.filter(invoice => invoice.id === params.id)[0]

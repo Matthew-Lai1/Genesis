@@ -2,7 +2,7 @@
 import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
 import FormControlLabel from '@mui/material/FormControlLabel'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Switch from '@mui/material/Switch'
 import Typography from '@mui/material/Typography'
 import { useTheme } from '@mui/material/styles'
@@ -19,7 +19,7 @@ const StepReview = ({ activeStep, handleNext, handlePrev, steps }) => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} lg={6}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <Typography variant='h4' className='mb-4'>
           Almost done! 🚀
         </Typography>
@@ -70,7 +70,7 @@ const StepReview = ({ activeStep, handleNext, handlePrev, steps }) => {
         </table>
         <FormControlLabel control={<Switch />} label='I have confirmed the deal details.' />
       </Grid>
-      <Grid item lg={6} xs={12}>
+      <Grid size={{ xs: 12, lg: 6 }}>
         <div className='flex justify-center items-end border rounded is-full bs-auto pbs-3'>
           <img
             alt='review-illustration'
@@ -79,7 +79,7 @@ const StepReview = ({ activeStep, handleNext, handlePrev, steps }) => {
           />
         </div>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex items-center justify-between'>
           <Button
             variant='tonal'

@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import Details from '@views/apps/academy/course-details/Details'
@@ -30,10 +30,10 @@ const CourseDetailsPage = async () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} md={8}>
+      <Grid size={{ xs: 12, md: 8 }}>
         <Details data={data?.courseDetails} />
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid size={{ xs: 12, md: 4 }}>
         <div className='sticky top-[94px]'>
           <Sidebar content={data?.courseDetails.content} />
         </div>

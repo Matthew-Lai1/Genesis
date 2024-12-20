@@ -23,7 +23,9 @@ import { getEcommerceData } from '@/app/server/actions'
 
   return res.json()
 } */
-const CustomerDetailsPage = async ({ params }) => {
+const CustomerDetailsPage = async props => {
+  const params = await props.params
+
   // Vars
   const data = await getEcommerceData()
   const filteredData = data?.customerData.filter(item => item.customerId === params.id)[0]

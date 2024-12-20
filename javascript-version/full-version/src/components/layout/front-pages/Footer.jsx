@@ -1,7 +1,7 @@
 'use client'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import Chip from '@mui/material/Chip'
@@ -39,12 +39,12 @@ const Footer = ({ mode }) => {
         <img src={dashboardImage} alt='footer bg' className='absolute inset-0 is-full bs-full object-cover -z-[1]' />
         <div className={classnames('plb-12 text-white', frontCommonStyles.layoutSpacing)}>
           <Grid container rowSpacing={10} columnSpacing={12}>
-            <Grid item xs={12} lg={5}>
+            <Grid size={{ xs: 12, lg: 5 }}>
               <div className='flex flex-col items-start gap-6'>
                 <Link href='/front-pages/landing-page'>
                   <Logo color='var(--mui-palette-common-white)' />
                 </Link>
-                <Typography color='white' className='md:max-is-[390px] opacity-[78]'>
+                <Typography color='white' className='md:max-is-[390px] opacity-[0.78]'>
                   Most Powerful & Comprehensive 🤩 React NextJS Admin Template with Elegant Material Design & Unique
                   Layouts.
                 </Typography>
@@ -80,16 +80,16 @@ const Footer = ({ mode }) => {
                 </div>
               </div>
             </Grid>
-            <Grid item xs={12} sm={3} lg={2}>
-              <Typography color='white' className='font-medium mbe-6 opacity-[92]'>
+            <Grid size={{ xs: 12, sm: 3, lg: 2 }}>
+              <Typography color='white' className='font-medium mbe-6 opacity-[0.92]'>
                 Pages
               </Typography>
               <div className='flex flex-col gap-4'>
-                <Typography component={Link} href='/front-pages/pricing' color='white' className='opacity-[78]'>
+                <Typography component={Link} href='/front-pages/pricing' color='white' className='opacity-[0.78]'>
                   Pricing
                 </Typography>
                 <Link href='/front-pages/payment' className='flex items-center gap-[10px]'>
-                  <Typography color='white' className='opacity-[78]'>
+                  <Typography color='white' className='opacity-[0.78]'>
                     Payment
                   </Typography>
                   <Chip label='New' color='primary' size='small' />
@@ -98,36 +98,36 @@ const Footer = ({ mode }) => {
                   component={Link}
                   href='/pages/misc/under-maintenance'
                   color='white'
-                  className='opacity-[78]'
+                  className='opacity-[0.78]'
                 >
                   Maintenance
                 </Typography>
-                <Typography component={Link} href='/pages/misc/coming-soon' color='white' className='opacity-[78]'>
+                <Typography component={Link} href='/pages/misc/coming-soon' color='white' className='opacity-[0.78]'>
                   Coming Soon
                 </Typography>
               </div>
             </Grid>
-            <Grid item xs={12} sm={3} lg={2}>
-              <Typography color='white' className='font-medium mbe-6 opacity-[92]'>
+            <Grid size={{ xs: 12, sm: 3, lg: 2 }}>
+              <Typography color='white' className='font-medium mbe-6 opacity-[0.92]'>
                 Products
               </Typography>
               <div className='flex flex-col gap-4'>
-                <Typography component={Link} href='/front-pages/landing-page' color='white' className='opacity-[78]'>
+                <Typography component={Link} href='/front-pages/landing-page' color='white' className='opacity-[0.78]'>
                   Page builder
                 </Typography>
-                <Typography component={Link} href='/front-pages/landing-page' color='white' className='opacity-[78]'>
+                <Typography component={Link} href='/front-pages/landing-page' color='white' className='opacity-[0.78]'>
                   Admin Dashboards
                 </Typography>
-                <Typography component={Link} href='/front-pages/landing-page' color='white' className='opacity-[78]'>
+                <Typography component={Link} href='/front-pages/landing-page' color='white' className='opacity-[0.78]'>
                   UI Kits
                 </Typography>
-                <Typography component={Link} href='/front-pages/landing-page' color='white' className='opacity-[78]'>
+                <Typography component={Link} href='/front-pages/landing-page' color='white' className='opacity-[0.78]'>
                   Illustrations
                 </Typography>
               </div>
             </Grid>
-            <Grid item xs={12} sm={6} lg={3}>
-              <Typography color='white' className='font-medium mbe-6 opacity-[92]'>
+            <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
+              <Typography color='white' className='font-medium mbe-6 opacity-[0.92]'>
                 Download our App
               </Typography>
               <div className='flex flex-col gap-4'>
@@ -135,10 +135,10 @@ const Footer = ({ mode }) => {
                   <div className='flex items-center pli-5 plb-[7px] gap-6'>
                     <img src='/images/front-pages/apple-icon.png' alt='apple store' className='bs-[34px]' />
                     <div className='flex flex-col items-start'>
-                      <Typography variant='body2' color='white' className='opacity-[75]'>
+                      <Typography variant='body2' color='white' className='opacity-75'>
                         Download on the
                       </Typography>
-                      <Typography color='white' className='font-medium opacity-[92]'>
+                      <Typography color='white' className='font-medium opacity-[0.92]'>
                         App Store
                       </Typography>
                     </div>
@@ -148,10 +148,10 @@ const Footer = ({ mode }) => {
                   <div className='flex items-center pli-5 plb-[7px] gap-6'>
                     <img src='/images/front-pages/google-play-icon.png' alt='Google play' className='bs-[34px]' />
                     <div className='flex flex-col items-start'>
-                      <Typography variant='body2' color='white' className='opacity-[75]'>
+                      <Typography variant='body2' color='white' className='opacity-75'>
                         Download on the
                       </Typography>
-                      <Typography color='white' className='font-medium opacity-[92]'>
+                      <Typography color='white' className='font-medium opacity-[0.92]'>
                         Google Play
                       </Typography>
                     </div>

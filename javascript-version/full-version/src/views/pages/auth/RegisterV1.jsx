@@ -55,14 +55,16 @@ const RegisterV1 = () => {
               label='Password'
               placeholder='············'
               type={isPasswordShown ? 'text' : 'password'}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position='end'>
-                    <IconButton edge='end' onClick={handleClickShowPassword} onMouseDown={e => e.preventDefault()}>
-                      <i className={isPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
-                    </IconButton>
-                  </InputAdornment>
-                )
+              slotProps={{
+                input: {
+                  endAdornment: (
+                    <InputAdornment position='end'>
+                      <IconButton edge='end' onClick={handleClickShowPassword} onMouseDown={e => e.preventDefault()}>
+                        <i className={isPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
+                      </IconButton>
+                    </InputAdornment>
+                  )
+                }
               }}
             />
             <FormControlLabel
@@ -81,7 +83,7 @@ const RegisterV1 = () => {
             </Button>
             <div className='flex justify-center items-center flex-wrap gap-2'>
               <Typography>Already have an account?</Typography>
-              <Typography component={Link} href={getLocalizedUrl('/pages/auth/login-v1', locale)} color='primary'>
+              <Typography component={Link} href={getLocalizedUrl('/pages/auth/login-v1', locale)} color='primary.main'>
                 Sign in instead
               </Typography>
             </div>

@@ -31,7 +31,7 @@ const HelpCenterHeader = ({ searchValue, setSearchValue }) => {
           'flex flex-col gap-4 items-center text-center pbs-[150px] lg:pbs-[168px] pbe-[40px] sm:pbe-[100px] pli-5'
         )}
       >
-        <Typography variant='h4' color='primary'>
+        <Typography variant='h4' color='primary.main'>
           Hello, how can we help?
         </Typography>
         <CustomTextFieldStyled
@@ -39,12 +39,14 @@ const HelpCenterHeader = ({ searchValue, setSearchValue }) => {
           placeholder='Ask a question...'
           value={searchValue}
           onChange={e => setSearchValue(e.target.value)}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position='start'>
-                <i className='tabler-search' />
-              </InputAdornment>
-            )
+          slotProps={{
+            input: {
+              startAdornment: (
+                <InputAdornment position='start'>
+                  <i className='tabler-search' />
+                </InputAdornment>
+              )
+            }
           }}
         />
         <Typography>Common troubleshooting topics: eCommerce, Blogging to payment</Typography>

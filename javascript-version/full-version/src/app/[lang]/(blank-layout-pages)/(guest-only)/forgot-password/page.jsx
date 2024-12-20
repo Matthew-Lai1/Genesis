@@ -9,9 +9,9 @@ export const metadata = {
   description: 'Forgotten Password to your account'
 }
 
-const ForgotPasswordPage = () => {
+const ForgotPasswordPage = async () => {
   // Vars
-  const mode = getServerMode()
+  const mode = await getServerMode()
 
   return <ForgotPassword mode={mode} />
 }

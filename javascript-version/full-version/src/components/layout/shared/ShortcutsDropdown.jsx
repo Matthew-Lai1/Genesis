@@ -16,7 +16,7 @@ import ClickAwayListener from '@mui/material/ClickAwayListener'
 import Typography from '@mui/material/Typography'
 import Tooltip from '@mui/material/Tooltip'
 import Divider from '@mui/material/Divider'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import useMediaQuery from '@mui/material/useMediaQuery'
 
 // Third Party Components
@@ -141,8 +141,7 @@ const ShortcutsDropdown = ({ shortcuts }) => {
                     <Grid container>
                       {shortcuts.map((shortcut, index) => (
                         <Grid
-                          item
-                          xs={6}
+                          size={{ xs: 6 }}
                           key={index}
                           onClick={handleClose}
                           className='[&:not(:last-of-type):not(:nth-last-of-type(2))]:border-be odd:border-ie'

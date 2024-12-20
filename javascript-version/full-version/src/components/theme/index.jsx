@@ -5,12 +5,7 @@ import { useMemo } from 'react'
 
 // MUI Imports
 import { deepmerge } from '@mui/utils'
-import {
-  Experimental_CssVarsProvider as CssVarsProvider,
-  experimental_extendTheme as extendTheme,
-  lighten,
-  darken
-} from '@mui/material/styles'
+import { ThemeProvider, lighten, darken, createTheme } from '@mui/material/styles'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter'
 import CssBaseline from '@mui/material/CssBaseline'
 
@@ -30,7 +25,7 @@ import { useSettings } from '@core/hooks/useSettings'
 // Core Theme Imports
 import defaultCoreTheme from '@core/theme'
 
-const ThemeProvider = props => {
+const CustomThemeProvider = props => {
   // Props
   const { children, direction, systemMode } = props
 
@@ -54,7 +49,7 @@ const ThemeProvider = props => {
 
   // Merge the primary color scheme override with the core theme
   const theme = useMemo(() => {
-    const newColorScheme = {
+    const newTheme = {
       colorSchemes: {
         light: {
           palette: {
@@ -74,12 +69,15 @@ const ThemeProvider = props => {
             }
           }
         }
+      },
+      cssVariables: {
+        colorSchemeSelector: 'data'
       }
     }
 
-    const coreTheme = deepmerge(defaultCoreTheme(settings, currentMode, direction), newColorScheme)
+    const coreTheme = deepmerge(defaultCoreTheme(settings, currentMode, direction), newTheme)
 
-    return extendTheme(coreTheme)
+    return createTheme(coreTheme)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [settings.primaryColor, settings.skin, currentMode])
 
@@ -93,7 +91,7 @@ const ThemeProvider = props => {
         })
       }}
     >
-      <CssVarsProvider
+      <ThemeProvider
         theme={theme}
         defaultMode={systemMode}
         modeStorageKey={`${themeConfig.templateName.toLowerCase().split(' ').join('-')}-mui-template-mode`}
@@ -103,9 +101,9 @@ const ThemeProvider = props => {
           <CssBaseline />
           {children}
         </>
-      </CssVarsProvider>
+      </ThemeProvider>
     </AppRouterCacheProvider>
   )
 }
 
-export default ThemeProvider
+export default CustomThemeProvider

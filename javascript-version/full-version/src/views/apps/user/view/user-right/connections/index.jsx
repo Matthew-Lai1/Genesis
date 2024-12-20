@@ -7,7 +7,7 @@ import Link from 'next/link'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Switch from '@mui/material/Switch'
 
@@ -86,7 +86,7 @@ const socialAccountsArr = [
 const ConnectionsTab = () => {
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Card>
           <CardHeader
             title='Connected Accounts'
@@ -110,7 +110,7 @@ const ConnectionsTab = () => {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Card>
           <CardHeader title='Social Accounts' subheader='Display content from social accounts on your site' />
           <CardContent className='flex flex-col gap-4'>
@@ -123,7 +123,7 @@ const ConnectionsTab = () => {
                       {item.title}
                     </Typography>
                     {item.isConnected ? (
-                      <Typography color='primary' component={Link} href={item.href || '/'} target='_blank'>
+                      <Typography color='primary.main' component={Link} href={item.href || '/'} target='_blank'>
                         {item.username}
                       </Typography>
                     ) : (

@@ -9,9 +9,9 @@ export const metadata = {
   description: 'Login to your account'
 }
 
-const LoginPage = () => {
+const LoginPage = async () => {
   // Vars
-  const mode = getServerMode()
+  const mode = await getServerMode()
 
   return <Login mode={mode} />
 }

@@ -5,7 +5,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
 import Divider from '@mui/material/Divider'
@@ -51,10 +51,10 @@ const data = [
         </Typography>
         <Divider />
         <div className='flex items-center gap-4 mbs-0.5 pbe-[6px]'>
-          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
             Edit
           </Typography>
-          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
             Remove
           </Typography>
         </div>
@@ -74,10 +74,10 @@ const data = [
         </Typography>
         <Divider />
         <div className='flex items-center gap-4 mbs-0.5 pbe-[6px]'>
-          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
             Edit
           </Typography>
-          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+          <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
             Remove
           </Typography>
         </div>
@@ -136,7 +136,8 @@ const StepAddress = ({ handleNext }) => {
 
   const buttonProps = {
     variant: 'tonal',
-    children: 'Add New Address'
+    children: 'Add New Address',
+    className: 'self-start'
   }
 
   // States
@@ -161,9 +162,9 @@ const StepAddress = ({ handleNext }) => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} lg={8} className='flex flex-col gap-6'>
-        <div className='flex flex-col items-start gap-4'>
-          <Typography color='text.primary' className='font-medium'>
+      <Grid size={{ xs: 12, lg: 8 }} className='flex flex-col gap-6'>
+        <div className='flex flex-col gap-4'>
+          <Typography color='text.primary' className='font-medium self-start'>
             Select your preferable address
           </Typography>
           <Grid container spacing={6}>
@@ -172,7 +173,12 @@ const StepAddress = ({ handleNext }) => {
                 type='radio'
                 key={index}
                 data={item}
-                gridProps={{ sm: 6, xs: 12 }}
+                gridProps={{
+                  size: {
+                    sm: 6,
+                    xs: 12
+                  }
+                }}
                 selected={selectedOption}
                 name='custom-radios-basic'
                 handleChange={handleOptionChange}
@@ -181,8 +187,8 @@ const StepAddress = ({ handleNext }) => {
           </Grid>
           <OpenDialogOnElementClick element={Button} elementProps={buttonProps} dialog={AddEditAddress} />
         </div>
-        <div className='flex flex-col items-start gap-4'>
-          <Typography color='text.primary' className='font-medium'>
+        <div className='flex flex-col gap-4'>
+          <Typography color='text.primary' className='font-medium self-start'>
             Choose Delivery Speed
           </Typography>
           <Grid container spacing={6}>
@@ -197,7 +203,12 @@ const StepAddress = ({ handleNext }) => {
                 <CustomInputVertical
                   type='radio'
                   key={index}
-                  gridProps={{ sm: 4, xs: 12 }}
+                  gridProps={{
+                    size: {
+                      sm: 4,
+                      xs: 12
+                    }
+                  }}
                   selected={selectedSpeed}
                   name='custom-radios-basic'
                   handleChange={handleSpeedChange}
@@ -208,7 +219,7 @@ const StepAddress = ({ handleNext }) => {
           </Grid>
         </div>
       </Grid>
-      <Grid item xs={12} lg={4} className='flex flex-col gap-4'>
+      <Grid size={{ xs: 12, lg: 4 }} className='flex flex-col gap-4'>
         <div className='border rounded'>
           <CardContent className='flex flex-col gap-4'>
             <Typography color='text.primary' className='font-medium'>

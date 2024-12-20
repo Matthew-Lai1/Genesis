@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Dialog from '@mui/material/Dialog'
 import Button from '@mui/material/Button'
 import Switch from '@mui/material/Switch'
@@ -44,7 +44,12 @@ const BillingCard = ({ open, setOpen, data }) => {
   }, [open])
 
   return (
-    <Dialog open={open} onClose={handleClose} sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}>
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      closeAfterTransition={false}
+      sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
+    >
       <DialogCloseButton onClick={() => setOpen(false)} disableRipple>
         <i className='tabler-x' />
       </DialogCloseButton>
@@ -57,7 +62,7 @@ const BillingCard = ({ open, setOpen, data }) => {
       <form onSubmit={e => e.preventDefault()}>
         <DialogContent className='overflow-visible pbs-0 p-6 sm:pli-16'>
           <Grid container spacing={6}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <CustomTextField
                 fullWidth
                 name='number'
@@ -68,7 +73,7 @@ const BillingCard = ({ open, setOpen, data }) => {
                 onChange={e => setCardData({ ...cardData, cardNumber: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 name='name'
@@ -79,7 +84,7 @@ const BillingCard = ({ open, setOpen, data }) => {
                 onChange={e => setCardData({ ...cardData, name: e.target.value })}
               />
             </Grid>
-            <Grid item xs={6} sm={3}>
+            <Grid size={{ xs: 6, sm: 3 }}>
               <CustomTextField
                 fullWidth
                 name='expiry'
@@ -90,7 +95,7 @@ const BillingCard = ({ open, setOpen, data }) => {
                 onChange={e => setCardData({ ...cardData, expiryDate: e.target.value })}
               />
             </Grid>
-            <Grid item xs={6} sm={3}>
+            <Grid size={{ xs: 6, sm: 3 }}>
               <CustomTextField
                 fullWidth
                 name='cvv'
@@ -101,7 +106,7 @@ const BillingCard = ({ open, setOpen, data }) => {
                 onChange={e => setCardData({ ...cardData, cardCvv: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <FormControlLabel control={<Switch defaultChecked />} label='Save Card for future billing?' />
             </Grid>
           </Grid>

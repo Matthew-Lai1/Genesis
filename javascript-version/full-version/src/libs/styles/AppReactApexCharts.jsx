@@ -48,14 +48,14 @@ const ApexChartWrapper = styled(Box)(({ theme }) => ({
     '& .apexcharts-xaxistooltip': {
       borderColor: 'var(--mui-palette-divider)',
       background: 'var(--mui-palette-grey-50)',
-      '[data-mui-color-scheme="dark"] &': {
+      ...theme.applyStyles('dark', {
         background: 'var(--mui-palette-customColors-bodyBg)'
-      },
+      }),
       '&:after': {
         borderBottomColor: 'var(--mui-palette-grey-50)',
-        '[data-mui-color-scheme="dark"] &': {
+        ...theme.applyStyles('dark', {
           borderBottomColor: 'var(--mui-palette-customColors-bodyBg)'
-        }
+        })
       },
       '&:before': {
         borderBottomColor: 'var(--mui-palette-divider)'
@@ -64,14 +64,14 @@ const ApexChartWrapper = styled(Box)(({ theme }) => ({
     '& .apexcharts-yaxistooltip': {
       borderColor: 'var(--mui-palette-divider)',
       background: 'var(--mui-palette-grey-50)',
-      '[data-mui-color-scheme="dark"] &': {
+      ...theme.applyStyles('dark', {
         background: 'var(--mui-palette-customColors-bodyBg)'
-      },
+      }),
       '&:after': {
         borderLeftColor: 'var(--mui-palette-grey-50)',
-        '[data-mui-color-scheme="dark"] &': {
+        ...theme.applyStyles('dark', {
           borderLeftColor: 'var(--mui-palette-customColors-bodyBg)'
-        }
+        })
       },
       '&:before': {
         borderLeftColor: 'var(--mui-palette-divider)'

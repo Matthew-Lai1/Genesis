@@ -25,7 +25,7 @@ import { getAcademyData } from '@/app/server/actions'
 } */
 const MyCoursePage = async () => {
   // Vars
-  const mode = getServerMode()
+  const mode = await getServerMode()
   const data = await getAcademyData()
 
   return <AcademyMyCourse mode={mode} courseData={data?.courses} />

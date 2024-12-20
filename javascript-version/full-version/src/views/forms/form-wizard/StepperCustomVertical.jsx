@@ -5,7 +5,7 @@ import { Fragment, useState } from 'react'
 import { styled } from '@mui/material/styles'
 import Box from '@mui/material/Box'
 import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import Divider from '@mui/material/Divider'
 import Stepper from '@mui/material/Stepper'
@@ -153,7 +153,7 @@ const StepperCustomVertical = () => {
       case 0:
         return (
           <Fragment>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='Username'
@@ -162,7 +162,7 @@ const StepperCustomVertical = () => {
                 onChange={e => setUsername(e.target.value)}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 type='email'
@@ -172,7 +172,7 @@ const StepperCustomVertical = () => {
                 onChange={e => setEmail(e.target.value)}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='Password'
@@ -181,23 +181,25 @@ const StepperCustomVertical = () => {
                 id='stepper-custom-vertical-account-password'
                 onChange={handlePasswordChange('password')}
                 type={state.showPassword ? 'text' : 'password'}
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position='end'>
-                      <IconButton
-                        edge='end'
-                        onClick={handleClickShowPassword}
-                        onMouseDown={e => e.preventDefault()}
-                        aria-label='toggle password visibility'
-                      >
-                        <i className={state.showPassword ? 'tabler-eye' : 'tabler-eye-off'} />
-                      </IconButton>
-                    </InputAdornment>
-                  )
+                slotProps={{
+                  input: {
+                    endAdornment: (
+                      <InputAdornment position='end'>
+                        <IconButton
+                          edge='end'
+                          onClick={handleClickShowPassword}
+                          onMouseDown={e => e.preventDefault()}
+                          aria-label='toggle password visibility'
+                        >
+                          <i className={state.showPassword ? 'tabler-eye' : 'tabler-eye-off'} />
+                        </IconButton>
+                      </InputAdornment>
+                    )
+                  }
                 }}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 value={state.password2}
@@ -206,19 +208,21 @@ const StepperCustomVertical = () => {
                 id='stepper-custom-vertical-account-password-2'
                 onChange={handleConfirmChange('password2')}
                 type={state.showPassword2 ? 'text' : 'password'}
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position='end'>
-                      <IconButton
-                        edge='end'
-                        onMouseDown={e => e.preventDefault()}
-                        aria-label='toggle password visibility'
-                        onClick={handleClickShowConfirmPassword}
-                      >
-                        <i className={state.showPassword2 ? 'tabler-eye' : 'tabler-eye-off'} />
-                      </IconButton>
-                    </InputAdornment>
-                  )
+                slotProps={{
+                  input: {
+                    endAdornment: (
+                      <InputAdornment position='end'>
+                        <IconButton
+                          edge='end'
+                          onMouseDown={e => e.preventDefault()}
+                          aria-label='toggle password visibility'
+                          onClick={handleClickShowConfirmPassword}
+                        >
+                          <i className={state.showPassword2 ? 'tabler-eye' : 'tabler-eye-off'} />
+                        </IconButton>
+                      </InputAdornment>
+                    )
+                  }
                 }}
               />
             </Grid>
@@ -227,7 +231,7 @@ const StepperCustomVertical = () => {
       case 1:
         return (
           <Fragment key={step}>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 value={firstName}
@@ -236,7 +240,7 @@ const StepperCustomVertical = () => {
                 onChange={e => setFirstName(e.target.value)}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 value={lastName}
@@ -245,7 +249,7 @@ const StepperCustomVertical = () => {
                 onChange={e => setLastName(e.target.value)}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 select
                 fullWidth
@@ -261,16 +265,18 @@ const StepperCustomVertical = () => {
                 <MenuItem value='Germany'>Germany</MenuItem>
               </CustomTextField>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 select
                 fullWidth
                 label='Language'
                 id='stepper-custom-vertical-personal-multiple-select'
-                SelectProps={{
-                  multiple: true,
-                  value: language,
-                  onChange: e => handleSelectChange(e)
+                slotProps={{
+                  select: {
+                    multiple: true,
+                    value: language,
+                    onChange: e => handleSelectChange(e)
+                  }
                 }}
               >
                 <MenuItem value='English'>English</MenuItem>
@@ -287,7 +293,7 @@ const StepperCustomVertical = () => {
       case 2:
         return (
           <Fragment key={step}>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='Twitter'
@@ -296,7 +302,7 @@ const StepperCustomVertical = () => {
                 placeholder='https://twitter.com/johndoe'
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='Facebook'
@@ -305,7 +311,7 @@ const StepperCustomVertical = () => {
                 placeholder='https://facebook.com/johndoe'
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='Google+'
@@ -314,7 +320,7 @@ const StepperCustomVertical = () => {
                 placeholder='https://plus.google.com/johndoe'
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='LinkedIn'
@@ -346,7 +352,7 @@ const StepperCustomVertical = () => {
       return (
         <form onSubmit={e => e.preventDefault()}>
           <Grid container spacing={5}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Typography variant='body2' sx={{ fontWeight: 600, color: 'text.primary' }}>
                 {steps[activeStep].title}
               </Typography>
@@ -355,7 +361,7 @@ const StepperCustomVertical = () => {
               </Typography>
             </Grid>
             {getStepContent(activeStep)}
-            <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'space-between' }}>
+            <Grid size={{ xs: 12 }} sx={{ display: 'flex', justifyContent: 'space-between' }}>
               <Button
                 variant='tonal'
                 color='secondary'

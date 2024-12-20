@@ -4,7 +4,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -32,9 +32,9 @@ const ProductVariants = () => {
       <CardContent>
         <Grid container spacing={6}>
           {Array.from(Array(count).keys()).map((item, index) => (
-            <Grid key={index} item xs={12} className='repeater-item'>
+            <Grid key={index} size={{ xs: 12 }} className='repeater-item'>
               <Grid container spacing={6}>
-                <Grid item xs={12} sm={4}>
+                <Grid size={{ xs: 12, sm: 4 }}>
                   <CustomTextField select fullWidth label='Options' defaultValue='Size'>
                     <MenuItem value='Size'>Size</MenuItem>
                     <MenuItem value='Color'>Color</MenuItem>
@@ -42,7 +42,7 @@ const ProductVariants = () => {
                     <MenuItem value='Smell'>Smell</MenuItem>
                   </CustomTextField>
                 </Grid>
-                <Grid item xs={12} sm={8} alignSelf='end'>
+                <Grid size={{ xs: 12, sm: 8 }} alignSelf='end'>
                   <div className='flex items-center gap-6'>
                     <CustomTextField fullWidth placeholder='Enter Variant Value' />
                     <CustomIconButton onClick={deleteForm} className='min-is-fit'>
@@ -53,7 +53,7 @@ const ProductVariants = () => {
               </Grid>
             </Grid>
           ))}
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <Button variant='contained' onClick={() => setCount(count + 1)} startIcon={<i className='tabler-plus' />}>
               Add Another Option
             </Button>

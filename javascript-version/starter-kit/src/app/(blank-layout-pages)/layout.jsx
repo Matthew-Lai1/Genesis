@@ -5,10 +5,12 @@ import BlankLayout from '@layouts/BlankLayout'
 // Util Imports
 import { getSystemMode } from '@core/utils/serverHelpers'
 
-const Layout = ({ children }) => {
+const Layout = async props => {
+  const { children } = props
+
   // Vars
   const direction = 'ltr'
-  const systemMode = getSystemMode()
+  const systemMode = await getSystemMode()
 
   return (
     <Providers direction={direction}>

@@ -161,7 +161,7 @@ const Login = ({ mode }) => {
             <Typography>Please sign-in to your account and start the adventure</Typography>
           </div>
           <Alert icon={false} className='bg-[var(--mui-palette-primary-lightOpacity)]'>
-            <Typography variant='body2' color='primary'>
+            <Typography variant='body2' color='primary.main'>
               Email: <span className='font-medium'>admin@vuexy.com</span> / Pass:{' '}
               <span className='font-medium'>admin</span>
             </Typography>
@@ -212,14 +212,20 @@ const Login = ({ mode }) => {
                     field.onChange(e.target.value)
                     errorState !== null && setErrorState(null)
                   }}
-                  InputProps={{
-                    endAdornment: (
-                      <InputAdornment position='end'>
-                        <IconButton edge='end' onClick={handleClickShowPassword} onMouseDown={e => e.preventDefault()}>
-                          <i className={isPasswordShown ? 'tabler-eye' : 'tabler-eye-off'} />
-                        </IconButton>
-                      </InputAdornment>
-                    )
+                  slotProps={{
+                    input: {
+                      endAdornment: (
+                        <InputAdornment position='end'>
+                          <IconButton
+                            edge='end'
+                            onClick={handleClickShowPassword}
+                            onMouseDown={e => e.preventDefault()}
+                          >
+                            <i className={isPasswordShown ? 'tabler-eye' : 'tabler-eye-off'} />
+                          </IconButton>
+                        </InputAdornment>
+                      )
+                    }
                   }}
                   {...(errors.password && { error: true, helperText: errors.password.message })}
                 />
@@ -229,7 +235,7 @@ const Login = ({ mode }) => {
               <FormControlLabel control={<Checkbox defaultChecked />} label='Remember me' />
               <Typography
                 className='text-end'
-                color='primary'
+                color='primary.main'
                 component={Link}
                 href={getLocalizedUrl('/forgot-password', locale)}
               >
@@ -241,7 +247,7 @@ const Login = ({ mode }) => {
             </Button>
             <div className='flex justify-center items-center flex-wrap gap-2'>
               <Typography>New on our platform?</Typography>
-              <Typography component={Link} href={getLocalizedUrl('/register', locale)} color='primary'>
+              <Typography component={Link} href={getLocalizedUrl('/register', locale)} color='primary.main'>
                 Create an account
               </Typography>
             </div>

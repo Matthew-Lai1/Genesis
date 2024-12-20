@@ -2,7 +2,7 @@
 import Link from 'next/link'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 
 // Component imports
@@ -15,7 +15,7 @@ import KitchenSink from '@views/react-table/KitchenSink'
 const Tables = () => {
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Typography variant='h4'>React Table</Typography>
         <Typography>
           <code>@tanstack/react-table</code> is a third-party library. Please refer to its{' '}
@@ -30,19 +30,19 @@ const Tables = () => {
           for more details.
         </Typography>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <BasicDataTables />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <EditableDataTables />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <ColumnVisibility />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <RowSelection />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <KitchenSink />
       </Grid>
     </Grid>

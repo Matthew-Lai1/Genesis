@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import { styled } from '@mui/material/styles'
@@ -30,10 +30,10 @@ const customInputData = [
       <Content component='div' className='flex flex-col justify-center items-center bs-full gap-2'>
         <Typography>A simple start for start ups & Students</Typography>
         <div className='flex items-baseline'>
-          <Typography component='sup' className='self-start' color='primary'>
+          <Typography component='sup' className='self-start' color='primary.main'>
             $
           </Typography>
-          <Typography component='span' variant='h3' color='primary'>
+          <Typography component='span' variant='h3' color='primary.main'>
             0
           </Typography>
           <Typography component='sub' className='self-baseline text-textDisabled'>
@@ -50,10 +50,10 @@ const customInputData = [
       <Content component='div' className='flex flex-col justify-center items-center bs-full gap-2'>
         <Typography>For small to medium businesses</Typography>
         <div className='flex items-baseline'>
-          <Typography component='sup' className='self-start' color='primary'>
+          <Typography component='sup' className='self-start' color='primary.main'>
             $
           </Typography>
-          <Typography component='span' variant='h3' color='primary'>
+          <Typography component='span' variant='h3' color='primary.main'>
             99
           </Typography>
           <Typography component='sub' className='self-baseline text-textDisabled'>
@@ -71,10 +71,10 @@ const customInputData = [
       <Content component='div' className='flex flex-col justify-center items-center bs-full gap-2'>
         <Typography>Solution for enterprise & organizations</Typography>
         <div className='flex items-baseline'>
-          <Typography component='sup' className='self-start' color='primary'>
+          <Typography component='sup' className='self-start' color='primary.main'>
             $
           </Typography>
-          <Typography component='span' variant='h3' color='primary'>
+          <Typography component='span' variant='h3' color='primary.main'>
             499
           </Typography>
           <Typography component='sub' className='self-baseline text-textDisabled'>
@@ -114,7 +114,7 @@ const StepBillingDetails = ({ handlePrev }) => {
             type='radio'
             key={index}
             data={item}
-            gridProps={{ xs: 12, sm: 4 }}
+            gridProps={{ size: { xs: 12, sm: 4 } }}
             selected={selectedOption}
             name='custom-radios-basic'
             handleChange={handleOptionChange}
@@ -126,19 +126,19 @@ const StepBillingDetails = ({ handlePrev }) => {
         <Typography>Enter your card information</Typography>
       </div>
       <Grid container spacing={6}>
-        <Grid item xs={12}>
+        <Grid size={{ xs: 12 }}>
           <CustomTextField fullWidth label='Card Number' placeholder='1356 3215 6548 7898' />
         </Grid>
-        <Grid item xs={12} sm={6}>
+        <Grid size={{ xs: 12, sm: 6 }}>
           <CustomTextField fullWidth label='Name On Card' placeholder='John Doe' />
         </Grid>
-        <Grid item xs={12} sm={3}>
+        <Grid size={{ xs: 12, sm: 3 }}>
           <CustomTextField fullWidth label='Expiry Date' placeholder='MM/YY' />
         </Grid>
-        <Grid item xs={12} sm={3}>
+        <Grid size={{ xs: 12, sm: 3 }}>
           <CustomTextField fullWidth label='CVV Code' placeholder='654' />
         </Grid>
-        <Grid item xs={12} className='flex justify-between'>
+        <Grid size={{ xs: 12 }} className='flex justify-between'>
           <Button
             variant='tonal'
             color='secondary'

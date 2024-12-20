@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import CardContent from '@mui/material/CardContent'
 import MenuItem from '@mui/material/MenuItem'
 
@@ -40,14 +40,16 @@ const TableFilters = ({ setData, productData }) => {
   return (
     <CardContent>
       <Grid container spacing={6}>
-        <Grid item xs={12} sm={4}>
+        <Grid size={{ xs: 12, sm: 4 }}>
           <CustomTextField
             select
             fullWidth
             id='select-status'
             value={status}
             onChange={e => setStatus(e.target.value)}
-            SelectProps={{ displayEmpty: true }}
+            slotProps={{
+              select: { displayEmpty: true }
+            }}
           >
             <MenuItem value=''>Select Status</MenuItem>
             <MenuItem value='Scheduled'>Scheduled</MenuItem>
@@ -55,14 +57,16 @@ const TableFilters = ({ setData, productData }) => {
             <MenuItem value='Inactive'>Inactive</MenuItem>
           </CustomTextField>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid size={{ xs: 12, sm: 4 }}>
           <CustomTextField
             select
             fullWidth
             id='select-category'
             value={category}
             onChange={e => setCategory(e.target.value)}
-            SelectProps={{ displayEmpty: true }}
+            slotProps={{
+              select: { displayEmpty: true }
+            }}
           >
             <MenuItem value=''>Select Category</MenuItem>
             <MenuItem value='Accessories'>Accessories</MenuItem>
@@ -73,14 +77,16 @@ const TableFilters = ({ setData, productData }) => {
             <MenuItem value='Games'>Games</MenuItem>
           </CustomTextField>
         </Grid>
-        <Grid item xs={12} sm={4}>
+        <Grid size={{ xs: 12, sm: 4 }}>
           <CustomTextField
             select
             fullWidth
             id='select-stock'
             value={stock}
             onChange={e => setStock(e.target.value)}
-            SelectProps={{ displayEmpty: true }}
+            slotProps={{
+              select: { displayEmpty: true }
+            }}
           >
             <MenuItem value=''>Select Stock</MenuItem>
             <MenuItem value='In Stock'>In Stock</MenuItem>

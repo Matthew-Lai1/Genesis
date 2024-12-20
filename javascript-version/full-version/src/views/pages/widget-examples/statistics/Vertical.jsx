@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import CardStatVertical from '@/components/card-statistics/Vertical'
@@ -9,7 +9,7 @@ const Vertical = ({ data }) => {
     return (
       <Grid container spacing={6}>
         {data.map((item, index) => (
-          <Grid item xs={6} key={index}>
+          <Grid size={{ xs: 6 }} key={index}>
             <CardStatVertical {...item} />
           </Grid>
         ))}

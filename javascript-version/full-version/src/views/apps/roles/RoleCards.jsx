@@ -3,7 +3,7 @@
 // MUI Imports
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Avatar from '@mui/material/Avatar'
 import AvatarGroup from '@mui/material/AvatarGroup'
@@ -37,12 +37,12 @@ const RoleCards = () => {
     className: 'cursor-pointer bs-full',
     children: (
       <Grid container className='bs-full'>
-        <Grid item xs={5}>
+        <Grid size={{ xs: 5 }}>
           <div className='flex items-end justify-center bs-full'>
             <img alt='add-role' src='/images/illustrations/characters/5.png' height={130} />
           </div>
         </Grid>
-        <Grid item xs={7}>
+        <Grid size={{ xs: 7 }}>
           <CardContent>
             <div className='flex flex-col items-end gap-4 text-right'>
               <Button variant='contained' size='small'>
@@ -63,7 +63,7 @@ const RoleCards = () => {
     <>
       <Grid container spacing={6}>
         {cardData.map((item, index) => (
-          <Grid item xs={12} sm={6} lg={4} key={index}>
+          <Grid size={{ xs: 12, sm: 6, lg: 4 }} key={index}>
             <Card>
               <CardContent className='flex flex-col gap-4'>
                 <div className='flex items-center justify-between'>
@@ -92,7 +92,7 @@ const RoleCards = () => {
             </Card>
           </Grid>
         ))}
-        <Grid item xs={12} sm={6} lg={4}>
+        <Grid size={{ xs: 12, sm: 6, lg: 4 }}>
           <OpenDialogOnElementClick element={Card} elementProps={CardProps} dialog={RoleDialog} />
         </Grid>
       </Grid>

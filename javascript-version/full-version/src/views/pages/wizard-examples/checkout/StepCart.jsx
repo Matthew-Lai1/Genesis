@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Alert from '@mui/material/Alert'
 import AlertTitle from '@mui/material/AlertTitle'
@@ -63,7 +63,7 @@ const StepCart = ({ handleNext }) => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} lg={8} className='flex flex-col gap-4'>
+      <Grid size={{ xs: 12, lg: 8 }} className='flex flex-col gap-4'>
         <Collapse in={openCollapse}>
           <Fade in={openFade} timeout={{ exit: 300 }}>
             <Alert
@@ -110,7 +110,7 @@ const StepCart = ({ handleNext }) => {
                   <div className='flex items-center gap-4'>
                     <div className='flex items-center gap-0.5'>
                       <Typography color='text.disabled'>Sold By:</Typography>
-                      <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+                      <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
                         {product.soldBy}
                       </Typography>
                     </div>
@@ -135,7 +135,7 @@ const StepCart = ({ handleNext }) => {
                 </div>
                 <div className='flex flex-col justify-between items-center gap-4 sm:items-end'>
                   <div className='flex'>
-                    <Typography color='primary'>{`$${product.price}/`}</Typography>
+                    <Typography color='primary.main'>{`$${product.price}/`}</Typography>
                     <Typography className='line-through'>{`$${product.originalPrice}`}</Typography>
                   </div>
                   <Button variant='tonal' size='small'>
@@ -151,13 +151,13 @@ const StepCart = ({ handleNext }) => {
           component={Link}
           onClick={e => e.preventDefault()}
           className='flex items-center justify-between gap-4 plb-2 pli-5 border border-primary rounded'
-          color='primary'
+          color='primary.main'
         >
           Add more products from wishlist
           <DirectionalIcon ltrIconClass='tabler-arrow-right' rtlIconClass='tabler-arrow-left' className='text-base' />
         </Typography>
       </Grid>
-      <Grid item xs={12} lg={4} className='flex flex-col gap-4'>
+      <Grid size={{ xs: 12, lg: 4 }} className='flex flex-col gap-4'>
         <div className='border rounded'>
           <CardContent className='flex flex-col gap-4'>
             <Typography color='text.primary' className='font-medium'>
@@ -178,7 +178,7 @@ const StepCart = ({ handleNext }) => {
                 href='/'
                 component={Link}
                 onClick={e => e.preventDefault()}
-                color='primary'
+                color='primary.main'
                 className='font-medium'
               >
                 Add a gift wrap
@@ -197,7 +197,7 @@ const StepCart = ({ handleNext }) => {
               </div>
               <div className='flex items-center flex-wrap justify-between'>
                 <Typography color='text.primary'>Coup Discount</Typography>
-                <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary'>
+                <Typography href='/' component={Link} onClick={e => e.preventDefault()} color='primary.main'>
                   Apply Coupon
                 </Typography>
               </div>

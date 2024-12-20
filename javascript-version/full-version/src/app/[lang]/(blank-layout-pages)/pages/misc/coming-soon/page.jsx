@@ -4,9 +4,9 @@ import ComingSoon from '@views/pages/misc/ComingSoon'
 // Server Action Imports
 import { getServerMode } from '@core/utils/serverHelpers'
 
-const ComingSoonPage = () => {
+const ComingSoonPage = async () => {
   // Vars
-  const mode = getServerMode()
+  const mode = await getServerMode()
 
   return <ComingSoon mode={mode} />
 }

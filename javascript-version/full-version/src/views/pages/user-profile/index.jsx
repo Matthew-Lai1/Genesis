@@ -4,7 +4,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Tab from '@mui/material/Tab'
 import TabContext from '@mui/lab/TabContext'
 import TabPanel from '@mui/lab/TabPanel'
@@ -23,11 +23,11 @@ const UserProfile = ({ tabContentList, data }) => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <UserProfileHeader data={data?.profileHeader} />
       </Grid>
       {activeTab === undefined ? null : (
-        <Grid item xs={12} className='flex flex-col gap-6'>
+        <Grid size={{ xs: 12 }} className='flex flex-col gap-6'>
           <TabContext value={activeTab}>
             <CustomTabList onChange={handleChange} variant='scrollable' pill='true'>
               <Tab

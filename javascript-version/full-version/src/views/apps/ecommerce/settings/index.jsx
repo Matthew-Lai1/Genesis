@@ -4,7 +4,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import Tab from '@mui/material/Tab'
 import TabContext from '@mui/lab/TabContext'
@@ -25,7 +25,7 @@ const Settings = ({ tabContentList }) => {
   return (
     <TabContext value={activeTab}>
       <Grid container spacing={6}>
-        <Grid item xs={12} md={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Typography variant='h5' className='mbe-4'>
             Getting Started
           </Typography>
@@ -74,14 +74,14 @@ const Settings = ({ tabContentList }) => {
             />
           </CustomTabList>
         </Grid>
-        <Grid item xs={12} md={8}>
+        <Grid size={{ xs: 12, md: 8 }}>
           <Grid container spacing={6}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <TabPanel value={activeTab} className='p-0'>
                 {tabContentList[activeTab]}
               </TabPanel>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <div className='flex justify-end gap-4'>
                 <Button variant='tonal' color='secondary'>
                   Discard

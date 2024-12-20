@@ -2,7 +2,7 @@
 import { redirect } from 'next/navigation'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import EditCard from '@views/apps/invoice/edit/EditCard'
@@ -27,7 +27,9 @@ import { getInvoiceData } from '@/app/server/actions'
 
   return res.json()
 } */
-const EditPage = async ({ params }) => {
+const EditPage = async props => {
+  const params = await props.params
+
   // Vars
   const data = await getInvoiceData()
   const filteredData = data?.filter(invoice => invoice.id === params.id)[0]
@@ -38,10 +40,10 @@ const EditPage = async ({ params }) => {
 
   return filteredData ? (
     <Grid container spacing={6}>
-      <Grid item xs={12} md={9}>
+      <Grid size={{ xs: 12, md: 9 }}>
         <EditCard data={data} invoiceData={filteredData} id={params.id} />
       </Grid>
-      <Grid item xs={12} md={3}>
+      <Grid size={{ xs: 12, md: 3 }}>
         <EditActions id={params.id} />
       </Grid>
     </Grid>

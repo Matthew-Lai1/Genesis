@@ -7,7 +7,7 @@ import { useState } from 'react'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import InputAdornment from '@mui/material/InputAdornment'
 import IconButton from '@mui/material/IconButton'
 import Alert from '@mui/material/Alert'
@@ -32,53 +32,57 @@ const ChangePassword = () => {
         </Alert>
         <form>
           <Grid container spacing={4}>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Grid container spacing={6}>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='Password'
                     type={isPasswordShown ? 'text' : 'password'}
                     placeholder='············'
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position='end'>
-                          <IconButton
-                            edge='end'
-                            onClick={() => setIsPasswordShown(!isPasswordShown)}
-                            onMouseDown={e => e.preventDefault()}
-                          >
-                            <i className={isPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
-                          </IconButton>
-                        </InputAdornment>
-                      )
+                    slotProps={{
+                      input: {
+                        endAdornment: (
+                          <InputAdornment position='end'>
+                            <IconButton
+                              edge='end'
+                              onClick={() => setIsPasswordShown(!isPasswordShown)}
+                              onMouseDown={e => e.preventDefault()}
+                            >
+                              <i className={isPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
+                            </IconButton>
+                          </InputAdornment>
+                        )
+                      }
                     }}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='Confirm Password'
                     type={isConfirmPasswordShown ? 'text' : 'password'}
                     placeholder='············'
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position='end'>
-                          <IconButton
-                            edge='end'
-                            onClick={() => setIsConfirmPasswordShown(!isConfirmPasswordShown)}
-                            onMouseDown={e => e.preventDefault()}
-                          >
-                            <i className={isConfirmPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
-                          </IconButton>
-                        </InputAdornment>
-                      )
+                    slotProps={{
+                      input: {
+                        endAdornment: (
+                          <InputAdornment position='end'>
+                            <IconButton
+                              edge='end'
+                              onClick={() => setIsConfirmPasswordShown(!isConfirmPasswordShown)}
+                              onMouseDown={e => e.preventDefault()}
+                            >
+                              <i className={isConfirmPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
+                            </IconButton>
+                          </InputAdornment>
+                        )
+                      }
                     }}
                   />
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <Button variant='contained'>Change Password</Button>
             </Grid>
           </Grid>

@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 // MUI Imports
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Switch from '@mui/material/Switch'
@@ -127,7 +127,7 @@ const PricingPlan = () => {
         </div>
         <Grid container spacing={6}>
           {pricingPlans.map((plan, index) => (
-            <Grid item key={index} xs={12} lg={4}>
+            <Grid key={index} size={{ xs: 12, lg: 4 }}>
               <Card className={`${plan.current && 'border-2 border-[var(--mui-palette-primary-main)] shadow-xl'}`}>
                 <CardContent className='flex flex-col gap-8 p-8'>
                   <div className='is-full flex flex-col items-center gap-3'>
@@ -138,7 +138,7 @@ const PricingPlan = () => {
                       {plan.title}
                     </Typography>
                     <div className='flex items-baseline gap-x-1'>
-                      <Typography variant='h2' color='primary' className='font-extrabold'>
+                      <Typography variant='h2' color='primary.main' className='font-extrabold'>
                         ${pricingPlan === 'monthly' ? plan.monthlyPay : plan.annualPay}
                       </Typography>
                       <Typography color='text.disabled' className='font-medium'>

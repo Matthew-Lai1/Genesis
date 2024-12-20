@@ -218,7 +218,8 @@ const MailDetails = props => {
         types: ['heading', 'paragraph']
       }),
       Underline
-    ]
+    ],
+    immediatelyRender: false
   })
 
   return (

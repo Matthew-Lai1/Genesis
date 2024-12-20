@@ -95,7 +95,7 @@ const ProductImage = () => {
         <CardHeader
           title='Product Image'
           action={
-            <Typography component={Link} color='primary' className='font-medium'>
+            <Typography component={Link} color='primary.main' className='font-medium'>
               Add media from URL
             </Typography>
           }

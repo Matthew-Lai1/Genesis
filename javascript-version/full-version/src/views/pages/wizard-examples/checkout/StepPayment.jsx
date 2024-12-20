@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import Alert from '@mui/material/Alert'
 import AlertTitle from '@mui/material/AlertTitle'
@@ -46,7 +46,7 @@ const StepPayment = ({ handleNext }) => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} lg={8} className='flex flex-col gap-6'>
+      <Grid size={{ xs: 12, lg: 8 }} className='flex flex-col gap-6'>
         <Collapse in={openCollapse}>
           <Fade in={openFade} timeout={{ exit: 300 }}>
             <Alert
@@ -87,26 +87,26 @@ const StepPayment = ({ handleNext }) => {
             <Tab value='gift-card' label='Gift Card' />
           </CustomTabList>
           <Grid container>
-            <Grid item md={8} xs={12}>
+            <Grid size={{ xs: 12, md: 8 }}>
               <TabPanel value='credit-card'>
                 <form>
                   <Grid container spacing={6}>
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                       <CustomTextField fullWidth type='number' label='Card Number' placeholder='0000 0000 0000 0000' />
                     </Grid>
-                    <Grid item xs={12} sm={6}>
+                    <Grid size={{ xs: 12, sm: 6 }}>
                       <CustomTextField fullWidth label='Name' placeholder='John Doe' />
                     </Grid>
-                    <Grid item xs={6} sm={3}>
+                    <Grid size={{ xs: 6, sm: 3 }}>
                       <CustomTextField fullWidth label='Expiry Date' placeholder='MM/YY' />
                     </Grid>
-                    <Grid item xs={6} sm={3}>
+                    <Grid size={{ xs: 6, sm: 3 }}>
                       <CustomTextField fullWidth label='CVV' placeholder='123' />
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid size={{ xs: 12 }}>
                       <FormControlLabel control={<Switch defaultChecked />} label='Save Card for future billing?' />
                     </Grid>
-                    <Grid item xs={12} className='flex gap-4'>
+                    <Grid size={{ xs: 12 }} className='flex gap-4'>
                       <Button variant='contained' onClick={handleNext}>
                         Checkout
                       </Button>
@@ -131,13 +131,13 @@ const StepPayment = ({ handleNext }) => {
                   Enter Gift Card Details
                 </Typography>
                 <Grid container spacing={6}>
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <CustomTextField fullWidth type='number' label='Gift Card Number' placeholder='Gift Card Number' />
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <CustomTextField fullWidth type='number' label='Gift Card Pin' placeholder='Gift Card Pin' />
                   </Grid>
-                  <Grid item xs={12}>
+                  <Grid size={{ xs: 12 }}>
                     <Button variant='contained' onClick={handleNext}>
                       Redeem Gift Card
                     </Button>
@@ -148,7 +148,7 @@ const StepPayment = ({ handleNext }) => {
           </Grid>
         </TabContext>
       </Grid>
-      <Grid item xs={12} lg={4}>
+      <Grid size={{ xs: 12, lg: 4 }}>
         <div className='border rounded'>
           <CardContent className='flex flex-col gap-4'>
             <Typography color='text.primary' className='font-medium'>
@@ -199,7 +199,7 @@ const StepPayment = ({ handleNext }) => {
               component={Link}
               onClick={e => e.preventDefault()}
               className='font-medium'
-              color='primary'
+              color='primary.main'
             >
               Change address
             </Typography>

@@ -1,6 +1,6 @@
 // MUI Imports
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // SVG Imports
 import Check from '@assets/svg/front-pages/landing-page/Check'
@@ -49,7 +49,7 @@ const ProductStat = () => {
       <div className={frontCommonStyles.layoutSpacing}>
         <Grid container spacing={6}>
           {statData.map((stat, index) => (
-            <Grid item key={index} xs={12} sm={6} md={3}>
+            <Grid key={index} size={{ xs: 12, sm: 6, md: 3 }}>
               <div
                 className='flex flex-col items-center justify-center gap-y-4 border p-6 rounded'
                 style={{

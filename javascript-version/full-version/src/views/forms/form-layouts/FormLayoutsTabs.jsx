@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 // MUI Imports
 import Card from '@mui/material/Card'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import Tab from '@mui/material/Tab'
 import MenuItem from '@mui/material/MenuItem'
@@ -93,7 +93,7 @@ const FormLayoutsWithTabs = () => {
           <CardContent>
             <TabPanel value='personal_info'>
               <Grid container spacing={6}>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='First Name'
@@ -102,7 +102,7 @@ const FormLayoutsWithTabs = () => {
                     onChange={e => setFormData({ ...formData, firstName: e.target.value })}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='Last Name'
@@ -111,7 +111,7 @@ const FormLayoutsWithTabs = () => {
                     onChange={e => setFormData({ ...formData, lastName: e.target.value })}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     select
                     fullWidth
@@ -126,15 +126,17 @@ const FormLayoutsWithTabs = () => {
                     <MenuItem value='Germany'>Germany</MenuItem>
                   </CustomTextField>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     select
                     fullWidth
                     label='Language'
                     value={formData.language}
-                    SelectProps={{
-                      multiple: true,
-                      onChange: e => setFormData({ ...formData, language: e.target.value })
+                    slotProps={{
+                      select: {
+                        multiple: true,
+                        onChange: e => setFormData({ ...formData, language: e.target.value })
+                      }
                     }}
                   >
                     <MenuItem value='English'>English</MenuItem>
@@ -146,7 +148,7 @@ const FormLayoutsWithTabs = () => {
                     <MenuItem value='Arabic'>Arabic</MenuItem>
                   </CustomTextField>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <AppReactDatepicker
                     selected={formData.date}
                     showYearDropdown
@@ -156,7 +158,7 @@ const FormLayoutsWithTabs = () => {
                     customInput={<CustomTextField fullWidth label='Birth Date' placeholder='MM-DD-YYYY' />}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='Phone Number'
@@ -170,7 +172,7 @@ const FormLayoutsWithTabs = () => {
             </TabPanel>
             <TabPanel value='account_details'>
               <Grid container spacing={6}>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='Username'
@@ -179,7 +181,7 @@ const FormLayoutsWithTabs = () => {
                     onChange={e => setFormData({ ...formData, username: e.target.value })}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     type='email'
@@ -189,7 +191,7 @@ const FormLayoutsWithTabs = () => {
                     onChange={e => setFormData({ ...formData, email: e.target.value })}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='Password'
@@ -198,23 +200,25 @@ const FormLayoutsWithTabs = () => {
                     type={formData.isPasswordShown ? 'text' : 'password'}
                     value={formData.password}
                     onChange={e => setFormData({ ...formData, password: e.target.value })}
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position='end'>
-                          <IconButton
-                            edge='end'
-                            onClick={handleClickShowPassword}
-                            onMouseDown={e => e.preventDefault()}
-                            aria-label='toggle password visibility'
-                          >
-                            <i className={formData.isPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
-                          </IconButton>
-                        </InputAdornment>
-                      )
+                    slotProps={{
+                      input: {
+                        endAdornment: (
+                          <InputAdornment position='end'>
+                            <IconButton
+                              edge='end'
+                              onClick={handleClickShowPassword}
+                              onMouseDown={e => e.preventDefault()}
+                              aria-label='toggle password visibility'
+                            >
+                              <i className={formData.isPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
+                            </IconButton>
+                          </InputAdornment>
+                        )
+                      }
                     }}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='Confirm Password'
@@ -223,19 +227,21 @@ const FormLayoutsWithTabs = () => {
                     type={formData.setIsConfirmPasswordShown ? 'text' : 'password'}
                     value={formData.confirmPassword}
                     onChange={e => setFormData({ ...formData, confirmPassword: e.target.value })}
-                    InputProps={{
-                      endAdornment: (
-                        <InputAdornment position='end'>
-                          <IconButton
-                            edge='end'
-                            onClick={handleClickShowConfirmPassword}
-                            onMouseDown={e => e.preventDefault()}
-                            aria-label='toggle password visibility'
-                          >
-                            <i className={formData.setIsConfirmPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
-                          </IconButton>
-                        </InputAdornment>
-                      )
+                    slotProps={{
+                      input: {
+                        endAdornment: (
+                          <InputAdornment position='end'>
+                            <IconButton
+                              edge='end'
+                              onClick={handleClickShowConfirmPassword}
+                              onMouseDown={e => e.preventDefault()}
+                              aria-label='toggle password visibility'
+                            >
+                              <i className={formData.setIsConfirmPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
+                            </IconButton>
+                          </InputAdornment>
+                        )
+                      }
                     }}
                   />
                 </Grid>
@@ -243,7 +249,7 @@ const FormLayoutsWithTabs = () => {
             </TabPanel>
             <TabPanel value='social_links'>
               <Grid container spacing={6}>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='Twitter'
@@ -252,7 +258,7 @@ const FormLayoutsWithTabs = () => {
                     onChange={e => setFormData({ ...formData, twitter: e.target.value })}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='Facebook'
@@ -261,7 +267,7 @@ const FormLayoutsWithTabs = () => {
                     onChange={e => setFormData({ ...formData, facebook: e.target.value })}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='Google+'
@@ -270,7 +276,7 @@ const FormLayoutsWithTabs = () => {
                     onChange={e => setFormData({ ...formData, google: e.target.value })}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='LinkedIn'
@@ -279,7 +285,7 @@ const FormLayoutsWithTabs = () => {
                     onChange={e => setFormData({ ...formData, linkedin: e.target.value })}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='Instagram'
@@ -288,7 +294,7 @@ const FormLayoutsWithTabs = () => {
                     onChange={e => setFormData({ ...formData, instagram: e.target.value })}
                   />
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid size={{ xs: 12, sm: 6 }}>
                   <CustomTextField
                     fullWidth
                     label='Quora'

@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Components Imports
 import EarningReports from '@views/pages/widget-examples/charts/EarningReports'
@@ -17,37 +17,37 @@ import InterestedTopics from '@views/pages/widget-examples/charts/InterestedTopi
 const Charts = () => {
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <EarningReports />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <SupportTracker />
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid size={{ xs: 12, md: 4 }}>
         <Sales />
       </Grid>
-      <Grid item xs={12} md={8}>
+      <Grid size={{ xs: 12, md: 8 }}>
         <RevenueReport />
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid size={{ xs: 12, md: 4 }}>
         <ProjectStatus />
       </Grid>
-      <Grid item xs={12} md={8}>
+      <Grid size={{ xs: 12, md: 8 }}>
         <EarningReportsWithTabs />
       </Grid>
-      <Grid item xs={12} md={5} lg={4}>
+      <Grid size={{ xs: 12, md: 5, lg: 4 }}>
         <TotalEarning />
       </Grid>
-      <Grid item xs={12} md={7} lg={8}>
+      <Grid size={{ xs: 12, md: 7, lg: 8 }}>
         <CarrierPerformance />
       </Grid>
-      <Grid item xs={12} md={6} lg={4}>
+      <Grid size={{ xs: 12, md: 6, lg: 4 }}>
         <DeliveryExceptions />
       </Grid>
-      <Grid item xs={12} md={6} lg={8}>
+      <Grid size={{ xs: 12, md: 6, lg: 8 }}>
         <VehicleOverview />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <InterestedTopics />
       </Grid>
     </Grid>

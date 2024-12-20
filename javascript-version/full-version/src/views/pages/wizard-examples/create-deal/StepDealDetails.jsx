@@ -1,7 +1,7 @@
 import { useState, forwardRef } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import FormControl from '@mui/material/FormControl'
 import MenuItem from '@mui/material/MenuItem'
 import Chip from '@mui/material/Chip'
@@ -53,13 +53,13 @@ const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }) => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField fullWidth label='Deal Title' placeholder='Black Friday sale, 25% off' />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField fullWidth label='Deal Code' placeholder='25PEROFF' />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField
           fullWidth
           multiline
@@ -68,22 +68,24 @@ const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }) => {
           placeholder='To sell or distribute something as a business deal'
         />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <Grid container spacing={6}>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <CustomTextField
               select
               fullWidth
-              SelectProps={{
-                multiple: true, // @ts-ignore
-                onChange: handleChange,
-                renderValue: selected => (
-                  <div className='flex flex-wrap gap-2'>
-                    {selected.map((value, index) => (
-                      <Chip size='small' key={index} label={value} />
-                    ))}
-                  </div>
-                )
+              slotProps={{
+                select: {
+                  multiple: true, // @ts-ignore
+                  onChange: handleChange,
+                  renderValue: selected => (
+                    <div className='flex flex-wrap gap-2'>
+                      {selected.map((value, index) => (
+                        <Chip size='small' key={index} label={value} />
+                      ))}
+                    </div>
+                  )
+                }
               }}
               label='Offered Items'
               value={offeredItems}
@@ -95,7 +97,7 @@ const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }) => {
               ))}
             </CustomTextField>
           </Grid>
-          <Grid item xs={12}>
+          <Grid size={{ xs: 12 }}>
             <CustomTextField select fullWidth label='Cart Condition' defaultValue=''>
               <MenuItem value=''>
                 <Typography color='text.primary' noWrap>
@@ -116,7 +118,7 @@ const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }) => {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <AppReactDatepicker
           selectsRange
           endDate={endDate}
@@ -128,7 +130,7 @@ const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }) => {
           customInput={<CustomInput label='Deal Duration' start={startDate} end={endDate} />}
         />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <FormControl>
           <FormLabel>Notify Users</FormLabel>
           <FormGroup aria-label='position' row>
@@ -138,7 +140,7 @@ const StepDealDetails = ({ activeStep, handleNext, handlePrev, steps }) => {
           </FormGroup>
         </FormControl>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex items-center justify-between'>
           <Button
             variant='tonal'

@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import CardStatsSquare from '@components/card-statistics/CardStatsSquare'
@@ -9,7 +9,7 @@ const Square = ({ data }) => {
     return (
       <Grid container spacing={6}>
         {data.map((item, index) => (
-          <Grid item xs={6} key={index}>
+          <Grid size={{ xs: 6 }} key={index}>
             <CardStatsSquare {...item} />
           </Grid>
         ))}

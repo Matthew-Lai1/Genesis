@@ -113,14 +113,16 @@ const ResetPasswordV2 = ({ mode }) => {
               label='New Password'
               placeholder='············'
               type={isPasswordShown ? 'text' : 'password'}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position='end'>
-                    <IconButton edge='end' onClick={handleClickShowPassword} onMouseDown={e => e.preventDefault()}>
-                      <i className={isPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
-                    </IconButton>
-                  </InputAdornment>
-                )
+              slotProps={{
+                input: {
+                  endAdornment: (
+                    <InputAdornment position='end'>
+                      <IconButton edge='end' onClick={handleClickShowPassword} onMouseDown={e => e.preventDefault()}>
+                        <i className={isPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
+                      </IconButton>
+                    </InputAdornment>
+                  )
+                }
               }}
             />
             <CustomTextField
@@ -128,24 +130,26 @@ const ResetPasswordV2 = ({ mode }) => {
               label='Confirm Password'
               placeholder='············'
               type={isConfirmPasswordShown ? 'text' : 'password'}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position='end'>
-                    <IconButton
-                      edge='end'
-                      onClick={handleClickShowConfirmPassword}
-                      onMouseDown={e => e.preventDefault()}
-                    >
-                      <i className={isConfirmPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
-                    </IconButton>
-                  </InputAdornment>
-                )
+              slotProps={{
+                input: {
+                  endAdornment: (
+                    <InputAdornment position='end'>
+                      <IconButton
+                        edge='end'
+                        onClick={handleClickShowConfirmPassword}
+                        onMouseDown={e => e.preventDefault()}
+                      >
+                        <i className={isConfirmPasswordShown ? 'tabler-eye-off' : 'tabler-eye'} />
+                      </IconButton>
+                    </InputAdornment>
+                  )
+                }
               }}
             />
             <Button fullWidth variant='contained' type='submit'>
               Set New Password
             </Button>
-            <Typography className='flex justify-center items-center' color='primary'>
+            <Typography className='flex justify-center items-center' color='primary.main'>
               <Link href={getLocalizedUrl('/pages/auth/login-v2', locale)} className='flex items-center gap-1.5'>
                 <DirectionalIcon
                   ltrIconClass='tabler-chevron-left'

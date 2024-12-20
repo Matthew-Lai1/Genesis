@@ -138,7 +138,8 @@ const ComposeMail = props => {
         types: ['heading', 'paragraph']
       }),
       Underline
-    ]
+    ],
+    immediatelyRender: false
   })
 
   return (

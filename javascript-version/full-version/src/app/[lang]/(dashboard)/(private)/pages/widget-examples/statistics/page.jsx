@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import StatisticsCard from '@views/pages/widget-examples/statistics/StatisticsCard'
@@ -49,67 +49,67 @@ const Statistics = async () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} md={8}>
+      <Grid size={{ xs: 12, md: 8 }}>
         <StatisticsCard />
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid size={{ xs: 12, md: 4 }}>
         <Square data={statsData.statsSquare} />
       </Grid>
-      <Grid item xs={12} sm={6} md={4} lg={2}>
+      <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
         <DistributedBarChartOrder />
       </Grid>
-      <Grid item xs={12} sm={6} md={4} lg={2}>
+      <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
         <LineAreaYearlySalesChart />
       </Grid>
-      <Grid item xs={12} sm={6} md={4} lg={2}>
+      <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
         <LineChartProfit />
       </Grid>
-      <Grid item xs={12} sm={6} md={4} lg={2}>
+      <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
         <BarChartSessionsWithNegativeValues />
       </Grid>
-      <Grid item xs={12} sm={6} md={4} lg={2}>
+      <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
         <RadialBarChart />
       </Grid>
-      <Grid item xs={12} sm={6} md={4} lg={2}>
+      <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2 }}>
         <LineChartImpression />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <LogisticsStatisticsCard data={statsData?.statsHorizontalWithBorder} />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <UserListCards />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Horizontal data={statsData.statsHorizontal} />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <CardStatsLineAreaCharts data={statsData.statsWithAreaChart} />
       </Grid>
-      <Grid item xs={12} sm={6} lg={3}>
+      <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
         <LineAreaDailySalesChart />
       </Grid>
-      <Grid item xs={12} sm={6} lg={3}>
+      <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
         <SalesOverview />
       </Grid>
-      <Grid item xs={12} sm={6} lg={3}>
+      <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
         <BarChartDailyTraffic />
       </Grid>
-      <Grid item xs={12} sm={6} lg={3}>
+      <Grid size={{ xs: 12, sm: 6, lg: 3 }}>
         <SubscribersOrders />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <HorizontalStatisticsCard data={statsData?.statsHorizontalWithAvatar} />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <CustomerStatisticsCard customerStatData={statsData?.customerStats} />
       </Grid>
-      <Grid item xs={12} md={6} lg={4}>
+      <Grid size={{ xs: 12, md: 6, lg: 4 }}>
         <Vertical data={statsData.statsVertical} />
       </Grid>
-      <Grid item xs={12} md={6} lg={4}>
+      <Grid size={{ xs: 12, md: 6, lg: 4 }}>
         <BarChartRevenueGrowth />
       </Grid>
-      <Grid item xs={12} md={6} lg={4}>
+      <Grid size={{ xs: 12, md: 6, lg: 4 }}>
         <DonutChartGeneratedLeads />
       </Grid>
     </Grid>

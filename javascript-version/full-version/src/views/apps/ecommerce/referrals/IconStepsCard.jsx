@@ -79,7 +79,7 @@ const IconStepsCard = () => {
           <div key={index} className='flex flex-col items-center gap-2 max-is-[185px]'>
             <div className='flex border border-dashed border-primary rounded-full p-3.5 text-primary'>{item.icon}</div>
             <Typography className='text-wrap text-center'>{item.description}</Typography>
-            <Typography variant='h6' color='primary'>
+            <Typography variant='h6' color='primary.main'>
               {item.value}
             </Typography>
           </div>

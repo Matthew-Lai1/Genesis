@@ -6,14 +6,14 @@ import ThemeProvider from '@components/theme'
 // Util Imports
 import { getMode, getSettingsFromCookie, getSystemMode } from '@core/utils/serverHelpers'
 
-const Providers = props => {
+const Providers = async props => {
   // Props
   const { children, direction } = props
 
   // Vars
-  const mode = getMode()
-  const settingsCookie = getSettingsFromCookie()
-  const systemMode = getSystemMode()
+  const mode = await getMode()
+  const settingsCookie = await getSettingsFromCookie()
+  const systemMode = await getSystemMode()
 
   return (
     <VerticalNavProvider>

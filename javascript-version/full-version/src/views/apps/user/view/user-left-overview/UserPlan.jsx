@@ -24,10 +24,10 @@ const UserPlan = () => {
           <div className='flex justify-between'>
             <Chip label='Standard' size='small' color='primary' variant='tonal' />
             <div className='flex justify-center'>
-              <Typography variant='h5' component='sup' className='self-start' color='primary'>
+              <Typography variant='h5' component='sup' className='self-start' color='primary.main'>
                 $
               </Typography>
-              <Typography component='span' variant='h1' color='primary'>
+              <Typography component='span' variant='h1' color='primary.main'>
                 99
               </Typography>
               <Typography component='sub' className='self-end' color='text.primary'>

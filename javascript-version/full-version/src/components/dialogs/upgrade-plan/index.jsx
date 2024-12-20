@@ -29,7 +29,13 @@ const UpgradePlan = ({ open, setOpen }) => {
 
   return (
     <>
-      <Dialog fullWidth open={open} onClose={handleClose} sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}>
+      <Dialog
+        fullWidth
+        open={open}
+        onClose={handleClose}
+        closeAfterTransition={false}
+        sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
+      >
         <DialogCloseButton onClick={() => setOpen(false)} disableRipple>
           <i className='tabler-x' />
         </DialogCloseButton>
@@ -56,10 +62,10 @@ const UpgradePlan = ({ open, setOpen }) => {
             <Typography variant='body2'>User current plan is standard plan</Typography>
             <div className='flex items-center justify-between flex-wrap gap-2'>
               <div className='flex justify-center items-baseline gap-1'>
-                <Typography component='sup' className='self-start mbs-3' color='primary'>
+                <Typography component='sup' className='self-start mbs-3' color='primary.main'>
                   $
                 </Typography>
-                <Typography component='span' color='primary' variant='h1'>
+                <Typography component='span' color='primary.main' variant='h1'>
                   99
                 </Typography>
                 <Typography variant='body2' component='sub' className='self-baseline'>

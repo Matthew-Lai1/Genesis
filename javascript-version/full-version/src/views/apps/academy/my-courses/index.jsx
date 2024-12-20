@@ -4,7 +4,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import MyCourseHeader from './MyCourseHeader'
@@ -18,16 +18,16 @@ const AcademyMyCourse = ({ courseData, mode }) => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <MyCourseHeader mode={mode} searchValue={searchValue} setSearchValue={setSearchValue} />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Courses courseData={courseData} searchValue={searchValue} />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <ColoredCards />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <FreeCourses />
       </Grid>
     </Grid>

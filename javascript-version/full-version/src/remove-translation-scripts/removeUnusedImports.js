@@ -1,17 +1,16 @@
-import fs from 'fs'
 import { exec as execCallback } from 'child_process'
 import { promisify } from 'util'
 
+import fs from 'fs-extra'
 import { consola } from 'consola'
 
 const exec = promisify(execCallback)
 
 export const updateEslintConfig = async () => {
   const eslintConfigPath = '../../.eslintrc.js' // Directly using the file name
-
   // Requiring the .eslintrc.js directly. Note: This may cache the module, affecting repeated calls.
-  delete require.cache[require.resolve(eslintConfigPath)] // Clear cache to ensure latest is loaded
-  const eslintConfig = require(eslintConfigPath)
+  const eslintConfigModule = await import(eslintConfigPath) // Importing the module to avoid caching
+  const eslintConfig = eslintConfigModule.default
 
   // Ensure the plugins array exists and add 'unused-imports' plugin
   eslintConfig.plugins = eslintConfig.plugins || []
@@ -43,10 +42,9 @@ export const reverseEslintConfig = async () => {
     consola.success('eslint-plugin-unused-imports uninstalled successfully\n')
   })
   const eslintConfigPath = '../../.eslintrc.js' // Directly using the file name
-
   // Requiring the .eslintrc.js directly. Note: This may cache the module, affecting repeated calls.
-  delete require.cache[require.resolve(eslintConfigPath)] // Clear cache to ensure latest is loaded
-  const eslintConfig = require(eslintConfigPath)
+  const eslintConfigModule = await import(eslintConfigPath) // Importing the module to avoid caching
+  const eslintConfig = eslintConfigModule.default
 
   // Ensure the plugins array exists and add 'unused-imports' plugin
   eslintConfig.plugins = eslintConfig.plugins || []

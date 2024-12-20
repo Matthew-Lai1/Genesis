@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI IMports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Typography from '@mui/material/Typography'
 import MenuItem from '@mui/material/MenuItem'
 import Button from '@mui/material/Button'
@@ -83,7 +83,7 @@ const StepPropertyDetails = ({ activeStep, handleNext, handlePrev, steps }) => {
           <CustomInputVertical
             type='radio'
             key={index}
-            gridProps={{ sm: 6, xs: 12 }}
+            gridProps={{ size: { xs: 12, sm: 6 } }}
             selected={selectedOption}
             name='custom-radios-basic'
             handleChange={handleOptionChange}
@@ -91,17 +91,17 @@ const StepPropertyDetails = ({ activeStep, handleNext, handlePrev, steps }) => {
           />
         )
       })}
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField select fullWidth label='Property Type' id='validation-property-select' defaultValue=''>
           <MenuItem value=''>Select Property Type</MenuItem>
           <MenuItem value='residential'>Residential</MenuItem>
           <MenuItem value='commercial'>Commercial</MenuItem>
         </CustomTextField>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField fullWidth type='number' label='Zip Code' placeholder='99950' />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField
           select
           fullWidth
@@ -118,19 +118,19 @@ const StepPropertyDetails = ({ activeStep, handleNext, handlePrev, steps }) => {
           <MenuItem value='Germany'>Germany</MenuItem>
         </CustomTextField>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField fullWidth label='Landmark' placeholder='Nr. Hard Rock Cafe' />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField fullWidth label='City' placeholder='Los Angeles' />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField fullWidth label='State' placeholder='California' />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <CustomTextField fullWidth multiline minRows={2} label='Address' placeholder='12, Business Park' />
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex items-center justify-between'>
           <Button
             variant='tonal'

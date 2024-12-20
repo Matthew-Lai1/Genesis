@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import FormControl from '@mui/material/FormControl'
 import MenuItem from '@mui/material/MenuItem'
 import FormLabel from '@mui/material/FormLabel'
@@ -38,16 +38,16 @@ const StepPropertyFeatures = ({ activeStep, handleNext, handlePrev, steps }) => 
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField fullWidth label='Bedrooms' placeholder='3' />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField fullWidth label='Floor No' placeholder='12' />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField fullWidth label='Bathroom' placeholder='4' />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField select fullWidth id='demo-simple-select' label='Furnished Status' defaultValue=''>
           <MenuItem value=''>Select Furnished Status</MenuItem>
           <MenuItem value='fully-furnished'>Fully Furnished</MenuItem>
@@ -56,7 +56,7 @@ const StepPropertyFeatures = ({ activeStep, handleNext, handlePrev, steps }) => 
           <MenuItem value='unfurnished'>UnFurnished</MenuItem>
         </CustomTextField>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <CustomAutocomplete
           fullWidth
           multiple
@@ -72,7 +72,7 @@ const StepPropertyFeatures = ({ activeStep, handleNext, handlePrev, steps }) => 
           }
         />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <FormControl>
           <FormLabel>Is There Any Common Area</FormLabel>
           <RadioGroup defaultValue='yes'>
@@ -81,7 +81,7 @@ const StepPropertyFeatures = ({ activeStep, handleNext, handlePrev, steps }) => 
           </RadioGroup>
         </FormControl>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <FormControl>
           <FormLabel>Is There Any Attached Balcony</FormLabel>
           <RadioGroup defaultValue='yes'>
@@ -90,7 +90,7 @@ const StepPropertyFeatures = ({ activeStep, handleNext, handlePrev, steps }) => 
           </RadioGroup>
         </FormControl>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex items-center justify-between'>
           <Button
             variant='tonal'

@@ -8,7 +8,7 @@ import Dialog from '@mui/material/Dialog'
 import DialogTitle from '@mui/material/DialogTitle'
 import DialogActions from '@mui/material/DialogActions'
 import DialogContent from '@mui/material/DialogContent'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import Alert from '@mui/material/Alert'
@@ -164,6 +164,7 @@ const TwoFactorAuth = ({ open, setOpen }) => {
         scroll='body'
         open={open}
         onClose={() => setOpen(false)}
+        closeAfterTransition={false}
         sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
       >
         <DialogCloseButton onClick={handleClose} disableRipple>
@@ -184,7 +185,7 @@ const TwoFactorAuth = ({ open, setOpen }) => {
                 selected={authType}
                 handleChange={handleOptionChange}
                 data={item}
-                gridProps={{ xs: 12 }}
+                gridProps={{ size: { xs: 12 } }}
                 name='auth-method'
               />
             ))}
@@ -213,6 +214,7 @@ const TwoFactorAuth = ({ open, setOpen }) => {
         scroll='body'
         open={showAuthDialog}
         onClose={handleAuthDialogClose}
+        closeAfterTransition={false}
         sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
       >
         <DialogCloseButton onClick={handleAuthDialogClose} disableRipple>

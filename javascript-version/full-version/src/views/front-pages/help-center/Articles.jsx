@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // SVG Imports
 import Gift from '@assets/svg/front-pages/help-center/Gift'
@@ -48,7 +48,7 @@ const Articles = () => {
         <Grid container spacing={6}>
           {popularArticles.map((article, index) => {
             return (
-              <Grid item xs={12} lg={4} key={index}>
+              <Grid size={{ xs: 12, lg: 4 }} key={index}>
                 <Card variant='outlined'>
                   <CardContent className='flex flex-col items-center justify-center gap-3 text-center'>
                     {article.svg}

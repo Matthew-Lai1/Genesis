@@ -132,7 +132,7 @@ const InvoiceListTable = ({ invoiceData }) => {
           <Typography
             component={Link}
             href={getLocalizedUrl(`apps/invoice/preview/${row.original.id}`, locale)}
-            color='primary'
+            color='primary.main'
           >{`#${row.original.id}`}</Typography>
         )
       }),
@@ -296,7 +296,9 @@ const InvoiceListTable = ({ invoiceData }) => {
             value={status}
             onChange={e => setStatus(e.target.value)}
             className='max-sm:is-full sm:is-[160px]'
-            SelectProps={{ displayEmpty: true }}
+            slotProps={{
+              select: { displayEmpty: true }
+            }}
           >
             <MenuItem value=''>Invoice Status</MenuItem>
             <MenuItem value='downloaded'>Downloaded</MenuItem>

@@ -106,7 +106,7 @@ const OrderListTable = ({ orderData }) => {
           <Typography
             component={Link}
             href={getLocalizedUrl(`/apps/ecommerce/orders/details/${row.original.order}`, locale)}
-            color='primary'
+            color='primary.main'
           >{`#${row.original.order}`}</Typography>
         )
       }),

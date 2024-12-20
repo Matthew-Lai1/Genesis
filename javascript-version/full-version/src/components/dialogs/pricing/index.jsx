@@ -18,6 +18,7 @@ const PricingDialog = ({ open, setOpen, data }) => {
       open={open}
       onClose={() => setOpen(false)}
       scroll='body'
+      closeAfterTransition={false}
       sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
     >
       <DialogCloseButton onClick={() => setOpen(false)} disableRipple>

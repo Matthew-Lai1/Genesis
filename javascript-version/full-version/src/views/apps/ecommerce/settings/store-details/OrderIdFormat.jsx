@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
@@ -18,23 +18,27 @@ const OrderIdFormat = () => {
       />
       <CardContent>
         <Grid container spacing={6}>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <CustomTextField
               fullWidth
               label='Prefix'
               placeholder='Prefix'
-              InputProps={{
-                startAdornment: <InputAdornment position='start'>#</InputAdornment>
+              slotProps={{
+                input: {
+                  startAdornment: <InputAdornment position='start'>#</InputAdornment>
+                }
               }}
             />
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <CustomTextField
               fullWidth
               label='Suffix'
               placeholder='Suffix'
-              InputProps={{
-                endAdornment: <InputAdornment position='end'>$</InputAdornment>
+              slotProps={{
+                input: {
+                  endAdornment: <InputAdornment position='end'>$</InputAdornment>
+                }
               }}
             />
           </Grid>

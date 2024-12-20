@@ -10,7 +10,7 @@ import './styles.css'
 
 const FleetMap = props => {
   // Vars
-  const { carIndex, viewState, geojson } = props
+  const { carIndex, viewState, geojson, mapboxAccessToken } = props
 
   // Hooks
   const mapRef = useRef()
@@ -22,7 +22,7 @@ const FleetMap = props => {
   return (
     <div className='is-full bs-full'>
       <Map
-        mapboxAccessToken='pk.eyJ1Ijoic29jaWFsZXhwbG9yZXIiLCJhIjoiREFQbXBISSJ9.dwFTwfSaWsHvktHrRtpydQ'
+        mapboxAccessToken={mapboxAccessToken}
         // eslint-disable-next-line lines-around-comment
         // @ts-ignore
         ref={mapRef}

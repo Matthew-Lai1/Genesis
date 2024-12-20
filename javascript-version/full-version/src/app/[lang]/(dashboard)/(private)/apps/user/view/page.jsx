@@ -2,7 +2,7 @@
 import dynamic from 'next/dynamic'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import UserLeftOverview from '@views/apps/user/view/user-left-overview'
@@ -48,10 +48,10 @@ const UserViewTab = async () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} lg={4} md={5}>
+      <Grid size={{ xs: 12, lg: 4, md: 5 }}>
         <UserLeftOverview />
       </Grid>
-      <Grid item xs={12} lg={8} md={7}>
+      <Grid size={{ xs: 12, lg: 8, md: 7 }}>
         <UserRight tabContentList={tabContentList(data)} />
       </Grid>
     </Grid>

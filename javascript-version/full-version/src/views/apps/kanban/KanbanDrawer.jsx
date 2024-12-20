@@ -155,25 +155,27 @@ const KanbanDrawer = props => {
             <CustomTextField
               select
               label='Label'
-              SelectProps={{
-                multiple: true,
-                value: badgeText || [],
-                onChange: e => setBadgeText(e.target.value),
-                renderValue: selected => (
-                  <div className='flex flex-wrap gap-1'>
-                    {selected.map(value => (
-                      <Chip
-                        variant='tonal'
-                        key={value}
-                        size='small'
-                        onMouseDown={e => e.stopPropagation()}
-                        label={value}
-                        color={chipColor[value]?.color}
-                        onDelete={() => setBadgeText(current => current.filter(item => item !== value))}
-                      />
-                    ))}
-                  </div>
-                )
+              slotProps={{
+                select: {
+                  multiple: true,
+                  value: badgeText || [],
+                  onChange: e => setBadgeText(e.target.value),
+                  renderValue: selected => (
+                    <div className='flex flex-wrap gap-1'>
+                      {selected.map(value => (
+                        <Chip
+                          variant='tonal'
+                          key={value}
+                          size='small'
+                          onMouseDown={e => e.stopPropagation()}
+                          label={value}
+                          color={chipColor[value]?.color}
+                          onDelete={() => setBadgeText(current => current.filter(item => item !== value))}
+                        />
+                      ))}
+                    </div>
+                  )
+                }
               }}
             >
               {Object.keys(chipColor).map(chip => (
@@ -204,15 +206,17 @@ const KanbanDrawer = props => {
                 placeholder='Choose File'
                 variant='outlined'
                 value={fileName}
-                InputProps={{
-                  readOnly: true,
-                  endAdornment: fileName ? (
-                    <InputAdornment position='end'>
-                      <IconButton size='small' edge='end' onClick={() => setFileName('')}>
-                        <i className='tabler-x' />
-                      </IconButton>
-                    </InputAdornment>
-                  ) : null
+                slotProps={{
+                  input: {
+                    readOnly: true,
+                    endAdornment: fileName ? (
+                      <InputAdornment position='end'>
+                        <IconButton size='small' edge='end' onClick={() => setFileName('')}>
+                          <i className='tabler-x' />
+                        </IconButton>
+                      </InputAdornment>
+                    ) : null
+                  }
                 }}
               />
               <Button component='label' variant='tonal' htmlFor='contained-button-file'>

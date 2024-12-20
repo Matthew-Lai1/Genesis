@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import Typography from '@mui/material/Typography'
 import CardContent from '@mui/material/CardContent'
@@ -42,7 +42,7 @@ const renderTeams = teams => {
 const AboutOverview = ({ data }) => {
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Card>
           <CardContent className='flex flex-col gap-6'>
             <div className='flex flex-col gap-4'>
@@ -66,7 +66,7 @@ const AboutOverview = ({ data }) => {
           </CardContent>
         </Card>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <Card>
           <CardContent className='flex flex-col gap-6'>
             <div className='flex flex-col gap-4'>

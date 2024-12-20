@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import InputAdornment from '@mui/material/InputAdornment'
 import FormControl from '@mui/material/FormControl'
 import MenuItem from '@mui/material/MenuItem'
@@ -17,53 +17,58 @@ import DirectionalIcon from '@components/DirectionalIcon'
 const StepPriceDetails = ({ activeStep, handleNext, handlePrev, steps }) => {
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField
           fullWidth
           type='number'
           placeholder='25,000'
           label='Expected Price'
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position='end'>
-                <i className='tabler-currency-dollar' />
-              </InputAdornment>
-            )
+          slotProps={{
+            input: {
+              endAdornment: (
+                <InputAdornment position='end'>
+                  <i className='tabler-currency-dollar' />
+                </InputAdornment>
+              )
+            }
           }}
         />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField
           fullWidth
           type='number'
           placeholder='500'
           label='Price Per SQFT'
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position='end'>
-                <i className='tabler-currency-dollar' />
-              </InputAdornment>
-            )
+          slotProps={{
+            input: {
+              endAdornment: (
+                <InputAdornment position='end'>
+                  <i className='tabler-currency-dollar' />
+                </InputAdornment>
+              )
+            }
           }}
         />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField
           fullWidth
           type='number'
           placeholder='50'
           label='Maintenance Charge'
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position='end'>
-                <i className='tabler-currency-dollar' />
-              </InputAdornment>
-            )
+          slotProps={{
+            input: {
+              endAdornment: (
+                <InputAdornment position='end'>
+                  <i className='tabler-currency-dollar' />
+                </InputAdornment>
+              )
+            }
           }}
         />
       </Grid>
-
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField select fullWidth label='Maintenance Period' defaultValue=''>
           <MenuItem value=''>Select Maintenance Period</MenuItem>
           <MenuItem value='monthly'>Monthly</MenuItem>
@@ -73,37 +78,41 @@ const StepPriceDetails = ({ activeStep, handleNext, handlePrev, steps }) => {
           <MenuItem value='one-time'>One-time</MenuItem>
         </CustomTextField>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField
           fullWidth
           type='number'
           placeholder='250'
           label='Booking/Token Amount'
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position='end'>
-                <i className='tabler-currency-dollar' />
-              </InputAdornment>
-            )
+          slotProps={{
+            input: {
+              endAdornment: (
+                <InputAdornment position='end'>
+                  <i className='tabler-currency-dollar' />
+                </InputAdornment>
+              )
+            }
           }}
         />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <CustomTextField
           fullWidth
           type='number'
           placeholder='500'
           label='Other Amount'
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position='end'>
-                <i className='tabler-currency-dollar' />
-              </InputAdornment>
-            )
+          slotProps={{
+            input: {
+              endAdornment: (
+                <InputAdornment position='end'>
+                  <i className='tabler-currency-dollar' />
+                </InputAdornment>
+              )
+            }
           }}
         />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <FormControl>
           <FormLabel id='price-radio'>Show Price As</FormLabel>
           <RadioGroup name='price-group' defaultValue='negotiable' aria-labelledby='price-radio'>
@@ -112,14 +121,14 @@ const StepPriceDetails = ({ activeStep, handleNext, handlePrev, steps }) => {
           </RadioGroup>
         </FormControl>
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid size={{ xs: 12, md: 6 }}>
         <FormControl>
           <FormLabel>Price Includes</FormLabel>
           <FormControlLabel control={<Checkbox defaultChecked />} label='Car Parking' />
           <FormControlLabel control={<Checkbox />} label='Club Membership' />
         </FormControl>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex items-center justify-between'>
           <Button
             variant='tonal'

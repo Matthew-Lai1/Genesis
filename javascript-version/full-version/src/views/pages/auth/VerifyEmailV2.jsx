@@ -102,7 +102,7 @@ const VerifyEmailV2 = ({ mode }) => {
           </Button>
           <div className='flex justify-center items-center flex-wrap gap-2'>
             <Typography>Didn&#39;t get the mail?</Typography>
-            <Typography color='primary' component={Link}>
+            <Typography color='primary.main' component={Link}>
               Resend
             </Typography>
           </div>

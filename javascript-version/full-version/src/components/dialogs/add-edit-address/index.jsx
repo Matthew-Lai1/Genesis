@@ -10,7 +10,7 @@ import DialogContent from '@mui/material/DialogContent'
 import DialogActions from '@mui/material/DialogActions'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import MenuItem from '@mui/material/MenuItem'
 import Switch from '@mui/material/Switch'
 import FormControlLabel from '@mui/material/FormControlLabel'
@@ -83,6 +83,7 @@ const AddEditAddress = ({ open, setOpen, data }) => {
         setOpen(false)
         setSelected(initialSelected)
       }}
+      closeAfterTransition={false}
       sx={{ '& .MuiDialog-paper': { overflow: 'visible' } }}
     >
       <DialogTitle variant='h4' className='flex gap-2 flex-col text-center sm:pbs-16 sm:pbe-6 sm:pli-16'>
@@ -105,7 +106,7 @@ const AddEditAddress = ({ open, setOpen, data }) => {
               }
 
               return (
-                <Grid item xs={12} sm={6} key={index}>
+                <Grid size={{ xs: 12, sm: 6 }} key={index}>
                   <CustomInputVertical
                     type='radio'
                     key={index}
@@ -117,7 +118,7 @@ const AddEditAddress = ({ open, setOpen, data }) => {
                 </Grid>
               )
             })}
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='First Name'
@@ -128,7 +129,7 @@ const AddEditAddress = ({ open, setOpen, data }) => {
                 onChange={e => setAddressData({ ...addressData, firstName: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='Last Name'
@@ -139,7 +140,7 @@ const AddEditAddress = ({ open, setOpen, data }) => {
                 onChange={e => setAddressData({ ...addressData, lastName: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <CustomTextField
                 select
                 fullWidth
@@ -156,7 +157,7 @@ const AddEditAddress = ({ open, setOpen, data }) => {
                 ))}
               </CustomTextField>
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <CustomTextField
                 fullWidth
                 label='Address Line 1'
@@ -167,7 +168,7 @@ const AddEditAddress = ({ open, setOpen, data }) => {
                 onChange={e => setAddressData({ ...addressData, address1: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <CustomTextField
                 fullWidth
                 label='Address Line 2'
@@ -178,7 +179,7 @@ const AddEditAddress = ({ open, setOpen, data }) => {
                 onChange={e => setAddressData({ ...addressData, address2: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='Landmark'
@@ -189,7 +190,7 @@ const AddEditAddress = ({ open, setOpen, data }) => {
                 onChange={e => setAddressData({ ...addressData, landmark: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='City'
@@ -200,7 +201,7 @@ const AddEditAddress = ({ open, setOpen, data }) => {
                 onChange={e => setAddressData({ ...addressData, city: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='State'
@@ -211,7 +212,7 @@ const AddEditAddress = ({ open, setOpen, data }) => {
                 onChange={e => setAddressData({ ...addressData, state: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid size={{ xs: 12, sm: 6 }}>
               <CustomTextField
                 fullWidth
                 label='Zip Code'
@@ -223,7 +224,7 @@ const AddEditAddress = ({ open, setOpen, data }) => {
                 onChange={e => setAddressData({ ...addressData, zipCode: e.target.value })}
               />
             </Grid>
-            <Grid item xs={12}>
+            <Grid size={{ xs: 12 }}>
               <FormControlLabel control={<Switch defaultChecked />} label='Make this default shipping address' />
             </Grid>
           </Grid>

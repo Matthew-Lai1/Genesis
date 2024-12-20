@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Avatar from '@mui/material/Avatar'
@@ -19,7 +19,7 @@ const Teams = ({ data }) => {
       {data &&
         data.map((item, index) => {
           return (
-            <Grid item key={index} xs={12} md={6} lg={4}>
+            <Grid size={{ xs: 12, md: 6, lg: 4 }} key={index}>
               <Card>
                 <CardContent className='flex flex-col gap-4'>
                   <div className='flex items-center justify-between gap-2'>

@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import FormHelperText from '@mui/material/FormHelperText'
 import MenuItem from '@mui/material/MenuItem'
 import Button from '@mui/material/Button'
@@ -80,7 +80,7 @@ const StepDealType = ({ activeStep, handleNext, handlePrev, steps }) => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <ImgWrapper>
           <img width={650} alt='illustration' src={`/images/pages/create-deal-type-${theme.palette.mode}.png`} />
         </ImgWrapper>
@@ -96,7 +96,7 @@ const StepDealType = ({ activeStep, handleNext, handlePrev, steps }) => {
           <CustomInputVertical
             type='radio'
             key={index}
-            gridProps={{ sm: 4, xs: 12 }}
+            gridProps={{ size: { xs: 12, sm: 4 } }}
             selected={selectedOption}
             name='custom-radios-basic'
             handleChange={handleOptionChange}
@@ -104,7 +104,7 @@ const StepDealType = ({ activeStep, handleNext, handlePrev, steps }) => {
           />
         )
       })}
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField
           fullWidth
           type='number'
@@ -113,13 +113,15 @@ const StepDealType = ({ activeStep, handleNext, handlePrev, steps }) => {
           helperText='Enter the discount percentage. 10 = 10%'
         />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid size={{ xs: 12, sm: 6 }}>
         <CustomTextField
           select
           fullWidth
           value={region}
-          SelectProps={{
-            onChange: e => setRegion(e.target.value)
+          slotProps={{
+            select: {
+              onChange: e => setRegion(e.target.value)
+            }
           }}
           label='Region'
         >
@@ -131,7 +133,7 @@ const StepDealType = ({ activeStep, handleNext, handlePrev, steps }) => {
         </CustomTextField>
         <FormHelperText>Select applicable regions for the deal.</FormHelperText>
       </Grid>
-      <Grid item xs={12}>
+      <Grid size={{ xs: 12 }}>
         <div className='flex items-center justify-between'>
           <Button
             variant='tonal'

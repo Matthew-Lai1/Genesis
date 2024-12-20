@@ -104,7 +104,7 @@ const ForgotPasswordV2 = ({ mode }) => {
             <Button fullWidth variant='contained' type='submit'>
               Send Reset Link
             </Button>
-            <Typography className='flex justify-center items-center' color='primary'>
+            <Typography className='flex justify-center items-center' color='primary.main'>
               <Link href={getLocalizedUrl('/pages/auth/login-v2', locale)} className='flex items-center gap-1.5'>
                 <DirectionalIcon
                   ltrIconClass='tabler-chevron-left'

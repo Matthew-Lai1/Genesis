@@ -166,7 +166,9 @@ const AddUserDrawer = props => {
                 id='select-plan'
                 label='Select Plan'
                 {...field}
-                inputProps={{ placeholder: 'Select Plan' }}
+                slotProps={{
+                  htmlInput: { placeholder: 'Select Plan' }
+                }}
                 {...(errors.plan && { error: true, helperText: 'This field is required.' })}
               >
                 <MenuItem value='basic'>Basic</MenuItem>
@@ -209,7 +211,9 @@ const AddUserDrawer = props => {
             value={formData.country}
             onChange={e => setFormData({ ...formData, country: e.target.value })}
             label='Select Country'
-            inputProps={{ placeholder: 'Country' }}
+            slotProps={{
+              htmlInput: { placeholder: 'Country' }
+            }}
           >
             <MenuItem value='India'>India</MenuItem>
             <MenuItem value='USA'>USA</MenuItem>

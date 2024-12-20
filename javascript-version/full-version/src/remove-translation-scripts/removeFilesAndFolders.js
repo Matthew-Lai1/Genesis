@@ -1,7 +1,7 @@
-import { consola } from 'consola'
+import path from 'path'
 
-const fs = require('fs').promises
-const path = require('path')
+import { consola } from 'consola'
+import fs from 'fs-extra'
 
 export const removeFilesAndFolders = async () => {
   consola.start('Removing unused files and folders related to i18n...')

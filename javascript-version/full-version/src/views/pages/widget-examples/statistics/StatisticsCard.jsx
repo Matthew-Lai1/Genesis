@@ -3,7 +3,7 @@ import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 
 // Component Imports
 import CustomAvatar from '@core/components/mui/Avatar'
@@ -47,9 +47,9 @@ const StatisticsCard = () => {
         }
       />
       <CardContent className='flex justify-between flex-wrap gap-4'>
-        <Grid container spacing={4}>
+        <Grid container spacing={4} flex={1}>
           {data.map((item, index) => (
-            <Grid item xs={6} md={3} key={index} className='flex gap-4 items-center'>
+            <Grid size={{ xs: 6, md: 3 }} key={index} className='flex gap-4 items-center'>
               <CustomAvatar color={item.color} variant='rounded' size={40} skin='light'>
                 <i className={item.icon}></i>
               </CustomAvatar>

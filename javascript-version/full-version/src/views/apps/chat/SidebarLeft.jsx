@@ -176,13 +176,15 @@ const SidebarLeft = props => {
                   {...params}
                   variant='outlined'
                   placeholder='Search Contacts'
-                  InputProps={{
-                    ...params.InputProps,
-                    startAdornment: (
-                      <InputAdornment position='start'>
-                        <i className='tabler-search' />
-                      </InputAdornment>
-                    )
+                  slotProps={{
+                    input: {
+                      ...params.InputProps,
+                      startAdornment: (
+                        <InputAdornment position='start'>
+                          <i className='tabler-search' />
+                        </InputAdornment>
+                      )
+                    }
                   }}
                 />
               )}

@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
@@ -17,7 +17,7 @@ const FreeCourses = () => {
     <Card>
       <CardContent>
         <Grid container spacing={6}>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <div className='flex flex-col items-center justify-center gap-y-4 bs-full text-center'>
               <CustomAvatar variant='rounded' skin='light' color='primary' size={52}>
                 <i className='tabler-gift text-4xl' />
@@ -30,7 +30,7 @@ const FreeCourses = () => {
               <Button variant='contained'>Get Premium Courses</Button>
             </div>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <div className='border rounded bs-full'>
               <div className='mli-2 mbs-2 overflow-hidden rounded'>
                 <ReactPlayer
@@ -57,7 +57,7 @@ const FreeCourses = () => {
               </div>
             </div>
           </Grid>
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid size={{ xs: 12, sm: 6, md: 4 }}>
             <div className='border rounded bs-full'>
               <div className='mli-2 mbs-2 overflow-hidden rounded'>
                 <ReactPlayer

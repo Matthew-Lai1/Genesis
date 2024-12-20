@@ -4,7 +4,7 @@
 import Card from '@mui/material/Card'
 import CardHeader from '@mui/material/CardHeader'
 import CardContent from '@mui/material/CardContent'
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
 
@@ -17,7 +17,7 @@ const CreateApiKey = () => {
       <CardHeader title='Create an API Key' />
       <CardContent className='!pb-0'>
         <Grid container spacing={6}>
-          <Grid item xs={12} md={6}>
+          <Grid size={{ xs: 12, md: 6 }}>
             <form className='flex justify-end items-end bs-full flex-col gap-5 pbe-6'>
               <CustomTextField select fullWidth label='Choose the API key type you want to create' defaultValue=''>
                 <MenuItem value='full-control'>Full Control</MenuItem>
@@ -33,7 +33,7 @@ const CreateApiKey = () => {
               </Button>
             </form>
           </Grid>
-          <Grid item xs={12} md={6} className='flex items-end justify-center '>
+          <Grid size={{ xs: 12, md: 6 }} className='flex items-end justify-center '>
             <img src='/images/illustrations/characters/4.png' width={197} height={224} alt='api illustration' />
           </Grid>
         </Grid>

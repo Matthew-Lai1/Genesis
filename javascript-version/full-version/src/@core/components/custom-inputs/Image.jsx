@@ -1,5 +1,5 @@
 // MUI Imports
-import Grid from '@mui/material/Grid'
+import Grid from '@mui/material/Grid2'
 import Checkbox from '@mui/material/Checkbox'
 import { styled } from '@mui/material/styles'
 
@@ -56,7 +56,7 @@ const CustomCheckboxImg = props => {
 
   const renderComponent = () => {
     return (
-      <Grid item {...gridProps}>
+      <Grid {...gridProps}>
         <Root className={classnames({ active: selected.includes(value) })} onClick={() => handleChange(value)}>
           {typeof img === 'string' ? <Image src={img} alt={alt ?? `checkbox-image-${value}`} /> : img}
           {type === 'radio' ? null : (
