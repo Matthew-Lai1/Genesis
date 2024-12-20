@@ -71,6 +71,7 @@ const StepPropertyFeatures = ({ activeStep, handleNext, handlePrev, steps }: Pro
         <Autocomplete
           fullWidth
           multiple
+          value={furnishingDetails}
           onChange={(event, value) => setFurnishingDetails(value as string[])}
           id='select-furnishing-details'
           options={furnishingArray}
@@ -79,7 +80,7 @@ const StepPropertyFeatures = ({ activeStep, handleNext, handlePrev, steps }: Pro
           renderInput={params => <TextField {...params} label='Furnishing Details' />}
           renderTags={(value: string[], getTagProps) =>
             value.map((option: string, index: number) => (
-              <Chip key={index} size='small' label={option} {...(getTagProps({ index }) as {})} />
+              <Chip size='small' label={option} {...(getTagProps({ index }) as {})} key={index} />
             ))
           }
         />
